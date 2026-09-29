@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="352.8pt" viewBox="0 0 936 352.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:47.977973</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 352.8
+L 936 352.8
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 248.4
+L 187.2 248.4
+Q 195.84 248.4 195.84 239.76
+L 195.84 91.44
+Q 195.84 82.8 187.2 82.8
+L 37.44 82.8
+Q 28.8 82.8 28.8 91.44
+L 28.8 239.76
+Q 28.8 248.4 37.44 248.4
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.44 113.04
+L 187.2 113.04
+Q 195.84 113.04 195.84 104.4
+L 195.84 91.44
+Q 195.84 82.8 187.2 82.8
+L 37.44 82.8
+Q 28.8 82.8 28.8 91.44
+L 28.8 104.4
+Q 28.8 113.04 37.44 113.04
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 197.28 157.68
+L 206.784 165.6
+L 197.28 173.52
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #a8863b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 217.44 248.4
+L 367.2 248.4
+Q 375.84 248.4 375.84 239.76
+L 375.84 91.44
+Q 375.84 82.8 367.2 82.8
+L 217.44 82.8
+Q 208.8 82.8 208.8 91.44
+L 208.8 239.76
+Q 208.8 248.4 217.44 248.4
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 217.44 113.04
+L 367.2 113.04
+Q 375.84 113.04 375.84 104.4
+L 375.84 91.44
+Q 375.84 82.8 367.2 82.8
+L 217.44 82.8
+Q 208.8 82.8 208.8 91.44
+L 208.8 104.4
+Q 208.8 113.04 217.44 113.04
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 377.28 157.68
+L 386.784 165.6
+L 377.28 173.52
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #a8863b"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 397.44 248.4
+L 547.2 248.4
+Q 555.84 248.4 555.84 239.76
+L 555.84 91.44
+Q 555.84 82.8 547.2 82.8
+L 397.44 82.8
+Q 388.8 82.8 388.8 91.44
+L 388.8 239.76
+Q 388.8 248.4 397.44 248.4
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 397.44 113.04
+L 547.2 113.04
+Q 555.84 113.04 555.84 104.4
+L 555.84 91.44
+Q 555.84 82.8 547.2 82.8
+L 397.44 82.8
+Q 388.8 82.8 388.8 91.44
+L 388.8 104.4
+Q 388.8 113.04 397.44 113.04
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 557.28 157.68
+L 566.784 165.6
+L 557.28 173.52
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #a8863b"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 577.44 248.4
+L 727.2 248.4
+Q 735.84 248.4 735.84 239.76
+L 735.84 91.44
+Q 735.84 82.8 727.2 82.8
+L 577.44 82.8
+Q 568.8 82.8 568.8 91.44
+L 568.8 239.76
+Q 568.8 248.4 577.44 248.4
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 577.44 113.04
+L 727.2 113.04
+Q 735.84 113.04 735.84 104.4
+L 735.84 91.44
+Q 735.84 82.8 727.2 82.8
+L 577.44 82.8
+Q 568.8 82.8 568.8 91.44
+L 568.8 104.4
+Q 568.8 113.04 577.44 113.04
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 737.28 157.68
+L 746.784 165.6
+L 737.28 173.52
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #a8863b"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 757.44 248.4
+L 907.2 248.4
+Q 915.84 248.4 915.84 239.76
+L 915.84 91.44
+Q 915.84 82.8 907.2 82.8
+L 757.44 82.8
+Q 748.8 82.8 748.8 91.44
+L 748.8 239.76
+Q 748.8 248.4 757.44 248.4
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #e8f1ec; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 757.44 113.04
+L 907.2 113.04
+Q 915.84 113.04 915.84 104.4
+L 915.84 91.44
+Q 915.84 82.8 907.2 82.8
+L 757.44 82.8
+Q 748.8 82.8 748.8 91.44
+L 748.8 104.4
+Q 748.8 113.04 757.44 113.04
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 37.44 316.8
+L 898.56 316.8
+Q 907.2 316.8 907.2 308.16
+L 907.2 275.04
+Q 907.2 266.4 898.56 266.4
+L 37.44 266.4
+Q 28.8 266.4 28.8 275.04
+L 28.8 308.16
+Q 28.8 316.8 37.44 316.8
+z
+" clip-path="url(#pc69e5bf897)" style="fill: #f6f0e4; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">ENFORCEMENT MODES</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b6773" x="468" y="58.628145" transform="rotate(-0 468 58.628145)">A separate dimension from the adoption stage; every record identifies the mode that actually applied</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="112.32" y="101.559844" transform="rotate(-0 112.32 101.559844)">OBSERVE</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="41.76" y="130.192383" transform="rotate(-0 41.76 130.192383)">BEHAVIOR</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="41.76" y="146.230312" transform="rotate(-0 41.76 146.230312)">Records available traffic</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="41.76" y="187.796484" transform="rotate(-0 41.76 187.796484)">LIMIT</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 202.387875)">A mirrored request cannot</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 213.727875)">retroactively prevent an</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 225.881625)">effect</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="292.32" y="101.559844" transform="rotate(-0 292.32 101.559844)">ADVISE</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="221.76" y="130.192383" transform="rotate(-0 221.76 130.192383)">BEHAVIOR</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="221.76" y="145.358437" transform="rotate(-0 221.76 145.358437)">Computes shadow decisions</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="221.76" y="187.796484" transform="rotate(-0 221.76 187.796484)">LIMIT</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(221.76 202.387875)">Would-deny and would-</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(221.76 214.113094)">escalate are surfaced;</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(221.76 225.067875)">nothing is blocked</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="472.32" y="101.559844" transform="rotate(-0 472.32 101.559844)">GUARD</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="401.76" y="130.192383" transform="rotate(-0 401.76 130.192383)">BEHAVIOR</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(401.76 146.230312)">Enforces a selected</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(401.76 157.508437)">boundary</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="401.76" y="187.796484" transform="rotate(-0 401.76 187.796484)">LIMIT</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(401.76 202.387875)">Meaningful only when the</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(401.76 213.727875)">capability is technically</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(401.76 225.881625)">behind the control</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="652.32" y="101.559844" transform="rotate(-0 652.32 101.559844)">ENFORCE</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="581.76" y="130.192383" transform="rotate(-0 581.76 130.192383)">BEHAVIOR</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(581.76 146.230312)">Mediates the declared</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(581.76 157.508437)">consequential paths</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="581.76" y="187.796484" transform="rotate(-0 581.76 187.796484)">LIMIT</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(581.76 202.387875)">Fail closed; receipts for</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(581.76 213.727875)">every effect</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="832.32" y="101.559844" transform="rotate(-0 832.32 101.559844)">ASSURE</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="761.76" y="130.192383" transform="rotate(-0 761.76 130.192383)">BEHAVIOR</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(761.76 145.358437)">Adds continuing evidence</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(761.76 157.508437)">and operational checks</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="761.76" y="187.796484" transform="rotate(-0 761.76 187.796484)">LIMIT</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(761.76 202.387875)">Evidence packages and drift</text>
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(761.76 213.727875)">reporting</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #1f3a5f" transform="translate(78.937148 287.771797)">Different agents and environments may run in different modes. Moving to weaker enforcement requires a governance transition and an updated</text>
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #1f3a5f" transform="translate(423.106562 301.554219)">assurance claim.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc69e5bf897">
+   <rect x="0" y="0" width="936" height="352.8"/>
+  </clipPath>
+ </defs>
+</svg>

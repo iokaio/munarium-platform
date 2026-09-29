@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="568.8pt" viewBox="0 0 936 568.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:44.801402</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 568.8
+L 936 568.8
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 120.24
+L 898.56 120.24
+Q 907.2 120.24 907.2 111.6
+L 907.2 84.24
+Q 907.2 75.6 898.56 75.6
+L 37.44 75.6
+Q 28.8 75.6 28.8 84.24
+L 28.8 111.6
+Q 28.8 120.24 37.44 120.24
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.44 230.4
+L 304.56 230.4
+Q 313.2 230.4 313.2 221.76
+L 313.2 149.04
+Q 313.2 140.4 304.56 140.4
+L 37.44 140.4
+Q 28.8 140.4 28.8 149.04
+L 28.8 221.76
+Q 28.8 230.4 37.44 230.4
+z
+" clip-path="url(#p394fca838c)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 246.24 168.48
+L 293.76 168.48
+Q 302.4 168.48 302.4 159.84
+L 302.4 159.84
+Q 302.4 151.2 293.76 151.2
+L 246.24 151.2
+Q 237.6 151.2 237.6 159.84
+L 237.6 159.84
+Q 237.6 168.48 246.24 168.48
+z
+" clip-path="url(#p394fca838c)" style="fill: #a8863b; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 50.4 224.64
+L 169.92 224.64
+Q 178.56 224.64 178.56 216
+L 178.56 216
+Q 178.56 207.36 169.92 207.36
+L 50.4 207.36
+Q 41.76 207.36 41.76 216
+L 41.76 216
+Q 41.76 224.64 50.4 224.64
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 332.64 230.4
+L 599.76 230.4
+Q 608.4 230.4 608.4 221.76
+L 608.4 149.04
+Q 608.4 140.4 599.76 140.4
+L 332.64 140.4
+Q 324 140.4 324 149.04
+L 324 221.76
+Q 324 230.4 332.64 230.4
+z
+" clip-path="url(#p394fca838c)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 541.44 168.48
+L 588.96 168.48
+Q 597.6 168.48 597.6 159.84
+L 597.6 159.84
+Q 597.6 151.2 588.96 151.2
+L 541.44 151.2
+Q 532.8 151.2 532.8 159.84
+L 532.8 159.84
+Q 532.8 168.48 541.44 168.48
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 345.6 224.64
+L 465.12 224.64
+Q 473.76 224.64 473.76 216
+L 473.76 216
+Q 473.76 207.36 465.12 207.36
+L 345.6 207.36
+Q 336.96 207.36 336.96 216
+L 336.96 216
+Q 336.96 224.64 345.6 224.64
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 627.84 230.4
+L 894.96 230.4
+Q 903.6 230.4 903.6 221.76
+L 903.6 149.04
+Q 903.6 140.4 894.96 140.4
+L 627.84 140.4
+Q 619.2 140.4 619.2 149.04
+L 619.2 221.76
+Q 619.2 230.4 627.84 230.4
+z
+" clip-path="url(#p394fca838c)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 836.64 168.48
+L 884.16 168.48
+Q 892.8 168.48 892.8 159.84
+L 892.8 159.84
+Q 892.8 151.2 884.16 151.2
+L 836.64 151.2
+Q 828 151.2 828 159.84
+L 828 159.84
+Q 828 168.48 836.64 168.48
+z
+" clip-path="url(#p394fca838c)" style="fill: #a8863b; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 640.8 224.64
+L 760.32 224.64
+Q 768.96 224.64 768.96 216
+L 768.96 216
+Q 768.96 207.36 760.32 207.36
+L 640.8 207.36
+Q 632.16 207.36 632.16 216
+L 632.16 216
+Q 632.16 224.64 640.8 224.64
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 37.44 331.2
+L 304.56 331.2
+Q 313.2 331.2 313.2 322.56
+L 313.2 249.84
+Q 313.2 241.2 304.56 241.2
+L 37.44 241.2
+Q 28.8 241.2 28.8 249.84
+L 28.8 322.56
+Q 28.8 331.2 37.44 331.2
+z
+" clip-path="url(#p394fca838c)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 246.24 269.28
+L 293.76 269.28
+Q 302.4 269.28 302.4 260.64
+L 302.4 260.64
+Q 302.4 252 293.76 252
+L 246.24 252
+Q 237.6 252 237.6 260.64
+L 237.6 260.64
+Q 237.6 269.28 246.24 269.28
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 50.4 325.44
+L 169.92 325.44
+Q 178.56 325.44 178.56 316.8
+L 178.56 316.8
+Q 178.56 308.16 169.92 308.16
+L 50.4 308.16
+Q 41.76 308.16 41.76 316.8
+L 41.76 316.8
+Q 41.76 325.44 50.4 325.44
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 332.64 331.2
+L 599.76 331.2
+Q 608.4 331.2 608.4 322.56
+L 608.4 249.84
+Q 608.4 241.2 599.76 241.2
+L 332.64 241.2
+Q 324 241.2 324 249.84
+L 324 322.56
+Q 324 331.2 332.64 331.2
+z
+" clip-path="url(#p394fca838c)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 541.44 269.28
+L 588.96 269.28
+Q 597.6 269.28 597.6 260.64
+L 597.6 260.64
+Q 597.6 252 588.96 252
+L 541.44 252
+Q 532.8 252 532.8 260.64
+L 532.8 260.64
+Q 532.8 269.28 541.44 269.28
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 345.6 325.44
+L 465.12 325.44
+Q 473.76 325.44 473.76 316.8
+L 473.76 316.8
+Q 473.76 308.16 465.12 308.16
+L 345.6 308.16
+Q 336.96 308.16 336.96 316.8
+L 336.96 316.8
+Q 336.96 325.44 345.6 325.44
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 627.84 331.2
+L 894.96 331.2
+Q 903.6 331.2 903.6 322.56
+L 903.6 249.84
+Q 903.6 241.2 894.96 241.2
+L 627.84 241.2
+Q 619.2 241.2 619.2 249.84
+L 619.2 322.56
+Q 619.2 331.2 627.84 331.2
+z
+" clip-path="url(#p394fca838c)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 836.64 269.28
+L 884.16 269.28
+Q 892.8 269.28 892.8 260.64
+L 892.8 260.64
+Q 892.8 252 884.16 252
+L 836.64 252
+Q 828 252 828 260.64
+L 828 260.64
+Q 828 269.28 836.64 269.28
+z
+" clip-path="url(#p394fca838c)" style="fill: #a8863b; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 640.8 325.44
+L 760.32 325.44
+Q 768.96 325.44 768.96 316.8
+L 768.96 316.8
+Q 768.96 308.16 760.32 308.16
+L 640.8 308.16
+Q 632.16 308.16 632.16 316.8
+L 632.16 316.8
+Q 632.16 325.44 640.8 325.44
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 37.44 432
+L 304.56 432
+Q 313.2 432 313.2 423.36
+L 313.2 350.64
+Q 313.2 342 304.56 342
+L 37.44 342
+Q 28.8 342 28.8 350.64
+L 28.8 423.36
+Q 28.8 432 37.44 432
+z
+" clip-path="url(#p394fca838c)" style="fill: #e8f1ec; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 246.24 370.08
+L 293.76 370.08
+Q 302.4 370.08 302.4 361.44
+L 302.4 361.44
+Q 302.4 352.8 293.76 352.8
+L 246.24 352.8
+Q 237.6 352.8 237.6 361.44
+L 237.6 361.44
+Q 237.6 370.08 246.24 370.08
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 50.4 426.24
+L 169.92 426.24
+Q 178.56 426.24 178.56 417.6
+L 178.56 417.6
+Q 178.56 408.96 169.92 408.96
+L 50.4 408.96
+Q 41.76 408.96 41.76 417.6
+L 41.76 417.6
+Q 41.76 426.24 50.4 426.24
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 332.64 432
+L 599.76 432
+Q 608.4 432 608.4 423.36
+L 608.4 350.64
+Q 608.4 342 599.76 342
+L 332.64 342
+Q 324 342 324 350.64
+L 324 423.36
+Q 324 432 332.64 432
+z
+" clip-path="url(#p394fca838c)" style="fill: #e8f1ec; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 541.44 370.08
+L 588.96 370.08
+Q 597.6 370.08 597.6 361.44
+L 597.6 361.44
+Q 597.6 352.8 588.96 352.8
+L 541.44 352.8
+Q 532.8 352.8 532.8 361.44
+L 532.8 361.44
+Q 532.8 370.08 541.44 370.08
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 345.6 426.24
+L 465.12 426.24
+Q 473.76 426.24 473.76 417.6
+L 473.76 417.6
+Q 473.76 408.96 465.12 408.96
+L 345.6 408.96
+Q 336.96 408.96 336.96 417.6
+L 336.96 417.6
+Q 336.96 426.24 345.6 426.24
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 627.84 432
+L 894.96 432
+Q 903.6 432 903.6 423.36
+L 903.6 350.64
+Q 903.6 342 894.96 342
+L 627.84 342
+Q 619.2 342 619.2 350.64
+L 619.2 423.36
+Q 619.2 432 627.84 432
+z
+" clip-path="url(#p394fca838c)" style="fill: #e8f1ec; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 836.64 370.08
+L 884.16 370.08
+Q 892.8 370.08 892.8 361.44
+L 892.8 361.44
+Q 892.8 352.8 884.16 352.8
+L 836.64 352.8
+Q 828 352.8 828 361.44
+L 828 361.44
+Q 828 370.08 836.64 370.08
+z
+" clip-path="url(#p394fca838c)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 640.8 426.24
+L 760.32 426.24
+Q 768.96 426.24 768.96 417.6
+L 768.96 417.6
+Q 768.96 408.96 760.32 408.96
+L 640.8 408.96
+Q 632.16 408.96 632.16 417.6
+L 632.16 417.6
+Q 632.16 426.24 640.8 426.24
+z
+" clip-path="url(#p394fca838c)" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 37.44 540
+L 567.36 540
+Q 576 540 576 531.36
+L 576 462.24
+Q 576 453.6 567.36 453.6
+L 37.44 453.6
+Q 28.8 453.6 28.8 462.24
+L 28.8 531.36
+Q 28.8 540 37.44 540
+z
+" clip-path="url(#p394fca838c)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 599.04 540
+L 898.56 540
+Q 907.2 540 907.2 531.36
+L 907.2 462.24
+Q 907.2 453.6 898.56 453.6
+L 599.04 453.6
+Q 590.4 453.6 590.4 462.24
+L 590.4 531.36
+Q 590.4 540 599.04 540
+z
+" clip-path="url(#p394fca838c)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">MUNARIUM GOVERNANCE PLATFORM · THE REPOSITORIES</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b6773" x="468" y="58.628145" transform="rotate(-0 468 58.628145)">One public hub, nine component repositories, the released foundation, and the tooling around them</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="468" y="100.504297" transform="rotate(-0 468 100.504297)">iokaio/munarium-platform · architecture · normative contracts · decision records · invariant catalog · roadmap · composition evidence</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="41.76" y="160.869844" transform="rotate(-0 41.76 160.869844)">REGISTRY</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="270" y="161.788535" transform="rotate(-0 270 161.788535)">authority</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="41.76" y="180.882969" transform="rotate(-0 41.76 180.882969)">munarium-registry</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="41.76" y="197.72825" transform="rotate(-0 41.76 197.72825)">Inventory and manifests</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="110.16" y="217.818633" transform="rotate(-0 110.16 217.818633)">planned · repository created</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="336.96" y="160.869844" transform="rotate(-0 336.96 160.869844)">HARNESS</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="565.2" y="161.788242" transform="rotate(-0 565.2 161.788242)">agent</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="336.96" y="181.706406" transform="rotate(-0 336.96 181.706406)">munarium-harness</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="336.96" y="197.650563" transform="rotate(-0 336.96 197.650563)">Agent SDKs</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="405.36" y="217.818633" transform="rotate(-0 405.36 217.818633)">planned · repository created</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="632.16" y="160.875313" transform="rotate(-0 632.16 160.875313)">WARDEN</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="860.4" y="161.788535" transform="rotate(-0 860.4 161.788535)">authority</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="632.16" y="181.706406" transform="rotate(-0 632.16 181.706406)">munarium-warden</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="632.16" y="197.72825" transform="rotate(-0 632.16 197.72825)">Identity and grants</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="700.56" y="217.818633" transform="rotate(-0 700.56 217.818633)">planned · repository created</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="41.76" y="261.669844" transform="rotate(-0 41.76 261.669844)">GATE</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="270" y="262.588535" transform="rotate(-0 270 262.588535)">mediation</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="41.76" y="281.682969" transform="rotate(-0 41.76 281.682969)">munarium-gate</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="41.76" y="299.38075" transform="rotate(-0 41.76 299.38075)">Decide and enforce</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="110.16" y="318.618633" transform="rotate(-0 110.16 318.618633)">planned · repository created</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="336.96" y="261.669844" transform="rotate(-0 336.96 261.669844)">GATEWAY</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="565.2" y="262.588535" transform="rotate(-0 565.2 262.588535)">mediation</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="336.96" y="281.682969" transform="rotate(-0 336.96 281.682969)">munarium-gateway</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="336.96" y="299.38075" transform="rotate(-0 336.96 299.38075)">Model-call mediation</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="405.36" y="318.618633" transform="rotate(-0 405.36 318.618633)">planned · repository created</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="632.16" y="261.669844" transform="rotate(-0 632.16 261.669844)">COUNCIL</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="860.4" y="262.588535" transform="rotate(-0 860.4 262.588535)">authority</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="632.16" y="282.506406" transform="rotate(-0 632.16 282.506406)">munarium-council</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="632.16" y="298.52825" transform="rotate(-0 632.16 298.52825)">Approve and ratify</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="700.56" y="318.618633" transform="rotate(-0 700.56 318.618633)">planned · repository created</text>
+   </g>
+   <g id="text_34">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="41.76" y="362.469844" transform="rotate(-0 41.76 362.469844)">SENTINEL</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="270" y="363.388242" transform="rotate(-0 270 363.388242)">assurance</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="41.76" y="383.306406" transform="rotate(-0 41.76 383.306406)">munarium-sentinel</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="41.76" y="399.32825" transform="rotate(-0 41.76 399.32825)">Observe and suspend</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="110.16" y="419.418633" transform="rotate(-0 110.16 419.418633)">planned · repository created</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="336.96" y="362.469844" transform="rotate(-0 336.96 362.469844)">ASSURE</text>
+   </g>
+   <g id="text_40">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="565.2" y="363.388242" transform="rotate(-0 565.2 363.388242)">assurance</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="336.96" y="383.306406" transform="rotate(-0 336.96 383.306406)">munarium-assure</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="336.96" y="399.32825" transform="rotate(-0 336.96 399.32825)">Control mapping and evidence packs</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="405.36" y="419.418633" transform="rotate(-0 405.36 419.418633)">planned · repository created</text>
+   </g>
+   <g id="text_44">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="632.16" y="362.469844" transform="rotate(-0 632.16 362.469844)">CONSOLE</text>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="860.4" y="363.388242" transform="rotate(-0 860.4 363.388242)">assurance</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6773" x="632.16" y="383.306406" transform="rotate(-0 632.16 383.306406)">munarium-console</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="632.16" y="399.32825" transform="rotate(-0 632.16 399.32825)">Approver, operator and auditor interface</text>
+   </g>
+   <g id="text_48">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="700.56" y="419.418633" transform="rotate(-0 700.56 419.418633)">planned · repository created</text>
+   </g>
+   <g id="text_49">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="41.76" y="472.914219" transform="rotate(-0 41.76 472.914219)">EXISTING FOUNDATION · released</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 493.132383)">Munarium Server 1.3.0 · iokaio/munarium</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 504.607383)">Munarium Matrix 1.2.0 · iokaio/munarium-matrix</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 515.592969)">Platform changes to either are made upstream, never copied into forks.</text>
+   </g>
+   <g id="text_51">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="603.36" y="471.956797" transform="rotate(-0 603.36 471.956797)">TOOLING · separate projects</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 492.1675)">munarium-clients-publish · client package</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 502.9675)">publishing</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 513.7675)">vcp · a development tool, not a component and not</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 524.5675)">a runtime dependency</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p394fca838c">
+   <rect x="0" y="0" width="936" height="568.8"/>
+  </clipPath>
+ </defs>
+</svg>

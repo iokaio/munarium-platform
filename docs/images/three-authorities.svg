@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="316.8pt" viewBox="0 0 936 316.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:46.820451</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 316.8
+L 936 316.8
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 226.8
+L 304.56 226.8
+Q 313.2 226.8 313.2 218.16
+L 313.2 84.24
+Q 313.2 75.6 304.56 75.6
+L 37.44 75.6
+Q 28.8 75.6 28.8 84.24
+L 28.8 218.16
+Q 28.8 226.8 37.44 226.8
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.44 105.84
+L 304.56 105.84
+Q 313.2 105.84 313.2 97.2
+L 313.2 84.24
+Q 313.2 75.6 304.56 75.6
+L 37.44 75.6
+Q 28.8 75.6 28.8 84.24
+L 28.8 97.2
+Q 28.8 105.84 37.44 105.84
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 314.64 142.56
+L 325.008 151.2
+L 314.64 159.84
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 336.24 226.8
+L 603.36 226.8
+Q 612 226.8 612 218.16
+L 612 84.24
+Q 612 75.6 603.36 75.6
+L 336.24 75.6
+Q 327.6 75.6 327.6 84.24
+L 327.6 218.16
+Q 327.6 226.8 336.24 226.8
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 336.24 105.84
+L 603.36 105.84
+Q 612 105.84 612 97.2
+L 612 84.24
+Q 612 75.6 603.36 75.6
+L 336.24 75.6
+Q 327.6 75.6 327.6 84.24
+L 327.6 97.2
+Q 327.6 105.84 336.24 105.84
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 613.44 142.56
+L 623.808 151.2
+L 613.44 159.84
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 635.04 226.8
+L 902.16 226.8
+Q 910.8 226.8 910.8 218.16
+L 910.8 84.24
+Q 910.8 75.6 902.16 75.6
+L 635.04 75.6
+Q 626.4 75.6 626.4 84.24
+L 626.4 218.16
+Q 626.4 226.8 635.04 226.8
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #f6f0e4; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 635.04 105.84
+L 902.16 105.84
+Q 910.8 105.84 910.8 97.2
+L 910.8 84.24
+Q 910.8 75.6 902.16 75.6
+L 635.04 75.6
+Q 626.4 75.6 626.4 84.24
+L 626.4 97.2
+Q 626.4 105.84 635.04 105.84
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 37.44 295.2
+L 898.56 295.2
+Q 907.2 295.2 907.2 286.56
+L 907.2 253.44
+Q 907.2 244.8 898.56 244.8
+L 37.44 244.8
+Q 28.8 244.8 28.8 253.44
+L 28.8 286.56
+Q 28.8 295.2 37.44 295.2
+z
+" clip-path="url(#p81a9dc2fc7)" style="fill: #f6f0e4; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">PROPOSING A GOVERNANCE CHANGE IS NOT ACTIVATING GOVERNANCE</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="171" y="94.359844" transform="rotate(-0 171 94.359844)">PROPOSE</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 125.538062)">An agent or a human submits an inert candidate</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 137.148062)">through a narrow intake surface.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="41.76" y="213.249766" transform="rotate(-0 41.76 213.249766)">Any principal</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="469.8" y="94.365312" transform="rotate(-0 469.8 94.365312)">RATIFY</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(340.56 125.538062)">A distinct authority verifies approver, role,</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(340.56 137.148062)">binding, freshness and quorum. Never the</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(340.56 148.758062)">proposer, never an agent-derived identity.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="340.56" y="214.106406" transform="rotate(-0 340.56 214.106406)">Council</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="768.6" y="94.359844" transform="rotate(-0 768.6 94.359844)">ACTIVATE</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(639.36 125.538062)">A compare-and-set transition makes the artifact</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(639.36 137.542453)">effective; the old artifact remains for</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(639.36 149.591187)">reconstruction.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="639.36" y="213.249766" transform="rotate(-0 639.36 213.249766)">Council → Registry · Server</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #1f3a5f" transform="translate(86.673711 266.171797)">A governed writer does not inherit authority to change the rules governing its writes. Before Council exists, an owner-provisioned, non-agent</text>
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #1f3a5f" transform="translate(279.714453 279.033906)">bootstrap attestation with a recorded retirement path takes its place.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p81a9dc2fc7">
+   <rect x="0" y="0" width="936" height="316.8"/>
+  </clipPath>
+ </defs>
+</svg>

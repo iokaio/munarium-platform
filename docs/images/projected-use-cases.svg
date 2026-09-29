@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="424.8pt" viewBox="0 0 936 424.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:48.718248</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 424.8
+L 936 424.8
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 111.6
+L 898.56 111.6
+Q 907.2 111.6 907.2 102.96
+L 907.2 91.44
+Q 907.2 82.8 898.56 82.8
+L 37.44 82.8
+Q 28.8 82.8 28.8 91.44
+L 28.8 102.96
+Q 28.8 111.6 37.44 111.6
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 30.24 158.4
+L 905.76 158.4
+Q 907.2 158.4 907.2 156.96
+L 907.2 115.2
+Q 907.2 113.76 905.76 113.76
+L 30.24 113.76
+Q 28.8 113.76 28.8 115.2
+L 28.8 156.96
+Q 28.8 158.4 30.24 158.4
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #f2f4f8; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 30.24 205.92
+L 905.76 205.92
+Q 907.2 205.92 907.2 204.48
+L 907.2 162.72
+Q 907.2 161.28 905.76 161.28
+L 30.24 161.28
+Q 28.8 161.28 28.8 162.72
+L 28.8 204.48
+Q 28.8 205.92 30.24 205.92
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #ffffff; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 30.24 253.44
+L 905.76 253.44
+Q 907.2 253.44 907.2 252
+L 907.2 210.24
+Q 907.2 208.8 905.76 208.8
+L 30.24 208.8
+Q 28.8 208.8 28.8 210.24
+L 28.8 252
+Q 28.8 253.44 30.24 253.44
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #f2f4f8; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 30.24 300.96
+L 905.76 300.96
+Q 907.2 300.96 907.2 299.52
+L 907.2 257.76
+Q 907.2 256.32 905.76 256.32
+L 30.24 256.32
+Q 28.8 256.32 28.8 257.76
+L 28.8 299.52
+Q 28.8 300.96 30.24 300.96
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #ffffff; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 30.24 348.48
+L 905.76 348.48
+Q 907.2 348.48 907.2 347.04
+L 907.2 305.28
+Q 907.2 303.84 905.76 303.84
+L 30.24 303.84
+Q 28.8 303.84 28.8 305.28
+L 28.8 347.04
+Q 28.8 348.48 30.24 348.48
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #f2f4f8; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 30.24 396
+L 905.76 396
+Q 907.2 396 907.2 394.56
+L 907.2 352.8
+Q 907.2 351.36 905.76 351.36
+L 30.24 351.36
+Q 28.8 351.36 28.8 352.8
+L 28.8 394.56
+Q 28.8 396 30.24 396
+z
+" clip-path="url(#pc709f9ffa0)" style="fill: #ffffff; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">SIX PROJECTED ENTERPRISE USES</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b6773" x="468" y="58.628145" transform="rotate(-0 468 58.628145)">Projected examples, not customer claims; each starts small and states the limit that keeps a demonstration from being mistaken for enterprise-wide governance</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffffff" x="37.44" y="99.683437" transform="rotate(-0 37.44 99.683437)">Enterprise</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffffff" x="203.04" y="99.648281" transform="rotate(-0 203.04 99.648281)">Entry point</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffffff" x="433.44" y="99.648281" transform="rotate(-0 433.44 99.648281)">Consequential boundary</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffffff" x="685.44" y="100.555313" transform="rotate(-0 685.44 100.555313)">Stated limit</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="37.44" y="138.147438" transform="rotate(-0 37.44 138.147438)">Software organization</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(203.04 133.047125)">Coding agent prepares a patch and a release</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(203.04 143.307125)">proposal</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 133.047125)">Publishing and deployment capability brokered by</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 143.307125)">Warden; release freeze is a governed input</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 133.047125)">Disposable repository first; does not prove</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 143.307125)">every laptop or CI system is governed</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="37.44" y="185.667438" transform="rotate(-0 37.44 185.667438)">Regional bank</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="203.04" y="185.697125" transform="rotate(-0 203.04 185.697125)">Vendor-master update from invoice evidence</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 180.567125)">Payment remains a separate C3 capability; new</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 190.827125)">account verified through a trusted channel</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 180.567125)">Bank supplies approver roles and test</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 191.563375)">environment</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="37.44" y="233.953375" transform="rotate(-0 37.44 233.953375)">Healthcare network</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="203.04" y="233.217125" transform="rotate(-0 203.04 233.217125)">Administrative scheduling and drafted messages</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 228.087125)">Recipient, channel, classification and consent</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 238.347125)">checked by a narrow connector</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 228.087125)">Synthetic records; no clinical or legal judgment</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 238.347125)">by the platform</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="37.44" y="281.473375" transform="rotate(-0 37.44 281.473375)">Manufacturer</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(203.04 275.607125)">Maintenance work order from approved plant</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(203.04 286.603375)">documents</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 275.607125)">Bounded CMMS request; direct machine control</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 285.867125)">prohibited</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 275.607125)">Offline profile tested, not assumed; not a</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 285.867125)">safety interlock</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="37.44" y="328.993375" transform="rotate(-0 37.44 328.993375)">Law firm</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="203.04" y="328.257125" transform="rotate(-0 203.04 328.257125)">Matter-scoped research and filing package</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 323.127125)">Digests, matter, destination and approver bound; a</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 333.387125)">later edit invalidates approval</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 323.127125)">Simulated filing endpoint; no legal validation</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 334.123375)">of content</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="37.44" y="376.396406" transform="rotate(-0 37.44 376.396406)">Insurer</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="203.04" y="376.513375" transform="rotate(-0 203.04 376.513375)">Claim recommendation with cited records</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 370.647125)">Disbursement separate, with thresholds, cumulative</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(433.44 380.907125)">controls and bound approval</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 370.647125)">Authority path evaluated separately from</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(685.44 380.907125)">recommendation accuracy</text>
+   </g>
+   <g id="text_31">
+    <text style="font-style: italic; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b6773" x="468" y="414.597688" transform="rotate(-0 468 414.597688)">Outreach target: six technically relevant evaluations in the first year, no more than two active high-touch design partners at once.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc709f9ffa0">
+   <rect x="0" y="0" width="936" height="424.8"/>
+  </clipPath>
+ </defs>
+</svg>

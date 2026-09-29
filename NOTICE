@@ -1,0 +1,35 @@
+Munarium Governance Platform (munarium-platform)
+Copyright (c) 2026 Ioka LLC
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+these files except in compliance with the License. A copy of the License is in
+the LICENSE file beside this notice.
+
+"Munarium" and "Ioka" are trademarks of Ioka LLC. The License grants no right to
+use them beyond what is needed to describe the origin of these files. What is
+and is not permitted is in TRADEMARK.md.
+
+This repository is the architecture hub of the Munarium Governance Platform: the
+shared architecture, normative contracts, decision records, invariant catalog,
+roadmap and composition evidence for nine open-source components built around
+Munarium Server (iokaio/munarium) and Munarium Matrix (iokaio/munarium-matrix).
+It contains no runtime component and no copy of any component's implementation.
+Everything Ioka authors here is under the License above.
+
+Existing dependencies, imported code, research material and previously
+contributed assets retain their applicable terms; publishing this repository
+does not relicense material copied into it. Research the platform builds on is
+cited beside the decisions it informs, with the attribution its authors require.
+
+Munarium Enterprise is a separate, proprietary distribution built on Munarium
+Server and Munarium Matrix. Nothing here is part of it and nothing here grants
+any right to it.
+
+Third-party software
+--------------------
+
+This repository currently contains no third-party software. When dependencies
+arrive, their components, versions and licenses will be listed in
+THIRD_PARTY_NOTICES.md, generated from the shipping dependency graph and
+reviewed at each release. Each component is governed by its own license, which
+takes precedence for that component.
