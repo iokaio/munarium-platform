@@ -47,7 +47,8 @@ The repository [README](../README.md) carries the component and invariant catalo
 |---|---|
 | [platform-plan.md](platform-plan.md) | The founder's delivery plan for the platform, revision 4 of 28 September 2026: strategy, architecture, the nine components, the governed action lifecycle, threat model, roadmap, sustainability, and appendices with the repository checklist, invariant catalog, illustrative contracts, standards alignment, glossary, sources and the Matrix consolidation plan. The hub's planning baseline. |
 | [Build plan](build-plan.md) | Repository entry points, bounded work packets, dependency sequence and evidence gates |
-| [Architecture index](architecture/README.md) | System boundaries, contract backlog and foundation requirements |
+| [Overview paper (PDF)](architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) | *An Open Source Applied AI Journey*, 29 September 2026: a forward-looking, business-level introduction to why the platform is being built in the open, how it is designed to work and how it is being built with VCP. Its case studies are synthetic; the repositories remain authoritative for status. |
+| [Architecture index](architecture/README.md) | System boundaries, contract backlog, foundation requirements and the overview paper |
 | [Decision index](decisions/README.md) | Cross-component design records, beginning with the scaffold proposal |
 
 The founder's plan is the historical baseline. The build guide and design records make preparation actionable without changing release labels or claiming that proposed controls exist. Research notes, normative contract artifacts and composition evidence arrive with their own reviewed content. This hub contains no Rust code.

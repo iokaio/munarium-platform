@@ -7,6 +7,12 @@ repository's history.
 
 ## Unreleased
 
+- **Overview paper.** Added the forward-looking business paper *Munarium Governance Platform: An
+  Open Source Applied AI Journey* (29 September 2026) as a PDF under `docs/architecture/`, indexed
+  it, and summarized it in `README.md` with the consequence classes, adoption stages and
+  enforcement modes from the platform plan. Catalog states, invariant evidence and release labels
+  are unchanged.
+
 - **Build preparation.** Added an indexed delivery guide, system boundaries, contract backlog,
   foundation requirements and proposed scaffold decision. Linked the nine component build plans.
   The hub stays documentation-only with no Rust source or Cargo workspace; catalog states,

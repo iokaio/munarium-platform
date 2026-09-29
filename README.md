@@ -4,6 +4,30 @@
 
 > **Status: hub created; build preparation present.** This repository contains architecture and design documentation, the reviewed [founder's plan](docs/platform-plan.md), and [implementation preparation](docs/build-plan.md). It has **no Rust code or Cargo workspace**. The nine component repositories have dependency-free Rust interface scaffolds; their catalog state remains **repository created**, functional capabilities remain **Planned**, and there is **no platform release, published contract bundle or tested composition**. Compilation of a scaffold is not implementation or qualification evidence.
 
+## Read the overview paper
+
+[*Munarium Governance Platform: An Open Source Applied AI Journey*](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) (PDF, 38 pages, as of 29 September 2026) is the business-level introduction to the platform, published by Ioka LLC in its Applied AI Governance Series. It explains why a governed applied AI platform is being built in the open, how it is designed to work, and how the founder is building it with bounded coding agents in VCP. Its message in one line: **let agents propose; keep authority, evidence and rules somewhere else.**
+
+The paper is **forward-looking**. It describes intended architecture and planned work; its case studies are synthetic composites with illustrative baselines and targets; and nothing in it is a certification, a compliance determination or a support commitment. Where it differs from a repository, the repository's README and evidence are authoritative, and this README's catalogs remain the status of record.
+
+| Sections | What they cover |
+|---|---|
+| 1–3 | Why: the five governance gaps agency opens, why governed memory was necessary but not sufficient, and the journey from governed memory to governed action |
+| 4–8 | How it works: the four powers and the principles in business terms, the planes and services, the nine-step governed action, consequence classes, degraded operation, governing change itself, evidence and framework alignment |
+| 9–10 | How it is built: the hub, contracts before code, invariants as the acceptance language, the founder-led roadmap, an illustrative cost envelope, and the VCP development method with its guardrails |
+| 11–13 | How to start: adoption stages and enforcement modes, brownfield patterns, three synthetic case studies (a software release path, vendor maintenance before payment, patient scheduling and messaging), twelve actions to take now and a ninety-day starter plan |
+| 14–15, appendices | Ways to participate, the invariant catalog as a checklist, a working glossary and sources |
+
+Its five takeaways:
+
+- **Governance has to sit on the path, not beside it.** Policies in documents or prompts do not stop an agent that holds a live credential; controls belong where the consequential call is made.
+- **Separate four powers.** Read, governed write, act and govern are different permissions that most early agent deployments collapse into one service account.
+- **Evidence is a product feature.** Every allowed, denied, approved or unresolved action should leave a record someone outside the system can verify.
+- **Start narrow and prove the boundary.** One high-value workflow, observed first and then enforced, teaches more than an enterprise-wide policy rollout.
+- **Build the way you govern.** Coding agents propose and implement, but never release, the same separation the product sells.
+
+Most of the paper's playbook needs no Munarium software. Its first recommendation: find the agent in your organization that holds a credential it should not, and move that credential somewhere the agent can only ask for it.
+
 ## Start building
 
 The [build plan](docs/build-plan.md) maps the founder's delivery stages to repository work packets and acceptance gates. Read the [system boundaries](docs/architecture/system-boundaries.md), [contract backlog](docs/architecture/contract-backlog.md) and [foundation requirements](docs/architecture/foundation-requirements.md) before implementing a cross-component path. The [scaffold decision proposal](docs/decisions/0001-scaffold-boundaries.md) explains the source layout and its limits. The [documentation index](docs/README.md) lists all pages.
@@ -33,6 +57,12 @@ Four planes compose the platform. They are responsibility and trust boundaries, 
 | Assurance | [Sentinel](https://github.com/iokaio/munarium-sentinel), [Assure](https://github.com/iokaio/munarium-assure), [Console](https://github.com/iokaio/munarium-console) | Ledger-derived views, evidence exports, governed operator requests |
 
 One shared accountability record runs through them: proposal, decision, authority, claim, dispatch, receipt. Operational caches and indexes are rebuildable projections of it, never competing histories.
+
+## Consequence and adoption
+
+These are planned design vocabulary, not claims of existing support. Not every action deserves the same friction. Each capability is classified from **C0** (bounded observation) through **C1** (internal, ordinarily reversible change), **C2** (bounded external effect), **C3** (irreversible, sensitive, regulated or production-critical, requiring explicit distinct authority) to **C4** (prohibited for the requesting principal). The class is computed from the approved manifest and verified context, never from the agent's description; modifiers such as amount, recipient, environment and data sensitivity can raise it but never lower it ([platform plan](docs/platform-plan.md), section 18.1).
+
+Adoption follows the workload, not the platform. The five adoption stages are **experiment, assist, propose, act and federate**; the first two produce value without giving an agent any external action authority. Enforcement mode is a separate dial: **observe** records traffic, **advise** computes shadow decisions, **guard** enforces a selected boundary, **enforce** mediates the declared consequential paths and **assure** adds continuing evidence and operational checks. Every record identifies the mode that actually applied, and observe or advise never makes an unsafe path safe ([platform plan](docs/platform-plan.md), section 21). The [overview paper](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) (sections 11 to 13) walks through brownfield patterns and synthetic case studies that start in one narrow workflow and widen only on evidence.
 
 ## The repositories
 
@@ -107,7 +137,7 @@ munarium-platform/
 ├── docs/platform-plan.md  the founder's delivery plan, revision 4 (the planning baseline)
 ├── docs/images/           the plan's figures, each as SVG source and PNG render
 ├── docs/build-plan.md     component work packets and delivery gates
-├── docs/architecture/     boundaries, contract backlog and foundation requirements
+├── docs/architecture/     boundaries, contract backlog, foundation requirements, overview paper (PDF)
 ├── docs/decisions/        decision index and scaffold proposal
 ├── docs/research/         attributed research and source notes
 ├── contracts/             normative wire schemas and golden vectors
@@ -186,7 +216,7 @@ Nine repositories create coordination cost. The hub addresses it with a reusable
 
 The platform plan was drafted in a private Ioka repository. This hub was created on 28 September 2026 as a new public repository, not by renaming that one, so no private history is carried here. Reviewed planning material moves into the hub document by document, each with a publication review for assets, licenses, secrets, customer references and private planning material, and a migration record naming the document and its source revision. A failed publication review delays exposure of the affected history, not the availability of a clean public design.
 
-The first document moved is the plan itself: [docs/platform-plan.md](docs/platform-plan.md), revision 4 of 28 September 2026, whose note at the top records its source revision. Everything in this README is drawn from it. Where the plan and a repository disagree about what exists, the repository's README and evidence are authoritative.
+The first document moved is the plan itself: [docs/platform-plan.md](docs/platform-plan.md), revision 4 of 28 September 2026, whose note at the top records its source revision. Everything in this README is drawn from it, except the overview section, which summarizes the [overview paper](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) of 29 September 2026, a business-level introduction that cites the plan as its primary source. Where the plan and a repository disagree about what exists, the repository's README and evidence are authoritative.
 
 ## Acknowledgment
 
