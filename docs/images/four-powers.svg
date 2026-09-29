@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="352.8pt" viewBox="0 0 936 352.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:45.152534</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 352.8
+L 936 352.8
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 266.4
+L 232.56 266.4
+Q 241.2 266.4 241.2 257.76
+L 241.2 87.84
+Q 241.2 79.2 232.56 79.2
+L 37.44 79.2
+Q 28.8 79.2 28.8 87.84
+L 28.8 257.76
+Q 28.8 266.4 37.44 266.4
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.44 109.44
+L 232.56 109.44
+Q 241.2 109.44 241.2 100.8
+L 241.2 87.84
+Q 241.2 79.2 232.56 79.2
+L 37.44 79.2
+Q 28.8 79.2 28.8 87.84
+L 28.8 100.8
+Q 28.8 109.44 37.44 109.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 50.4 255.6
+L 219.6 255.6
+Q 228.24 255.6 228.24 246.96
+L 228.24 224.64
+Q 228.24 216 219.6 216
+L 50.4 216
+Q 41.76 216 41.76 224.64
+L 41.76 246.96
+Q 41.76 255.6 50.4 255.6
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #e8f1ec; stroke: #2f6b4f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 242.64 164.16
+L 253.008 172.8
+L 242.64 181.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 260.64 266.4
+L 455.76 266.4
+Q 464.4 266.4 464.4 257.76
+L 464.4 87.84
+Q 464.4 79.2 455.76 79.2
+L 260.64 79.2
+Q 252 79.2 252 87.84
+L 252 257.76
+Q 252 266.4 260.64 266.4
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 260.64 109.44
+L 455.76 109.44
+Q 464.4 109.44 464.4 100.8
+L 464.4 87.84
+Q 464.4 79.2 455.76 79.2
+L 260.64 79.2
+Q 252 79.2 252 87.84
+L 252 100.8
+Q 252 109.44 260.64 109.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 273.6 255.6
+L 442.8 255.6
+Q 451.44 255.6 451.44 246.96
+L 451.44 224.64
+Q 451.44 216 442.8 216
+L 273.6 216
+Q 264.96 216 264.96 224.64
+L 264.96 246.96
+Q 264.96 255.6 273.6 255.6
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #e8f1ec; stroke: #2f6b4f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 465.84 164.16
+L 476.208 172.8
+L 465.84 181.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 483.84 266.4
+L 678.96 266.4
+Q 687.6 266.4 687.6 257.76
+L 687.6 87.84
+Q 687.6 79.2 678.96 79.2
+L 483.84 79.2
+Q 475.2 79.2 475.2 87.84
+L 475.2 257.76
+Q 475.2 266.4 483.84 266.4
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 483.84 109.44
+L 678.96 109.44
+Q 687.6 109.44 687.6 100.8
+L 687.6 87.84
+Q 687.6 79.2 678.96 79.2
+L 483.84 79.2
+Q 475.2 79.2 475.2 87.84
+L 475.2 100.8
+Q 475.2 109.44 483.84 109.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 496.8 255.6
+L 666 255.6
+Q 674.64 255.6 674.64 246.96
+L 674.64 224.64
+Q 674.64 216 666 216
+L 496.8 216
+Q 488.16 216 488.16 224.64
+L 488.16 246.96
+Q 488.16 255.6 496.8 255.6
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f6f0e4; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 689.04 164.16
+L 699.408 172.8
+L 689.04 181.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 707.04 266.4
+L 902.16 266.4
+Q 910.8 266.4 910.8 257.76
+L 910.8 87.84
+Q 910.8 79.2 902.16 79.2
+L 707.04 79.2
+Q 698.4 79.2 698.4 87.84
+L 698.4 257.76
+Q 698.4 266.4 707.04 266.4
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 707.04 109.44
+L 902.16 109.44
+Q 910.8 109.44 910.8 100.8
+L 910.8 87.84
+Q 910.8 79.2 902.16 79.2
+L 707.04 79.2
+Q 698.4 79.2 698.4 87.84
+L 698.4 100.8
+Q 698.4 109.44 707.04 109.44
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 720 255.6
+L 889.2 255.6
+Q 897.84 255.6 897.84 246.96
+L 897.84 224.64
+Q 897.84 216 889.2 216
+L 720 216
+Q 711.36 216 711.36 224.64
+L 711.36 246.96
+Q 711.36 255.6 720 255.6
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f4e9e9; stroke: #8f3a3a; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 37.44 324
+L 898.56 324
+Q 907.2 324 907.2 315.36
+L 907.2 293.04
+Q 907.2 284.4 898.56 284.4
+L 37.44 284.4
+Q 28.8 284.4 28.8 293.04
+L 28.8 315.36
+Q 28.8 324 37.44 324
+z
+" clip-path="url(#pa2e5aaf160)" style="fill: #f6f0e4; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">FOUR POWERS, FOUR BOUNDARIES</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="135" y="97.965312" transform="rotate(-0 135 97.965312)">READ</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="41.76" y="128.752383" transform="rotate(-0 41.76 128.752383)">WHAT IT IS</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="41.76" y="143.918437" transform="rotate(-0 41.76 143.918437)">Retrieve permitted evidence</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="41.76" y="180.592383" transform="rotate(-0 41.76 180.592383)">WHERE IT IS MEDIATED</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="41.76" y="197.154219" transform="rotate(-0 41.76 197.154219)">Server · Matrix</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2f6b4f" x="135" y="232.840688" transform="rotate(-0 135 232.840688)">THE AGENT'S PART</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2f6b4f" x="135" y="248.073906" transform="rotate(-0 135 248.073906)">Scoped access</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="358.2" y="97.959844" transform="rotate(-0 358.2 97.959844)">GOVERNED WRITE</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="264.96" y="128.752383" transform="rotate(-0 264.96 128.752383)">WHAT IT IS</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="264.96" y="143.918437" transform="rotate(-0 264.96 143.918437)">Submit claims through checks</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="264.96" y="180.592383" transform="rotate(-0 264.96 180.592383)">WHERE IT IS MEDIATED</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="264.96" y="197.070352" transform="rotate(-0 264.96 197.070352)">Server</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2f6b4f" x="358.2" y="232.840688" transform="rotate(-0 358.2 232.840688)">THE AGENT'S PART</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2f6b4f" x="358.2" y="248.073906" transform="rotate(-0 358.2 248.073906)">Scoped proposal</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="581.4" y="97.959844" transform="rotate(-0 581.4 97.959844)">ACT</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="488.16" y="128.752383" transform="rotate(-0 488.16 128.752383)">WHAT IT IS</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(488.16 144.790312)">Create a bounded external</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(488.16 156.940312)">effect</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="488.16" y="180.592383" transform="rotate(-0 488.16 180.592383)">WHERE IT IS MEDIATED</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="488.16" y="197.154219" transform="rotate(-0 488.16 197.154219)">Gate · Warden</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #a8863b" x="581.4" y="232.840688" transform="rotate(-0 581.4 232.840688)">THE AGENT'S PART</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #a8863b" x="581.4" y="248.036797" transform="rotate(-0 581.4 248.036797)">Proposal only</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="804.6" y="97.959844" transform="rotate(-0 804.6 97.959844)">GOVERN</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="711.36" y="128.752383" transform="rotate(-0 711.36 128.752383)">WHAT IT IS</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a3a" x="711.36" y="143.918437" transform="rotate(-0 711.36 143.918437)">Activate the governing rules</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a8863b" x="711.36" y="180.592383" transform="rotate(-0 711.36 180.592383)">WHERE IT IS MEDIATED</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f3a5f" x="711.36" y="196.196797" transform="rotate(-0 711.36 196.196797)">Council · Registry</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8f3a3a" x="804.6" y="232.840688" transform="rotate(-0 804.6 232.840688)">THE AGENT'S PART</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8f3a3a" x="804.6" y="248.994219" transform="rotate(-0 804.6 248.994219)">No activation</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="306.784297" transform="rotate(-0 468 306.784297)">A proposal may be recorded without acquiring authority to activate itself. Proposing a governance change is not activating governance.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa2e5aaf160">
+   <rect x="0" y="0" width="936" height="352.8"/>
+  </clipPath>
+ </defs>
+</svg>

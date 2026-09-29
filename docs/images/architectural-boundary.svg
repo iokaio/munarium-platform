@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="331.2pt" viewBox="0 0 936 331.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:46.959403</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 331.2
+L 936 331.2
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 205.2
+L 264.96 205.2
+Q 273.6 205.2 273.6 196.56
+L 273.6 91.44
+Q 273.6 82.8 264.96 82.8
+L 37.44 82.8
+Q 28.8 82.8 28.8 91.44
+L 28.8 196.56
+Q 28.8 205.2 37.44 205.2
+z
+" clip-path="url(#p7692ad0f74)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 277.2 135.36
+L 287.568 144
+L 277.2 152.64
+z
+" clip-path="url(#p7692ad0f74)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 311.04 205.2
+L 624.96 205.2
+Q 633.6 205.2 633.6 196.56
+L 633.6 91.44
+Q 633.6 82.8 624.96 82.8
+L 311.04 82.8
+Q 302.4 82.8 302.4 91.44
+L 302.4 196.56
+Q 302.4 205.2 311.04 205.2
+z
+" clip-path="url(#p7692ad0f74)" style="fill: #f6f0e4; stroke: #a8863b; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 637.2 135.36
+L 647.568 144
+L 637.2 152.64
+z
+" clip-path="url(#p7692ad0f74)" style="fill: #5b6773"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 671.04 205.2
+L 898.56 205.2
+Q 907.2 205.2 907.2 196.56
+L 907.2 91.44
+Q 907.2 82.8 898.56 82.8
+L 671.04 82.8
+Q 662.4 82.8 662.4 91.44
+L 662.4 196.56
+Q 662.4 205.2 671.04 205.2
+z
+" clip-path="url(#p7692ad0f74)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 37.44 288
+L 898.56 288
+Q 907.2 288 907.2 279.36
+L 907.2 228.24
+Q 907.2 219.6 898.56 219.6
+L 37.44 219.6
+Q 28.8 219.6 28.8 228.24
+L 28.8 279.36
+Q 28.8 288 37.44 288
+z
+" clip-path="url(#p7692ad0f74)" style="fill: #f4e9e9; stroke: #8f3a3a; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">WHERE THE GUARANTEE ENDS</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b6773" x="468" y="58.628145" transform="rotate(-0 468 58.628145)">Within a qualified deployment, the specified consequential path is mediated; nothing is claimed beyond it</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="151.2" y="103.989844" transform="rotate(-0 151.2 103.989844)">AGENT PLANE</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 126.882969)">Untrusted reasoning and proposals.</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 138.357969)">Cannot acquire, through the mediated</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 149.832969)">path, authority the deployed</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(41.76 161.307969)">controls deny.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="103.33125" transform="rotate(-0 468 103.33125)">QUALIFIED MEDIATION BOUNDARY</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(315.36 126.882969)">Gate, Gateway, Server, Matrix, with Registry, Warden</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(315.36 138.357969)">and Council behind them. The control-boundary record</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(315.36 149.832969)">names the systems, identities, networks, tools and</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(315.36 161.307969)">administrative roles included in qualification.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="784.8" y="103.989844" transform="rotate(-0 784.8 103.989844)">TARGETS</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(675.36 126.882969)">The declared, connector-qualified</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(675.36 138.357969)">operations. Downstream effects and</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(675.36 149.832969)">destinations are part of the</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(675.36 160.458633)">consequence.</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8f3a3a" x="43.2" y="236.528164" transform="rotate(-0 43.2 236.528164)">OUTSIDE THE BOUNDARY, AND THEREFORE OUTSIDE THE CLAIM</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 254.037688)">A separate credential · an unmanaged host · an unprotected approval pipeline · a target-side rule outside the tested boundary. Discovery and tests</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 265.107687)">locate gaps; they do not prove every bypass eliminated. Assure exports the boundary with the evidence; silence about untested paths would make the</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 276.177687)">assurance misleading.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7692ad0f74">
+   <rect x="0" y="0" width="936" height="331.2"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="352.8pt" viewBox="0 0 936 352.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T21:38:47.572047</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 352.8
+L 936 352.8
+L 936 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 28.8 75.6
+L 141.12 75.6
+L 156.96 109.8
+L 141.12 144
+L 28.8 144
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 154.08 75.6
+L 266.4 75.6
+L 282.24 109.8
+L 266.4 144
+L 154.08 144
+L 169.92 109.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 279.36 75.6
+L 391.68 75.6
+L 407.52 109.8
+L 391.68 144
+L 279.36 144
+L 295.2 109.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 404.64 75.6
+L 516.96 75.6
+L 532.8 109.8
+L 516.96 144
+L 404.64 144
+L 420.48 109.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #a8863b; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 529.92 75.6
+L 642.24 75.6
+L 658.08 109.8
+L 642.24 144
+L 529.92 144
+L 545.76 109.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 655.2 75.6
+L 767.52 75.6
+L 783.36 109.8
+L 767.52 144
+L 655.2 144
+L 671.04 109.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 780.48 75.6
+L 892.8 75.6
+L 908.64 109.8
+L 892.8 144
+L 780.48 144
+L 796.32 109.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #1f3a5f; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 37.44 316.8
+L 448.56 316.8
+Q 457.2 316.8 457.2 308.16
+L 457.2 213.84
+Q 457.2 205.2 448.56 205.2
+L 37.44 205.2
+Q 28.8 205.2 28.8 213.84
+L 28.8 308.16
+Q 28.8 316.8 37.44 316.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #f4e9e9; stroke: #8f3a3a; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 487.44 316.8
+L 898.56 316.8
+Q 907.2 316.8 907.2 308.16
+L 907.2 213.84
+Q 907.2 205.2 898.56 205.2
+L 487.44 205.2
+Q 478.8 205.2 478.8 213.84
+L 478.8 308.16
+Q 478.8 316.8 487.44 316.8
+z
+" clip-path="url(#p3c68ed7a6e)" style="fill: #f2f4f8; stroke: #1f3a5f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="468" y="34.136484" transform="rotate(-0 468 34.136484)">GOVERNANCE CHANGE · PROPOSE, PACKAGE, SHADOW, RATIFY, TIME-LOCK, ACTIVATE, OBSERVE</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="92.88" y="103.887539" transform="rotate(-0 92.88 103.887539)">Propose</text>
+   </g>
+   <g id="text_3">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="92.88" y="123.398438" transform="rotate(-0 92.88 123.398438)">agent or human</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(64.007203 160.812937)">candidate with</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(75.543281 171.342937)">rationale</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="223.92" y="103.887949" transform="rotate(-0 223.92 103.887949)">Package</text>
+   </g>
+   <g id="text_6">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="223.92" y="123.398438" transform="rotate(-0 223.92 123.398438)">Registry</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(196.195688 160.812937)">diff · tests ·</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.604063 170.587312)">signed bundle</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="349.2" y="103.887949" transform="rotate(-0 349.2 103.887949)">Shadow</text>
+   </g>
+   <g id="text_9">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="349.2" y="123.398438" transform="rotate(-0 349.2 123.398438)">Council</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(309.51 160.057312)">replay a declared</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(308.354016 170.587312)">set; impact report</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="474.48" y="103.887949" transform="rotate(-0 474.48 103.887949)">Ratify</text>
+   </g>
+   <g id="text_12">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="474.48" y="123.398438" transform="rotate(-0 474.48 123.398438)">distinct authority</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(429.758391 159.277922)">approver · quorum ·</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(454.182141 170.587312)">binding</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="599.76" y="103.887949" transform="rotate(-0 599.76 103.887949)">Time-lock</text>
+   </g>
+   <g id="text_15">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="599.76" y="123.398438" transform="rotate(-0 599.76 123.398438)">Council</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(553.889719 160.415016)">review window; veto</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(578.031938 170.587312)">possible</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="725.04" y="103.887949" transform="rotate(-0 725.04 103.887949)">Activate</text>
+   </g>
+   <g id="text_18">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="725.04" y="123.398438" transform="rotate(-0 725.04 123.398438)">Registry + Server</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(684.741844 160.057312)">compare-and-set;</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(692.666766 170.587312)">digest pinned</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="850.32" y="103.887949" transform="rotate(-0 850.32 103.887949)">Observe</text>
+   </g>
+   <g id="text_21">
+    <text style="font-style: italic; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="850.32" y="123.398438" transform="rotate(-0 850.32 123.398438)">Sentinel</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(813.486141 160.415016)">drift vs shadow;</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(815.412984 171.342937)">rollback = new</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(825.244641 181.872937)">activation</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8f3a3a" x="243" y="223.593906" transform="rotate(-0 243 223.593906)">Separation of duties is structural</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 241.797687)">A principal cannot ratify a proposal that policy identifies as its own, and an</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 252.867687)">agent-derived identity cannot become the ratifier by delegating through</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 263.937687)">another service. A deterministic pipeline may approve only permitted change</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(43.2 275.802062)">classes.</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f3a5f" x="693" y="223.556797" transform="rotate(-0 693 223.556797)">Nothing is edited in place</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(493.2 241.797687)">The active bundle is never modified; rollback activates a known prior digest</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(493.2 252.867687)">within a bounded, pre-authorized scope. Cancellation, expiry, veto and failed</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(493.2 263.937687)">activation are first-class outcomes. A policy that weakens enforcement is</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(493.2 275.007687)">itself a governance change.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3c68ed7a6e">
+   <rect x="0" y="0" width="936" height="352.8"/>
+  </clipPath>
+ </defs>
+</svg>
