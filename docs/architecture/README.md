@@ -8,6 +8,7 @@ All unimplemented behavior remains proposed.
 | [System boundaries](system-boundaries.md) | Planes, authority flow, state ownership and degraded operation |
 | [Contract backlog](contract-backlog.md) | Shared definitions that must be decided before components implement them |
 | [Foundation requirements](foundation-requirements.md) | Server S1–S9, Matrix boundaries and qualification inputs |
+| [Overview paper (PDF)](Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) | *An Open Source Applied AI Journey*, 29 September 2026: the forward-looking, business-level introduction to why and how the platform is built; its case studies are synthetic |
 
 See the [build plan](../build-plan.md) for order and the
 [decision index](../decisions/README.md) for proposals under review.
