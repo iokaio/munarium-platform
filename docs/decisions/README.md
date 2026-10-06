@@ -12,6 +12,8 @@ implementation waits for the applicable accepted decision and versioned contract
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus, actual bounded runs and unqualified adapter work. It does not select an engine.
+[HUB-02 evaluator adapter oracle](evaluator-adapter-oracle.md) adds executable typed
+obligation/refusal fixtures and native mixed allow/error checks; it is not a runtime adapter.
 
 Follow [CONTRIBUTING](../../CONTRIBUTING.md) and [GOVERNANCE](../../GOVERNANCE.md).
 Future records name alternatives, evidence, owners, affected consumers, version policy and
