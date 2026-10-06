@@ -101,5 +101,7 @@ HTTP and storage implementations. Existing capability tokens are not reinterpret
 platform assertions. Expand with explicit version/profile negotiation, migrate deployments
 and consumers using pinned vectors, then remove legacy behavior only at a declared boundary.
 
-Acceptance must name the reviewed commit, date, key/lifetime/skew policy, signed-vector
-digest, compatibility policy and accountable maintainer. None is supplied by this PR.
+The [candidate schemas and signed vectors](candidates/README.md) now specify exact
+algorithm, lifetime/skew, key/issuer and attenuation test inputs, with a candidate digest.
+They do not establish deployment authority or S1/S3 persistence. Acceptance still requires
+an explicit maintainer disposition of the reviewed revision and compatibility policy.

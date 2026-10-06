@@ -24,3 +24,6 @@ date; a merged preparation PR or compiled scaffold does not retrospectively acce
 proposed choices. Its status remains proposed pending that disposition. ADR-0002 likewise is a
 candidate for review, not authorization to implement or activate a runtime contract. The
 decision register distinguishes open questions from proposals with a concrete candidate.
+
+[Foundation candidate schemas and signed vectors](candidates/README.md) supply
+executable review inputs for ADR 0003/0004; they are not accepted or published contracts.
