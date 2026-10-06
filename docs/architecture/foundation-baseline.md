@@ -70,6 +70,9 @@ source's development assumptions.
 
 ## Qualification still required
 
+[FOUNDATION-01](foundation-01.md) records the subsequent local runs and remaining gaps.
+It preserves failed and unrun checks and does not qualify a platform composition.
+
 FOUNDATION-01 must retain commands, toolchain, fixture versions, supported test profiles,
 exit status and output references for both foundations. For each S1–S9 requirement, classify
 the result as observed-and-tested, partial, absent, failed or not-run, with source and test links.

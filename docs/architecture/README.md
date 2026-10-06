@@ -8,6 +8,7 @@ All unimplemented behavior remains proposed.
 | [System boundaries](system-boundaries.md) | Planes, authority flow, state ownership and degraded operation |
 | [Contract backlog](contract-backlog.md) | Shared definitions that must be decided before components implement them |
 | [Foundation requirements](foundation-requirements.md) | Server S1–S9, Matrix boundaries and qualification inputs |
+| [FOUNDATION-01 observations](foundation-01.md) | Pinned source/test outcomes, S1-S9 map, failures and unavailable coverage; incomplete qualification |
 | [Foundation baseline](foundation-baseline.md) | Dated public source observations, read-only workspace preflight, historical crosswalk and qualification gaps |
 | [Action lifecycle](action-lifecycle.md) | Proposed operation states, API outcomes, identity, retry/cancellation rules and enforcement-mode binding |
 | [Local reference profile](reference-profile.md) | Proposed topology, identities, storage/network boundaries, timing limits and installation/recovery obligations |
