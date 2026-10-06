@@ -15,6 +15,13 @@ confirms all twelve required public checkouts, including standalone Matrix. It r
 inspection, not runtime qualification. The proposals below require maintainer review and
 accepted contracts before runtime implementation; this contribution changes neither foundation.
 
+**Development focus — 6 October 2026.** Ioka has suspended VCP development: the experiment was
+worthwhile, but continued development has become too expensive and is unlikely to deliver the
+desired impact or independently provide a usable way to advance Munarium Governance Platform.
+Ioka is concentrating more intensely on building the platform. The work packets below use a
+bounded coding-agent workflow and do not depend on further VCP development or on VCP as a primary
+development environment. See the [status update](../README.md#how-the-platform-is-built).
+
 ## Start here
 
 1. Run the read-only [workspace preflight](architecture/foundation-baseline.md#workspace-preflight),

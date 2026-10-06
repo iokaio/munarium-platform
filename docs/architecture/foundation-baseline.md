@@ -45,7 +45,10 @@ repositories fail the preflight. Optional repositories do not become runtime dep
 Clean/process filters and submodule inspection are disabled during status collection to prevent
 side effects; counts can conservatively include filtered files and exclude submodule contents.
 Presence does not establish freshness, builds, compatibility, release provenance or qualification.
-VCP is optional development tooling and is not a preflight requirement.
+VCP development is suspended as of 6 October 2026. The worthwhile experiment became too expensive
+to continue and is unlikely to deliver the desired impact or independently advance the platform;
+Ioka is focusing more intensely on Munarium Governance Platform. VCP is not a preflight or delivery
+requirement; see the [development focus update](../../README.md#how-the-platform-is-built).
 
 ## Historical-plan crosswalk
 
@@ -57,10 +60,13 @@ VCP is optional development tooling and is not a preflight requirement.
 | Month windows and 1,320 founder hours | Capacity assumptions; the current [work packets](../build-plan.md#work-packets-and-capacity) supply near-term estimation and rebaseline rules. |
 | INV-19 first gate is Stage 4 in historical Appendix C | The current delivery plan requires minimum restore safety at Stage 2 before dispatch, and broader recovery exercises at Stage 4. No evidence state advances. |
 | Overview paper describes eleven services | Eleven components: Harness is an SDK and Console a human interface; component count is not a process or host count. |
+| Revision 4 and the overview paper describe VCP as the primary development environment | Superseded by the 6 October suspension update: VCP development is too expensive relative to its likely impact; Ioka's effort is concentrated on the platform and its delivery does not depend on further VCP development. |
 
 The original plan remains an attributed historical baseline. Current proposals live in the
 [decision register](contract-backlog.md) and [build guide](../build-plan.md). This crosswalk
-does not rewrite the historical source or claim that the phase-2 proposals have been accepted.
+does not claim that the phase-2 proposals have been accepted. The plan and overview paper carry
+explicit 6 October updates to distinguish the suspended tooling experiment from the historical
+source's development assumptions.
 
 ## Qualification still required
 

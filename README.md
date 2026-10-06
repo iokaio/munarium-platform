@@ -6,7 +6,7 @@
 
 ## Read the overview paper
 
-[*Munarium Governance Platform: An Open Source Applied AI Journey*](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) (PDF, 38 pages, as of 29 September 2026) is the business-level introduction to the platform, published by Ioka LLC in its Applied AI Governance Series. It explains why a governed applied AI platform is being built in the open, how it is designed to work, and how the founder is building it with bounded coding agents in VCP. Its message in one line: **let agents propose; keep authority, evidence and rules somewhere else.**
+[*Munarium Governance Platform: An Open Source Applied AI Journey*](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) (PDF, 38 pages, originally published 29 September 2026) is the business-level introduction to the platform, published by Ioka LLC in its Applied AI Governance Series. It explains why a governed applied AI platform is being built in the open, how it is designed to work, and the founder's bounded coding-agent workflow. Its historical VCP development approach is superseded by the [6 October 2026 suspension update](#how-the-platform-is-built), also noted in the PDF. Its message in one line: **let agents propose; keep authority, evidence and rules somewhere else.**
 
 The paper is **forward-looking**. It describes intended architecture and planned work; its case studies are synthetic composites with illustrative baselines and targets; and nothing in it is a certification, a compliance determination or a support commitment. Where it differs from a repository, the repository's README and evidence are authoritative, and this README's catalogs remain the status of record.
 
@@ -14,7 +14,7 @@ The paper is **forward-looking**. It describes intended architecture and planned
 |---|---|
 | 1–3 | Why: the five governance gaps agency opens, why governed memory was necessary but not sufficient, and the journey from governed memory to governed action |
 | 4–8 | How it works: the four powers and the principles in business terms, the planes and services, the nine-step governed action, consequence classes, degraded operation, governing change itself, evidence and framework alignment |
-| 9–10 | How it is built: the hub, contracts before code, invariants as the acceptance language, the founder-led roadmap, an illustrative cost envelope, and the VCP development method with its guardrails |
+| 9–10 | How it is built: the hub, contracts before code, invariants as the acceptance language, the founder-led roadmap, an illustrative cost envelope, and coding-agent guardrails; the historical VCP approach now carries a suspension notice |
 | 11–13 | How to start: adoption stages and enforcement modes, brownfield patterns, three synthetic case studies (a software release path, vendor maintenance before payment, patient scheduling and messaging), twelve actions to take now and a ninety-day starter plan |
 | 14–15, appendices | Ways to participate, the invariant catalog as a checklist, a working glossary and sources |
 
@@ -85,7 +85,7 @@ Every public repository the plan names.
 | [iokaio/munarium-clients-publish](https://github.com/iokaio/munarium-clients-publish) | tooling | The one place Munarium client packages are built for release and published from |
 | [iokaio/munarium-demo](https://github.com/iokaio/munarium-demo) | examples | Munarium Demo: working applications and bundled datasets for evaluating the foundation |
 
-The development tool VCP ([iokaio/vcp](https://github.com/iokaio/vcp)) is separate: not one of the nine components and not a runtime dependency for adopters. Ioka's private repositories hold planning material awaiting publication review and the proprietary Matrix analytics adapters; nothing from them is copied into a public repository without that review.
+Development of VCP ([iokaio/vcp](https://github.com/iokaio/vcp)) is **suspended** as of 6 October 2026; the [status update](#how-the-platform-is-built) explains the cost and impact assessment behind Ioka's stronger focus on the platform. It remains a separate project, outside the nine components and their runtime dependencies. Ioka's private repositories hold planning material awaiting publication review and the proprietary Matrix analytics adapters; nothing from them is copied into a public repository without that review.
 
 ## Component catalog
 
@@ -208,7 +208,9 @@ The twelve-month target is a coherent single-cell reference platform: public cod
 
 ## How the platform is built
 
-The platform will be built primarily by the founder using [Vibe Code Pro (VCP)](https://github.com/iokaio/vcp) as the main development environment, with assistance from coding agents and multiple models. The founder retains responsibility for architecture, verification and release decisions. The development method mirrors the product: agents propose and implement within a bounded work packet; a protected release path, held by a human, admits the exact approved revision; no coding agent may publish a release or rewrite its active control baseline. [GOVERNANCE.md](GOVERNANCE.md) describes the roles, the decision process, the work-in-progress limits and the limits of a single maintainer.
+**Development focus update — 6 October 2026.** Ioka has suspended development of [Vibe Code Pro (VCP)](https://github.com/iokaio/vcp). The experiment was worthwhile, but continued development has become too expensive and is unlikely to deliver the desired impact or, on its own, provide a usable way to move Munarium Governance Platform forward. Ioka is concentrating its effort more intensely on building Munarium Governance Platform. Platform delivery no longer assumes VCP as its primary development environment or depends on further VCP development.
+
+The platform will be built primarily by the founder with assistance from coding agents and multiple models. The founder retains responsibility for architecture, verification and release decisions. Agents propose and implement within a bounded work packet; a protected release path, held by a human, admits the exact approved revision; no coding agent may publish a release or rewrite its active control baseline. [GOVERNANCE.md](GOVERNANCE.md) describes the roles, the decision process, the work-in-progress limits and the limits of a single maintainer.
 
 Nine repositories create coordination cost. The hub addresses it with a reusable repository template (the governance files every component carries), a shared CI convention, machine-checked contract compatibility, and an integration job that consumes a proposed composition change. A cross-repository feature has one hub issue linking its component issues, required order, test fixtures and acceptance evidence. Breaking interface changes use **expand, migrate, remove**: a producer adds a compatible capability, consumers adopt it, the composition records the transition, and only then is the obsolete contract removed under the declared version policy.
 
@@ -216,7 +218,7 @@ Nine repositories create coordination cost. The hub addresses it with a reusable
 
 The platform plan was drafted in a private Ioka repository. This hub was created on 28 September 2026 as a new public repository, not by renaming that one, so no private history is carried here. Reviewed planning material moves into the hub document by document, each with a publication review for assets, licenses, secrets, customer references and private planning material, and a migration record naming the document and its source revision. A failed publication review delays exposure of the affected history, not the availability of a clean public design.
 
-The first document moved is the plan itself: [docs/platform-plan.md](docs/platform-plan.md), revision 4 of 28 September 2026, whose note at the top records its source revision. Everything in this README is drawn from it, except the overview section, which summarizes the [overview paper](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) of 29 September 2026, a business-level introduction that cites the plan as its primary source. Where the plan and a repository disagree about what exists, the repository's README and evidence are authoritative.
+The first document moved is the plan itself: [docs/platform-plan.md](docs/platform-plan.md), revision 4 of 28 September 2026, whose note at the top records its source revision and subsequent amendments. This README draws on that plan, the [overview paper](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) of 29 September 2026, the phase-2 source inspection and the founder's 6 October development focus update. The dated VCP suspension amendment supersedes the earlier tooling assumptions. Where the plan and a repository disagree about what exists, the repository's README and evidence are authoritative.
 
 ## Acknowledgment
 

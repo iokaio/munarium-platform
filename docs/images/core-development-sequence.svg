@@ -252,9 +252,11 @@ z
     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="246.24" y="101.559844" transform="rotate(-0 246.24 101.559844)">2 · DELEGATE</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.08 133.132453)">VCP, Claude Code, Codex</text>
-    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.08 144.348062)">or another agent works</text>
-    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.08 156.791188)">in a bounded checkout.</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.08 133.132453)">Claude Code, Codex or</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.08 144.348062)">another agent works in</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(190.08 156.791188)">a bounded checkout.</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #5b6773" transform="translate(190.08 183.6)">VCP development is</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #5b6773" transform="translate(190.08 195.21)">suspended.</text>
    </g>
    <g id="text_7">
     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="394.56" y="101.559844" transform="rotate(-0 394.56 101.559844)">3 · VERIFY</text>
