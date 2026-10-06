@@ -43,6 +43,11 @@ jobs:
       - name: documentation links and indexes
         run: python3 scripts/docs_linkcheck.py
 
+      # Local gate behavior is tested with synthetic files and temporary repositories.
+      # No foundation checkout, release authority or network service is needed.
+      - name: gate regression tests
+        run: python3 -m unittest discover -s scripts -p "test_*.py"
+
       # Apache-2.0 headers, licence texts and notice files, across the whole
       # tree.
       - name: licence and notice check

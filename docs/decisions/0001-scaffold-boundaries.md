@@ -6,6 +6,12 @@
 
 **Scope:** The nine new component repositories and the documentation-only platform hub.
 
+**Phase-2 disposition:** Scaffolds are observable, but this record remains proposed until the
+maintainer records an explicit acceptance, revision or supersession. Implementation preparation
+does not establish runtime design approval. The [decision register](../architecture/contract-backlog.md)
+tracks the shared semantics; [ADR-0002](0002-action-execution-protocol.md) proposes execution
+ownership separately. No component interface needs a new wire type for this planning update.
+
 ## Context
 
 The [platform plan](../platform-plan.md), sections 3, 7–15 and Appendix B, calls for

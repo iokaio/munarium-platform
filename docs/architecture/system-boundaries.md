@@ -10,7 +10,7 @@ The hub contains architecture and design documents; it has no Rust crate or runt
 | Plane | Owner | Owns | Must not become |
 |---|---|---|---|
 | Agent | Harness | Proposal construction, client diagnostics, operation lookup | A security boundary or holder of target credentials |
-| Mediation | Gate | Deterministic evaluation, claim journal, isolated connectors | A governance ratifier or exactly-once external-effect promise |
+| Mediation | Gate | Deterministic evaluation, claim journal, grant consumption, cumulative action reservations, isolated connectors | A governance ratifier or exactly-once external-effect promise |
 | Mediation | Gateway | Model route controls and shared-budget admission/settlement | A second accounting implementation diverging from Server |
 | Mediation | Server | Authoritative accountability records and governed memory | A way for ordinary writers to activate governance |
 | Mediation | Matrix | Governed read-only structured evidence | A target-write path or an automatic low-consequence classification |
@@ -31,8 +31,9 @@ hardware isolation. Unmediated credentials and routes stay outside the claimed b
 sequenceDiagram
     participant H as Harness / untrusted agent
     participant G as Gate
+    participant J as Gate operational journal
     participant R as Registry
-    participant S as Server / durable journal
+    participant S as Server accountability ledger
     participant C as Council
     participant W as Warden
     participant X as Isolated connector
@@ -46,23 +47,35 @@ sequenceDiagram
         G->>C: Exact request and decision context
         C-->>G: Bound approval or refusal
     end
-    Note over G: Recheck obligations, validity and target preconditions
-    G->>S: Persist matching execution claim
+    G->>J: Persist immutable claim and issuance binding
     G->>W: Request claim-bound grant
-    W-->>G: Scoped, time-bounded grant
-    Note over G,W: Shared atomic consumption and fencing protocol required
-    G->>X: Authorized dispatch under current ownership
-    X->>T: Narrow target operation
+    W->>G: Authenticate and inspect durable claim binding
+    G-->>W: Matching immutable claim or refusal
+    W-->>G: Persisted issuance, same grant on identical retry
+    G->>J: Atomically consume grant, acquire claim, reserve action capacity
+    G->>S: Append matching predispatch event from outbox
+    S-->>G: Durable event ID and digest acknowledgement
+    G->>W: Online validation for exact grant, claim, fence and epoch
+    W-->>G: Short validation ticket
+    W-->>X: Credential admission only to isolated connector
+    G->>X: Prepare one bound live invocation
+    X->>G: Request final admission for this invocation
+    G->>J: Final checks and conditional dispatching transition
+    G-->>X: Winning live invocation may send once
+    X->>T: Narrow operation with effect key and supported fence
     T-->>X: Receipt or ambiguous response
-    X->>S: Preserve outcome or unresolved state
+    X->>G: Preserve receipt or uncertainty
+    G->>J: Outcome plus durable Server outbox event
+    G->>S: Deliver outcome by immutable event ID
     G-->>H: Recorded typed outcome / operation reference
 ```
 
-This is a design sequence, not an implemented integration or a distributed transaction
-specification. The claim/grant protocol must settle crash points and durable acknowledgements
-before dispatch is enabled. Recording occurs at each required transition, not just at the end.
-When an outcome is ambiguous, lookup and investigation preserve uncertainty; compensation is
-a separately authorized action.
+This sequence follows proposed [ADR-0002](../decisions/0002-action-execution-protocol.md), not an
+implemented integration. Gate owns the one local consumption/acquisition/reservation transaction;
+there is no atomic transaction spanning Warden, Server and a target. Required predispatch Server
+acknowledgement precedes the final journal admission to send. Recording occurs at each required
+transition, not just at the end. [Action lifecycle](action-lifecycle.md) separates denied,
+unsent, sent-but-no-effect, unresolved and recording-pending results. Compensation is a new action.
 
 Decision-only Stage 1 stops before grant issuance and dispatch. An allow decision has no target
 authority. REST is the first proposed Action API transport; MCP is an adapter with identical
@@ -77,6 +90,8 @@ semantics, and additional transports wait for conformance evidence.
 - A grant binds a durable claim, request, audience, scope and validity window; a signature alone
   does not supply atomic single-use behavior.
 - Durable records preserve unresolved work and grant consumption through restart and restore.
+- Action reservations survive ambiguity and window rollover; Gateway model budgets are separate.
+- Actual enforcement mode and activation/recovery epochs bind authority and every event.
 - Projections carry source IDs and coverage; missing intervals never imply a successful interval.
 
 The [contract backlog](contract-backlog.md) names the decisions and consumers for each definition.
@@ -85,9 +100,12 @@ No executable schema, placeholder contract version or activated artifact is intr
 ## State and trust
 
 The Server accountability record links proposal, decision, authority, claim, dispatch and outcome.
-Gate's execution journal and Warden's grant state must use a reviewed storage protocol with
-explicit recovery and Server linkage. They are necessary operational state, not a separate
-history that can contradict the ledger silently.
+Gate's journal is authoritative for operational claims, worker ownership, consumption and action
+capacity; Warden owns issuance and revocation. Transactional outboxes link those states to Server
+with idempotent durable acknowledgements. Ledger lag is exposed, and an unavailable required
+predispatch acknowledgement stops a send. A worker lease expiry never establishes no effect.
+Restore starts quarantined until old workers are fenced, records reconciled and a new protected
+recovery epoch installed. ADR-0002's protocol remains proposed and needs real persistence tests.
 
 Registry owns effective pointers, Council workflow, and Gateway accounting through the extracted
 Server lineage. Sentinel and Console views are rebuildable. Assure exports pins, references,
@@ -102,7 +120,7 @@ human reviewers. A release requiring distinct human review waits for that eviden
 | Failure | Required behavior from plan section 22 |
 |---|---|
 | Council unavailable | No new approval/activation; existing authorized work still needs valid obligations and dependencies |
-| Warden unavailable | No new grants; unconsumed grants follow qualified validation/revocation rules |
+| Warden unavailable | No new grants or validation tickets; final dispatch needs valid online validation within the reference profile's measured bound |
 | Server or mandatory journal unavailable | No new consequential dispatch requiring those records; preserve and recover in-flight uncertainty |
 | Registry unavailable | Cached artifacts only within explicit freshness/revocation bounds; otherwise refuse |
 | Sentinel unavailable | Hard authorization and budget checks remain; current-monitoring obligations stop affected actions |
@@ -110,6 +128,9 @@ human reviewers. A release requiring distinct human review waits for that eviden
 | Uncertain clock or key validity | Time-sensitive authority fails closed |
 | Target schema/API drift | Restrict or quarantine the affected connector until conformance returns |
 
-The first reference profile is one qualified cell with separate identities, authenticated channels,
+The first reference profile proposes one cell to qualify with separate identities, authenticated channels,
 durable storage, controlled egress and tested recovery. Local disposable fixtures establish only
-their own boundary; cloud, offline and federated profiles need separate evidence.
+their own boundary; cloud, offline and federated profiles need separate evidence. The proposed
+[reference profile](reference-profile.md) makes the local topology and timing assumptions concrete;
+the [reference scenario](reference-scenario.md) defines the acceptance observations. Harness is an
+SDK, so eleven architectural components do not imply eleven independently deployed services.

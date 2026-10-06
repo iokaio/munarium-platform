@@ -6,7 +6,7 @@
 
 ## Read the overview paper
 
-[*Munarium Governance Platform: An Open Source Applied AI Journey*](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) (PDF, 38 pages, as of 29 September 2026) is the business-level introduction to the platform, published by Ioka LLC in its Applied AI Governance Series. It explains why a governed applied AI platform is being built in the open, how it is designed to work, and how the founder is building it with bounded coding agents in VCP. Its message in one line: **let agents propose; keep authority, evidence and rules somewhere else.**
+[*Munarium Governance Platform: An Open Source Applied AI Journey*](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) (PDF, 38 pages, originally published 29 September 2026) is the business-level introduction to the platform, published by Ioka LLC in its Applied AI Governance Series. It explains why a governed applied AI platform is being built in the open, how it is designed to work, and the founder's bounded coding-agent workflow. Its historical VCP development approach is superseded by the [6 October 2026 suspension update](#how-the-platform-is-built), also noted in the PDF. Its message in one line: **let agents propose; keep authority, evidence and rules somewhere else.**
 
 The paper is **forward-looking**. It describes intended architecture and planned work; its case studies are synthetic composites with illustrative baselines and targets; and nothing in it is a certification, a compliance determination or a support commitment. Where it differs from a repository, the repository's README and evidence are authoritative, and this README's catalogs remain the status of record.
 
@@ -14,7 +14,7 @@ The paper is **forward-looking**. It describes intended architecture and planned
 |---|---|
 | 1–3 | Why: the five governance gaps agency opens, why governed memory was necessary but not sufficient, and the journey from governed memory to governed action |
 | 4–8 | How it works: the four powers and the principles in business terms, the planes and services, the nine-step governed action, consequence classes, degraded operation, governing change itself, evidence and framework alignment |
-| 9–10 | How it is built: the hub, contracts before code, invariants as the acceptance language, the founder-led roadmap, an illustrative cost envelope, and the VCP development method with its guardrails |
+| 9–10 | How it is built: the hub, contracts before code, invariants as the acceptance language, the founder-led roadmap, an illustrative cost envelope, and coding-agent guardrails; the historical VCP approach now carries a suspension notice |
 | 11–13 | How to start: adoption stages and enforcement modes, brownfield patterns, three synthetic case studies (a software release path, vendor maintenance before payment, patient scheduling and messaging), twelve actions to take now and a ninety-day starter plan |
 | 14–15, appendices | Ways to participate, the invariant catalog as a checklist, a working glossary and sources |
 
@@ -56,7 +56,7 @@ Four planes compose the platform. They are responsibility and trust boundaries, 
 | Authority | [Registry](https://github.com/iokaio/munarium-registry), [Warden](https://github.com/iokaio/munarium-warden), [Council](https://github.com/iokaio/munarium-council) | Approved inventory, scoped grants, independently authorized activation |
 | Assurance | [Sentinel](https://github.com/iokaio/munarium-sentinel), [Assure](https://github.com/iokaio/munarium-assure), [Console](https://github.com/iokaio/munarium-console) | Ledger-derived views, evidence exports, governed operator requests |
 
-One shared accountability record runs through them: proposal, decision, authority, claim, dispatch, receipt. Operational caches and indexes are rebuildable projections of it, never competing histories.
+One shared accountability record runs through them: proposal, decision, authority, claim, dispatch, receipt. Read projections are rebuildable. Gate and Warden also require durable operational claim, consumption and revocation state; the proposed [execution protocol](docs/decisions/0002-action-execution-protocol.md) specifies how it links to Server without pretending independent stores share one transaction.
 
 ## Consequence and adoption
 
@@ -85,7 +85,7 @@ Every public repository the plan names.
 | [iokaio/munarium-clients-publish](https://github.com/iokaio/munarium-clients-publish) | tooling | The one place Munarium client packages are built for release and published from |
 | [iokaio/munarium-demo](https://github.com/iokaio/munarium-demo) | examples | Munarium Demo: working applications and bundled datasets for evaluating the foundation |
 
-The development tool VCP ([iokaio/vcp](https://github.com/iokaio/vcp)) is separate: not one of the nine components and not a runtime dependency for adopters. Ioka's private repositories hold planning material awaiting publication review and the proprietary Matrix analytics adapters; nothing from them is copied into a public repository without that review.
+Development of VCP ([iokaio/vcp](https://github.com/iokaio/vcp)) is **suspended** as of 6 October 2026; the [status update](#how-the-platform-is-built) explains the cost and impact assessment behind Ioka's stronger focus on the platform. It remains a separate project, outside the nine components and their runtime dependencies. Ioka's private repositories hold planning material awaiting publication review and the proprietary Matrix analytics adapters; nothing from them is copied into a public repository without that review.
 
 ## Component catalog
 
@@ -174,7 +174,7 @@ Each invariant names a claim, its trust assumptions, its owner, the tests that e
 | INV-16 | Console cannot perform a privileged operation unavailable through governed APIs | Console, Council, Warden; stage 3 |
 | INV-17 | Missing evidence or telemetry is reported as a gap, not a successful interval | Sentinel and Assure; stages 3–4 |
 | INV-18 | Evidence-package verification detects changed or missing required artifacts | Assure and Server; stage 4 |
-| INV-19 | Restore cannot silently reactivate a consumed grant or erase an unresolved claim | Gate, Warden, Server; stage 4 |
+| INV-19 | Restore cannot silently reactivate a consumed grant or erase an unresolved claim | Gate, Warden, Server; minimum safety at stage 2, full recovery exercises at stage 4 |
 | INV-20 | A local overlay cannot waive a mandatory parent prohibition | Council, Registry, Gate; stage 5 |
 | INV-21 | Untrusted pull-request code cannot acquire release secrets or replace active approval controls | Hub and repository CI; stage 0 onward |
 | INV-22 | A release advertises only the profiles and capabilities supported by its evidence | Component maintainers and hub; every stage |
@@ -197,7 +197,7 @@ The roadmap begins when the founder starts the program. Public repositories exis
 
 | Stage | Window | Scope | Exit evidence |
 |---|---|---|---|
-| 0 | month 1 | Populate the hub and the nine repositories; foundation qualification record; Server S1 with a non-agent bootstrap attestation; the Matrix move and 1.2.0 release in the maintenance lane | Public planning artifacts, verified repository ownership, a secret and rights review, reproducible foundation tests, a demonstrated refusal of an unauthorized governance transition |
+| 0 | month 1 | Populate the hub and the nine repositories; foundation qualification record; Server S1 with a non-agent bootstrap attestation; confirm current Matrix layout/release evidence rather than repeat the historical move | Public planning artifacts, verified repository ownership, a secret and rights review, reproducible foundation tests, a demonstrated refusal of an unauthorized governance transition |
 | 1 | months 2–3 | Contracts and decision-only capability: Registry's catalog, Gate's evaluator, action-record shapes, verified principal context, a minimal Harness client; Warden and Council interfaces and bounded prototypes | Deterministic replay of allowed and refused proposals, unknown-manifest rejection, tenant isolation fixtures, contract compatibility, no hidden target credential in the agent environment |
 | 2 | months 4–6 | The first complete governed action: Gate's durable journal, Warden's first identity and broker path, Council's minimum approval and activation; one narrow connector, one reference identity system, one deployment profile | Recorded proposal-to-outcome chain, bypass tests within the stated boundary, atomic grant consumption, crash recovery, stale-state rejection, a usable operator runbook |
 | 3 | months 7–9 | Daily operational use: Gateway extraction, Sentinel timeline and suspension, Console read-only views then governed interactions; a small number of external evaluations | Clean local installation, tested budget concurrency, measured suspension propagation, recoverable views, role-safe Console interactions, at least one evaluation report with both the successful path and the remaining limitations |
@@ -208,7 +208,9 @@ The twelve-month target is a coherent single-cell reference platform: public cod
 
 ## How the platform is built
 
-The platform will be built primarily by the founder using [Vibe Code Pro (VCP)](https://github.com/iokaio/vcp) as the main development environment, with assistance from coding agents and multiple models. The founder retains responsibility for architecture, verification and release decisions. The development method mirrors the product: agents propose and implement within a bounded work packet; a protected release path, held by a human, admits the exact approved revision; no coding agent may publish a release or rewrite its active control baseline. [GOVERNANCE.md](GOVERNANCE.md) describes the roles, the decision process, the work-in-progress limits and the limits of a single maintainer.
+**Development focus update — 6 October 2026.** Ioka has suspended development of [Vibe Code Pro (VCP)](https://github.com/iokaio/vcp). The experiment was worthwhile, but continued development has become too expensive and is unlikely to deliver the desired impact or, on its own, provide a usable way to move Munarium Governance Platform forward. Ioka is concentrating its effort more intensely on building Munarium Governance Platform. Platform delivery no longer assumes VCP as its primary development environment or depends on further VCP development.
+
+The platform will be built primarily by the founder with assistance from coding agents and multiple models. The founder retains responsibility for architecture, verification and release decisions. Agents propose and implement within a bounded work packet; a protected release path, held by a human, admits the exact approved revision; no coding agent may publish a release or rewrite its active control baseline. [GOVERNANCE.md](GOVERNANCE.md) describes the roles, the decision process, the work-in-progress limits and the limits of a single maintainer.
 
 Nine repositories create coordination cost. The hub addresses it with a reusable repository template (the governance files every component carries), a shared CI convention, machine-checked contract compatibility, and an integration job that consumes a proposed composition change. A cross-repository feature has one hub issue linking its component issues, required order, test fixtures and acceptance evidence. Breaking interface changes use **expand, migrate, remove**: a producer adds a compatible capability, consumers adopt it, the composition records the transition, and only then is the obsolete contract removed under the declared version policy.
 
@@ -216,7 +218,7 @@ Nine repositories create coordination cost. The hub addresses it with a reusable
 
 The platform plan was drafted in a private Ioka repository. This hub was created on 28 September 2026 as a new public repository, not by renaming that one, so no private history is carried here. Reviewed planning material moves into the hub document by document, each with a publication review for assets, licenses, secrets, customer references and private planning material, and a migration record naming the document and its source revision. A failed publication review delays exposure of the affected history, not the availability of a clean public design.
 
-The first document moved is the plan itself: [docs/platform-plan.md](docs/platform-plan.md), revision 4 of 28 September 2026, whose note at the top records its source revision. Everything in this README is drawn from it, except the overview section, which summarizes the [overview paper](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) of 29 September 2026, a business-level introduction that cites the plan as its primary source. Where the plan and a repository disagree about what exists, the repository's README and evidence are authoritative.
+The first document moved is the plan itself: [docs/platform-plan.md](docs/platform-plan.md), revision 4 of 28 September 2026, whose note at the top records its source revision and subsequent amendments. This README draws on that plan, the [overview paper](docs/architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) of 29 September 2026, the phase-2 source inspection and the founder's 6 October development focus update. The dated VCP suspension amendment supersedes the earlier tooling assumptions. Where the plan and a repository disagree about what exists, the repository's README and evidence are authoritative.
 
 ## Acknowledgment
 
@@ -230,11 +232,18 @@ The gates that run today are the repository-wide ones, on every push and pull re
 |---|---|---|
 | Licence and notices | `py check_license.py` | `LICENSE` is the canonical Apache-2.0 text; `NOTICE`, `TRADEMARK.md` and `CODE_OF_CONDUCT.md` exist; every Ioka-authored source file carries `SPDX-License-Identifier: Apache-2.0` |
 | Private material | `py scripts/private_material_scan.py` | The private research and planning vocabulary behind Munarium stays out of the public tree |
-| Documentation links | `py scripts/docs_linkcheck.py` | Every relative link resolves; every page under `docs/` is indexed |
+| Documentation links | `py scripts/docs_linkcheck.py` | Supported local Markdown paths and heading fragments resolve; every page under `docs/` is indexed; remote links and non-Markdown fragments are outside scope |
 | Secrets | `gitleaks dir . --config .gitleaks.toml` | Nothing that looks like a credential is in the tree or its history |
 | Sign-off | `git commit -s` | Every commit in a pull request carries a Developer Certificate of Origin trailer ([.github/workflows/dco.yml](.github/workflows/dco.yml)) |
+| Gate regression tests | `python -m unittest discover -s scripts -p "test_*.py"` | Documentation-anchor and read-only workspace-preflight negative controls; temporary repositories require Git, no network |
 
 Schema validation for `contracts/`, golden-vector checks and the integration job are added with the content they check. Coding agents working here follow [AGENTS.md](AGENTS.md).
+
+The [phase-2 build guide](docs/build-plan.md) adds proposed decision/packet dependencies,
+requirement traceability, a concrete local profile and a synthetic acceptance oracle. The
+[foundation baseline](docs/architecture/foundation-baseline.md) records inspected revisions,
+including standalone Matrix; it is not a qualification report. Run the optional workspace
+preflight against an explicit parent directory; individual component builds remain independent.
 
 ## Licensing
 

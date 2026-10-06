@@ -1,6 +1,6 @@
-<!-- Public copy of the founder's platform plan. Content is carried verbatim from the
-     source named below; only the document-export artifacts were repaired so that
-     GitHub renders it. Tables from the export are kept as preformatted text. -->
+<!-- Public copy of the founder's platform plan, with the source and subsequent
+     strategy amendment identified below. Tables from the original document export
+     are kept as preformatted text. -->
 
 > **About this document.** This is the Munarium founder's delivery plan for the Munarium
 > Governance Platform, revision 4 of 28 September 2026, published here as the hub's planning
@@ -9,10 +9,20 @@
 > the export's page numbers, link markup and escapes were repaired and its tables are shown as
 > preformatted text; the names of private repositories were replaced by the phrase "the private
 > repository"; and the figures were redrawn from the plan's own diagrams as SVG sources with PNG
-> renders under `images/`. The words are otherwise the source revision's.
+> renders under `images/`. The original publication otherwise preserved the source wording.
+> The dated strategy amendment below updates VCP-related passages and figures; navigation
+> repairs and the current reading guide also supplement the historical baseline.
 > The plan describes intended work. Where it and a repository disagree about what exists, the
 > repository's README and evidence are authoritative, and the component catalog in the hub
 > [README](../README.md) records the current state.
+
+> **Strategy update — 6 October 2026.** Ioka has suspended VCP development. It was a
+> worthwhile experiment, but continuing it was too expensive and unlikely to deliver the
+> desired impact or independently move the Munarium Governance Platform forward. Ioka is
+> intensifying its focus on the platform. The development plan no longer depends on VCP;
+> bounded coding-agent work, verification and human-controlled release remain tool-independent.
+> This amendment supersedes revision 4's intended VCP development role without changing its
+> historical attribution or advancing any platform capability claim. [18]
 
 **I O K A L L C · M U N A R I U M L A B**
 
@@ -34,6 +44,8 @@ to governed action
   **Date**         28 September 2026
 
   **Revision**     4 · Solo-founder and open-source strategy
+
+  **Amendment**    6 October 2026 · VCP development suspended; platform focus
 
   **Planning hub** iokaio/munarium-platform (public; created 28 September
                    2026)
@@ -59,44 +71,44 @@ are separate milestones.
 *Founder strategy, architecture, delivery evidence, and implementation appendices*
 
 - [Executive perspective](#executive-perspective)
-- [1. The founder's journey and the decision to continue alone](#the-founders-journey-and-the-decision-to-continue-alone)
-- [2. An open-source strategy, not an unfunded staffing plan](#an-open-source-strategy-not-an-unfunded-staffing-plan)
-- [3. The repository architecture](#the-repository-architecture)
-- [4. Four powers and the controls around them](#four-powers-and-the-controls-around-them)
-- [5. Four planes, one bounded guarantee](#four-planes-one-bounded-guarantee)
-- [6. The development method: VCP and bounded coding agents](#the-development-method-vcp-and-bounded-coding-agents)
-- [7. Munarium Registry: the inventory of governed capability](#munarium-registry-the-inventory-of-governed-capability)
-- [8. Munarium Gate: the consequential action path](#munarium-gate-the-consequential-action-path)
-- [9. Munarium Warden: identity without ambient authority](#munarium-warden-identity-without-ambient-authority)
-- [10. Munarium Council: approval and governance activation](#munarium-council-approval-and-governance-activation)
-- [11. Munarium Harness: the easiest correct path](#munarium-harness-the-easiest-correct-path)
-- [12. Munarium Gateway: the model path and its budget](#munarium-gateway-the-model-path-and-its-budget)
-- [13. Munarium Sentinel: operational evidence and bounded response](#munarium-sentinel-operational-evidence-and-bounded-response)
-- [14. Munarium Assure: evidence that can be checked elsewhere](#munarium-assure-evidence-that-can-be-checked-elsewhere)
-- [15. Munarium Console: one interface, no hidden privilege](#munarium-console-one-interface-no-hidden-privilege)
-- [16. The foundation: Server and Matrix extensions](#the-foundation-server-and-matrix-extensions)
-- [17. The governed action lifecycle](#the-governed-action-lifecycle)
+- [1. The founder's journey and the decision to continue alone](#1-the-founders-journey-and-the-decision-to-continue-alone)
+- [2. An open-source strategy, not an unfunded staffing plan](#2-an-open-source-strategy-not-an-unfunded-staffing-plan)
+- [3. The repository architecture](#3-the-repository-architecture)
+- [4. Four powers and the controls around them](#4-four-powers-and-the-controls-around-them)
+- [5. Four planes, one bounded guarantee](#5-four-planes-one-bounded-guarantee)
+- [6. The development method: bounded coding agents](#6-the-development-method-bounded-coding-agents)
+- [7. Munarium Registry: the inventory of governed capability](#7-munarium-registry-the-inventory-of-governed-capability)
+- [8. Munarium Gate: the consequential action path](#8-munarium-gate-the-consequential-action-path)
+- [9. Munarium Warden: identity without ambient authority](#9-munarium-warden-identity-without-ambient-authority)
+- [10. Munarium Council: approval and governance activation](#10-munarium-council-approval-and-governance-activation)
+- [11. Munarium Harness: the easiest correct path](#11-munarium-harness-the-easiest-correct-path)
+- [12. Munarium Gateway: the model path and its budget](#12-munarium-gateway-the-model-path-and-its-budget)
+- [13. Munarium Sentinel: operational evidence and bounded response](#13-munarium-sentinel-operational-evidence-and-bounded-response)
+- [14. Munarium Assure: evidence that can be checked elsewhere](#14-munarium-assure-evidence-that-can-be-checked-elsewhere)
+- [15. Munarium Console: one interface, no hidden privilege](#15-munarium-console-one-interface-no-hidden-privilege)
+- [16. The foundation: Server and Matrix extensions](#16-the-foundation-server-and-matrix-extensions)
+- [17. The governed action lifecycle](#17-the-governed-action-lifecycle)
 *Founder strategy, architecture, delivery evidence, and implementation appendices*
 
-- [18. Consequence classes and provenance-aware policy](#consequence-classes-and-provenance-aware-policy)
-- [19. Governance changes and the policy toolchain](#governance-changes-and-the-policy-toolchain)
-- [20. Supporting systems without nine more services](#supporting-systems-without-nine-more-services)
-- [21. Adoption across different enterprise journeys and stacks](#adoption-across-different-enterprise-journeys-and-stacks)
-- [22. Deployment, federation, and degraded operation](#deployment-federation-and-degraded-operation)
-- [23. Six projected enterprise uses, beginning with a founder-scale proof](#six-projected-enterprise-uses-beginning-with-a-founder-scale-proof)
-- [24. Threat model, verification, and release integrity](#threat-model-verification-and-release-integrity)
-- [25. The founder-led roadmap](#the-founder-led-roadmap)
-- [26. Sustainability, community, and founder continuity](#sustainability-community-and-founder-continuity)
-- [27. The outcome the founder intends to build](#the-outcome-the-founder-intends-to-build)
-- [Appendix A. Acknowledgment and a small research suggestion](#appendix-a.-acknowledgment-and-a-small-research-suggestion)
-- [Appendix B. Repository migration and first-commit checklist](#appendix-b.-repository-migration-and-first-commit-checklist)
-- [Appendix C. Initial invariant and acceptance catalog](#appendix-c.-initial-invariant-and-acceptance-catalog)
-- [Appendix D. Illustrative contracts and release composition](#appendix-d.-illustrative-contracts-and-release-composition)
-- [Appendix E. Standards alignment and remaining responsibility](#appendix-e.-standards-alignment-and-remaining-responsibility)
-- [Appendix F. Working glossary](#appendix-f.-working-glossary)
-- [Appendix G. Sources, attribution, and access notes](#appendix-g.-sources-attribution-and-access-notes)
-- [Appendix H. Source-to-revision map](#appendix-h.-source-to-revision-map)
-- [Appendix I. Matrix consolidation and the 1.2.0 release](#appendix-i.-matrix-consolidation-and-the-1.2.0-release)
+- [18. Consequence classes and provenance-aware policy](#18-consequence-classes-and-provenance-aware-policy)
+- [19. Governance changes and the policy toolchain](#19-governance-changes-and-the-policy-toolchain)
+- [20. Supporting systems without nine more services](#20-supporting-systems-without-nine-more-services)
+- [21. Adoption across different enterprise journeys and stacks](#21-adoption-across-different-enterprise-journeys-and-stacks)
+- [22. Deployment, federation, and degraded operation](#22-deployment-federation-and-degraded-operation)
+- [23. Six projected enterprise uses, beginning with a founder-scale proof](#23-six-projected-enterprise-uses-beginning-with-a-founder-scale-proof)
+- [24. Threat model, verification, and release integrity](#24-threat-model-verification-and-release-integrity)
+- [25. The founder-led roadmap](#25-the-founder-led-roadmap)
+- [26. Sustainability, community, and founder continuity](#26-sustainability-community-and-founder-continuity)
+- [27. The outcome the founder intends to build](#27-the-outcome-the-founder-intends-to-build)
+- [Appendix A. Acknowledgment and a small research suggestion](#appendix-a-acknowledgment-and-a-small-research-suggestion)
+- [Appendix B. Repository migration and first-commit checklist](#appendix-b-repository-migration-and-first-commit-checklist)
+- [Appendix C. Initial invariant and acceptance catalog](#appendix-c-initial-invariant-and-acceptance-catalog)
+- [Appendix D. Illustrative contracts and release composition](#appendix-d-illustrative-contracts-and-release-composition)
+- [Appendix E. Standards alignment and remaining responsibility](#appendix-e-standards-alignment-and-remaining-responsibility)
+- [Appendix F. Working glossary](#appendix-f-working-glossary)
+- [Appendix G. Sources, attribution, and access notes](#appendix-g-sources-attribution-and-access-notes)
+- [Appendix H. Source-to-revision map](#appendix-h-source-to-revision-map)
+- [Appendix I. Matrix consolidation and the 1.2.0 release](#appendix-i-matrix-consolidation-and-the-120-release)
 ## Reading guide
 
 For implementation preparation derived from this historical plan, use the current
@@ -104,7 +116,12 @@ For implementation preparation derived from this historical plan, use the curren
 [decision index](decisions/README.md). The hub remains documentation-only; the nine
 component repositories now carry Rust interface scaffolds. These preparation artifacts
 do not establish runtime capabilities, contract releases or a qualified composition.
-The historical plan text below retains its source baseline.
+The historical plan text below retains its source baseline except for the explicitly dated
+VCP strategy amendment and accompanying editorial updates.
+
+For the dated phase-2 source observations, already changed Matrix repository layout, and revised
+delivery gates, use the [current-status crosswalk](architecture/foundation-baseline.md#historical-plan-crosswalk).
+Do not execute the historical migration checklist as new work without checking that record.
 
 Sections 1--6 explain the founder's strategy and development method.
 Sections 7--20 define the components and shared controls. Sections
@@ -158,10 +175,13 @@ broad multi-cloud general availability or six founder-operated
 production accounts. Public access begins with the repositories;
 readiness advances through evidence-based release gates.
 
-VCP is the intended primary work environment, with Claude Code, Codex,
-and other agents available when appropriate. These tools assist
-implementation and review; they do not authorize releases. The founder
-remains the sole required builder and maintainer. Optional reviewers,
+As of 6 October 2026, VCP development is suspended and Ioka is concentrating
+its development effort on the Munarium Governance Platform. The VCP
+experiment was worthwhile, but its continuing cost and expected impact
+did not justify making it a separate development priority. [18]
+Claude Code, Codex and other appropriate tools assist implementation and
+review through bounded work packets; they do not authorize releases.
+The founder remains the sole required builder and maintainer. Optional reviewers,
 sponsors, contributors, and deployment partners are not counted as
 uncommitted delivery capacity. Their involvement can strengthen the
 project without becoming a prerequisite to publishing useful work.
@@ -397,14 +417,14 @@ only after review. Appendix B defines the migration checklist.
 |                         | evidence packs          | auditor interface       |
 +-------------------------+-------------------------+-------------------------+
 | **Existing foundation: Server (iokaio/munarium) + Matrix                    |
-| (iokaio/munarium-matrix after the move) \| Development tooling: VCP         |
-| (iokaio/vcp) + other agents**                                               |
+| (iokaio/munarium-matrix after the move)**                                    |
+| **Development tooling: bounded coding agents; no required VCP dependency**  |
 +-----------------------------------------------------------------------------+
 ```
 
 ![The hub and the nine component repositories around the released foundation](images/repository-architecture.png)
 
-*Figure 1. The architecture hub coordinates nine independent component repositories, shown with their published GitHub descriptions. The foundation and VCP remain separate projects.*
+*Figure 1. The architecture hub coordinates nine independent component repositories, shown with their published GitHub descriptions. The foundation remains separate; development tooling is optional. VCP development is suspended as of 6 October 2026.*
 
 Server and Matrix currently share the public **iokaio/munarium**
 repository, which holds server/, matrix/, and clients/. Matrix will
@@ -417,9 +437,10 @@ exists but has no commits yet, so iokaio/munarium remains the Matrix
 source of record until the move's cutover. Server stays in
 iokaio/munarium. Platform changes to either will be made upstream
 rather than copied into new forks. VCP (**iokaio/vcp**, "Vibe Code Pro
-- An Experiment") also remains a separate development tool, not one of
-the nine proposed platform components and not a required runtime
-dependency for adopters.
+- An Experiment") is a separate tooling experiment whose development
+Ioka suspended on 6 October 2026. It is not one of the nine proposed
+platform components or a prerequisite for platform development or use.
+The historical repository reference is retained for attribution. [6, 18]
 
 ## 3.2 What belongs in the hub
 
@@ -700,24 +721,25 @@ administrative roles included in qualification. Assure will export that
 boundary along with the positive evidence. Silence about untested paths
 would make the assurance misleading.
 
-# 6. The development method: VCP and bounded coding agents
+# 6. The development method: bounded coding agents
 
-## 6.1 A toolchain, not another authority
+## 6.1 A tool-independent development process
 
-The founder intends VCP to organize repository-aware work, retained
-context, model selection, visible delegated tasks, and cost accounting.
-The public repository describes those intended capabilities and
-distinguishes its implemented foundation from its unreleased product
-scope. The execution plan therefore requires local qualification of the
-particular VCP build being used; it does not infer readiness from the
-project name or from the founder's progress estimate. [6]
+Revision 4 originally proposed VCP for repository-aware work, retained
+context, model selection, visible delegated tasks and cost accounting. [6]
+Ioka suspended its development on 6 October 2026: the experiment was
+worthwhile, but too expensive to continue relative to its likely impact,
+and unlikely to independently advance the Munarium Governance Platform.
+Ioka is intensifying its focus on the platform's implementation and evidence. [18]
 
-Claude Code, Codex, and other coding agents remain available as
-alternatives. Their use does not change repository ownership, contract
-versions, test obligations, or release authority. Work must be portable
-between tools through checked-in specifications, issues, reproducible
-scripts, and evidence. VCP should reduce friction, not become a single
-dependency capable of stopping all platform development.
+The platform's development process uses suitable existing tools, including
+Claude Code, Codex and other coding agents, within bounded work packets.
+Tool use does not change repository ownership, contract versions, test
+obligations or release authority. Work remains portable through checked-in
+specifications, issues, reproducible scripts and retained evidence.
+Any tool used for a packet must support its required controls; a product
+name or progress estimate does not establish that those controls work.
+No platform milestone depends on resuming VCP development.
 
 ![Define, delegate, verify, review, authorize, release](images/core-development-sequence.png)
 
@@ -753,7 +775,7 @@ without exposing protected material.
 The starting work-in-progress limit is one major capability slice, one
 maintenance lane for released software, and no more than two bounded
 agent implementation tasks awaiting substantive review. That limit is a
-planning choice, not an inherent limit of VCP. The founder can revise it
+planning choice about review capacity. The founder can revise it
 after measuring review delay, integration failures, and rework.
 
 Security or protocol decisions that affect several repositories will be
@@ -770,7 +792,7 @@ constrain. Increased test volume is useful only when the tests address
 the required property and their oracle has not been generated from the
 same mistaken assumption.
 
-## 6.4 Measuring leverage and containing recursion
+## 6.4 Measuring cost and controlling tool changes
 
 The founder will track model spend per accepted change, founder review
 hours, rework, escaped defects, security findings, restore success, and
@@ -778,12 +800,13 @@ elapsed time to a useful capability. Comparisons will use similar task
 classes and disclose the sample size. No blanket twofold or fourfold
 productivity assumption is required by this plan.
 
-VCP's own changes will be built and qualified separately from the
-platform release they help produce. A running agent must not upgrade its
-own active enforcement code or silently change the controls around its
-current task. Candidate VCP changes can be tested in a separate checkout
-and promoted through the founder's human-controlled path. A tool can
-help build its successor without ratifying that successor.
+With VCP development suspended, there is no parallel VCP implementation
+lane in this plan. Development-tool changes needed for platform work are
+evaluated separately from the platform release they help produce. A running
+agent must not upgrade its own active enforcement code or silently change
+the controls around its current task. Candidate tool updates are tested in
+isolation and admitted through the founder's human-controlled path. These
+controls apply to every tool used for platform development.
 
 The plan's first internal example is therefore narrow and testable: a
 coding agent may prepare a patch and propose a release, while a
@@ -2527,7 +2550,7 @@ being mistaken for enterprise-wide governance. [1]
 ## 23.1 Software organization: coding agents and controlled release
 
 This is the founder's preferred first reference case because it is
-closest to the work already occurring around VCP and Munarium. A coding
+closest to the ongoing engineering work on the Munarium Governance Platform. A coding
 agent can inspect an authorized checkout, prepare a patch, run bounded
 tests, and create a release proposal. It cannot publish packages,
 replace protected release policy, or obtain production deployment
@@ -3662,10 +3685,11 @@ the distinction between governed memory and governed authority.
 
 [3] Munarium founder. Founder's development account and planning
 instructions in the accompanying exchange, September 2026. Source for
-sole-founder authorship with AI assistance, intended use of VCP and
+sole-founder authorship with AI assistance, the then-intended use of VCP and
 other coding agents, the all-open-source direction, and the requested
 repository reorganization. These are founder statements and proposed
-decisions, not independent productivity measurements.
+decisions, not independent productivity measurements. The VCP direction is
+superseded by the founder's 6 October 2026 update in [18].
 
 [4] Kistner, Jamey. *The Sovereign Stack: Architecture, Discipline,
 and Evidence from One Desk*. OSINTelligence LLC, 2026. Concept DOI:
@@ -3691,9 +3715,10 @@ equivalence or endorsement is implied.
 [6] Ioka LLC. *VCP: Vibe Code Pro*, public repository README and
 documented development status.
 <https://github.com/iokaio/vcp>
-. Source for intended tool capabilities and the distinction between
-implemented foundations and planned product behavior. The plan requires
-qualification of the actual build used.
+. Historical source for revision 4's intended tool capabilities and the
+distinction between implemented foundations and planned product behavior.
+Ioka suspended VCP development on 6 October 2026; this citation preserves
+the earlier source and does not make VCP a current platform dependency. [18]
 
 [7] Apache Software Foundation. *Apache License, Version 2.0*.
 <https://www.apache.org/licenses/LICENSE-2.0>
@@ -3753,6 +3778,15 @@ applications*.
 <https://genai.owasp.org/llm-top-10/>
 . The source paper's threat categories are used as planning inputs; the
 platform does not claim complete coverage of every OWASP risk.
+
+[18] Munarium founder. Development direction supplied for this documentation
+update, 6 October 2026; recorded in the hub's
+[public development status](../README.md#how-the-platform-is-built).
+Source for suspension of VCP development: a worthwhile experiment whose
+continuing cost was too high and which was unlikely to deliver the desired
+impact or independently move the Munarium Governance Platform forward.
+Ioka is intensifying its focus on the platform. This is the founder's
+resource and strategy decision, not an independently measured productivity result.
 
 # Appendix H. Source-to-revision map
 

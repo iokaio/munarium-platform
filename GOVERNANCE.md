@@ -13,12 +13,19 @@ is the sole required builder and maintainer, holds the release credentials and s
 and is the accountable human on every merged change. `CODEOWNERS` in every repository names one
 owner; it is split when a component gets a second maintainer, not before.
 
-**Coding agents** (VCP, Claude Code, Codex and others) perform bounded implementation,
+**Coding agents** (Claude Code, Codex and others) perform bounded implementation,
 investigation, test generation, documentation and review tasks. They receive the minimum context and
 permissions a work packet needs. Their use changes nothing about repository ownership, contract
 versions, test obligations or release authority. A model's statement that tests passed points to
 actual commands, exit status and retained output. A second model's review is additional analysis,
 not a second accountable person, and the record says so.
+
+**Development focus, 6 October 2026.** Ioka has suspended VCP development. The experiment was
+worthwhile, but continued development has become too expensive and is unlikely to deliver the
+desired impact or independently provide a usable way to advance Munarium Governance Platform.
+Ioka is focusing more intensely on building the platform. Its delivery plan does not depend on
+further VCP development; the bounded-agent workflow and human authority requirements above apply
+across development tools. See the [project status update](README.md#how-the-platform-is-built).
 
 **Contributors** submit signed-off pull requests under the process in `CONTRIBUTING.md`. Every
 contribution has a human submitter who accepts responsibility for it, a bounded scope, relevant

@@ -577,8 +577,8 @@ z
    <g id="text_52">
     <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 492.1675)">munarium-clients-publish · client package</text>
     <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 502.9675)">publishing</text>
-    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 513.7675)">vcp · a development tool, not a component and not</text>
-    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 524.5675)">a runtime dependency</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 513.7675)">VCP · development suspended; no platform dependency</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1c2a3a" transform="translate(603.36 524.5675)">Ioka focuses more intensely on the platform.</text>
    </g>
   </g>
  </g>
