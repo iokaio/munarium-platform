@@ -15,6 +15,25 @@ Runtime implementations remain in their owning repositories after accepted defin
 | [identity-vectors.json](identity-vectors.json) | Public verification keys, signed fictional messages, trusted fixture state and expected acceptance/refusal |
 | [record-vectors.json](record-vectors.json) | Positive record shapes; tests derive reproducible missing-field, extra-field and cross-record negative cases |
 | [candidate-lock.json](candidate-lock.json) | Exact data-file digests and aggregate candidate digest; no release or signature claim |
+| [warden-admission.schema.json](warden-admission.schema.json) | Separate proposed ADR 0005 record shapes for provider bindings, delegation registrations and forwarding |
+| [warden-admission-vectors.json](warden-admission-vectors.json) | Fictional trusted contexts and acceptance/refusal cases for those records |
+| [warden-admission-lock.json](warden-admission-lock.json) | Separate additive candidate digest, bound to the existing foundation candidate |
+
+The Warden admission candidates belong to [ADR 0005](../0005-warden-identity-admission.md).
+They do not change the existing foundation schema, signed vectors or their lock.
+Their vector format stores one base per operation, dot-path replacements in `changes`,
+and an optional `duplicate` naming a list whose first record is copied in memory.
+Each case declares `accept` or `reject`; acceptance compares the exact base `expected`
+result. Task/policy/request digest strings are fictional references supplied by a trusted
+test context, not proofs of retrieved artifacts. A runtime must resolve and verify the
+actual admitted records. The [admission oracle](../../../scripts/test_warden_admission.py)
+checks semantic examples and closed schemas; only its delegation cases use the original
+signed chain. It does not verify a real upstream provider or authenticated transport.
+Run the optional independent schema comparison with
+`py scripts/check_warden_admission_jsonschema.py` from the hub root when `jsonschema`
+is installed. The regular unittest suite remains dependency-free apart from its existing
+OpenSSL tool requirement. The additive lock uses the same LF-normalized file hashes
+and ordinal filename ordering as the foundation candidate lock.
 
 All named fields are required and top-level records reject unknown properties. Explicit null
 means unavailable for nullable lineage bindings; it is never converted to verified trust.
