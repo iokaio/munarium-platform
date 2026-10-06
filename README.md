@@ -56,7 +56,7 @@ Four planes compose the platform. They are responsibility and trust boundaries, 
 | Authority | [Registry](https://github.com/iokaio/munarium-registry), [Warden](https://github.com/iokaio/munarium-warden), [Council](https://github.com/iokaio/munarium-council) | Approved inventory, scoped grants, independently authorized activation |
 | Assurance | [Sentinel](https://github.com/iokaio/munarium-sentinel), [Assure](https://github.com/iokaio/munarium-assure), [Console](https://github.com/iokaio/munarium-console) | Ledger-derived views, evidence exports, governed operator requests |
 
-One shared accountability record runs through them: proposal, decision, authority, claim, dispatch, receipt. Operational caches and indexes are rebuildable projections of it, never competing histories.
+One shared accountability record runs through them: proposal, decision, authority, claim, dispatch, receipt. Read projections are rebuildable. Gate and Warden also require durable operational claim, consumption and revocation state; the proposed [execution protocol](docs/decisions/0002-action-execution-protocol.md) specifies how it links to Server without pretending independent stores share one transaction.
 
 ## Consequence and adoption
 
@@ -174,7 +174,7 @@ Each invariant names a claim, its trust assumptions, its owner, the tests that e
 | INV-16 | Console cannot perform a privileged operation unavailable through governed APIs | Console, Council, Warden; stage 3 |
 | INV-17 | Missing evidence or telemetry is reported as a gap, not a successful interval | Sentinel and Assure; stages 3–4 |
 | INV-18 | Evidence-package verification detects changed or missing required artifacts | Assure and Server; stage 4 |
-| INV-19 | Restore cannot silently reactivate a consumed grant or erase an unresolved claim | Gate, Warden, Server; stage 4 |
+| INV-19 | Restore cannot silently reactivate a consumed grant or erase an unresolved claim | Gate, Warden, Server; minimum safety at stage 2, full recovery exercises at stage 4 |
 | INV-20 | A local overlay cannot waive a mandatory parent prohibition | Council, Registry, Gate; stage 5 |
 | INV-21 | Untrusted pull-request code cannot acquire release secrets or replace active approval controls | Hub and repository CI; stage 0 onward |
 | INV-22 | A release advertises only the profiles and capabilities supported by its evidence | Component maintainers and hub; every stage |
@@ -197,7 +197,7 @@ The roadmap begins when the founder starts the program. Public repositories exis
 
 | Stage | Window | Scope | Exit evidence |
 |---|---|---|---|
-| 0 | month 1 | Populate the hub and the nine repositories; foundation qualification record; Server S1 with a non-agent bootstrap attestation; the Matrix move and 1.2.0 release in the maintenance lane | Public planning artifacts, verified repository ownership, a secret and rights review, reproducible foundation tests, a demonstrated refusal of an unauthorized governance transition |
+| 0 | month 1 | Populate the hub and the nine repositories; foundation qualification record; Server S1 with a non-agent bootstrap attestation; confirm current Matrix layout/release evidence rather than repeat the historical move | Public planning artifacts, verified repository ownership, a secret and rights review, reproducible foundation tests, a demonstrated refusal of an unauthorized governance transition |
 | 1 | months 2–3 | Contracts and decision-only capability: Registry's catalog, Gate's evaluator, action-record shapes, verified principal context, a minimal Harness client; Warden and Council interfaces and bounded prototypes | Deterministic replay of allowed and refused proposals, unknown-manifest rejection, tenant isolation fixtures, contract compatibility, no hidden target credential in the agent environment |
 | 2 | months 4–6 | The first complete governed action: Gate's durable journal, Warden's first identity and broker path, Council's minimum approval and activation; one narrow connector, one reference identity system, one deployment profile | Recorded proposal-to-outcome chain, bypass tests within the stated boundary, atomic grant consumption, crash recovery, stale-state rejection, a usable operator runbook |
 | 3 | months 7–9 | Daily operational use: Gateway extraction, Sentinel timeline and suspension, Console read-only views then governed interactions; a small number of external evaluations | Clean local installation, tested budget concurrency, measured suspension propagation, recoverable views, role-safe Console interactions, at least one evaluation report with both the successful path and the remaining limitations |
@@ -230,11 +230,18 @@ The gates that run today are the repository-wide ones, on every push and pull re
 |---|---|---|
 | Licence and notices | `py check_license.py` | `LICENSE` is the canonical Apache-2.0 text; `NOTICE`, `TRADEMARK.md` and `CODE_OF_CONDUCT.md` exist; every Ioka-authored source file carries `SPDX-License-Identifier: Apache-2.0` |
 | Private material | `py scripts/private_material_scan.py` | The private research and planning vocabulary behind Munarium stays out of the public tree |
-| Documentation links | `py scripts/docs_linkcheck.py` | Every relative link resolves; every page under `docs/` is indexed |
+| Documentation links | `py scripts/docs_linkcheck.py` | Supported local Markdown paths and heading fragments resolve; every page under `docs/` is indexed; remote links and non-Markdown fragments are outside scope |
 | Secrets | `gitleaks dir . --config .gitleaks.toml` | Nothing that looks like a credential is in the tree or its history |
 | Sign-off | `git commit -s` | Every commit in a pull request carries a Developer Certificate of Origin trailer ([.github/workflows/dco.yml](.github/workflows/dco.yml)) |
+| Gate regression tests | `python -m unittest discover -s scripts -p "test_*.py"` | Documentation-anchor and read-only workspace-preflight negative controls; temporary repositories require Git, no network |
 
 Schema validation for `contracts/`, golden-vector checks and the integration job are added with the content they check. Coding agents working here follow [AGENTS.md](AGENTS.md).
+
+The [phase-2 build guide](docs/build-plan.md) adds proposed decision/packet dependencies,
+requirement traceability, a concrete local profile and a synthetic acceptance oracle. The
+[foundation baseline](docs/architecture/foundation-baseline.md) records inspected revisions,
+including standalone Matrix; it is not a qualification report. Run the optional workspace
+preflight against an explicit parent directory; individual component builds remain independent.
 
 ## Licensing
 

@@ -59,44 +59,44 @@ are separate milestones.
 *Founder strategy, architecture, delivery evidence, and implementation appendices*
 
 - [Executive perspective](#executive-perspective)
-- [1. The founder's journey and the decision to continue alone](#the-founders-journey-and-the-decision-to-continue-alone)
-- [2. An open-source strategy, not an unfunded staffing plan](#an-open-source-strategy-not-an-unfunded-staffing-plan)
-- [3. The repository architecture](#the-repository-architecture)
-- [4. Four powers and the controls around them](#four-powers-and-the-controls-around-them)
-- [5. Four planes, one bounded guarantee](#four-planes-one-bounded-guarantee)
-- [6. The development method: VCP and bounded coding agents](#the-development-method-vcp-and-bounded-coding-agents)
-- [7. Munarium Registry: the inventory of governed capability](#munarium-registry-the-inventory-of-governed-capability)
-- [8. Munarium Gate: the consequential action path](#munarium-gate-the-consequential-action-path)
-- [9. Munarium Warden: identity without ambient authority](#munarium-warden-identity-without-ambient-authority)
-- [10. Munarium Council: approval and governance activation](#munarium-council-approval-and-governance-activation)
-- [11. Munarium Harness: the easiest correct path](#munarium-harness-the-easiest-correct-path)
-- [12. Munarium Gateway: the model path and its budget](#munarium-gateway-the-model-path-and-its-budget)
-- [13. Munarium Sentinel: operational evidence and bounded response](#munarium-sentinel-operational-evidence-and-bounded-response)
-- [14. Munarium Assure: evidence that can be checked elsewhere](#munarium-assure-evidence-that-can-be-checked-elsewhere)
-- [15. Munarium Console: one interface, no hidden privilege](#munarium-console-one-interface-no-hidden-privilege)
-- [16. The foundation: Server and Matrix extensions](#the-foundation-server-and-matrix-extensions)
-- [17. The governed action lifecycle](#the-governed-action-lifecycle)
+- [1. The founder's journey and the decision to continue alone](#1-the-founders-journey-and-the-decision-to-continue-alone)
+- [2. An open-source strategy, not an unfunded staffing plan](#2-an-open-source-strategy-not-an-unfunded-staffing-plan)
+- [3. The repository architecture](#3-the-repository-architecture)
+- [4. Four powers and the controls around them](#4-four-powers-and-the-controls-around-them)
+- [5. Four planes, one bounded guarantee](#5-four-planes-one-bounded-guarantee)
+- [6. The development method: VCP and bounded coding agents](#6-the-development-method-vcp-and-bounded-coding-agents)
+- [7. Munarium Registry: the inventory of governed capability](#7-munarium-registry-the-inventory-of-governed-capability)
+- [8. Munarium Gate: the consequential action path](#8-munarium-gate-the-consequential-action-path)
+- [9. Munarium Warden: identity without ambient authority](#9-munarium-warden-identity-without-ambient-authority)
+- [10. Munarium Council: approval and governance activation](#10-munarium-council-approval-and-governance-activation)
+- [11. Munarium Harness: the easiest correct path](#11-munarium-harness-the-easiest-correct-path)
+- [12. Munarium Gateway: the model path and its budget](#12-munarium-gateway-the-model-path-and-its-budget)
+- [13. Munarium Sentinel: operational evidence and bounded response](#13-munarium-sentinel-operational-evidence-and-bounded-response)
+- [14. Munarium Assure: evidence that can be checked elsewhere](#14-munarium-assure-evidence-that-can-be-checked-elsewhere)
+- [15. Munarium Console: one interface, no hidden privilege](#15-munarium-console-one-interface-no-hidden-privilege)
+- [16. The foundation: Server and Matrix extensions](#16-the-foundation-server-and-matrix-extensions)
+- [17. The governed action lifecycle](#17-the-governed-action-lifecycle)
 *Founder strategy, architecture, delivery evidence, and implementation appendices*
 
-- [18. Consequence classes and provenance-aware policy](#consequence-classes-and-provenance-aware-policy)
-- [19. Governance changes and the policy toolchain](#governance-changes-and-the-policy-toolchain)
-- [20. Supporting systems without nine more services](#supporting-systems-without-nine-more-services)
-- [21. Adoption across different enterprise journeys and stacks](#adoption-across-different-enterprise-journeys-and-stacks)
-- [22. Deployment, federation, and degraded operation](#deployment-federation-and-degraded-operation)
-- [23. Six projected enterprise uses, beginning with a founder-scale proof](#six-projected-enterprise-uses-beginning-with-a-founder-scale-proof)
-- [24. Threat model, verification, and release integrity](#threat-model-verification-and-release-integrity)
-- [25. The founder-led roadmap](#the-founder-led-roadmap)
-- [26. Sustainability, community, and founder continuity](#sustainability-community-and-founder-continuity)
-- [27. The outcome the founder intends to build](#the-outcome-the-founder-intends-to-build)
-- [Appendix A. Acknowledgment and a small research suggestion](#appendix-a.-acknowledgment-and-a-small-research-suggestion)
-- [Appendix B. Repository migration and first-commit checklist](#appendix-b.-repository-migration-and-first-commit-checklist)
-- [Appendix C. Initial invariant and acceptance catalog](#appendix-c.-initial-invariant-and-acceptance-catalog)
-- [Appendix D. Illustrative contracts and release composition](#appendix-d.-illustrative-contracts-and-release-composition)
-- [Appendix E. Standards alignment and remaining responsibility](#appendix-e.-standards-alignment-and-remaining-responsibility)
-- [Appendix F. Working glossary](#appendix-f.-working-glossary)
-- [Appendix G. Sources, attribution, and access notes](#appendix-g.-sources-attribution-and-access-notes)
-- [Appendix H. Source-to-revision map](#appendix-h.-source-to-revision-map)
-- [Appendix I. Matrix consolidation and the 1.2.0 release](#appendix-i.-matrix-consolidation-and-the-1.2.0-release)
+- [18. Consequence classes and provenance-aware policy](#18-consequence-classes-and-provenance-aware-policy)
+- [19. Governance changes and the policy toolchain](#19-governance-changes-and-the-policy-toolchain)
+- [20. Supporting systems without nine more services](#20-supporting-systems-without-nine-more-services)
+- [21. Adoption across different enterprise journeys and stacks](#21-adoption-across-different-enterprise-journeys-and-stacks)
+- [22. Deployment, federation, and degraded operation](#22-deployment-federation-and-degraded-operation)
+- [23. Six projected enterprise uses, beginning with a founder-scale proof](#23-six-projected-enterprise-uses-beginning-with-a-founder-scale-proof)
+- [24. Threat model, verification, and release integrity](#24-threat-model-verification-and-release-integrity)
+- [25. The founder-led roadmap](#25-the-founder-led-roadmap)
+- [26. Sustainability, community, and founder continuity](#26-sustainability-community-and-founder-continuity)
+- [27. The outcome the founder intends to build](#27-the-outcome-the-founder-intends-to-build)
+- [Appendix A. Acknowledgment and a small research suggestion](#appendix-a-acknowledgment-and-a-small-research-suggestion)
+- [Appendix B. Repository migration and first-commit checklist](#appendix-b-repository-migration-and-first-commit-checklist)
+- [Appendix C. Initial invariant and acceptance catalog](#appendix-c-initial-invariant-and-acceptance-catalog)
+- [Appendix D. Illustrative contracts and release composition](#appendix-d-illustrative-contracts-and-release-composition)
+- [Appendix E. Standards alignment and remaining responsibility](#appendix-e-standards-alignment-and-remaining-responsibility)
+- [Appendix F. Working glossary](#appendix-f-working-glossary)
+- [Appendix G. Sources, attribution, and access notes](#appendix-g-sources-attribution-and-access-notes)
+- [Appendix H. Source-to-revision map](#appendix-h-source-to-revision-map)
+- [Appendix I. Matrix consolidation and the 1.2.0 release](#appendix-i-matrix-consolidation-and-the-120-release)
 ## Reading guide
 
 For implementation preparation derived from this historical plan, use the current
@@ -105,6 +105,10 @@ For implementation preparation derived from this historical plan, use the curren
 component repositories now carry Rust interface scaffolds. These preparation artifacts
 do not establish runtime capabilities, contract releases or a qualified composition.
 The historical plan text below retains its source baseline.
+
+For the dated phase-2 source observations, already changed Matrix repository layout, and revised
+delivery gates, use the [current-status crosswalk](architecture/foundation-baseline.md#historical-plan-crosswalk).
+Do not execute the historical migration checklist as new work without checking that record.
 
 Sections 1--6 explain the founder's strategy and development method.
 Sections 7--20 define the components and shared controls. Sections
