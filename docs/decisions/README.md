@@ -9,6 +9,7 @@ implementation waits for the applicable accepted decision and versioned contract
 | [0002: action execution protocol](0002-action-execution-protocol.md) | Proposed for maintainer review | Single consumption owner, mandatory recording, bounded authority, cumulative action limits and recovery |
 | [0003: bootstrap and principal context](0003-bootstrap-principal-context.md) | Proposed for maintainer review | HUB-01 authority, retirement, verification and semantic test oracles |
 | [0004: decision-only contracts](0004-decision-only-contracts.md) | Proposed; acceptance evidence incomplete | HUB-02 canonical vectors, manifests, evaluation, minimum topology and events |
+| [0005: Warden identity admission](0005-warden-identity-admission.md) | Proposed; not accepted | Provider identity mapping, registered delegation and attribution-only forwarding |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus, actual bounded runs and unqualified adapter work. It does not select an engine.
@@ -27,3 +28,7 @@ decision register distinguishes open questions from proposals with a concrete ca
 
 [Foundation candidate schemas and signed vectors](candidates/README.md) supply
 executable review inputs for ADR 0003/0004; they are not accepted or published contracts.
+
+[Proposed Warden identity contract](warden-identity-contract.md) specifies the
+WARDEN-01 consumer boundary against those unchanged candidates, with additional
+offline checks of the exact principal result and decision-path refusal cases.

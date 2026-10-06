@@ -105,3 +105,8 @@ The [candidate schemas and signed vectors](candidates/README.md) now specify exa
 algorithm, lifetime/skew, key/issuer and attenuation test inputs, with a candidate digest.
 They do not establish deployment authority or S1/S3 persistence. Acceptance still requires
 an explicit maintainer disposition of the reviewed revision and compatibility policy.
+
+The [proposed Warden identity contract](warden-identity-contract.md) makes the
+candidate wire bytes, trusted verification inputs, attenuation and consumer obligations
+explicit for WARDEN-01. Its additional offline tests preserve the candidate oracle;
+provider mapping, transport/profile pins and maintainer acceptance remain required.
