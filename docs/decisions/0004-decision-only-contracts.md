@@ -75,8 +75,10 @@ ambient clock/network inputs; enforce 100 ms and 64 MiB per evaluation in a kill
 for the initial experiment. These are proposed bounds to measure, not observed limits.
 The [comparison](evaluator-comparison.md) records 36 bounded CLI invocations of OPA 1.21.1
 and Cedar 4.13.0, actual errors and matching reordered replays. Its negative controls verified
-timeout and memory enforcement. This is not a typed platform evaluator: obligation mapping,
-mixed allow/error cases, dependency review and service integration remain open under DEC-03.
+timeout and memory enforcement. This is not a typed platform evaluator. The subsequent
+[adapter oracle](evaluator-adapter-oracle.md) adds typed obligation/refusal fixtures and real
+mixed allow/error probes. Dependency review, production adapter admission and service
+integration remain open under DEC-03.
 
 ## Minimum topology and events
 
