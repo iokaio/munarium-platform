@@ -49,6 +49,13 @@ human-controlled release path. The agent cannot possess the release credential, 
 approval workflow, or replace the test baseline used to judge its own change. That is meaningful
 separation between the coding agent and the founder.
 
+Development authorization and release authorization are distinct. The maintainer
+may direct scoped implementation and supporting build/test workflow edits without
+granting control of the trusted approval or release path. The
+[Stage 1 development authorization](docs/stage1-authorization.md) records such a
+direction, including isolated tests with temporary credentials having no production
+trust. It preserves the existing test baseline and human acceptance requirements.
+
 It is not independent human oversight of the founder. If the founder designs, writes, reviews and
 releases a change alone, the record says so. For a change whose risk policy requires independent
 human review, the release obtains that review or remains outside the corresponding production
@@ -106,9 +113,12 @@ composition. Release labels (planned, experimental, conformance-tested, referenc
 independently reviewed) are statements about evidence, and the composition advertises no stronger
 boundary than its weakest required dependency supports.
 
-Release publication, policy activation and changes to protected workflows, branch protection,
-ownership, signing material and trusted publishers are outside coding-agent authority. Untrusted
-pull-request code never runs with production secrets or publication authority, and the code under
+Release publication, production policy activation and changes to trusted approval/release
+workflows, branch protection, ownership, production signing material and trusted publishers
+are outside the Stage 1 development grant. Protected build/test workflow edits require
+explicit maintainer direction, supplied for Stage 1 by the authorization above; they
+must retain required checks and cannot weaken approval controls. Untrusted pull-request
+code never runs with production secrets or publication authority, and the code under
 review cannot replace the checks used to approve it.
 
 When capacity is constrained, scope is reduced in a fixed order: connector breadth, SDK breadth, UI
