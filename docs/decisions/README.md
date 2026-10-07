@@ -10,6 +10,7 @@ implementation waits for the applicable accepted decision and versioned contract
 | [0003: bootstrap and principal context](0003-bootstrap-principal-context.md) | Proposed for maintainer review | HUB-01 authority, retirement, verification and semantic test oracles |
 | [0004: decision-only contracts](0004-decision-only-contracts.md) | Proposed; acceptance evidence incomplete | HUB-02 canonical vectors, manifests, evaluation, minimum topology and events |
 | [0005: Warden identity admission](0005-warden-identity-admission.md) | Proposed; not accepted | Provider identity mapping, registered delegation and attribution-only forwarding |
+| [0006: Registry manifest admission](0006-registry-manifest-admission.md) | Proposed; implementation candidate present | DEC-02 signed artifacts, tenant/owner binding and recipient-bound candidate access |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus, actual bounded runs and unqualified adapter work. It does not select an engine.
@@ -32,3 +33,6 @@ executable review inputs for ADR 0003/0004; they are not accepted or published c
 [Proposed Warden identity contract](warden-identity-contract.md) specifies the
 WARDEN-01 consumer boundary against those unchanged candidates, with additional
 offline checks of the exact principal result and decision-path refusal cases.
+
+[Registry v2 candidate](registry-v2/README.md) supplies separate closed schemas, signed
+artifact vectors and exact contract pins for REG-01; formal acceptance remains pending.

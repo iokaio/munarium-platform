@@ -5,6 +5,10 @@ Packet: HUB-02 / DEC-02, DEC-03, minimum DEC-07 and DEC-08. Depends on
 [0003](0003-bootstrap-principal-context.md). Owner: founder/maintainer; consumers: Registry,
 Warden, Gate, Harness, Server and Matrix. No target authority is enabled by this proposal.
 
+[ADR-0006](0006-registry-manifest-admission.md) proposes the missing Registry artifact-signature,
+tenant/owner and immutable-byte rules. It requires a new candidate profile and evidence bundle;
+the existing version-1 shapes, digests and vectors remain unchanged and unaccepted.
+
 ## Canonical requests and candidate artifacts
 
 Propose profile `decision-json-v1`: UTF-8 JSON objects, ASCII member names, strings containing
