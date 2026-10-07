@@ -1,6 +1,10 @@
 # Proposed local reference profile
 
-**Proposal for review; no runnable deployment, selected dependency or qualified profile.**
+**Proposed Stage 2 effect profile; no qualified effect deployment.** Stage 1 has a
+separate implemented Windows decision-only service profile, recorded in the
+[acceptance packet](stage1-acceptance.md). It does not qualify the Linux network,
+broker or target boundary below. [HUB-03](../decisions/0010-stage2-authority-durability.md)
+records the profile recommendation and the additional Linux evaluator dependency.
 This is the first profile candidate for the [build sequence](../build-plan.md) and
 [reference scenario](reference-scenario.md). A profile ADR must accept its topology,
 identity/broker choices, limits and threat model before effect-producing implementation.

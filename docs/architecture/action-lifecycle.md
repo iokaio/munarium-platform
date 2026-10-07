@@ -4,16 +4,24 @@
 The founder/maintainer owns acceptance. [ADR-0002](../decisions/0002-action-execution-protocol.md)
 defines the transaction boundary; DEC-02, DEC-04 and DEC-05 in the
 [contract backlog](contract-backlog.md) must settle exact encodings before component work.
+The 7 October second pass in [ADR 0011](../decisions/0011-platform-contract-evolution.md)
+separates stable intent from immutable authorization attempts and qualifies the
+identity/epoch fields for new action contracts. Existing Stage 1 bytes stay intact.
 
 ## Identity, binding and retention
 
 The application persists a stable operation identity with its business intent **before** submitting
 it. Harness accepts that persisted identity; it must not invent a fresh one on each network retry.
-Gate's deduplication key is tenant plus operation identity, bound to the authorized principal scope
-and Gate-computed canonical request digest. Lookup/replay requires authorization for that tenant
+Gate's deduplication key is qualified tenant/home-cell plus operation identity,
+bound to the authorized principal scope and immutable intent digest. Each evaluation/
+authorization attempt additionally binds its own Gate-computed canonical request
+and context digests. Lookup/replay requires current authorization for that tenant
 and operation; possession of its identifier is not access authority.
 
-The same key and canonical content returns the existing operation; changed content conflicts.
+The same operation key and intent returns the existing operation; changed intent
+conflicts. Reusing an attempt ID with different canonical content also conflicts.
+An explicit fresh evaluation preserves the original attempt and may supersede it
+before a claim through Gate's conditional transition; it does not rewrite an approval.
 An intentional second effect has a new business intent and key. When a target has an independent
 business uniqueness constraint, its manifest declares the corresponding effect key and conflict
 behavior; a new arbitrary client key cannot bypass that constraint. Request identity alone cannot
@@ -53,8 +61,10 @@ actor, time, authority and source-event references; clients use conditional vers
 | `rejected-after-dispatch` | A send occurred but authoritative target evidence proves no effect | Record rejection and evidence; settle/release under its measurement rule; never label this unsent |
 | `unresolved` | Some, all or none of the effect may have happened | Authorized read-only investigation may append evidence and resolve to a known outcome; no automatic resend or capacity refund |
 
-An abandoned pre-consumption claim may be superseded by a fresh linked claim only after its issuance
-is irrevocably closed and Gate atomically disables admission. A consumed claim is never recycled.
+An abandoned pre-consumption claim may be superseded by a fresh linked claim only
+after Warden durably closes its issuance and Gate conditionally disables admission
+while checking it is still unconsumed. Require both bound receipts before replacement;
+if consumption won, supersession refuses. A consumed claim is never recycled.
 A new attempt after definitive failure uses a new operation linked by `retry-of` and repeats all
 authority checks. Changed business intent is a new operation, not a changed digest under an old key.
 An unresolved operation cannot be made retryable by cancellation, new approval or a new client key;

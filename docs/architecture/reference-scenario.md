@@ -1,6 +1,9 @@
 # Proposed reference action and evidence specification
 
-**Proposed integration specification; no executed acceptance evidence.** The first action
+**Integration specification; Stage 1 observations recorded, effect acceptance pending.**
+The [acceptance packet](stage1-acceptance.md) maps the existing decision-only
+REF-01 and refusal evidence. REF-02–20 below remain action/evidence requirements,
+not claims of executed qualification. The first action
 is `release.publish_approved_artifact` against the [local profile](reference-profile.md).
 Harness should own the executable integration runner and installation recipe; Gate should
 own the disposable target/connector fixture and its conformance tests. The hub owns this

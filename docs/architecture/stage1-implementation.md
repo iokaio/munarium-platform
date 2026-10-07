@@ -1,6 +1,9 @@
 # Stage 1 implementation record
 
 **6 October 2026: Stage 1 service implementation complete; formal acceptance remains open.**
+The subsequent [7 October acceptance packet](stage1-acceptance.md) pins the review
+inputs and records exact-revision CI observations without changing this historical
+local-run record. [Stage 2 preparation](../stage2-preparation.md) tracks the next work.
 Both rows of the [parallel plan](../parallel-build-plan.md) now have executable
 implementations, authenticated service integration and local regression evidence.
 ADRs [0007](../decisions/0007-stage1-composition.md),

@@ -6,9 +6,12 @@ baseline. The [hub README](../../README.md#component-catalog) describes Server 1
 1.2.0 as the foundation. Confirm actual repository revisions and behavior before relying on
 either; no upstream code, dependency pin or release is changed by scaffolding these components.
 
-The [phase-2 baseline](foundation-baseline.md) records inspected public revisions and separates
-the already changed repository layout from qualification still required. Server and Matrix
-remain read-only during this planning contribution; upstream implementation is later work.
+The [phase-2 baseline](foundation-baseline.md) records the earlier source inspection.
+Subsequent [Stage 1 implementation](stage1-implementation.md) supplied authority,
+identity, records and authenticated services. The [acceptance packet](stage1-acceptance.md)
+retains their remaining gates. The current [Stage 2 assessment](stage2-foundation-assessment.md)
+reads the updated Server source and identifies confirmed gaps; it does not repeat
+the historical qualification or change Server/Matrix source.
 
 ## Qualification record to create from actual runs
 
