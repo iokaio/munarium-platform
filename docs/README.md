@@ -17,7 +17,13 @@ Server and Matrix have their own releases and implementation evidence. The [foun
 
 ## The nine new components
 
-These summaries describe the **planned responsibilities**. The repositories currently contain Rust interface scaffolds and build guides; their functional capabilities remain **Planned**. There is no qualified platform composition or production action path. The [component catalog](../README.md#component-catalog) and each repository's README record status.
+These summaries describe the **planned responsibilities**. Registry, Warden, Gate
+and Harness now have the experimental implementations described in the
+[Stage 1 record](architecture/stage1-implementation.md); the other five components
+remain scaffolds. The [acceptance packet](architecture/stage1-acceptance.md)
+separates implementation evidence from pending contract acceptance. There is no
+qualified platform composition or production action path. Catalog labels remain
+unchanged pending their own evidence review.
 
 | Component and repository | Plane | Planned responsibility |
 |---|---|---|
@@ -49,6 +55,7 @@ The repository [README](../README.md) carries the component and invariant catalo
 | [Build plan](build-plan.md) | Phase-2 work packets, decision dependencies, S1–S9/invariant traceability, capacity and evidence gates |
 | [Parallel build plan](parallel-build-plan.md) | Proposed two-machine work allocation, component pairings, dependency order and integration gates |
 | [Stage 1 development authorization](stage1-authorization.md) | Maintainer-directed implementation scope across six repositories, supporting CI changes and separate acceptance boundaries |
+| [Stage 2 preparation](stage2-preparation.md) | Approved closeout/design scope, HUB-03 and foundation packets, review and environment gates |
 | [Overview paper (PDF)](architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) | *An Open Source Applied AI Journey*, 29 September 2026, with a 6 October status update: a forward-looking, business-level introduction to the platform and its bounded-agent development method. VCP development is suspended; Ioka is focusing more intensely on the platform. Its case studies are synthetic; the repositories remain authoritative for status. |
 | [Architecture index](architecture/README.md) | Foundation baseline, system boundaries, decision register, proposed lifecycle, local profile and reference acceptance scenario |
 | [Decision index](decisions/README.md) | Cross-component design records, beginning with the scaffold proposal |

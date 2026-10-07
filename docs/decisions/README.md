@@ -19,9 +19,14 @@ while human acceptance remains pending. It does not accept or release those cand
 | [0006: Registry manifest admission](0006-registry-manifest-admission.md) | Proposed; implementation candidate present | DEC-02 signed artifacts, tenant/owner binding and recipient-bound candidate access |
 | [0007: Stage 1 composition](0007-stage1-composition.md) | Proposed; implementation authorized | Decision-only component integration, independent clients, refusal/replay and retained run evidence |
 | [0008: Stage 1 service boundary](0008-stage1-service-boundary.md) | Implementation directed; acceptance evidence pending | Durable bootstrap authority, authenticated services and client compatibility |
+| [0009: Stage 1 recovery profile](0009-stage1-recovery-profile.md) | Implementation directed; human acceptance pending | Source derivation, immutable recording intent and authenticated recovery |
+| [0010: Stage 2 authority and durability](0010-stage2-authority-durability.md) | Proposed for maintainer review | HUB-03 approval/activation, action records, reservations, effect profile and failure histories |
+| [0011: platform contract evolution](0011-platform-contract-evolution.md) | Proposed for maintainer review | Second-pass identity/attempt binding, qualified context, shared events, coverage, profiles and later-component boundaries |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
-corpus, actual bounded runs and unqualified adapter work. It does not select an engine.
+corpus and bounded runs. ADR 0007 subsequently selected OPA for experimental
+Stage 1 implementation; formal DEC-03 acceptance remains pending in the
+[review packet](../architecture/stage1-acceptance.md).
 [HUB-02 evaluator adapter oracle](evaluator-adapter-oracle.md) adds executable typed
 obligation/refusal fixtures and native mixed allow/error checks; it is not a runtime adapter.
 

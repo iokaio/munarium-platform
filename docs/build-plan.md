@@ -5,15 +5,20 @@
 The original plan remains the historical strategy baseline. This guide makes the next work
 reviewable without advancing catalog states, release labels or invariant evidence.
 
-The hub is architecture and design documentation only: no Rust code or Cargo workspace.
-The nine component repositories contain non-publishable Rust library scaffolds and design
-guides. They declare local interfaces without implementations or wire types. Supported
-contracts, deployment profiles and production action paths remain **none**.
+The hub owns architecture, contract candidates and evidence: no Rust code or Cargo
+workspace. Registry, Warden, Gate and Harness now implement an experimental
+decision-only slice with Server. The other five component repositories remain
+scaffolds. The [Stage 1 record](architecture/stage1-implementation.md) describes
+actual behavior; accepted published contracts and production action profiles
+remain **none**.
 
-**Phase 2 is planning and verification tooling.** The [dated source baseline](architecture/foundation-baseline.md)
-confirms all twelve required public checkouts, including standalone Matrix. It records source
-inspection, not runtime qualification. The proposals below require maintainer review and
-accepted contracts before runtime implementation; this contribution changes neither foundation.
+**Current position, 7 October 2026.** The original phase-2 preparation baseline is
+historical. [FOUNDATION-01](architecture/foundation-01.md) records its observed
+checks and gaps. The [Stage 1 authorization](stage1-authorization.md) subsequently
+permitted experimental implementation before formal acceptance. The maintainer
+has now approved [closeout and Stage 2 preparation](stage2-preparation.md).
+Review [pinned Stage 1 evidence](architecture/stage1-acceptance.md), then HUB-03
+and confirmed foundation gaps; effects still require their own accepted contracts.
 
 **Development focus — 6 October 2026.** Ioka has suspended VCP development: the experiment was
 worthwhile, but continued development has become too expensive and is unlikely to deliver the
@@ -25,7 +30,8 @@ development environment. See the [status update](../README.md#how-the-platform-i
 ## Start here
 
 1. Run the read-only [workspace preflight](architecture/foundation-baseline.md#workspace-preflight),
-   then inspect and qualify the [foundation requirements](architecture/foundation-requirements.md).
+   then review the [Stage 1 acceptance packet](architecture/stage1-acceptance.md)
+   and [current foundation assessment](architecture/stage2-foundation-assessment.md).
 2. Review the [decision register](architecture/contract-backlog.md#decision-register),
    [scaffold proposal](decisions/0001-scaffold-boundaries.md) and
    [execution proposal](decisions/0002-action-execution-protocol.md). Proposed is not accepted.
@@ -67,8 +73,10 @@ accepted decision or release is implied by an identifier.
 | 4 · integrated evidence | S5 checkpoints; Assure offline verification, retention, full upgrade/restore exercises and released composition preparation | REF-20 plus independent verification, retained gaps, immutable pins, operational/security evidence and explicit support boundary |
 | 5 · demand-led breadth | Additional identity/broker/provider/connector profiles, availability, offline packaging and federation | Separate conformance and operational evidence, actual test environment and maintainer for each added boundary |
 
-Month windows in plan section 25 remain capacity assumptions. Preparation does not complete
-Stage 0: no foundation qualification or S1 authority test is supplied by these scaffolds.
+Month windows in plan section 25 remain capacity assumptions. Stage 1 now supplies
+S1 authority implementation/tests and a decision-only composition, while formal
+acceptance and omitted foundation profiles remain open. Earlier scaffold-only
+statements are not descriptions of the current implemented slice.
 The [historical crosswalk](architecture/foundation-baseline.md#historical-plan-crosswalk) explains
 why Matrix extraction is no longer a new work packet. The local reference milestone is the core
 commitment to pursue; an enterprise profile is conditional on a named environment owner, access,
@@ -96,8 +104,9 @@ Every executable packet must add: repository/base SHA; accepted ADR and contract
 permitted files; excluded work and unchanged APIs; fixture/oracle revision; exact commands and
 required environment; estimated implementation and human review hours; time/spend ceiling;
 failure/stop conditions; evidence destination; accountable owner and acceptance reviewer. Missing
-required fields keep the packet in design. Upstream foundation changes get separate authorization
-and PRs; this phase-2 planning branch performs none of them.
+required fields keep the packet in design. Upstream foundation changes require
+their scoped authorization and PRs; the current closeout/preparation packet
+performs the documented read-only audit and existing checks there.
 
 Review estimates weekly against accepted work, review delay, integration failures and rework.
 At the first six-week review replace the annual 1,320-hour assumption with observed capacity,
@@ -156,10 +165,12 @@ preserves Server's existing accounting lineage. Assure verification must run wit
 
 ## Local development and what the checks mean
 
-Each component's validation guide gives the exact commands. All initial crates build without
-external dependencies or sibling checkouts. Run format, locked offline build, Clippy with
-warnings denied, tests and API docs from each component root, followed by its hygiene checks.
-No runtime tests exist yet; zero executed tests are not acceptance evidence.
+Each component's validation guide gives the exact commands. Implemented Stage 1
+components have locked dependencies and runtime tests; their ordinary builds do
+not require sibling checkouts. Fetch locked dependencies when needed, then run
+the component's documented formatting, build, lint, test and hygiene checks.
+Harness's composition runner explicitly requires the pinned sibling sources.
+Scaffold-only components do not gain runtime coverage from successful compilation.
 
 This repository's checks remain documentation, licensing and hygiene checks from
 [CONTRIBUTING](../CONTRIBUTING.md). Also run the gate regression tests:
@@ -180,7 +191,8 @@ script tests with temporary fictional repositories. CI and DCO remain independen
 A future composition records immutable Server/Matrix/component releases and digests, contract
 bundle, schema versions, migration requirements, deployment profile, policy/identity assumptions,
 acceptance runs and unresolved findings. No placeholder `platform-lock.yaml` is created now:
-there is no tested composition to describe.
+there is no released, qualified composition to describe. Experimental Stage 1
+source pins and run observations are retained in the acceptance packet instead.
 
 Before that release, every integrated attempt retains an
 [experimental run record](architecture/reference-scenario.md#experimental-run-record-from-the-first-integrated-slice).

@@ -1,0 +1,69 @@
+{
+  "kind": "stage1-review-inputs",
+  "status": "proposed-review-inputs-not-a-release",
+  "observation_date": "2026-10-07",
+  "contract_acceptance": "pending",
+  "independent_review": "pending",
+  "repositories": {
+    "munarium-platform": {
+      "origin": "https://github.com/iokaio/munarium-platform.git",
+      "revision": "f122011b713c892249738c9835c90a2d81a9505a",
+      "tree": "72e833a51bc98439c723c10753a77dd24b02170d"
+    },
+    "munarium": {
+      "origin": "https://github.com/iokaio/munarium.git",
+      "revision": "7cc0c97fe124d446064bb8cf0dfcb6d868d04987",
+      "tree": "9c02adf2030ef0ca008311488294b17a7c4bf83b"
+    },
+    "munarium-warden": {
+      "origin": "https://github.com/iokaio/munarium-warden.git",
+      "revision": "7aabbf4a5336cbf29ee7ef26f3baf8a7078770fb",
+      "tree": "e4d28ebc6e81f893c637bb696d90cdd2b99a18a3"
+    },
+    "munarium-registry": {
+      "origin": "https://github.com/iokaio/munarium-registry.git",
+      "revision": "4ab7f4b3a9f77d16e74e44611de4a526e8c75eb9",
+      "tree": "36448d9735eb4a869b1ff70895e0d98b23ba6dbf"
+    },
+    "munarium-gate": {
+      "origin": "https://github.com/iokaio/munarium-gate.git",
+      "revision": "5f8957e25cff0398f8cda7359e6397e840232835",
+      "tree": "346dd96e21d10291cc18e63be3605f253b0aa6b3"
+    },
+    "munarium-harness": {
+      "origin": "https://github.com/iokaio/munarium-harness.git",
+      "revision": "926624e0cb4e1d5af1996308cfaed108204a3854",
+      "tree": "c7ce169590a9908e211de598a516595261489e96"
+    }
+  },
+  "hub_file_sha256_lf": {
+    "docs/decisions/candidates/candidate-lock.json": "c411082dd6748917fd7ffdbf5a5ea839caf112faa1a12441e79424e26c033969",
+    "docs/decisions/candidates/warden-admission-lock.json": "67aa8e9431dd1097330ac0e92f7cb4c2fcdee3259d48c56a39c073f111b79f58",
+    "docs/decisions/registry-v2/bundle-lock.json": "def97c45484f13da11da3b091e0e20e81e4574ef7158ab19542d700d6aab81df",
+    "docs/decisions/decision-json-v1-vectors.json": "849033a2d90681b378754603b8129866cc28a5fa400996d8b8807b87fd959775"
+  },
+  "candidate_bundle_sha256": {
+    "docs/decisions/candidates/candidate-lock.json": "5ee201e48a2390b7cf66fdf6aa8750f751f1ec9241e9e04131b6632745612238",
+    "docs/decisions/candidates/warden-admission-lock.json": "9ed4a12563d064e5d2068658b903a8b8813ffe49e8cd66356931af1447080283",
+    "docs/decisions/registry-v2/bundle-lock.json": "2e121d86c8dd4061ef1bdbc9dc073dceebfebf7305cf7a50d5d0e59385eaf0fc"
+  },
+  "evaluator": {
+    "name": "OPA",
+    "version": "1.21.1",
+    "platform": "windows-amd64",
+    "binary_sha256": "25406f7c6e147d687fd7fd546f835bafa160a6242c605ee94a23ba6cd7bccdcd",
+    "worker_path": "scripts/opa_worker.py",
+    "worker_sha256_lf": "3ee39b26da54a811658d467ee8ae72ca6478e371319dfeb7123aea482e7e5a0a"
+  },
+  "limits": {
+    "qualification": false,
+    "runtime_activation": false,
+    "binary_build_provenance": "source pins do not prove binary provenance",
+    "contract_hash_convention": "LF-normalized committed bytes; runtime worker hashing uses actual file bytes"
+  },
+  "checks_observed": [
+    "hub candidate lock file hashes match committed files",
+    "Server/Gate/Harness Stage 1 files equal pinned hub sources after LF normalization",
+    "Registry v2 files equal pinned hub candidate after LF normalization"
+  ]
+}

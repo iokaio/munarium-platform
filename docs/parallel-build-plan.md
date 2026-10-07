@@ -10,6 +10,13 @@ gates below remain requirements for claiming Stage 1 complete.
 
 Use the machines for two bounded tasks within the same delivery stage. Complete a working slice across repositories before advancing; each repository receives several increments rather than being finished in isolation. Machine assignments can change between packets.
 
+**Current position, 7 October 2026.** Both Stage 1 rows have experimental service
+implementations and recorded local integration evidence. The maintainer approved
+[Stage 1 closeout and Stage 2 preparation](stage2-preparation.md). First review the
+[pinned acceptance packet](architecture/stage1-acceptance.md); row 3's next pair is
+HUB-03 design plus the [Server foundation assessment](architecture/stage2-foundation-assessment.md).
+Implementation progress does not close the contract acceptance gates.
+
 ## Shared prerequisites
 
 1. **Qualify the foundations in parallel.** Machine A inspects and tests Server; Machine B inspects and tests Matrix. Combine the results into FOUNDATION-01, retaining exact source revisions, actual outcomes and unavailable checks. The [foundation baseline](architecture/foundation-baseline.md) records that Matrix is already separate; do not repeat extraction.
@@ -60,4 +67,10 @@ Keep Console out of the first action milestone: Council's minimal authenticated 
 
 ## First pair to start
 
-Begin with **Server qualification on Machine A and Matrix qualification on Machine B**. After the initial contracts and foundation gates, **Registry plus Warden** is the first component implementation pair. Reassess later packet estimates from those observed results rather than assigning calendar dates from machine availability alone.
+The original starting pair was Server and Matrix qualification, recorded in
+[FOUNDATION-01](architecture/foundation-01.md). Do not repeat extraction or
+restart implemented Stage 1 packets from their scaffold descriptions. The current
+next pair is **HUB-03 preparation on Machine A and confirmed Server foundation
+gap assessment on Machine B**, with Stage 1 acceptance evidence prepared first.
+Use [the preparation packet](stage2-preparation.md) for exact scope and gates;
+re-estimate implementation from these observations before assigning dates.

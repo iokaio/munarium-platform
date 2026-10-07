@@ -9,6 +9,9 @@ All unimplemented behavior remains proposed.
 | [Contract backlog](contract-backlog.md) | Shared definitions that must be decided before components implement them |
 | [Foundation requirements](foundation-requirements.md) | Server S1–S9, Matrix boundaries and qualification inputs |
 | [Stage 1 implementation record](stage1-implementation.md) | Cross-repository experimental behavior, observed tests and open acceptance gates |
+| [Stage 1 acceptance packet](stage1-acceptance.md) | Exact source/candidate pins, observed CI, requirement mapping and pending human dispositions |
+| [Stage 2 foundation assessment](stage2-foundation-assessment.md) | Existing S7/S9 behavior, confirmed action-record gap and bounded next checks |
+| [Platform contract second pass](platform-contract-review.md) | Cross-platform findings, next-cut corrections, later boundaries and required acceptance cases |
 | [FOUNDATION-01 observations](foundation-01.md) | Pinned source/test outcomes, S1-S9 map, failures and unavailable coverage; incomplete qualification |
 | [Foundation baseline](foundation-baseline.md) | Dated public source observations, read-only workspace preflight, historical crosswalk and qualification gaps |
 | [Action lifecycle](action-lifecycle.md) | Proposed operation states, API outcomes, identity, retry/cancellation rules and enforcement-mode binding |
