@@ -6,6 +6,11 @@ text, develop HUB-03 proposals and assess Server S7/S9 in parallel. This is the
 scope of the current packet. Specific contract acceptance, effect implementation,
 publication, merge and operational activation remain separate decisions.
 
+**Follow-on direction:** after reviewing and merging this packet in PR 13, the
+maintainer directed the [Stage 2 contract candidate packet](stage2-contract-packet.md).
+That packet records the selected design basis and its new schema/vector work;
+this page retains the original closeout scope and evidence.
+
 ## Current result and next gate
 
 Both Stage 1 rows have implementations and recorded local integration evidence.

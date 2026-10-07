@@ -22,6 +22,7 @@ while human acceptance remains pending. It does not accept or release those cand
 | [0009: Stage 1 recovery profile](0009-stage1-recovery-profile.md) | Implementation directed; human acceptance pending | Source derivation, immutable recording intent and authenticated recovery |
 | [0010: Stage 2 authority and durability](0010-stage2-authority-durability.md) | Proposed for maintainer review | HUB-03 approval/activation, action records, reservations, effect profile and failure histories |
 | [0011: platform contract evolution](0011-platform-contract-evolution.md) | Proposed for maintainer review | Second-pass identity/attempt binding, qualified context, shared events, coverage, profiles and later-component boundaries |
+| [0012: Stage 2 candidate profile](0012-stage2-candidate-profile.md) | Candidate preparation directed; wire acceptance pending | Concrete single-cell action/approval/activation/event schemas, digest domains, offline profile and compatibility boundary |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus and bounded runs. ADR 0007 subsequently selected OPA for experimental
@@ -49,3 +50,7 @@ offline checks of the exact principal result and decision-path refusal cases.
 
 [Registry v2 candidate](registry-v2/README.md) supplies separate closed schemas, signed
 artifact vectors and exact contract pins for REG-01; formal acceptance remains pending.
+
+[Stage 2 v1 candidate](stage2-v1/README.md) adds a separate inert namespace with
+fixed wire/digest/refusal vectors and committed-source export. It does not change
+or accept the Stage 1 bundles or implement effect-producing service APIs.

@@ -43,6 +43,11 @@ compatibility. Coverage/export, invocation settlement, UI, suspension and federa
 remain later implementation packets. Existing candidate schemas and locks stay
 unchanged; accepting Stage 1 does not accept these future contracts implicitly.
 
+The subsequent [ADR 0012](../decisions/0012-stage2-candidate-profile.md) and
+[Stage 2 candidate](../decisions/stage2-v1/README.md) make those next-cut choices
+reviewable as closed schemas and fixed vectors. Their offline evidence is separate
+from pending exact-wire acceptance, consumer conformance and runtime qualification.
+
 | Design item | Responsible design owners / consumers | Questions and acceptance vectors required before implementation |
 |---|---|---|
 | Principal context | Warden and Server; Gate, Council, Registry, Gateway | Verified tenant/origin/actor evidence, issuer/audience/expiry, narrowing, depth/cycles and forbidden ratifier transitions |
