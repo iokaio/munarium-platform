@@ -2,17 +2,30 @@
 
 **Proposed work allocation, 6 October 2026.** This applies the dependencies and acceptance gates in the [build plan](build-plan.md) to two development machines. It is a scheduling recommendation, not an accepted contract, implementation authorization or qualification result. The build plan and [decision register](architecture/contract-backlog.md#decision-register) remain authoritative for prerequisites. Component repositories own their code and tests.
 
+The subsequent [Stage 1 development authorization](stage1-authorization.md) directs
+implementation of both Stage 1 rows in one workspace, including their foundation
+prerequisites and supporting CI. It permits experimental development against
+recorded proposals while acceptance is pending. The acceptance and completion
+gates below remain requirements for claiming Stage 1 complete.
+
 Use the machines for two bounded tasks within the same delivery stage. Complete a working slice across repositories before advancing; each repository receives several increments rather than being finished in isolation. Machine assignments can change between packets.
 
 ## Shared prerequisites
 
 1. **Qualify the foundations in parallel.** Machine A inspects and tests Server; Machine B inspects and tests Matrix. Combine the results into FOUNDATION-01, retaining exact source revisions, actual outcomes and unavailable checks. The [foundation baseline](architecture/foundation-baseline.md) records that Matrix is already separate; do not repeat extraction.
-2. **Accept the initial hub contracts.** Resolve bootstrap/principal identity, canonical requests, manifests, evaluation, minimum identity/topology and event records through HUB-01/02. The second machine can investigate foundation gaps and prepare tests while decisions are reviewed. Component runtime work waits for its accepted definitions.
-3. **Complete the required Server foundation changes.** Implement only confirmed gaps against accepted decisions. Pass the S1 authority gate and supply the required S2 record shapes, S3 principal verification and S4 lineage support for the first integrated slice. Use the [foundation requirements](architecture/foundation-requirements.md) and Server's own tests; a planning description is not evidence that a gap exists or has been closed.
+2. **Accept the initial hub contracts.** Resolve bootstrap/principal identity, canonical requests, manifests, evaluation, minimum identity/topology and event records through HUB-01/02. The second machine can investigate foundation gaps and prepare tests while decisions are reviewed. The scoped Stage 1 authorization permits experimental runtime implementation against recorded candidates; acceptance is still required to close this gate.
+3. **Complete the required Server foundation changes.** Implement only confirmed gaps against the shared decisions, using the Stage 1 experimental authorization while acceptance is pending. Pass the S1 authority gate and supply the required S2 record shapes, S3 principal verification and S4 lineage support for the first integrated slice. Use the [foundation requirements](architecture/foundation-requirements.md) and Server's own tests; a planning description is not evidence that a gap exists or has been closed.
 
 ## Development sequence
 
-The rows below are a recommended order within the build plan's stages. Two tasks in a row can proceed concurrently once their shared contracts and individual prerequisites are accepted. The completion column is an integration gate, not merely two successful component builds.
+The [Stage 1 implementation record](architecture/stage1-implementation.md) tracks the
+single-workspace implementation, actual experimental runs and remaining acceptance gates.
+
+The rows below are a recommended order within the build plan's stages. Normally,
+two tasks in a row proceed once their shared contracts and individual prerequisites
+are accepted; the scoped Stage 1 experimental authorization is the exception for
+development, not completion. The completion column is an integration gate, not
+merely two successful component builds.
 
 | Order / stage | Machine A | Machine B | Completion gate |
 |---|---|---|---|

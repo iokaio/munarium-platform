@@ -1,7 +1,13 @@
 # Architecture decision index
 
-A proposed record is not an accepted contract or release approval. Cross-component semantic
-implementation waits for the applicable accepted decision and versioned contract.
+[Stage 1 source derivation and recovery](0009-stage1-recovery-profile.md) specifies
+the first executable service profile's source verification and durable recovery.
+
+A proposed record is not an accepted contract or release approval. Ordinarily,
+cross-component semantic implementation waits for the applicable accepted decision
+and versioned contract. The [Stage 1 development authorization](../stage1-authorization.md)
+explicitly permits experimental implementation and testing against recorded candidates
+while human acceptance remains pending. It does not accept or release those candidates.
 
 | Record | State | Scope |
 |---|---|---|
@@ -11,6 +17,8 @@ implementation waits for the applicable accepted decision and versioned contract
 | [0004: decision-only contracts](0004-decision-only-contracts.md) | Proposed; acceptance evidence incomplete | HUB-02 canonical vectors, manifests, evaluation, minimum topology and events |
 | [0005: Warden identity admission](0005-warden-identity-admission.md) | Proposed; not accepted | Provider identity mapping, registered delegation and attribution-only forwarding |
 | [0006: Registry manifest admission](0006-registry-manifest-admission.md) | Proposed; implementation candidate present | DEC-02 signed artifacts, tenant/owner binding and recipient-bound candidate access |
+| [0007: Stage 1 composition](0007-stage1-composition.md) | Proposed; implementation authorized | Decision-only component integration, independent clients, refusal/replay and retained run evidence |
+| [0008: Stage 1 service boundary](0008-stage1-service-boundary.md) | Implementation directed; acceptance evidence pending | Durable bootstrap authority, authenticated services and client compatibility |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus, actual bounded runs and unqualified adapter work. It does not select an engine.

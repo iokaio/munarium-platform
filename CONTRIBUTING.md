@@ -47,7 +47,10 @@ chain, the outcome vocabulary, a consequence-class rule, a policy-engine choice)
 record** first, under `docs/decisions/` once that directory exists. The record names the
 requirement, the alternatives considered, the evidence, the consequences for each affected
 repository and the version policy the change follows. Component pull requests land only after the
-record is merged. [GOVERNANCE.md](GOVERNANCE.md) describes who decides.
+record is merged. The [Stage 1 authorization](docs/stage1-authorization.md) permits
+experimental implementation and testing against recorded proposals while formal
+acceptance remains pending; it does not authorize merging or release composition.
+[GOVERNANCE.md](GOVERNANCE.md) describes who decides.
 
 ### Contracts
 
@@ -105,3 +108,9 @@ Only Ioka changes `LICENSE`, `NOTICE`, `TRADEMARK.md`, this file, `GOVERNANCE.md
 `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `AGENTS.md` and `CLAUDE.md`, anything under
 `.github/`, the invariant catalog, `contracts/` and `releases/` once they exist, and any signing or
 release configuration. A pull request that touches them is declined unless a maintainer opened it.
+
+The [Stage 1 development authorization](AGENTS.md#stage-1-development-authorization)
+is the maintainer's explicit direction to prepare the scoped guidance, build/test
+workflow and contract candidate changes. Contributors carrying out that direction
+may edit those files; protected-file ownership, review and merge requirements still
+apply. It grants no release authority or permission to weaken approval controls.
