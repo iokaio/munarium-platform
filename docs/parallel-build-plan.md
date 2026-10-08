@@ -72,11 +72,13 @@ The original starting pair was Server and Matrix qualification, recorded in
 [FOUNDATION-01](architecture/foundation-01.md). Do not repeat extraction or
 restart implemented Stage 1 packets from their scaffold descriptions. Council
 approval and Registry activation storage have merged through Council PR 2 and
-Registry PR 4. The current review pair is **Gate's PostgreSQL activation barrier
-and Warden's participant adapter**, under
+Registry PR 4. Gate PR 3 and Warden PR 4 have also merged. The current review pair
+is **Server's activation participant and Harness's real five-service activation
+composition**, under
 [ADR 0014](decisions/0014-stage2-service-integration.md).
-Complete activation still requires Server's participant adapter, acknowledged
-audit delivery and real composition tests before the integrated barrier can pass.
+The composition exercises every activation phase with lost replies and process
+restart. Other-participant outbox delivery, snapshot recovery and the controlled
+execution path remain open; a completed activation barrier does not qualify effects.
 Use the [implementation packet](stage2-implementation.md) and
 [next-step plan](next-steps.md) for scope and evidence gates; re-estimate from
 observed runtime availability before assigning dates.
