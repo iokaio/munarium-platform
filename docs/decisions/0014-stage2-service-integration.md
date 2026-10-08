@@ -103,3 +103,46 @@ Required evidence is REF-02-19 and H03-01-13 against actual persistence and serv
 boundaries, including independent send/effect counts. Retain every failed or
 unavailable case. The second implementation review is advisory, not human
 contract acceptance. CI results apply only to their exact tested PR heads.
+
+## Participant adapter intake, 7 October 2026
+
+The maintainer reported the first three PRs merged and directed continuation.
+Verified inputs are hub `27c3e6c71a3030b209725778bacd88c00f6ff165`, Council
+`6ea0822b6ad2da29ca051410289422d9ccaa4c54` and Registry
+`eb08f75deaae664afd067194241ae4646c3d53ce`. The next two review tasks are Gate's
+PostgreSQL activation barrier and Warden's durable participant adapter. Server's
+participant adapter and real complete composition follow after this review pair.
+
+Gate's existing `/v1/actions` experimental adapter uses `pause`, `pause-lookup`,
+`apply-activation`, `activation-lookup`, `activation-head` and `resume` operations.
+Warden uses `/v1/activation` with `apply`, `lookup` and `head`. Both require current
+Server governing bindings at `stage2:<service>` with qualified `scope`, enrolled
+`coordinator`, `readers`, `initial_epoch` and `initial_artifact_set_digest`.
+Only the enrolled Council transport peer may mutate. Current Council lookup must
+confirm the exact ratified transition and bounded validity. Warden independently
+obtains Gate's pause and Registry's matching applied receipt/head. Gate independently
+obtains the Registry, Server and Warden applied receipts/heads before resuming;
+caller-supplied receipts alone are insufficient. Lookup is evidence, never resume.
+
+The initial head is enrolled once and cannot be overwritten by later configuration.
+Gate serializes each scope through a PostgreSQL row lock; pause, epoch install,
+resume and their retained local outbox records commit atomically. Future consumption
+and final-send transactions must take this same lock. Warden owns SQLite WAL/FULL
+participant state and matching local outbox transactions. Retried transition IDs
+cannot change bytes, and historical receipt lookup cannot alter the current head.
+An expired transition cannot gain fresh authority through a retry. Scope includes
+domain, tenant, deployment and cell. Only one pending transition may own a barrier.
+
+Gate's resume response distinguishes the completed activation barrier from
+execution availability: no execution route is enabled by this packet. Required
+Server receipt/head endpoints remain a dependency, and absence keeps the barrier
+closed. Participant outbox delivery, snapshot quarantine and target-floor recovery
+remain later integration requirements; process restart tests are not restore tests.
+The existing Stage 1 decision and identity paths remain separate.
+
+Validation uses isolated test PostgreSQL, native services with disposable mTLS,
+concurrent writers, restart after committed phases, immutable retries, changed
+authority, incomplete/forged receipt sets and tenant refusals. Synthetic dependency
+servers are explicitly identified. No full REF-18 or effect qualification is inferred
+from component tests. Local resources have loopback-only ports, synthetic credentials,
+no cost authority beyond the existing host, and expiry at test teardown.

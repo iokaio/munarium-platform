@@ -70,11 +70,13 @@ Keep Console out of the first action milestone: Council's minimal authenticated 
 
 The original starting pair was Server and Matrix qualification, recorded in
 [FOUNDATION-01](architecture/foundation-01.md). Do not repeat extraction or
-restart implemented Stage 1 packets from their scaffold descriptions. The current
-next pair is **Council approval on Machine A and Registry activation storage on
-Machine B**, under [ADR 0014](decisions/0014-stage2-service-integration.md).
-Complete activation also requires Gate's durable pause/resume and matching
-Server/Warden participant adapters before the integrated barrier can pass.
+restart implemented Stage 1 packets from their scaffold descriptions. Council
+approval and Registry activation storage have merged through Council PR 2 and
+Registry PR 4. The current review pair is **Gate's PostgreSQL activation barrier
+and Warden's participant adapter**, under
+[ADR 0014](decisions/0014-stage2-service-integration.md).
+Complete activation still requires Server's participant adapter, acknowledged
+audit delivery and real composition tests before the integrated barrier can pass.
 Use the [implementation packet](stage2-implementation.md) and
 [next-step plan](next-steps.md) for scope and evidence gates; re-estimate from
 observed runtime availability before assigning dates.
