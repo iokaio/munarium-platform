@@ -180,3 +180,61 @@ services and persistence, partial progress, lost replies and retry. Delivery of
 Registry/Gate/Warden local outboxes, restore quarantine, effects and network/secret
 isolation remain explicit follow-up coverage; complete activation is not complete
 Stage 2 execution qualification.
+
+## Participant delivery and action journal intake
+
+The maintainer reported the preceding three PRs merged and requested participant
+outbox delivery and Gate's action journal, enabling execution when its dependencies
+justify it. Verified merge inputs are Server `7d4a4d836fb483e7dad056f167f3a965d793d229`,
+Harness `887d38b482b209662964e1cbce2b5c88bdc433bc` and hub
+`748dc42dfb1cc0718458ef5e9e3fe2175eca9e67`; participant inputs above remain unchanged.
+The two bounded review tasks are delivery across participant owners and Gate journal
+storage. Component PRs retain their owners; this does not authorize merging them.
+
+Participant `flush` is a coordinator-authenticated maintenance operation. It may
+deliver retained evidence after a transition expires, but cannot apply or resume a
+transition. The owner obtains its own current Warden assertion with `propose` scope
+for Server's `action-records:<tenant>` resource. The signed Server action-record
+policy registers a dedicated activation-only stream and current generation for each
+owner. No request may supply authoritative stream coordinates or acknowledgements.
+Source registration changes with pending events refuse; they do not rewrite history.
+
+Only applied receipts map to the existing `activation-applied` event. Gate's pause
+and resume records remain retained local history. Before the first send, the owner
+transactionally materializes exact canonical event bytes, source sequence,
+predecessor and timestamp from its retained intent. This timestamp records the
+owner's observation for delivery, not an invented historical commit time. A stream
+starts at one and belongs exclusively to this owner store; Server rejects a conflicting
+head rather than the sender guessing past missing history. Subsequent events follow
+the last locally materialized digest. Each event retains its original source and
+bytes across restart, lost acknowledgement and retry. Outbox delivery does not
+constitute snapshot recovery: restored or changed-generation stores remain refused
+until a separately governed reconciliation protocol exists.
+
+Delivery requires the archived transition (normally committed by Server's apply).
+Missing prerequisites leave the event pending. Mark acknowledgement only after
+validating the closed candidate acknowledgement, exact event/payload digests,
+qualified ledger reference and positive ledger position. Never delete retained
+intent or treat an HTTP success, source-head query or mismatched reply as custody.
+Concurrent flushes may repeat the same event; they cannot allocate different bytes
+or advance past an unacknowledged predecessor.
+
+Gate journal transactions use the existing qualified activation-cell row lock.
+They bind immutable operation/request and attempt/context/decision/approval inputs,
+retain cancellation tombstones, establish one claim, and atomically consume a
+grant, acquire a worker fence, reserve every supplied admitted bucket and append
+durable intent. Adapters must provide independently verified inputs, never deserialize
+trusted admission structs directly from callers. Storage support alone is not an
+authenticated execution route. The mandatory publication bucket is tenant/target,
+limit two per UTC hour; extra admitted buckets are conjunctive. Pending and uncertain
+reservations count in later windows, and retry returns the original consumption
+without a new fence, capacity charge or send opportunity. Cancellation and activation
+pause serialize against consumption. No timer or process restart refunds exposure.
+
+This packet does not introduce an executable wire profile or fabricate live Warden,
+connector, recovery-floor or Linux isolation evidence. Final-send and target effects
+remain unavailable until those controls are implemented and tested. Tests cover
+real PostgreSQL races, atomic rollback, restart, cancellation, pause, immutable
+retries and capacity across windows; owner delivery tests cover wrong/missing
+acknowledgements, changed registration and lost replies. The same implementation
+receives a second review pass before publication.
