@@ -33,6 +33,19 @@ or memory-store success cannot substitute for a required real-store/effect test.
 
 ## S2-A implementation evidence, 7 October 2026
 
+Subsequent read-only verification found hub PR 14 merged at
+`d51aa1681a18ab57687f88f92cf07565b0f77df2` and Server PR 76 merged at
+`61a350a98953837e2b1b6564608c5b6957873ae9`. Server's exact-merge
+[server-ci](https://github.com/iokaio/munarium/actions/runs/37707715091),
+[clients-ci](https://github.com/iokaio/munarium/actions/runs/37707715121) and
+[hygiene](https://github.com/iokaio/munarium/actions/runs/37707715194) runs completed
+successfully. Hub's exact-merge
+[hygiene](https://github.com/iokaio/munarium-platform/actions/runs/37707211035)
+also completed successfully. These results supplement, rather than rewrite, the
+earlier local evidence below. The maintainer then directed implementation of the
+[next-step plan](next-steps.md), including tests, a second pass and review PRs;
+[ADR 0014](decisions/0014-stage2-service-integration.md) records that boundary.
+
 Server source [489e9f2bf276195f2028fd549cce69018ae075d0](https://github.com/iokaio/munarium/commit/489e9f2bf276195f2028fd549cce69018ae075d0)
 implements [ADR 0013](decisions/0013-action-record-admission.md). It exports the
 exact candidate into a new namespace, adds action artifacts/events to protected
