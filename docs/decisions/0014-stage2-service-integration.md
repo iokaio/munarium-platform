@@ -169,8 +169,9 @@ append the participant receipt/state, canonical Server accountability event and
 Council transition archive in one transaction. The archive provenance names the
 authenticated coordinator and independently fetched ratification, never a fabricated
 Council principal. A direct audit append cannot install a participant epoch. Existing
-record readers can inspect the canonical event and exact acknowledgement; retries
-retain the original event, time, receipt and acknowledgement. This participant epoch
+record readers can inspect the canonical event; an authorized exact event retry
+returns the original acknowledgement. Retries retain the original event, time,
+receipt and acknowledgement. This participant epoch
 does not replace the independently signed root governance epoch or enable execution.
 
 Memory storage is disposable; PostgreSQL is the durable profile. Process restart

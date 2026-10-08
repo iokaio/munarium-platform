@@ -194,8 +194,8 @@ review-time limitations; this section records the next bounded pair.
 
 | Component | Review input | Implemented boundary |
 |---|---|---|
-| Server | [PR 77](https://github.com/iokaio/munarium/pull/77), `6d07421f5e7bd0e275a03458ed8974580cc7d7f7` | Governed REST/gRPC participant, immutable initial enrollment, atomic receipt/epoch/archive/audit event in the protected ledger |
-| Harness | [PR 3](https://github.com/iokaio/munarium-harness/pull/3), `967c216d0ef3dba81a9a5c676b54abd0a8f169c1` | Actual five-service activation, six post-commit response losses and participant/coordinator restarts, pinned Linux CI and source/binary evidence runner |
+| Server | [PR 77](https://github.com/iokaio/munarium/pull/77), `059ee3f3305e17d96581822827f182ce927db615` | Governed REST/gRPC participant, immutable initial enrollment, atomic receipt/epoch/archive/audit event in the protected ledger |
+| Harness | [PR 3](https://github.com/iokaio/munarium-harness/pull/3), `11140d9fb6dc6f264331feaedc0deb8544a1b742` | Actual five-service activation, six post-commit response losses and participant/coordinator restarts, pinned Linux CI and source/binary evidence runner |
 
 Server's current signed coordinator binding, independently fetched Council
 ratification, Gate pause/head and Registry receipt/head precede application.
@@ -231,7 +231,8 @@ races, retry immutability, actual fault placement, cleanup and evidence limits.
 It added competing-transition tests on memory/PostgreSQL. Initial test expectation
 errors were corrected. Actual composition exposed HTTP/2 negotiation against
 HTTP/1.1 participant adapters; Server now explicitly uses HTTP/1.1 for those
-calls, preserving native gRPC. No assertion, evaluator limit or CI requirement
+calls, preserving native gRPC. The final pass regenerated the gRPC reference
+through its owning tool to correct operation ordering. No assertion, evaluator limit or CI requirement
 was weakened. This review is not an independent human acceptance disposition.
 
 Environment availability was observed before the run: the existing host, cached
@@ -239,7 +240,8 @@ pgvector image `sha256:9b05db12a35460fff0587e009f9326e414a53e9484555547f96d214a2
 loopback-only owned container, 2 CPU/768 MiB ceiling, synthetic credentials and
 expiry at task teardown. The maintainer's local test session owns it; no paid
 resources were used. Temporary keys, configuration and service processes were
-removed/stopped by the test. Hosted CI uses its pinned public pgvector image and
+removed/stopped by the test. The verified owned container and anonymous volume
+were removed after local verification. Hosted CI uses its pinned public pgvector image and
 independent disposable databases. Local Windows results do not establish Linux
 qualification. Exact-head hosted results are recorded below when observed.
 
@@ -251,3 +253,25 @@ reservations, Warden grants/custody, controlled target effects, snapshot recover
 agent isolation and final installation/investigation evidence remain open.
 The next bounded work after this review is acknowledged owner outbox delivery
 and Gate's durable action journal, before enabling any controlled execution.
+
+Harness's final reviewed head `11140d9` passed the hosted Linux
+[five-service activation job](https://github.com/iokaio/munarium-harness/actions/runs/37723974798),
+[Rust/Python suite](https://github.com/iokaio/munarium-harness/actions/runs/37723974773),
+[hygiene](https://github.com/iokaio/munarium-harness/actions/runs/37723974770) and
+[DCO](https://github.com/iokaio/munarium-harness/actions/runs/37723974710).
+The composition artifact confirms the final Server pin `059ee3f` and retains the
+actual checkout/source/binary/image identities and sanitized test log. Its earlier
+run also passed before the documentation-only Server pin update; final evidence
+uses the links above. This supplies Linux activation evidence, with the stated
+execution, outbox, restore and isolation limits intact.
+
+Server's final reviewed head `059ee3f` passed the complete
+[Server workflow](https://github.com/iokaio/munarium/actions/runs/37723823625),
+including platform authority, PostgreSQL/workspace tests, DiskANN, black-box
+conformance and generated-document drift. Its
+[four-language clients and conformance](https://github.com/iokaio/munarium/actions/runs/37723823505),
+[hygiene](https://github.com/iokaio/munarium/actions/runs/37723823508) and
+[DCO](https://github.com/iokaio/munarium/actions/runs/37723823609) also passed.
+All reported checks were successful on this final head. The superseded Server
+run was cancelled after the generated-reference correction; no passing result
+is inferred from that incomplete run.
