@@ -117,3 +117,67 @@ installation/acceptance packet also remain outstanding. No target effect or Stag
 qualification is claimed. Review this pair before opening the next dependent
 implementation packet; the next work is the activation barrier and its failure
 tests, followed by the execution and Harness sequence in the next-step plan.
+
+## Participant review pair, 7 October 2026
+
+The maintainer reported all three preceding PRs merged and directed continuation.
+GitHub confirmed hub PR 16 at `27c3e6c71a3030b209725778bacd88c00f6ff165`,
+Council PR 2 at `6ea0822b6ad2da29ca051410289422d9ccaa4c54`, and Registry PR 4
+at `eb08f75deaae664afd067194241ae4646c3d53ce`. These merge observations supplement
+the historical review snapshot above; they do not close formal acceptance gates.
+
+The next two bounded implementation tasks are:
+
+| Component | Review input | Implemented boundary |
+|---|---|---|
+| Gate | [PR 3](https://github.com/iokaio/munarium-gate/pull/3), `663c513317e03ec94380257e3800a650b6162de7` | PostgreSQL pause/apply/resume barrier, scope-row concurrency, exact receipt recovery and independently authenticated participant evidence |
+| Warden | [PR 4](https://github.com/iokaio/munarium-warden/pull/4), `98fa5d6a86d66d85277090d3d3ee90bdd128c3bb` | Current Council/Gate/Registry admission, SQLite expected-head application and durable receipt/outbox |
+
+Both preserve the candidate bundle. Gate's earlier export retains hub `d51aa16`
+as its source; Warden's exporter records `27c3e6c`. Their bundle hashes agree.
+The participant intake amendment to ADR 0014 was recorded before implementation.
+Server remains unchanged at `61a350a` and its participant adapter is the next
+review task, alongside the remaining activation audit/composition work.
+
+Local Rust 1.98.1 formatting/build and warnings-denied Clippy/docs passed.
+Gate's ten ordinary tests and both explicitly selected real PostgreSQL tests passed.
+Warden's 27 ordinary tests and identity-core commands passed; the unrelated live
+OpenBao test was not run. Native mTLS tests passed against each actual binary,
+including process kill/restart, coordinator/reader separation, unknown/agent/
+foreign-tenant refusal, missing or stale dependencies and governing-revision changes.
+Dependency services were synthetic authenticated fixtures, not the complete
+composition. License, private-material, documentation and whitespace checks passed.
+
+The second implementation pass tightened expected-refusal assertions so timeouts
+cannot count as authorization refusals, added current-authority churn and specifically
+missing Server coverage, and reviewed current-head versus historical receipt checks.
+An initial SQLx umbrella dependency conflict was resolved with exactly pinned core
+and PostgreSQL crates; an initial test compilation error was corrected before the
+passing runs. Gate's unchanged Windows evaluator gate failed locally on positive
+allow/deny controls both inside and outside the sandbox. No evaluator limits or
+checks were weakened. Its exact-head hosted
+[Windows evaluator job](https://github.com/iokaio/munarium-gate/actions/runs/37718889131/job/113121700541)
+subsequently passed. Local gitleaks was unavailable. Gate's exact-head
+[Rust/PostgreSQL/native-service workflow](https://github.com/iokaio/munarium-gate/actions/runs/37718889131),
+[hygiene](https://github.com/iokaio/munarium-gate/actions/runs/37718888960) and
+[DCO](https://github.com/iokaio/munarium-gate/actions/runs/37718888995) passed.
+Warden's exact-head
+[Rust/native-service workflow](https://github.com/iokaio/munarium-warden/actions/runs/37718895132),
+[hygiene](https://github.com/iokaio/munarium-warden/actions/runs/37718895142) and
+[DCO](https://github.com/iokaio/munarium-warden/actions/runs/37718895084) also passed.
+
+Environment intake observed the cached PostgreSQL image
+`postgres@sha256:65b16a8b326e0cfbdf33fa7e783f2a0cb352a61448616ccccfd616ef42aa0f65`,
+a task-owned loopback-only container limited to 384 MiB/one CPU, synthetic credentials
+and a disposable database. The maintainer's local test session owns these resources;
+availability was checked before launch, no paid resources were used, and expiry is
+task teardown. The verified task container was stopped and automatically removed
+with its anonymous test volume after local verification. Temporary native-service
+keys/databases were cleaned by each test.
+
+These two tasks await review. Complete activation is still unavailable without
+Server's independent participant implementation; Gate refuses missing receipts.
+Neither service enables action execution. Local phase outboxes still require
+acknowledged Server delivery. Actual REF-18 effects, snapshot quarantine,
+PostgreSQL action reservations, grants/custody, final-send admission, Linux isolation
+and the remaining Harness/reference evidence are outstanding.
