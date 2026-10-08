@@ -1,5 +1,83 @@
 # Stage 2 implementation direction and bounded packets
 
+## Participant delivery and journal review, 7 October 2026
+
+After the maintainer confirmed the preceding three merges, Server, hub, Harness,
+Council, Registry, Gate and Warden were refreshed from `origin/main`. Verified
+new merge heads are Server `7d4a4d8`, hub `748dc42` and Harness `887d38b`.
+The two current bounded tasks are participant outbox delivery across its owners
+and Gate journal persistence, following the intake in
+[ADR 0014](decisions/0014-stage2-service-integration.md#participant-delivery-and-action-journal-intake).
+
+| Component review | Exact implementation input | Behavior |
+|---|---|---|
+| [Gate PR 4](https://github.com/iokaio/munarium-gate/pull/4) | `f8df9736045214c204921f358b296c27d58fc868` | PostgreSQL immutable claims, cancellation tombstones, atomic grant/worker/capacity admission, ordered action custody and participant delivery |
+| [Warden PR 5](https://github.com/iokaio/munarium-warden/pull/5) | `f0bfdda6d11060dccdbc4cefc2a5b805c44c0d87` | Current owner identity, immutable activation events and exact Server acknowledgement persistence |
+| [Registry PR 5](https://github.com/iokaio/munarium-registry/pull/5) | `91d4305a3241c9f3bf4e5cf011400d4a6e5b2353` | The same delivery boundary with Registry-owned SQLite transactions and retained receipt intent |
+
+Local Rust 1.98.1 formatting, locked offline build, warnings-denied Clippy, default
+tests and documentation checks passed in all three components. Gate's five explicitly
+selected real PostgreSQL tests passed, covering concurrent writers, competing
+workers and capacity, exact retry, cancellation, pause, multi-bucket rollback,
+ordered acknowledgements, tenant isolation and unresolved capacity after restart
+and UTC-hour rollover. Warden/Registry delivery tests passed across SQLite reopen.
+Native Gate and Warden authenticated activation tests passed. Registry's library
+also passed without default features. Local gitleaks was unavailable; hosted
+secret scanning remains enabled. Warden's optional live OpenBao test was not rerun.
+
+Harness's extended five-service test passed locally against separate disposable
+Server/Gate databases, real Warden assertions and Server audit custody. For each
+participant it rejected a reader flush and a substituted acknowledgement, lost
+the real committed reply, restarted the owner and recovered the original Server
+acknowledgement. The preceding six activation interruption cases remain enabled.
+The first attempt failed because the fixture supplied duplicate provider bindings
+for one workload subject; the corrected unique enrollment passed. Failed and
+successful attempts remain retained locally rather than relabelled.
+
+The second pass added explicit installed-artifact-set checks to the journal,
+ordered custody checks, direct rollback assertions and Registry feature gating.
+This is an advisory implementation review, not supplied human acceptance.
+Component hygiene passed. The hub root filesystem scan found scanner fixtures
+inside existing nested worktrees; those files were preserved. The unchanged
+checks passed on the proposed hub content in an isolated review worktree.
+
+**Execution remains closed.** The journal is a trusted owner-local storage API;
+action-source/claim/cancellation service adapters, live Warden grant/custody,
+final-send admission, evidence-based settlement, attempt closure, restore quarantine
+and target-floor/isolation qualification remain subsequent integration work.
+Participant delivery and completed activation do not satisfy those controls.
+No candidate bytes, Stage 1 acceptance pins or release labels changed.
+
+### Exact-head hosted checks
+
+All checks passed on the component heads above and Harness
+`07f3aa5363d23e11a3c90a3cc08721092a9faa9a`
+([PR 4](https://github.com/iokaio/munarium-harness/pull/4)). Runs:
+
+- [Gate Rust/PostgreSQL/native/evaluator](https://github.com/iokaio/munarium-gate/actions/runs/37730652030),
+  [hygiene](https://github.com/iokaio/munarium-gate/actions/runs/37730652108) and
+  [DCO](https://github.com/iokaio/munarium-gate/actions/runs/37730652006).
+- [Warden Rust/native/identity-core](https://github.com/iokaio/munarium-warden/actions/runs/37730655916),
+  [hygiene](https://github.com/iokaio/munarium-warden/actions/runs/37730655905) and
+  [DCO](https://github.com/iokaio/munarium-warden/actions/runs/37730655929).
+- [Registry Rust](https://github.com/iokaio/munarium-registry/actions/runs/37730657900),
+  [hygiene](https://github.com/iokaio/munarium-registry/actions/runs/37730657885) and
+  [DCO](https://github.com/iokaio/munarium-registry/actions/runs/37730657993).
+- [Harness Linux composition](https://github.com/iokaio/munarium-harness/actions/runs/37730811209),
+  [Rust/Python](https://github.com/iokaio/munarium-harness/actions/runs/37730811175),
+  [hygiene](https://github.com/iokaio/munarium-harness/actions/runs/37730811176) and
+  [DCO](https://github.com/iokaio/munarium-harness/actions/runs/37730811172).
+
+The hosted composition artifact records clean source trees, Server `7d4a4d8`,
+Council `6ea0822`, the exact Gate/Warden/Registry heads above, and GitHub's Harness
+test merge checkout `295b0f4666e96c36a8a831af310983f31f6b75c6`. Its scenario passed
+in 38.33 seconds, with participant delivery included and execution excluded.
+The retained log digest is
+`sha256:092759e4402f3ed5d6978c7a5e8f03a0e5a7da5eba07e7c6f54c919165e103fb`.
+These checks establish experimental storage and composition behavior, not human
+review or effect qualification. The disposable local PostgreSQL container and its
+volume were removed after verification; hosted job cleanup also passed.
+
 **Maintainer directed, 7 October 2026.** Following candidate PR 14, the maintainer
 instructed “Proceed with implementation.” Use hub candidate source
 `2fb118909633264fad23ede2e7c9942aba374312` and bundle
