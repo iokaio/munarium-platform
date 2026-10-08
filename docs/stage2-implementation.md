@@ -48,8 +48,35 @@ and target-floor/isolation qualification remain subsequent integration work.
 Participant delivery and completed activation do not satisfy those controls.
 No candidate bytes, Stage 1 acceptance pins or release labels changed.
 
-These are local observations. Exact-head hosted CI and Harness source pins are
-recorded separately after the new PR checks finish.
+### Exact-head hosted checks
+
+All checks passed on the component heads above and Harness
+`07f3aa5363d23e11a3c90a3cc08721092a9faa9a`
+([PR 4](https://github.com/iokaio/munarium-harness/pull/4)). Runs:
+
+- [Gate Rust/PostgreSQL/native/evaluator](https://github.com/iokaio/munarium-gate/actions/runs/37730652030),
+  [hygiene](https://github.com/iokaio/munarium-gate/actions/runs/37730652108) and
+  [DCO](https://github.com/iokaio/munarium-gate/actions/runs/37730652006).
+- [Warden Rust/native/identity-core](https://github.com/iokaio/munarium-warden/actions/runs/37730655916),
+  [hygiene](https://github.com/iokaio/munarium-warden/actions/runs/37730655905) and
+  [DCO](https://github.com/iokaio/munarium-warden/actions/runs/37730655929).
+- [Registry Rust](https://github.com/iokaio/munarium-registry/actions/runs/37730657900),
+  [hygiene](https://github.com/iokaio/munarium-registry/actions/runs/37730657885) and
+  [DCO](https://github.com/iokaio/munarium-registry/actions/runs/37730657993).
+- [Harness Linux composition](https://github.com/iokaio/munarium-harness/actions/runs/37730811209),
+  [Rust/Python](https://github.com/iokaio/munarium-harness/actions/runs/37730811175),
+  [hygiene](https://github.com/iokaio/munarium-harness/actions/runs/37730811176) and
+  [DCO](https://github.com/iokaio/munarium-harness/actions/runs/37730811172).
+
+The hosted composition artifact records clean source trees, Server `7d4a4d8`,
+Council `6ea0822`, the exact Gate/Warden/Registry heads above, and GitHub's Harness
+test merge checkout `295b0f4666e96c36a8a831af310983f31f6b75c6`. Its scenario passed
+in 38.33 seconds, with participant delivery included and execution excluded.
+The retained log digest is
+`sha256:092759e4402f3ed5d6978c7a5e8f03a0e5a7da5eba07e7c6f54c919165e103fb`.
+These checks establish experimental storage and composition behavior, not human
+review or effect qualification. The disposable local PostgreSQL container and its
+volume were removed after verification; hosted job cleanup also passed.
 
 **Maintainer directed, 7 October 2026.** Following candidate PR 14, the maintainer
 instructed “Proceed with implementation.” Use hub candidate source
