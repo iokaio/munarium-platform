@@ -146,3 +146,37 @@ authority, incomplete/forged receipt sets and tenant refusals. Synthetic depende
 servers are explicitly identified. No full REF-18 or effect qualification is inferred
 from component tests. Local resources have loopback-only ports, synthetic credentials,
 no cost authority beyond the existing host, and expiry at test teardown.
+
+## Server participant and complete barrier intake
+
+The next review pair is Server activation custody and Harness's real-service
+activation composition. Inputs are Gate `bc429ebcce47579419d88daa6a6aee644fd34221`,
+Warden `ef08b587b259600864e3b4f48935e44fa00b7134`, and the Council, Registry and
+Server revisions above. Candidate bytes and Stage 1 acceptance pins remain intact.
+
+Server exposes the coordinator's existing `/v1/platform/{tenant}/activation`
+adapter with `apply`, `lookup` and `head`. Its currently signed `stage2:<audience>`
+binding supplies scope, coordinator, readers, initial epoch/set, audit stream and
+the authenticated Council/Gate/Registry endpoints. Application requires the actual
+enrolled coordinator peer, current Council ratification, Gate's current pause and
+Registry's applied receipt/current head. Network checks happen outside Server's
+authority checkpoint lock because those services independently call Server.
+Server reacquires the fence and verifies the exact governing revision before commit.
+
+Use the existing protected record ledger and its atomic expected-head batch,
+rather than a separate mutable activation pointer. Persist initial enrollment once;
+append the participant receipt/state, canonical Server accountability event and
+Council transition archive in one transaction. The archive provenance names the
+authenticated coordinator and independently fetched ratification, never a fabricated
+Council principal. A direct audit append cannot install a participant epoch. Existing
+record readers can inspect the canonical event; an authorized exact event retry
+returns the original acknowledgement. Retries retain the original event, time,
+receipt and acknowledgement. This participant epoch
+does not replace the independently signed root governance epoch or enable execution.
+
+Memory storage is disposable; PostgreSQL is the durable profile. Process restart
+is not snapshot recovery qualification. Harness will exercise actual authenticated
+services and persistence, partial progress, lost replies and retry. Delivery of
+Registry/Gate/Warden local outboxes, restore quarantine, effects and network/secret
+isolation remain explicit follow-up coverage; complete activation is not complete
+Stage 2 execution qualification.

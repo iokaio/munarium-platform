@@ -181,3 +181,97 @@ Neither service enables action execution. Local phase outboxes still require
 acknowledged Server delivery. Actual REF-18 effects, snapshot quarantine,
 PostgreSQL action reservations, grants/custody, final-send admission, Linux isolation
 and the remaining Harness/reference evidence are outstanding.
+
+## Server and composition review pair, 7 October 2026
+
+The maintainer reported the participant pair and hub update merged and directed
+continuation. Verified merge inputs are hub PR 17 at
+`8a4afbf2a2f8b6ae87f35179771143844ece823f`, Gate PR 3 at
+`bc429ebcce47579419d88daa6a6aee644fd34221`, and Warden PR 4 at
+`ef08b587b259600864e3b4f48935e44fa00b7134`. Council and Registry remain at the
+merged revisions recorded above. The previous paragraphs retain their historical
+review-time limitations; this section records the next bounded pair.
+
+| Component | Review input | Implemented boundary |
+|---|---|---|
+| Server | [PR 77](https://github.com/iokaio/munarium/pull/77), `059ee3f3305e17d96581822827f182ce927db615` | Governed REST/gRPC participant, immutable initial enrollment, atomic receipt/epoch/archive/audit event in the protected ledger |
+| Harness | [PR 3](https://github.com/iokaio/munarium-harness/pull/3), `11140d9fb6dc6f264331feaedc0deb8544a1b742` | Actual five-service activation, six post-commit response losses and participant/coordinator restarts, pinned Linux CI and source/binary evidence runner |
+
+Server's current signed coordinator binding, independently fetched Council
+ratification, Gate pause/head and Registry receipt/head precede application.
+Its external root authority fence is reacquired after callbacks and held through
+the atomic expected-head ledger batch. An ordinary audit append cannot install
+an epoch. Its internal archive provenance identifies the actual coordinator and
+root revision; no Council principal is fabricated. Candidate bytes and golden
+vectors remain unchanged. The amendment to ADR 0014 preceded implementation.
+
+Local Server evidence: required runner/catalog/equivalence/format entry point
+passed (23 runner and 14 catalog regressions); affected-package warnings-denied
+Clippy passed; core/memory action tests passed (6), explicit PostgreSQL tests
+passed (2), platform API and documentation tests passed (6 each). The exact CI
+live authority/actions command passed (8), including REST/gRPC, changed root
+authority during callbacks, denied dependency evidence and process restart.
+Python API tests passed (6), as did Ruff, formatting, mypy, API generation drift,
+licence, compatibility, private-material, documentation and whitespace checks.
+Local full Server gate ladder and .NET/Java suites were not claimed; hosted CI
+remains required. Local gitleaks was unavailable.
+
+Harness's local five-service scenario passed with separate disposable Server and
+Gate PostgreSQL databases. Warden issued the candidate admission assertion,
+Registry verified a signed candidate, and a separately enrolled human ratified
+Council's transition. The test discarded one successful response after each
+owner's durable pause/apply/resume phase and restarted that owner and Council.
+Incomplete progress stayed paused; retry recovered matching receipts and heads
+for all four participants. Gate still reported execution unavailable after resume.
+The runner retained local attempts with source inventory, binary/image and log
+hashes. Existing Harness Python tests passed (7); hygiene/link checks passed.
+
+The advisory second pass reviewed authority, callback lock order, transaction
+races, retry immutability, actual fault placement, cleanup and evidence limits.
+It added competing-transition tests on memory/PostgreSQL. Initial test expectation
+errors were corrected. Actual composition exposed HTTP/2 negotiation against
+HTTP/1.1 participant adapters; Server now explicitly uses HTTP/1.1 for those
+calls, preserving native gRPC. The final pass regenerated the gRPC reference
+through its owning tool to correct operation ordering. No assertion, evaluator limit or CI requirement
+was weakened. This review is not an independent human acceptance disposition.
+
+Environment availability was observed before the run: the existing host, cached
+pgvector image `sha256:9b05db12a35460fff0587e009f9326e414a53e9484555547f96d214a2ba98ef7`,
+loopback-only owned container, 2 CPU/768 MiB ceiling, synthetic credentials and
+expiry at task teardown. The maintainer's local test session owns it; no paid
+resources were used. Temporary keys, configuration and service processes were
+removed/stopped by the test. The verified owned container and anonymous volume
+were removed after local verification. Hosted CI uses its pinned public pgvector image and
+independent disposable databases. Local Windows results do not establish Linux
+qualification. Exact-head hosted results are recorded below when observed.
+
+These two implementation tasks await review; merge Server before the Harness
+dependency. This closes the missing-participant implementation and provides real
+barrier recovery evidence, not the complete C2-A or Stage 2 acceptance packet.
+Registry/Gate/Warden outbox delivery, withdrawal integration, Gate action
+reservations, Warden grants/custody, controlled target effects, snapshot recovery,
+agent isolation and final installation/investigation evidence remain open.
+The next bounded work after this review is acknowledged owner outbox delivery
+and Gate's durable action journal, before enabling any controlled execution.
+
+Harness's final reviewed head `11140d9` passed the hosted Linux
+[five-service activation job](https://github.com/iokaio/munarium-harness/actions/runs/37723974798),
+[Rust/Python suite](https://github.com/iokaio/munarium-harness/actions/runs/37723974773),
+[hygiene](https://github.com/iokaio/munarium-harness/actions/runs/37723974770) and
+[DCO](https://github.com/iokaio/munarium-harness/actions/runs/37723974710).
+The composition artifact confirms the final Server pin `059ee3f` and retains the
+actual checkout/source/binary/image identities and sanitized test log. Its earlier
+run also passed before the documentation-only Server pin update; final evidence
+uses the links above. This supplies Linux activation evidence, with the stated
+execution, outbox, restore and isolation limits intact.
+
+Server's final reviewed head `059ee3f` passed the complete
+[Server workflow](https://github.com/iokaio/munarium/actions/runs/37723823625),
+including platform authority, PostgreSQL/workspace tests, DiskANN, black-box
+conformance and generated-document drift. Its
+[four-language clients and conformance](https://github.com/iokaio/munarium/actions/runs/37723823505),
+[hygiene](https://github.com/iokaio/munarium/actions/runs/37723823508) and
+[DCO](https://github.com/iokaio/munarium/actions/runs/37723823609) also passed.
+All reported checks were successful on this final head. The superseded Server
+run was cancelled after the generated-reference correction; no passing result
+is inferred from that incomplete run.
