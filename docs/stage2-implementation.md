@@ -82,3 +82,38 @@ Gate journal verification, human eligibility, credential isolation or Linux
 reference qualification are claimed. C2-A, G2-A and H2-A remain unimplemented by
 this packet. Review S2-A's evidence before starting the next major capability
 slice, following the [parallel-build integration gate](parallel-build-plan.md).
+
+## C2-A first component pair awaiting review, 7 October 2026
+
+The first two implementation tasks are committed and published for substantive
+review. Both consumed the unchanged candidate exported from hub `d51aa16`.
+
+| Component | Review input | Observed CI on that exact head |
+|---|---|---|
+| Council | [PR 2](https://github.com/iokaio/munarium-council/pull/2), `c8103eddadbd5bbd0efd856b85c3d7b2a7e58731` | [Rust and real mTLS process tests](https://github.com/iokaio/munarium-council/actions/runs/37714558962), [hygiene](https://github.com/iokaio/munarium-council/actions/runs/37714558889) and [DCO](https://github.com/iokaio/munarium-council/actions/runs/37714558851) succeeded |
+| Registry | [PR 4](https://github.com/iokaio/munarium-registry/pull/4), `1ab730c8b658f957a722826da411a5982d31c34e` | [Rust](https://github.com/iokaio/munarium-registry/actions/runs/37714561999), [hygiene](https://github.com/iokaio/munarium-registry/actions/runs/37714562070) and [DCO](https://github.com/iokaio/munarium-registry/actions/runs/37714561990) succeeded |
+
+Council implements durable request-bound human approval, immutable retries,
+pending withdrawal, approval issuance outbox and resumable activation coordination.
+Its nine Rust integration tests and native mTLS process scenario passed locally.
+The process scenario uses synthetic authenticated dependency servers; it does not
+establish integration with Gate's future source/cancellation routes. The first TLS
+fixture failed for a missing CA key-usage extension; the corrected fixture passed
+with certificate verification retained.
+
+Registry implements separately authorized activation, expected-head concurrency,
+exact receipt recovery and retained explicit retirement. All 29 Rust tests and one
+documentation test passed locally. The second implementation pass corrected
+Council withdrawal receipt revision binding and Registry's distinction between
+supersession and explicit retirement. Formatting, warnings-denied lint/docs and
+component hygiene checks passed. Local gitleaks was unavailable; CI hygiene passed.
+
+These two tasks fill the plan's limit on implementation tasks awaiting substantive
+review. Neither PR is merged. C2-A is still incomplete: Gate/Server/Warden activation
+participants, full barrier recovery and remaining activation/withdrawal audit
+delivery need implementation and real composition tests. Runtime environment
+qualification, G2-A execution, H2-A crash/restore/isolation evidence and the final
+installation/acceptance packet also remain outstanding. No target effect or Stage 2
+qualification is claimed. Review this pair before opening the next dependent
+implementation packet; the next work is the activation barrier and its failure
+tests, followed by the execution and Harness sequence in the next-step plan.
