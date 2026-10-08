@@ -111,3 +111,17 @@ Here is the detailed sequence.
 I would keep the existing limit of two bounded implementation tasks awaiting review, with one owner for hub edits and one for Server edits. Harness test design should begin alongside implementation so fault-injection points are built into the services.
 
 **The first concrete implementation pair is Council approval plus Registry activation storage.** Calendar estimates should follow the runtime-profile intake and initial PostgreSQL protocol work; the older roadmap month ranges are not reliable estimates for the remaining implementation.
+## Progress on 8 October 2026
+
+The [live execution review packet](stage2-implementation.md#live-execution-review-packet-8-october-2026)
+connects the merged journal to live Warden grant/OpenBao custody, Council approval
+custody, Gate's final-send transaction and an independently persisted synthetic target.
+Real tests cover effects, lost replies, withdrawal, target recovery-floor refusal and
+restoration of a pre-effect PostgreSQL snapshot into quarantine. Five owner PRs are
+prepared for review; their exact source pins and evidence limits are in that packet.
+
+Steps 6 and 7 now have experimental prepared-release implementation and real fault
+histories. They are not complete qualification: dynamic Linux evaluation, OS isolation,
+automatic rollback detection, retained-fact/cutoff reconciliation and safe reopening
+remain required before general execution. The current profile accepts only signed
+operator-prepared disposable requests and cannot reopen a restored store by boolean.

@@ -238,3 +238,50 @@ real PostgreSQL races, atomic rollback, restart, cancellation, pause, immutable
 retries and capacity across windows; owner delivery tests cover wrong/missing
 acknowledgements, changed registration and lost replies. The same implementation
 receives a second review pass before publication.
+
+## Live execution intake (8 October 2026, proposed)
+
+The preceding delivery and journal PRs are merged. This packet connects live grant
+custody and final admission, then exercises a synthetic target and restore histories.
+The review tasks are the execution service boundary (Gate, Warden and Council) and
+its target/recovery composition (Harness). Candidate `stage2-v1` remains immutable;
+these are experimental service adapters, not a newly accepted contract.
+
+The first executable surface is deliberately narrow: operator-enrolled, immutable
+prepared release requests under Server's signed `execution:<service>` binding.
+Gate validates and hashes the request and decision itself, checks the current
+activated artifact set and qualified scope, and binds the actual enrolled proposing
+peer. Caller data selects an enrolled operation; it cannot supply context, evidence,
+hashes, approval, consequence class, endpoints or credentials. This prepared-input
+surface does not qualify arbitrary dynamic policy evaluation or Linux OPA. Existing
+decision-only APIs and evaluator evidence retain their separate boundaries.
+
+Council supplies current approval status plus the original approval event and exact
+Server acknowledgement. Its recording assertion uses `propose`, the implemented
+Server write scope. Gate archives request and decision before approval. Claims and
+consumption use the existing PostgreSQL cell lock and canonical outbox. Warden
+independently fetches Gate and Council state, retains stable grant issuance and
+outbox bytes, and binds custody to an enrolled connector, worker and invocation.
+Revocation and current authority are checked again immediately before final admission.
+
+Final admission requires the exact stored predispatch acknowledgement, current
+approval and custody, unchanged activation/recovery epochs and the owning worker.
+In one PostgreSQL transaction Gate records `send-intent` and spends the one send
+opportunity. Only that first live response permits a send; a lookup or repeated
+request cannot replace a lost response. Cancellation serializes on the same lock
+and reports `too-late` after admission. Uncertainty retains capacity. Outcome and
+reconciliation append facts; they never erase a send intent or authorize a resend.
+
+The synthetic target stores effects and its monotonic recovery floor outside the
+Gate database. It atomically checks the exact target precondition, content digest,
+stable effect identity and recovery fence with mutation. The connector has no retry
+loop. Credentials are obtained through the broker only in the connector privilege
+domain and never appear in action responses, journals or evidence logs.
+
+Restore tests must retain the external target/floor and original Server custody.
+Restored Gate state remains quarantined when it cannot demonstrate the current
+recovery generation and retained exposure. Reopening requires reconciliation of
+the Server cutoff, consumption/cancellation/reservation facts and target floor;
+missing evidence cannot be replaced by an operator boolean. Tests distinguish
+quarantine evidence from demonstrated safe reopening. This packet grants no
+production activation, deployment, release or merge authority.
