@@ -56,6 +56,8 @@ The repository [README](../README.md) carries the component and invariant catalo
 | [Parallel build plan](parallel-build-plan.md) | Proposed two-machine work allocation, component pairings, dependency order and integration gates |
 | [Stage 1 development authorization](stage1-authorization.md) | Maintainer-directed implementation scope across six repositories, supporting CI changes and separate acceptance boundaries |
 | [Stage 2 preparation](stage2-preparation.md) | Approved closeout/design scope, HUB-03 and foundation packets, review and environment gates |
+| [Stage 2 contract candidate packet](stage2-contract-packet.md) | Directed next packet, selected reference direction, candidate scope and remaining consumer/runtime gates |
+| [Stage 2 implementation](stage2-implementation.md) | Maintainer-directed component packets, pinned experimental inputs and execution boundaries |
 | [Overview paper (PDF)](architecture/Munarium_Governance_Platform_Open_Source_Applied_AI_Journey.pdf) | *An Open Source Applied AI Journey*, 29 September 2026, with a 6 October status update: a forward-looking, business-level introduction to the platform and its bounded-agent development method. VCP development is suspended; Ioka is focusing more intensely on the platform. Its case studies are synthetic; the repositories remain authoritative for status. |
 | [Architecture index](architecture/README.md) | Foundation baseline, system boundaries, decision register, proposed lifecycle, local profile and reference acceptance scenario |
 | [Decision index](decisions/README.md) | Cross-component design records, beginning with the scaffold proposal |
