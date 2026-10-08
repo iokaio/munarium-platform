@@ -428,3 +428,28 @@ detection, cutoff/retained-fact reconciliation and safe reopening, no-effect set
 and the remaining H03/REF qualification matrix remain open. The tested restore
 procedure advances external authority and installs the target floor BEFORE restored
 workers start. An undisclosed rollback is not detected by the current adapter.
+
+### Hosted evidence for the live execution packet
+
+Harness head `908cb895952fceef9a88923ccf127476682bcbe1` passed the complete
+[Linux composition workflow](https://github.com/iokaio/munarium-harness/actions/runs/37742815516),
+including the unchanged activation/delivery history and both new live execution
+histories (214.93 seconds). The downloaded `stage2-execution-evidence` artifact
+records `stage2-prepared-release-v1`, exit zero and `qualification:false`; all six
+source checkouts are clean. Its Gate, Warden, Council, Registry and Server source
+pins match the table/inputs above. Harness ran GitHub's test merge
+`d4e02f3cb5453b332e6c37fb84e97e6282f3a382` for that PR head. The sanitized log digest
+is `sha256:bfd6a21f77cc2e88e6b3766374b0c2dfbb9ac7f7f03fae4fca7dba8ade7ef7b0`.
+The environment record identifies Linux 6.17, Python 3.13.16, and the pinned
+pgvector/OpenBao inputs. It does not qualify a dynamic Linux evaluator or OS isolation.
+
+The exact component heads also passed their complete hosted workflows:
+[Gate](https://github.com/iokaio/munarium-gate/actions/runs/37742704653)
+(including explicit PostgreSQL and the preserved Windows evaluator controls),
+[Warden](https://github.com/iokaio/munarium-warden/actions/runs/37742312694),
+[Council](https://github.com/iokaio/munarium-council/actions/runs/37742322842), and
+[Harness Rust/Python](https://github.com/iokaio/munarium-harness/actions/runs/37742815318).
+Their DCO and public-material/licence checks are green on the same heads. No hosted
+failure was hidden by a skipped check or policy exception. The local owned PostgreSQL
+container and anonymous volume were verified and removed after testing; no local
+service process or OpenBao container remains from this packet.
