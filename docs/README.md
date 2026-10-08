@@ -74,3 +74,5 @@ historical, with notices superseding its VCP development assumptions. The
 VCP experiment was worthwhile but continued development became too expensive and is unlikely to
 deliver the desired impact or independently advance the platform. Component count does not
 prescribe a service count: Harness is an SDK.
+
+[Stage 2 next steps](next-steps.md) records the directed implementation sequence.

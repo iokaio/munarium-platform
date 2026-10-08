@@ -55,3 +55,5 @@ artifact vectors and exact contract pins for REG-01; formal acceptance remains p
 [Stage 2 v1 candidate](stage2-v1/README.md) adds a separate inert namespace with
 fixed wire/digest/refusal vectors and committed-source export. It does not change
 or accept the Stage 1 bundles or implement effect-producing service APIs.
+
+[ADR 0014](0014-stage2-service-integration.md) records the experimental service integration boundary and its test obligations.

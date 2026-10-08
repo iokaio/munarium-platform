@@ -11,11 +11,12 @@ gates below remain requirements for claiming Stage 1 complete.
 Use the machines for two bounded tasks within the same delivery stage. Complete a working slice across repositories before advancing; each repository receives several increments rather than being finished in isolation. Machine assignments can change between packets.
 
 **Current position, 7 October 2026.** Both Stage 1 rows have experimental service
-implementations and recorded local integration evidence. The maintainer approved
-[Stage 1 closeout and Stage 2 preparation](stage2-preparation.md). First review the
-[pinned acceptance packet](architecture/stage1-acceptance.md); row 3's next pair is
-HUB-03 design plus the [Server foundation assessment](architecture/stage2-foundation-assessment.md).
-Implementation progress does not close the contract acceptance gates.
+implementations and recorded local integration evidence. HUB-03 candidate
+preparation and Server's S2-A action-record path are merged through hub PR 14 and
+Server PR 76. The [next-step plan](next-steps.md) now directs C2-A approval and
+activation implementation, followed by G2-A execution and H2-A integration.
+The [pinned acceptance packet](architecture/stage1-acceptance.md) remains unchanged:
+implementation and merging do not close contract acceptance or qualification gates.
 
 ## Shared prerequisites
 
@@ -70,7 +71,10 @@ Keep Console out of the first action milestone: Council's minimal authenticated 
 The original starting pair was Server and Matrix qualification, recorded in
 [FOUNDATION-01](architecture/foundation-01.md). Do not repeat extraction or
 restart implemented Stage 1 packets from their scaffold descriptions. The current
-next pair is **HUB-03 preparation on Machine A and confirmed Server foundation
-gap assessment on Machine B**, with Stage 1 acceptance evidence prepared first.
-Use [the preparation packet](stage2-preparation.md) for exact scope and gates;
-re-estimate implementation from these observations before assigning dates.
+next pair is **Council approval on Machine A and Registry activation storage on
+Machine B**, under [ADR 0014](decisions/0014-stage2-service-integration.md).
+Complete activation also requires Gate's durable pause/resume and matching
+Server/Warden participant adapters before the integrated barrier can pass.
+Use the [implementation packet](stage2-implementation.md) and
+[next-step plan](next-steps.md) for scope and evidence gates; re-estimate from
+observed runtime availability before assigning dates.
