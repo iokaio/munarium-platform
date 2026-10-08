@@ -353,3 +353,103 @@ conformance and generated-document drift. Its
 All reported checks were successful on this final head. The superseded Server
 run was cancelled after the generated-reference correction; no passing result
 is inferred from that incomplete run.
+
+## Live execution review packet, 8 October 2026
+
+The preceding delivery/journal PRs were verified merged, and seven affected main
+branches were fast-forwarded before fresh work began. Inputs: hub `9b0103a`,
+Gate `fab85a1`, Warden `2b99142`, Council `6ea0822`, Registry `243709c`,
+Harness `7d2ddd3` and Server `7d4a4d8`. The live execution intake in ADR 0014
+preceded consumer edits. Candidate bytes and Stage 1 acceptance pins are unchanged.
+
+| Component | Review | Boundary |
+|---|---|---|
+| Gate | [PR 5](https://github.com/iokaio/munarium-gate/pull/5), `9d0687ad6e4d244e3bbb029b8a2853bdf39ed19d` | Authenticated prepared requests, live approval/grant integration, exact outbox custody, one-shot final-send transaction and independent target reconciliation |
+| Warden | [PR 6](https://github.com/iokaio/munarium-warden/pull/6), `fa6951ffdd83c74c0699ca217351562b2da28e5b` | Stable grant/outbox custody, current approval/claim checks, bounded connector invocation and actual OpenBao delivery |
+| Council | [PR 3](https://github.com/iokaio/munarium-council/pull/3), `24babfd88991386d6e850dfe7db013155bfc9beb` | Original approval event/acknowledgement lookup and corrected Server recording scope |
+| Harness | [PR 5](https://github.com/iokaio/munarium-harness/pull/5), `908cb895952fceef9a88923ccf127476682bcbe1` | Actual service/target processes, PostgreSQL/SQLite/OpenBao, lost replies, independent effect observation, target floor and real snapshot restore quarantine |
+
+The executable surface is **operator-prepared disposable release requests** under
+signed Server authority. Gate owns canonical hashes and mandatory obligations and
+checks the activated set plus current artifact retirement. The caller selects an
+enrolled operation; it cannot supply authoritative context or an endpoint. This
+narrow surface does not claim that arbitrary dynamic policy or a Linux OPA evaluator
+ran. General dynamic evaluation remains a separate profile requirement.
+
+Local component checks passed: locked builds, warnings-denied Clippy, Rust tests and
+documentation; Gate's six explicitly selected PostgreSQL tests; native Gate/Warden
+activation and Council approval/restart tests; and licence/private-material/link/
+whitespace checks. The PostgreSQL tests cover final-admission races, missing exact
+custody, wrong fence, expiry, cancellation, immutable lost-reply recovery, generation
+refusal, independent settlement bindings and reservation accounting across UTC hours.
+Warden tests cover stable issuance/custody, expiry, recovery generation and retained
+expired outbox evidence. Council tests preserve pending versus acknowledged custody.
+Local gitleaks was unavailable; automatic hosted scanning stays required.
+
+Retained local Harness attempts include an initial failure on reused attempt identity
+(Server correctly rejected it), followed by a passing basic flow (116.82 seconds),
+two passing expanded histories (223.56 seconds), and two passing final-admission/
+stale-worker histories (237.87 seconds). All attempt records/logs remain local under
+Harness's ignored target directory. The final hosted workflow pins the component
+heads above and retains sanitized source/binary/image/log evidence independently.
+
+| Failure history | Observed local result | Limit |
+|---|---|---|
+| H03-01 | Live withdrawal completes with Gate's exact cancellation receipt; after admission it reports too late | Full scheduler interleaving space is not exhaustively tested |
+| H03-03/04 | Stable grants and one final-admission winner; retries preserve original expiry and bytes | Single-cell PostgreSQL and single-node Warden SQLite |
+| H03-05 | Wrong/missing exact custody refuses final admission; ordered outboxes retain original acknowledgements | Storage tests supplement the live positive path |
+| H03-06 | Drop successful final-admission response after commit; zero target sends, including after Gate restart | No replacement permission or no-effect refund |
+| H03-07/08 | Target commits with reply lost; independent observation and reconciliation find the effect; retry sends nothing | Dedicated post-outcome Server-outage composition remains unqualified |
+| H03-09 | Paused admitted worker is refused by a newer target recovery floor, with its actual reason recorded | This is bounded revocation, not instantaneous distributed cancellation |
+| H03-10 | Actual PostgreSQL snapshot predating an effect restored into a new database; externally advanced generation and installed target floor quarantine dispatch | No automatic rollback detector or reconciled reopening |
+| H03-11 | Unresolved debt survives restart/windows; completed settlement preserves the original hour's admission charge | No-effect settlement and compensation remain unavailable |
+
+The advisory second pass inspected transactional boundaries, exact custody,
+authority freshness, callback deadlocks, target mutation atomicity, secret handling,
+cleanup and the difference between permission and retained evidence. It added
+current artifact-retirement checks, settlement/rollover regressions and actual
+paused-worker target-floor testing. It also moved the live capacity assertion before
+settlement so a UTC hour boundary cannot turn correct refill behavior into a flaky
+failure. No existing gate or candidate fixture was weakened. This is not independent
+human review or contract acceptance.
+
+The maintainer's disposable local test session owns the resources: observed Docker
+availability, pinned pgvector and OpenBao images, loopback-only ports, synthetic
+identities/credentials, PostgreSQL 768 MiB/two CPU and OpenBao 256 MiB/one CPU.
+No paid resources or production trust are used. Test finally blocks remove their
+OpenBao containers, restored databases and temporary identities and stop service/
+connector/target processes. The caller-owned original PostgreSQL container expires
+at task teardown. Hosted runners own their separate disposable resources.
+
+This packet is ready for review after exact-head CI succeeds. Merge the three
+component dependencies before Harness; do not infer merge authority from this text.
+OS network/mount isolation, a dynamic Linux evaluator profile, automatic rollback
+detection, cutoff/retained-fact reconciliation and safe reopening, no-effect settlement
+and the remaining H03/REF qualification matrix remain open. The tested restore
+procedure advances external authority and installs the target floor BEFORE restored
+workers start. An undisclosed rollback is not detected by the current adapter.
+
+### Hosted evidence for the live execution packet
+
+Harness head `908cb895952fceef9a88923ccf127476682bcbe1` passed the complete
+[Linux composition workflow](https://github.com/iokaio/munarium-harness/actions/runs/37742815516),
+including the unchanged activation/delivery history and both new live execution
+histories (214.93 seconds). The downloaded `stage2-execution-evidence` artifact
+records `stage2-prepared-release-v1`, exit zero and `qualification:false`; all six
+source checkouts are clean. Its Gate, Warden, Council, Registry and Server source
+pins match the table/inputs above. Harness ran GitHub's test merge
+`d4e02f3cb5453b332e6c37fb84e97e6282f3a382` for that PR head. The sanitized log digest
+is `sha256:bfd6a21f77cc2e88e6b3766374b0c2dfbb9ac7f7f03fae4fca7dba8ade7ef7b0`.
+The environment record identifies Linux 6.17, Python 3.13.16, and the pinned
+pgvector/OpenBao inputs. It does not qualify a dynamic Linux evaluator or OS isolation.
+
+The exact component heads also passed their complete hosted workflows:
+[Gate](https://github.com/iokaio/munarium-gate/actions/runs/37742704653)
+(including explicit PostgreSQL and the preserved Windows evaluator controls),
+[Warden](https://github.com/iokaio/munarium-warden/actions/runs/37742312694),
+[Council](https://github.com/iokaio/munarium-council/actions/runs/37742322842), and
+[Harness Rust/Python](https://github.com/iokaio/munarium-harness/actions/runs/37742815318).
+Their DCO and public-material/licence checks are green on the same heads. No hosted
+failure was hidden by a skipped check or policy exception. The local owned PostgreSQL
+container and anonymous volume were verified and removed after testing; no local
+service process or OpenBao container remains from this packet.
