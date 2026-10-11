@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1070" viewBox="0 0 1600 1070" role="img" aria-labelledby="title desc">
+<title id="title">Logical architecture | Four planes, eleven components</title>
+<desc id="desc">Four planes contain Harness; Gate, Gateway, Server and Matrix; Registry, Warden and Council; Sentinel, Assure and Console. A connector alone sends target mutations.</desc>
+<defs>
+<marker id="arrow19324b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#19324b"/></marker>
+<marker id="arrow2374ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#2374ab"/></marker>
+<marker id="arrow087f82" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#087f82"/></marker>
+<marker id="arrow7653a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7653a2"/></marker>
+<marker id="arrowb56a19" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#b56a19"/></marker>
+<marker id="arrowaa384b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#aa384b"/></marker>
+<marker id="arrow536b80" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#536b80"/></marker>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{font-size:29px;font-weight:700} .heading{font-size:19px;font-weight:700} .body{font-size:16px} .small{font-size:14px}</style>
+<rect width="1600" height="1070" fill="#fff"/>
+<text x="32" y="44" class="title" fill="#19324b" text-anchor="start">Logical architecture | Four planes, eleven components</text>
+<text x="32" y="75" class="body" fill="#536b80" text-anchor="start">Component ownership is distinct from process count. Harness is an SDK; the hub is documentation, contracts and evidence.</text>
+<rect x="30" y="120" width="310" height="225" rx="12" fill="#edf4fb" stroke="#2374ab" stroke-width="1.5"/>
+<text x="48" y="149" class="heading" fill="#2374ab" text-anchor="start">AGENT PLANE</text>
+<rect x="425" y="120" width="515" height="695" rx="12" fill="#e9f7f5" stroke="#087f82" stroke-width="1.5"/>
+<text x="443" y="149" class="heading" fill="#087f82" text-anchor="start">MEDIATION PLANE</text>
+<rect x="1025" y="120" width="545" height="695" rx="12" fill="#f2edf9" stroke="#7653a2" stroke-width="1.5"/>
+<text x="1043" y="149" class="heading" fill="#7653a2" text-anchor="start">AUTHORITY PLANE</text>
+<rect x="50" y="175" width="270" height="135" rx="8" fill="#fff" stroke="#2374ab" stroke-width="1.5"/>
+<text x="66" y="204" class="heading" fill="#2374ab" text-anchor="start">Application + Harness</text>
+<text x="66" y="229" class="body" fill="#19324b" text-anchor="start">Build stable proposals</text>
+<text x="66" y="251" class="body" fill="#19324b" text-anchor="start">Bind verified task lineage</text>
+<text x="66" y="273" class="body" fill="#19324b" text-anchor="start">Look up typed outcomes</text>
+<text x="66" y="295" class="body" fill="#19324b" text-anchor="start">SDK carries no enforcement</text>
+<rect x="30" y="455" width="310" height="180" rx="12" fill="#e9f7f5" stroke="#087f82" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="48" y="484" class="heading" fill="#087f82" text-anchor="start">CONNECTOR DOMAIN</text>
+<rect x="50" y="505" width="270" height="110" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="66" y="534" class="heading" fill="#087f82" text-anchor="start">Isolated connector</text>
+<text x="66" y="559" class="body" fill="#19324b" text-anchor="start">Own privilege domain</text>
+<text x="66" y="581" class="body" fill="#19324b" text-anchor="start">Bound live invocation</text>
+<text x="66" y="603" class="body" fill="#19324b" text-anchor="start">Target-only narrow egress</text>
+<rect x="50" y="690" width="270" height="90" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="66" y="719" class="heading" fill="#536b80" text-anchor="start">Target system</text>
+<text x="66" y="744" class="body" fill="#19324b" text-anchor="start">Effect key + precondition</text>
+<text x="66" y="766" class="body" fill="#19324b" text-anchor="start">Supported recovery fence</text>
+<rect x="445" y="175" width="475" height="115" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="461" y="204" class="heading" fill="#087f82" text-anchor="start">Gate</text>
+<text x="461" y="229" class="body" fill="#19324b" text-anchor="start">Policy and exact-request admission</text>
+<text x="461" y="251" class="body" fill="#19324b" text-anchor="start">Claims, reservations, final-send journal</text>
+<rect x="445" y="330" width="475" height="115" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="461" y="359" class="heading" fill="#087f82" text-anchor="start">Gateway</text>
+<text x="461" y="384" class="body" fill="#19324b" text-anchor="start">Model routes and disclosure checks</text>
+<text x="461" y="406" class="body" fill="#19324b" text-anchor="start">Model-spend reservations and settlement</text>
+<rect x="445" y="485" width="475" height="115" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="461" y="514" class="heading" fill="#087f82" text-anchor="start">Server</text>
+<text x="461" y="539" class="body" fill="#19324b" text-anchor="start">Governed memory and protected action records</text>
+<text x="461" y="561" class="body" fill="#19324b" text-anchor="start">Authoritative append-only accountability</text>
+<rect x="445" y="640" width="475" height="115" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="461" y="669" class="heading" fill="#087f82" text-anchor="start">Matrix</text>
+<text x="461" y="694" class="body" fill="#19324b" text-anchor="start">Approved read-only query contracts</text>
+<text x="461" y="716" class="body" fill="#19324b" text-anchor="start">Typed evidence, source scope and provenance</text>
+<rect x="1045" y="175" width="505" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="1061" y="204" class="heading" fill="#7653a2" text-anchor="start">Registry</text>
+<text x="1061" y="229" class="body" fill="#19324b" text-anchor="start">Signed manifests and inert candidates</text>
+<text x="1061" y="251" class="body" fill="#19324b" text-anchor="start">Immutable artifacts + activation pointers</text>
+<rect x="1045" y="365" width="505" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="1061" y="394" class="heading" fill="#7653a2" text-anchor="start">Warden</text>
+<text x="1061" y="419" class="body" fill="#19324b" text-anchor="start">Verified principal/delegation and narrow grants</text>
+<text x="1061" y="441" class="body" fill="#19324b" text-anchor="start">Credential custody, revocation and suspension</text>
+<rect x="1045" y="555" width="505" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="1061" y="584" class="heading" fill="#7653a2" text-anchor="start">Council</text>
+<text x="1061" y="609" class="body" fill="#19324b" text-anchor="start">Exact approvals and distinct human authority</text>
+<text x="1061" y="631" class="body" fill="#19324b" text-anchor="start">Ratification + activation coordination</text>
+<polyline points="320,230 445,230" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<rect x="344.5" y="205.0" width="76.0" height="21" rx="3" fill="#fff"/>
+<text x="382.5" y="220.0" class="small" fill="#2374ab" text-anchor="middle">proposal</text>
+<polyline points="320,280 380,280 380,385 445,385" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<rect x="353.25" y="350" width="53.5" height="21" rx="3" fill="#fff"/>
+<text x="380" y="365" class="small" fill="#2374ab" text-anchor="middle">model</text>
+<polyline points="445,265 355,265 355,545 320,545" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="317.0" y="455" width="76.0" height="21" rx="3" fill="#fff"/>
+<text x="355" y="470" class="small" fill="#087f82" text-anchor="middle">dispatch</text>
+<polyline points="185,615 185,690" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="154.5" y="627.5" width="61.0" height="21" rx="3" fill="#fff"/>
+<text x="185.0" y="642.5" class="small" fill="#087f82" text-anchor="middle">effect</text>
+<polyline points="920,220 1045,220" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="944.5" y="195.0" width="76.0" height="21" rx="3" fill="#fff"/>
+<text x="982.5" y="210.0" class="small" fill="#7653a2" text-anchor="middle">manifest</text>
+<polyline points="920,240 975,240 975,415 1045,415" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="909.0" y="335" width="136.0" height="21" rx="3" fill="#fff"/>
+<text x="977" y="350" class="small" fill="#7653a2" text-anchor="middle">identity / grant</text>
+<polyline points="920,265 955,265 955,605 1045,605" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="946.0" y="565" width="76.0" height="21" rx="3" fill="#fff"/>
+<text x="984" y="580" class="small" fill="#7653a2" text-anchor="middle">approval</text>
+<rect x="30" y="845" width="1540" height="145" rx="12" fill="#fff5e6" stroke="#b56a19" stroke-width="1.5"/>
+<text x="48" y="874" class="heading" fill="#b56a19" text-anchor="start">ASSURANCE PLANE | authorized records and governed operator APIs</text>
+<rect x="50" y="892" width="460" height="77" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="66" y="921" class="heading" fill="#b56a19" text-anchor="start">Sentinel</text>
+<text x="66" y="946" class="body" fill="#19324b" text-anchor="start">Rebuildable timelines + bounded suspension</text>
+<rect x="550" y="892" width="470" height="77" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="566" y="921" class="heading" fill="#b56a19" text-anchor="start">Assure</text>
+<text x="566" y="946" class="body" fill="#19324b" text-anchor="start">Evidence packages + offline integrity verification</text>
+<rect x="1060" y="892" width="490" height="77" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="1076" y="921" class="heading" fill="#b56a19" text-anchor="start">Console</text>
+<text x="1076" y="946" class="body" fill="#19324b" text-anchor="start">Human views + Council/Warden service calls</text>
+<text x="32" y="1032" class="small" fill="#536b80" text-anchor="start">Selected dependencies shown. Each state owner writes only its own store; all authoritative producers retain ordered Server outboxes.</text>
+<text x="32" y="1054" class="small" fill="#536b80" text-anchor="start">TARGET ARCHITECTURE • Proposed deployment choices • See architecture-review.md for evidence and limits</text>
+</svg>

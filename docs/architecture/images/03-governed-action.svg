@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Governed action | From proposal to a known or unresolved effect</title>
+<desc id="desc">Sequence across agent, Gate journal, authority services, Server, connector and target. Durable claim, grant consumption and predispatch acknowledgement precede one live final admission.</desc>
+<defs>
+<marker id="arrow19324b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#19324b"/></marker>
+<marker id="arrow2374ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#2374ab"/></marker>
+<marker id="arrow087f82" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#087f82"/></marker>
+<marker id="arrow7653a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7653a2"/></marker>
+<marker id="arrowb56a19" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#b56a19"/></marker>
+<marker id="arrowaa384b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#aa384b"/></marker>
+<marker id="arrow536b80" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#536b80"/></marker>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{font-size:29px;font-weight:700} .heading{font-size:19px;font-weight:700} .body{font-size:16px} .small{font-size:14px}</style>
+<rect width="1600" height="1180" fill="#fff"/>
+<text x="32" y="44" class="title" fill="#19324b" text-anchor="start">Governed action | From proposal to a known or unresolved effect</text>
+<text x="32" y="75" class="body" fill="#536b80" text-anchor="start">An allow decision, approval, grant or HTTP success alone cannot authorize a target send.</text>
+<rect x="20" y="120" width="230" height="65" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="36" y="149" class="heading" fill="#536b80" text-anchor="start">Agent / Harness</text>
+<line x1="135" y1="185" x2="135" y2="1055" stroke="#dce4ed" stroke-width="2"/>
+<rect x="285" y="120" width="230" height="65" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="301" y="149" class="heading" fill="#536b80" text-anchor="start">Gate + journal</text>
+<line x1="400" y1="185" x2="400" y2="1055" stroke="#dce4ed" stroke-width="2"/>
+<rect x="555" y="120" width="230" height="65" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="571" y="149" class="heading" fill="#536b80" text-anchor="start">Registry / Council</text>
+<line x1="670" y1="185" x2="670" y2="1055" stroke="#dce4ed" stroke-width="2"/>
+<rect x="825" y="120" width="230" height="65" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="841" y="149" class="heading" fill="#536b80" text-anchor="start">Warden</text>
+<line x1="940" y1="185" x2="940" y2="1055" stroke="#dce4ed" stroke-width="2"/>
+<rect x="1090" y="120" width="230" height="65" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="1106" y="149" class="heading" fill="#536b80" text-anchor="start">Server</text>
+<line x1="1205" y1="185" x2="1205" y2="1055" stroke="#dce4ed" stroke-width="2"/>
+<rect x="1355" y="120" width="230" height="65" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="1371" y="149" class="heading" fill="#536b80" text-anchor="start">Connector / target</text>
+<line x1="1470" y1="185" x2="1470" y2="1055" stroke="#dce4ed" stroke-width="2"/>
+<polyline points="135,235 400,235" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<rect x="90.75" y="210.0" width="353.5" height="21" rx="3" fill="#fff"/>
+<text x="267.5" y="225.0" class="small" fill="#2374ab" text-anchor="middle">1  Submit stable intent; authenticated caller</text>
+<polyline points="400,290 940,290" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="512.0" y="265.0" width="316.0" height="21" rx="3" fill="#fff"/>
+<text x="670.0" y="280.0" class="small" fill="#7653a2" text-anchor="middle">2  Verify current principal / delegation</text>
+<polyline points="400,345 670,345" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="373.25" y="320.0" width="323.5" height="21" rx="3" fill="#fff"/>
+<text x="535.0" y="335.0" class="small" fill="#7653a2" text-anchor="middle">3  Pin manifest / active policy; evaluate</text>
+<polyline points="400,400 1205,400" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="629.5" y="375.0" width="346.0" height="21" rx="3" fill="#fff"/>
+<text x="802.5" y="390.0" class="small" fill="#087f82" text-anchor="middle">4  Archive request + decision; exact custody</text>
+<polyline points="400,455 670,455" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="392.0" y="430.0" width="286.0" height="21" rx="3" fill="#fff"/>
+<text x="535.0" y="445.0" class="small" fill="#7653a2" text-anchor="middle">5  Exact approval if policy requires</text>
+<polyline points="400,565 940,565" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="489.5" y="540.0" width="361.0" height="21" rx="3" fill="#fff"/>
+<text x="670.0" y="555.0" class="small" fill="#7653a2" text-anchor="middle">7  Issue claim-bound grant; retry keeps expiry</text>
+<polyline points="400,675 1205,675" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="622.0" y="650.0" width="361.0" height="21" rx="3" fill="#fff"/>
+<text x="802.5" y="665.0" class="small" fill="#087f82" text-anchor="middle">9  Predispatch outbox; await exact durable ACK</text>
+<polyline points="400,730 940,730" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="478.25" y="705.0" width="383.5" height="21" rx="3" fill="#fff"/>
+<text x="670.0" y="720.0" class="small" fill="#7653a2" text-anchor="middle">10  Current grant, approval and connector custody</text>
+<polyline points="940,785 1470,785" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="1054.5" y="760.0" width="301.0" height="21" rx="3" fill="#fff"/>
+<text x="1205.0" y="775.0" class="small" fill="#7653a2" text-anchor="middle">11  Credential only to bound connector</text>
+<polyline points="1470,845 400,845" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="807.0" y="820.0" width="256.0" height="21" rx="3" fill="#fff"/>
+<text x="935.0" y="835.0" class="small" fill="#087f82" text-anchor="middle">12  Live final-admission request</text>
+<polyline points="400,945 1470,945" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="762.0" y="920.0" width="346.0" height="21" rx="3" fill="#fff"/>
+<text x="935.0" y="935.0" class="small" fill="#087f82" text-anchor="middle">14  First live winning reply allows one send</text>
+<polyline points="1470,1000 400,1000" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="739.5" y="975.0" width="391.0" height="21" rx="3" fill="#fff"/>
+<text x="935.0" y="990.0" class="small" fill="#087f82" text-anchor="middle">15  Target receipt or uncertainty; retain exposure</text>
+<polyline points="400,1050 1205,1050" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="607.0" y="1025.0" width="391.0" height="21" rx="3" fill="#fff"/>
+<text x="802.5" y="1040.0" class="small" fill="#087f82" text-anchor="middle">16  Outcome outbox; immutable later reconciliation</text>
+<rect x="230" y="489" width="545" height="37" rx="6" fill="#e9f7f5" stroke="#087f82"/>
+<text x="247" y="513" class="body" fill="#087f82" text-anchor="start">6  Persist immutable claim</text>
+<rect x="230" y="599" width="545" height="37" rx="6" fill="#e9f7f5" stroke="#087f82"/>
+<text x="247" y="623" class="body" fill="#087f82" text-anchor="start">8  Atomic: consume + own + reserve + outbox</text>
+<rect x="230" y="879" width="545" height="37" rx="6" fill="#e9f7f5" stroke="#087f82"/>
+<text x="247" y="903" class="body" fill="#087f82" text-anchor="start">13  Lock: recheck + spend send opportunity</text>
+<text x="35" y="1100" class="body" fill="#aa384b" text-anchor="start">Lost final-admission reply: no replacement send. Lost target reply: unresolved; investigate through independent read-only evidence.</text>
+<text x="32" y="1142" class="small" fill="#536b80" text-anchor="start">No distributed transaction spans Gate, Warden, Server and target. The connector&#x27;s target contract bounds the actual effect guarantee.</text>
+<text x="32" y="1164" class="small" fill="#536b80" text-anchor="start">TARGET ARCHITECTURE • Proposed deployment choices • See architecture-review.md for evidence and limits</text>
+</svg>

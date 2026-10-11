@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="860" viewBox="0 0 1500 860" role="img" aria-labelledby="title desc">
+<title id="title">Governance lifecycle | Approval is separate from activation</title>
+<desc id="desc">Proposal, package, shadow testing, distinct ratification and time lock precede a paused multi-participant activation. Incomplete receipt sets keep dispatch paused.</desc>
+<defs>
+<marker id="arrow19324b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#19324b"/></marker>
+<marker id="arrow2374ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#2374ab"/></marker>
+<marker id="arrow087f82" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#087f82"/></marker>
+<marker id="arrow7653a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7653a2"/></marker>
+<marker id="arrowb56a19" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#b56a19"/></marker>
+<marker id="arrowaa384b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#aa384b"/></marker>
+<marker id="arrow536b80" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#536b80"/></marker>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{font-size:29px;font-weight:700} .heading{font-size:19px;font-weight:700} .body{font-size:16px} .small{font-size:14px}</style>
+<rect width="1500" height="860" fill="#fff"/>
+<text x="32" y="44" class="title" fill="#19324b" text-anchor="start">Governance lifecycle | Approval is separate from activation</text>
+<text x="32" y="75" class="body" fill="#536b80" text-anchor="start">Candidates remain inert until a separately authorized, recorded transition installs an effective artifact set.</text>
+<rect x="35" y="135" width="260" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="51" y="164" class="heading" fill="#7653a2" text-anchor="start">1  Propose</text>
+<text x="51" y="189" class="body" fill="#19324b" text-anchor="start">Agent or human</text>
+<text x="51" y="211" class="body" fill="#19324b" text-anchor="start">Inert candidate</text>
+<rect x="330" y="135" width="260" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="346" y="164" class="heading" fill="#7653a2" text-anchor="start">2  Package / test</text>
+<text x="346" y="189" class="body" fill="#19324b" text-anchor="start">Registry admission</text>
+<text x="346" y="211" class="body" fill="#19324b" text-anchor="start">Digest + compatibility</text>
+<rect x="625" y="135" width="260" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="641" y="164" class="heading" fill="#7653a2" text-anchor="start">3  Shadow / review</text>
+<text x="641" y="189" class="body" fill="#19324b" text-anchor="start">Declared replay scope</text>
+<text x="641" y="211" class="body" fill="#19324b" text-anchor="start">Boundary regressions</text>
+<rect x="920" y="135" width="260" height="115" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="936" y="164" class="heading" fill="#7653a2" text-anchor="start">4  Ratify / time-lock</text>
+<text x="936" y="189" class="body" fill="#19324b" text-anchor="start">Council + eligible humans</text>
+<text x="936" y="211" class="body" fill="#19324b" text-anchor="start">Exact set, scope and expiry</text>
+<polyline points="295,192 330,192" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<polyline points="590,192 625,192" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<polyline points="885,192 920,192" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="35" y="315" width="1430" height="340" rx="12" fill="#f2edf9" stroke="#7653a2" stroke-width="1.5"/>
+<text x="53" y="344" class="heading" fill="#7653a2" text-anchor="start">5  Activate under a durable cell barrier | Council coordinates; each participant owns its commit</text>
+<rect x="60" y="385" width="250" height="135" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="76" y="414" class="heading" fill="#087f82" text-anchor="start">Gate: pause</text>
+<text x="76" y="439" class="body" fill="#19324b" text-anchor="start">Expected prior epoch</text>
+<text x="76" y="461" class="body" fill="#19324b" text-anchor="start">Serialize against admission</text>
+<text x="76" y="483" class="body" fill="#19324b" text-anchor="start">Durable pause receipt</text>
+<rect x="375" y="385" width="370" height="135" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="391" y="414" class="heading" fill="#7653a2" text-anchor="start">Apply exact transition</text>
+<text x="391" y="439" class="body" fill="#19324b" text-anchor="start">Registry: effective artifact set</text>
+<text x="391" y="461" class="body" fill="#19324b" text-anchor="start">Server: protected custody / authority</text>
+<text x="391" y="483" class="body" fill="#19324b" text-anchor="start">Warden: current grant authority</text>
+<rect x="810" y="385" width="280" height="135" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="826" y="414" class="heading" fill="#087f82" text-anchor="start">Gate: install epoch</text>
+<text x="826" y="439" class="body" fill="#19324b" text-anchor="start">Authenticated owner receipts</text>
+<text x="826" y="461" class="body" fill="#19324b" text-anchor="start">Complete participant set</text>
+<text x="826" y="483" class="body" fill="#19324b" text-anchor="start">Still paused while incomplete</text>
+<rect x="1150" y="385" width="290" height="135" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="1166" y="414" class="heading" fill="#087f82" text-anchor="start">Gate: resume</text>
+<text x="1166" y="439" class="body" fill="#19324b" text-anchor="start">Verify current heads</text>
+<text x="1166" y="461" class="body" fill="#19324b" text-anchor="start">Commit matching transition</text>
+<text x="1166" y="483" class="body" fill="#19324b" text-anchor="start">New admissions may proceed</text>
+<polyline points="310,450 375,450" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<polyline points="745,450 810,450" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<polyline points="1090,450 1150,450" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<polyline points="1050,250 1050,288 20,288 20,450 60,450" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<text x="62" y="571" class="body" fill="#aa384b" text-anchor="start">Expired, partial or conflicting transition: retain history and keep admission paused; lookup never resumes execution.</text>
+<text x="62" y="607" class="body" fill="#536b80" text-anchor="start">Later profiles declare all required participants, including Gateway where model-route governance is affected.</text>
+<rect x="375" y="695" width="700" height="80" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="391" y="724" class="heading" fill="#b56a19" text-anchor="start">6  Observe / retain / controlled rollback</text>
+<text x="391" y="749" class="body" fill="#19324b" text-anchor="start">A prior bundle is reactivated under a new epoch; history is never rewritten.</text>
+<polyline points="1295,520 1295,735 1075,735" fill="none" stroke="#b56a19" stroke-width="2" marker-end="url(#arrowb56a19)"/>
+<text x="32" y="822" class="small" fill="#536b80" text-anchor="start">Action approval permits one exact action context. Governance ratification changes rules. Neither substitutes for the other.</text>
+<text x="32" y="844" class="small" fill="#536b80" text-anchor="start">TARGET ARCHITECTURE • Proposed deployment choices • See architecture-review.md for evidence and limits</text>
+</svg>

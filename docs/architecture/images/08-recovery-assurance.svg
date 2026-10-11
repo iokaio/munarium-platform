@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="880" viewBox="0 0 1500 880" role="img" aria-labelledby="title desc">
+<title id="title">Failure, recovery and assurance | Preserve uncertainty before availability</title>
+<desc id="desc">Local journals and outboxes retain facts; Server provides independently retained custody; the target retains its recovery floor. Restore stays quarantined until reconciliation and separately authorized reopening.</desc>
+<defs>
+<marker id="arrow19324b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#19324b"/></marker>
+<marker id="arrow2374ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#2374ab"/></marker>
+<marker id="arrow087f82" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#087f82"/></marker>
+<marker id="arrow7653a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7653a2"/></marker>
+<marker id="arrowb56a19" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#b56a19"/></marker>
+<marker id="arrowaa384b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#aa384b"/></marker>
+<marker id="arrow536b80" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#536b80"/></marker>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{font-size:29px;font-weight:700} .heading{font-size:19px;font-weight:700} .body{font-size:16px} .small{font-size:14px}</style>
+<rect width="1500" height="880" fill="#fff"/>
+<text x="32" y="44" class="title" fill="#19324b" text-anchor="start">Failure, recovery and assurance | Preserve uncertainty before availability</text>
+<text x="32" y="75" class="body" fill="#536b80" text-anchor="start">A database restore or failover cannot resurrect a consumed grant, erase exposure or authorize another effect.</text>
+<rect x="35" y="140" width="420" height="140" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="51" y="169" class="heading" fill="#087f82" text-anchor="start">Owner journals + outboxes</text>
+<text x="51" y="194" class="body" fill="#19324b" text-anchor="start">Claim, consumption and send intent</text>
+<text x="51" y="216" class="body" fill="#19324b" text-anchor="start">Approval / grant / cancellation receipts</text>
+<text x="51" y="238" class="body" fill="#19324b" text-anchor="start">Unresolved capacity debt survives restart</text>
+<text x="51" y="260" class="body" fill="#19324b" text-anchor="start">Retry exact event bytes; never resend target</text>
+<rect x="535" y="140" width="430" height="140" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="551" y="169" class="heading" fill="#087f82" text-anchor="start">Server protected custody</text>
+<text x="551" y="194" class="body" fill="#19324b" text-anchor="start">Original archives + acknowledgements</text>
+<text x="551" y="216" class="body" fill="#19324b" text-anchor="start">Append-only correction / reconciliation</text>
+<text x="551" y="238" class="body" fill="#19324b" text-anchor="start">Independent source ranges and cutoffs</text>
+<text x="551" y="260" class="body" fill="#19324b" text-anchor="start">Backups alone are not restore admission</text>
+<rect x="1045" y="140" width="420" height="140" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="1061" y="169" class="heading" fill="#7653a2" text-anchor="start">Target + external recovery</text>
+<text x="1061" y="194" class="body" fill="#19324b" text-anchor="start">Actual effects and independent receipts</text>
+<text x="1061" y="216" class="body" fill="#19324b" text-anchor="start">Installed monotonic recovery floor</text>
+<text x="1061" y="238" class="body" fill="#19324b" text-anchor="start">Recovery generation outside restored store</text>
+<text x="1061" y="260" class="body" fill="#19324b" text-anchor="start">Stale workers refused by target profile</text>
+<polyline points="455,210 535,210" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="464.5" y="185.0" width="61.0" height="21" rx="3" fill="#fff"/>
+<text x="495.0" y="200.0" class="small" fill="#087f82" text-anchor="middle">outbox</text>
+<rect x="35" y="355" width="1430" height="245" rx="12" fill="#fff0f2" stroke="#aa384b" stroke-width="1.5"/>
+<text x="53" y="384" class="heading" fill="#aa384b" text-anchor="start">Restore / partial transition / missing evidence</text>
+<rect x="60" y="420" width="270" height="120" rx="8" fill="#fff" stroke="#aa384b" stroke-width="1.5"/>
+<text x="76" y="449" class="heading" fill="#aa384b" text-anchor="start">1  Quarantine</text>
+<text x="76" y="474" class="body" fill="#19324b" text-anchor="start">Disable issuance / dispatch</text>
+<text x="76" y="496" class="body" fill="#19324b" text-anchor="start">Preserve unresolved records</text>
+<text x="76" y="518" class="body" fill="#19324b" text-anchor="start">No health-probe override</text>
+<rect x="390" y="420" width="360" height="120" rx="8" fill="#fff" stroke="#aa384b" stroke-width="1.5"/>
+<text x="406" y="449" class="heading" fill="#aa384b" text-anchor="start">2  Reconcile retained facts</text>
+<text x="406" y="474" class="body" fill="#19324b" text-anchor="start">Server cutoff + target observation</text>
+<text x="406" y="496" class="body" fill="#19324b" text-anchor="start">Claim / reservation / cancellation facts</text>
+<text x="406" y="518" class="body" fill="#19324b" text-anchor="start">Missing or disputed facts stay visible</text>
+<rect x="810" y="420" width="290" height="120" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="826" y="449" class="heading" fill="#7653a2" text-anchor="start">3  Install new generation</text>
+<text x="826" y="474" class="body" fill="#19324b" text-anchor="start">Separate recovery authority</text>
+<text x="826" y="496" class="body" fill="#19324b" text-anchor="start">Target-floor acknowledgement</text>
+<text x="826" y="518" class="body" fill="#19324b" text-anchor="start">Current policy / identity checks</text>
+<rect x="1160" y="420" width="280" height="120" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="1176" y="449" class="heading" fill="#087f82" text-anchor="start">4  Governed reopening</text>
+<text x="1176" y="474" class="body" fill="#19324b" text-anchor="start">Only if profile evidence holds</text>
+<text x="1176" y="496" class="body" fill="#19324b" text-anchor="start">No replay of consumed sends</text>
+<text x="1176" y="518" class="body" fill="#19324b" text-anchor="start">Unresolved work stays blocked</text>
+<polyline points="330,480 390,480" fill="none" stroke="#aa384b" stroke-width="2" marker-end="url(#arrowaa384b)"/>
+<polyline points="750,480 810,480" fill="none" stroke="#aa384b" stroke-width="2" marker-end="url(#arrowaa384b)"/>
+<polyline points="1100,480 1160,480" fill="none" stroke="#aa384b" stroke-width="2" marker-end="url(#arrowaa384b)"/>
+<rect x="35" y="670" width="650" height="110" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="51" y="699" class="heading" fill="#b56a19" text-anchor="start">Operational assurance</text>
+<text x="51" y="724" class="body" fill="#19324b" text-anchor="start">Sentinel + Console: known state, lag, omissions and pending recording</text>
+<text x="51" y="746" class="body" fill="#19324b" text-anchor="start">Suspension narrows authority; restoration requires its governing path.</text>
+<rect x="785" y="670" width="680" height="110" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="801" y="699" class="heading" fill="#b56a19" text-anchor="start">Portable evidence / offline verification</text>
+<text x="801" y="724" class="body" fill="#19324b" text-anchor="start">Assure: composition, records, checkpoints, covered ranges and gaps</text>
+<text x="801" y="746" class="body" fill="#19324b" text-anchor="start">Verify integrity with independent trust; do not infer truth or compliance.</text>
+<text x="32" y="842" class="small" fill="#536b80" text-anchor="start">Target-effect status and recording-delivery status are separate. Full recovery/reopening and evidence export remain qualification obligations.</text>
+<text x="32" y="864" class="small" fill="#536b80" text-anchor="start">TARGET ARCHITECTURE • Proposed deployment choices • See architecture-review.md for evidence and limits</text>
+</svg>

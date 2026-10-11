@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1220" viewBox="0 0 1700 1220" role="img" aria-labelledby="title desc">
+<title id="title">AWS physical architecture | Proposed single-region governed cell</title>
+<desc id="desc">Proposed AWS deployment separates corporate ingress, isolated agent compute, private platform Kubernetes across zones, connector compute, owner datastores, secrets and an independently retained recovery boundary.</desc>
+<defs>
+<marker id="arrow19324b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#19324b"/></marker>
+<marker id="arrow2374ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#2374ab"/></marker>
+<marker id="arrow087f82" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#087f82"/></marker>
+<marker id="arrow7653a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7653a2"/></marker>
+<marker id="arrowb56a19" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#b56a19"/></marker>
+<marker id="arrowaa384b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#aa384b"/></marker>
+<marker id="arrow536b80" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#536b80"/></marker>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{font-size:29px;font-weight:700} .heading{font-size:19px;font-weight:700} .body{font-size:16px} .small{font-size:14px}</style>
+<rect width="1700" height="1220" fill="#fff"/>
+<text x="32" y="44" class="title" fill="#19324b" text-anchor="start">AWS physical architecture | Proposed single-region governed cell</text>
+<text x="32" y="75" class="body" fill="#536b80" text-anchor="start">One home cell per operation; private service boundaries; separate agent and connector execution domains.</text>
+<rect x="30" y="120" width="300" height="110" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="46" y="149" class="heading" fill="#536b80" text-anchor="start">Corporate access</text>
+<text x="46" y="174" class="body" fill="#19324b" text-anchor="start">People + enterprise applications</text>
+<text x="46" y="196" class="body" fill="#19324b" text-anchor="start">VPN / private circuit</text>
+<text x="46" y="218" class="body" fill="#19324b" text-anchor="start">Separate operator credentials</text>
+<rect x="385" y="120" width="430" height="110" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="401" y="149" class="heading" fill="#536b80" text-anchor="start">Internal Application Load Balancer</text>
+<text x="401" y="174" class="body" fill="#19324b" text-anchor="start">Human Console + scoped API ingress</text>
+<text x="401" y="196" class="body" fill="#19324b" text-anchor="start">TLS; preserve verified caller identity</text>
+<rect x="950" y="120" width="360" height="110" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="966" y="149" class="heading" fill="#7653a2" text-anchor="start">Enterprise IdP + AWS IAM</text>
+<text x="966" y="174" class="body" fill="#19324b" text-anchor="start">Human and workload enrollment</text>
+<text x="966" y="196" class="body" fill="#19324b" text-anchor="start">Cloud identity is not an action grant</text>
+<rect x="1380" y="120" width="290" height="110" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="1396" y="149" class="heading" fill="#536b80" text-anchor="start">External dependencies</text>
+<text x="1396" y="174" class="body" fill="#19324b" text-anchor="start">Enterprise query sources</text>
+<text x="1396" y="196" class="body" fill="#19324b" text-anchor="start">Approved model providers</text>
+<text x="1396" y="218" class="body" fill="#19324b" text-anchor="start">Business targets</text>
+<rect x="30" y="290" width="330" height="535" rx="12" fill="#edf4fb" stroke="#2374ab" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="48" y="319" class="heading" fill="#2374ab" text-anchor="start">Agent account / VPC</text>
+<rect x="50" y="350" width="290" height="140" rx="8" fill="#fff" stroke="#2374ab" stroke-width="1.5"/>
+<text x="66" y="379" class="heading" fill="#2374ab" text-anchor="start">Isolated agent compute</text>
+<text x="66" y="404" class="body" fill="#19324b" text-anchor="start">Separate cluster or VM pool</text>
+<text x="66" y="426" class="body" fill="#19324b" text-anchor="start">Application + Harness SDK</text>
+<text x="66" y="448" class="body" fill="#19324b" text-anchor="start">No target or vault IAM rights</text>
+<text x="66" y="470" class="body" fill="#19324b" text-anchor="start">Egress only to admitted APIs</text>
+<rect x="50" y="650" width="290" height="105" rx="8" fill="#fff" stroke="#2374ab" stroke-width="1.5"/>
+<text x="66" y="679" class="heading" fill="#2374ab" text-anchor="start">Agent network controls</text>
+<text x="66" y="704" class="body" fill="#19324b" text-anchor="start">Default deny + route allowlist</text>
+<text x="66" y="726" class="body" fill="#19324b" text-anchor="start">No cluster/host admin</text>
+<text x="66" y="748" class="body" fill="#19324b" text-anchor="start">No metadata credential bypass</text>
+<rect x="410" y="290" width="850" height="535" rx="12" fill="#e9f7f5" stroke="#087f82" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="428" y="319" class="heading" fill="#087f82" text-anchor="start">Platform account / private VPC</text>
+<rect x="435" y="345" width="800" height="300" rx="12" fill="#e9f7f5" stroke="#087f82" stroke-width="1.5"/>
+<text x="453" y="374" class="heading" fill="#087f82" text-anchor="start">Private EKS cluster | zone-spread eligible replicas</text>
+<rect x="455" y="402" width="350" height="92" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="471" y="431" class="heading" fill="#087f82" text-anchor="start">Mediation workloads</text>
+<text x="471" y="456" class="body" fill="#19324b" text-anchor="start">Gate • Gateway • Server • Matrix</text>
+<text x="471" y="478" class="body" fill="#19324b" text-anchor="start">Separate identities and service roles</text>
+<rect x="850" y="402" width="365" height="92" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="866" y="431" class="heading" fill="#7653a2" text-anchor="start">Authority workloads</text>
+<text x="866" y="456" class="body" fill="#19324b" text-anchor="start">Registry • Warden • Council</text>
+<text x="866" y="478" class="body" fill="#19324b" text-anchor="start">Protected administrative permissions</text>
+<rect x="455" y="520" width="760" height="90" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="471" y="549" class="heading" fill="#b56a19" text-anchor="start">Assurance workloads</text>
+<text x="471" y="574" class="body" fill="#19324b" text-anchor="start">Sentinel • Assure • Console  |  read models have source watermarks</text>
+<text x="471" y="596" class="body" fill="#19324b" text-anchor="start">Operators approve through service APIs; telemetry is not audit custody.</text>
+<rect x="455" y="617" width="240" height="22" rx="4" fill="#fff" stroke="#087f82"/>
+<text x="575" y="633" class="small" fill="#087f82" text-anchor="middle">Availability zone 1</text>
+<rect x="715" y="617" width="240" height="22" rx="4" fill="#fff" stroke="#087f82"/>
+<text x="835" y="633" class="small" fill="#087f82" text-anchor="middle">Availability zone 2</text>
+<rect x="975" y="617" width="240" height="22" rx="4" fill="#fff" stroke="#087f82"/>
+<text x="1095" y="633" class="small" fill="#087f82" text-anchor="middle">Availability zone 3</text>
+<rect x="435" y="685" width="800" height="100" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="451" y="714" class="heading" fill="#536b80" text-anchor="start">Private data access + default-deny east/west policy</text>
+<text x="451" y="739" class="body" fill="#19324b" text-anchor="start">Authenticated, audience-bound service channels; qualified TLS termination</text>
+<text x="451" y="761" class="body" fill="#19324b" text-anchor="start">Private cluster API; explicit DNS/time/image/identity endpoints; controlled provider egress</text>
+<rect x="1310" y="290" width="360" height="270" rx="12" fill="#f3f6f9" stroke="#536b80" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="1328" y="319" class="heading" fill="#536b80" text-anchor="start">Connector account / VPC</text>
+<rect x="1330" y="350" width="320" height="140" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="1346" y="379" class="heading" fill="#087f82" text-anchor="start">Isolated connector workers</text>
+<text x="1346" y="404" class="body" fill="#19324b" text-anchor="start">One qualified adapter / privilege domain</text>
+<text x="1346" y="426" class="body" fill="#19324b" text-anchor="start">Credential delivered through Warden</text>
+<text x="1346" y="448" class="body" fill="#19324b" text-anchor="start">Final admission from Gate before send</text>
+<text x="1346" y="470" class="body" fill="#19324b" text-anchor="start">Target allowlist; no agent secret mounts</text>
+<rect x="1310" y="610" width="360" height="215" rx="12" fill="#fff0f2" stroke="#aa384b" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="1328" y="639" class="heading" fill="#aa384b" text-anchor="start">Independent target boundary</text>
+<rect x="1330" y="660" width="320" height="110" rx="8" fill="#fff" stroke="#aa384b" stroke-width="1.5"/>
+<text x="1346" y="689" class="heading" fill="#aa384b" text-anchor="start">Target-owned state</text>
+<text x="1346" y="714" class="body" fill="#19324b" text-anchor="start">Stable effect identity + precondition</text>
+<text x="1346" y="736" class="body" fill="#19324b" text-anchor="start">Recovery floor retained outside Gate</text>
+<text x="1346" y="758" class="body" fill="#19324b" text-anchor="start">Independent read-only effect observer</text>
+<polyline points="330,175 385,175" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<polyline points="600,230 600,345" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<rect x="535.75" y="262.5" width="128.5" height="21" rx="3" fill="#fff"/>
+<text x="600.0" y="277.5" class="small" fill="#2374ab" text-anchor="middle">private ingress</text>
+<polyline points="340,405 455,445" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<rect x="339.75" y="390" width="98.5" height="21" rx="3" fill="#fff"/>
+<text x="389" y="405" class="small" fill="#2374ab" text-anchor="middle">scoped APIs</text>
+<polyline points="1215,440 1330,440" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="1208.25" y="415.0" width="128.5" height="21" rx="3" fill="#fff"/>
+<text x="1272.5" y="430.0" class="small" fill="#7653a2" text-anchor="middle">grant / custody</text>
+<polyline points="760,494 760,505 1285,505 1285,465 1330,465" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="1000.75" y="497" width="248.5" height="21" rx="3" fill="#fff"/>
+<text x="1125" y="512" class="small" fill="#087f82" text-anchor="middle">Gate dispatch / final admission</text>
+<polyline points="1490,490 1490,580 1685,580 1685,715 1650,715" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="1438.25" y="558" width="143.5" height="21" rx="3" fill="#fff"/>
+<text x="1510" y="573" class="small" fill="#087f82" text-anchor="middle">one admitted send</text>
+<rect x="30" y="870" width="1640" height="255" rx="12" fill="#f3f6f9" stroke="#536b80" stroke-width="1.5"/>
+<text x="48" y="899" class="heading" fill="#536b80" text-anchor="start">PRIVATE MANAGED SERVICES / OWNER-ISOLATED STATE | Each service accesses only its enrolled resources</text>
+<rect x="50" y="925" width="525" height="135" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="66" y="954" class="heading" fill="#087f82" text-anchor="start">RDS for PostgreSQL (Multi-AZ)</text>
+<text x="66" y="979" class="body" fill="#19324b" text-anchor="start">Gate journal: atomic consumption / capacity</text>
+<text x="66" y="1001" class="body" fill="#19324b" text-anchor="start">Owner-separated databases, roles and backups</text>
+<text x="66" y="1023" class="body" fill="#19324b" text-anchor="start">Server ledger: protected accountability custody</text>
+<text x="66" y="1045" class="body" fill="#19324b" text-anchor="start">Other owner stores: qualified single-writer PVs</text>
+<rect x="610" y="925" width="485" height="135" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="626" y="954" class="heading" fill="#7653a2" text-anchor="start">Secrets Manager + IAM role adapter</text>
+<text x="626" y="979" class="body" fill="#19324b" text-anchor="start">Cloud adapter requires admission tests</text>
+<text x="626" y="1001" class="body" fill="#19324b" text-anchor="start">Broker access limited to Warden</text>
+<text x="626" y="1023" class="body" fill="#19324b" text-anchor="start">Target secret delivered only to connector</text>
+<text x="626" y="1045" class="body" fill="#19324b" text-anchor="start">Vault storage is not grant or send authority</text>
+<rect x="1130" y="925" width="520" height="135" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="1146" y="954" class="heading" fill="#b56a19" text-anchor="start">S3 + approved Object Lock policy</text>
+<text x="1146" y="979" class="body" fill="#19324b" text-anchor="start">Amazon ECR • digest-pinned images</text>
+<text x="1146" y="1001" class="body" fill="#19324b" text-anchor="start">CloudWatch / enterprise SIEM</text>
+<text x="1146" y="1023" class="body" fill="#19324b" text-anchor="start">Export/checkpoint storage + separate trust custody</text>
+<text x="1146" y="1045" class="body" fill="#19324b" text-anchor="start">Cross-region backup: dispatch stays quarantined</text>
+<polyline points="835,825 835,870" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="662.0" y="822.5" width="346.0" height="21" rx="3" fill="#fff"/>
+<text x="835.0" y="837.5" class="small" fill="#087f82" text-anchor="middle">private endpoints / private database routing</text>
+<text x="52" y="1099" class="small" fill="#536b80" text-anchor="start">Cloud vaults store credentials; Warden owns grant semantics. Zones and replica counts depend on the qualified storage profile.</text>
+<text x="32" y="1182" class="small" fill="#536b80" text-anchor="start">Selected physical paths shown. Cross-network allowlists enforce the logical flow table; account/subscription separation requires distinct real administrators.</text>
+<text x="32" y="1204" class="small" fill="#536b80" text-anchor="start">TARGET ARCHITECTURE • Proposed deployment choices • See architecture-review.md for evidence and limits</text>
+</svg>
