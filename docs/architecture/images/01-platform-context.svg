@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="800" viewBox="0 0 1500 800" role="img" aria-labelledby="title desc">
+<title id="title">Munarium Governance Platform | System context</title>
+<desc id="desc">Agents use mediation services. Separate human authority governs rules. Targets and model providers are outside the platform boundary.</desc>
+<defs>
+<marker id="arrow19324b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#19324b"/></marker>
+<marker id="arrow2374ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#2374ab"/></marker>
+<marker id="arrow087f82" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#087f82"/></marker>
+<marker id="arrow7653a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7653a2"/></marker>
+<marker id="arrowb56a19" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#b56a19"/></marker>
+<marker id="arrowaa384b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#aa384b"/></marker>
+<marker id="arrow536b80" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#536b80"/></marker>
+</defs>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{font-size:29px;font-weight:700} .heading{font-size:19px;font-weight:700} .body{font-size:16px} .small{font-size:14px}</style>
+<rect width="1500" height="800" fill="#fff"/>
+<text x="32" y="44" class="title" fill="#19324b" text-anchor="start">Munarium Governance Platform | System context</text>
+<text x="32" y="75" class="body" fill="#536b80" text-anchor="start">The agent may reason and propose; deployed controls determine what may take effect.</text>
+<rect x="405" y="115" width="665" height="565" rx="12" fill="#f3f6f9" stroke="#536b80" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="423" y="144" class="heading" fill="#536b80" text-anchor="start">Qualified platform boundary</text>
+<rect x="35" y="170" width="280" height="125" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="51" y="199" class="heading" fill="#7653a2" text-anchor="start">People</text>
+<text x="51" y="224" class="body" fill="#19324b" text-anchor="start">Business approvers</text>
+<text x="51" y="246" class="body" fill="#19324b" text-anchor="start">Operators and auditors</text>
+<text x="51" y="268" class="body" fill="#19324b" text-anchor="start">Distinct governing authority</text>
+<rect x="35" y="440" width="280" height="125" rx="8" fill="#fff" stroke="#2374ab" stroke-width="1.5"/>
+<text x="51" y="469" class="heading" fill="#2374ab" text-anchor="start">Agent applications</text>
+<text x="51" y="494" class="body" fill="#19324b" text-anchor="start">Harness SDK in the runtime</text>
+<text x="51" y="516" class="body" fill="#19324b" text-anchor="start">Scoped workload identity</text>
+<text x="51" y="538" class="body" fill="#19324b" text-anchor="start">No direct target credentials</text>
+<rect x="435" y="170" width="605" height="100" rx="8" fill="#fff" stroke="#7653a2" stroke-width="1.5"/>
+<text x="451" y="199" class="heading" fill="#7653a2" text-anchor="start">Authority</text>
+<text x="451" y="224" class="body" fill="#19324b" text-anchor="start">Registry • Warden • Council</text>
+<text x="451" y="246" class="body" fill="#19324b" text-anchor="start">Inventory, identity, grants, approval and activation</text>
+<rect x="435" y="330" width="605" height="125" rx="8" fill="#fff" stroke="#087f82" stroke-width="1.5"/>
+<text x="451" y="359" class="heading" fill="#087f82" text-anchor="start">Mediation</text>
+<text x="451" y="384" class="body" fill="#19324b" text-anchor="start">Gate: consequential action • Gateway: model calls</text>
+<text x="451" y="406" class="body" fill="#19324b" text-anchor="start">Server: governed memory and accountability</text>
+<text x="451" y="428" class="body" fill="#19324b" text-anchor="start">Matrix: governed read-only structured evidence</text>
+<rect x="435" y="525" width="605" height="100" rx="8" fill="#fff" stroke="#b56a19" stroke-width="1.5"/>
+<text x="451" y="554" class="heading" fill="#b56a19" text-anchor="start">Assurance</text>
+<text x="451" y="579" class="body" fill="#19324b" text-anchor="start">Sentinel • Assure • Console</text>
+<text x="451" y="601" class="body" fill="#19324b" text-anchor="start">Operational views, portable evidence and human workflows</text>
+<rect x="1170" y="165" width="295" height="100" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="1186" y="194" class="heading" fill="#536b80" text-anchor="start">Enterprise sources</text>
+<text x="1186" y="219" class="body" fill="#19324b" text-anchor="start">Documents and structured data</text>
+<text x="1186" y="241" class="body" fill="#19324b" text-anchor="start">Scoped read access</text>
+<rect x="1170" y="345" width="295" height="100" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="1186" y="374" class="heading" fill="#536b80" text-anchor="start">Business targets</text>
+<text x="1186" y="399" class="body" fill="#19324b" text-anchor="start">SaaS, release and other tools</text>
+<text x="1186" y="421" class="body" fill="#19324b" text-anchor="start">Isolated connectors act here</text>
+<rect x="1170" y="525" width="295" height="100" rx="8" fill="#fff" stroke="#536b80" stroke-width="1.5"/>
+<text x="1186" y="554" class="heading" fill="#536b80" text-anchor="start">Model providers</text>
+<text x="1186" y="579" class="body" fill="#19324b" text-anchor="start">Approved hosted or local routes</text>
+<text x="1186" y="601" class="body" fill="#19324b" text-anchor="start">Data disclosure and cost limits</text>
+<polyline points="315,215 435,215" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="344.5" y="190.0" width="61.0" height="21" rx="3" fill="#fff"/>
+<text x="375.0" y="205.0" class="small" fill="#7653a2" text-anchor="middle">govern</text>
+<polyline points="315,500 360,500 360,390 435,390" fill="none" stroke="#2374ab" stroke-width="2" marker-end="url(#arrow2374ab)"/>
+<rect x="304.5" y="359" width="121.0" height="21" rx="3" fill="#fff"/>
+<text x="365" y="374" class="small" fill="#2374ab" text-anchor="middle">read / propose</text>
+<polyline points="735,270 735,330" fill="none" stroke="#7653a2" stroke-width="2" marker-end="url(#arrow7653a2)"/>
+<rect x="670.75" y="275.0" width="128.5" height="21" rx="3" fill="#fff"/>
+<text x="735.0" y="290.0" class="small" fill="#7653a2" text-anchor="middle">bound authority</text>
+<polyline points="735,455 735,525" fill="none" stroke="#b56a19" stroke-width="2" marker-end="url(#arrowb56a19)"/>
+<rect x="670.75" y="465.0" width="128.5" height="21" rx="3" fill="#fff"/>
+<text x="735.0" y="480.0" class="small" fill="#b56a19" text-anchor="middle">records / views</text>
+<polyline points="1040,365 1110,365 1110,215 1170,215" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<polyline points="1040,397 1170,397" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<rect x="1033.25" y="372.0" width="143.5" height="21" rx="3" fill="#fff"/>
+<text x="1105.0" y="387.0" class="small" fill="#087f82" text-anchor="middle">authorized effect</text>
+<polyline points="1040,430 1130,430 1130,575 1170,575" fill="none" stroke="#087f82" stroke-width="2" marker-end="url(#arrow087f82)"/>
+<text x="440" y="715" class="heading" fill="#19324b" text-anchor="start">Four powers: READ  |  GOVERNED WRITE  |  ACT  |  GOVERN</text>
+<text x="32" y="762" class="small" fill="#536b80" text-anchor="start">Guarantee covers declared, qualified paths. Unmanaged credentials, tools and administrators remain explicit trust assumptions.</text>
+<text x="32" y="784" class="small" fill="#536b80" text-anchor="start">TARGET ARCHITECTURE • Proposed deployment choices • See architecture-review.md for evidence and limits</text>
+</svg>

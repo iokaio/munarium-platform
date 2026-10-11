@@ -5,6 +5,7 @@ All unimplemented behavior remains proposed.
 
 | Document | Purpose |
 |---|---|
+| [Architecture review](architecture-review.md) | Executive summary, full-platform target behavior, eight diagrams, proposed Azure/AWS physical profiles and qualification priorities |
 | [System boundaries](system-boundaries.md) | Planes, authority flow, state ownership and degraded operation |
 | [Contract backlog](contract-backlog.md) | Shared definitions that must be decided before components implement them |
 | [Foundation requirements](foundation-requirements.md) | Server S1–S9, Matrix boundaries and qualification inputs |
