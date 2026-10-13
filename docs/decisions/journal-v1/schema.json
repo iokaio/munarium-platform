@@ -1,0 +1,2193 @@
+{
+  "$defs": {
+    "attempt-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "attempt",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    },
+    "audit": {
+      "additionalProperties": false,
+      "properties": {
+        "checkpoint_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "cutoff": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "ledger": {
+          "$ref": "#/$defs/ledger-ref"
+        }
+      },
+      "required": [
+        "ledger",
+        "cutoff",
+        "checkpoint_digest"
+      ],
+      "type": "object"
+    },
+    "bucket": {
+      "additionalProperties": false,
+      "properties": {
+        "bucket": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "limit": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "units": {
+          "const": 1,
+          "type": "integer"
+        },
+        "window_start": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "bucket",
+        "window_start",
+        "units",
+        "limit"
+      ],
+      "type": "object"
+    },
+    "delta": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_cancellations-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_cancellations-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "approval": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "attempt": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "operation": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "operation",
+                "attempt",
+                "approval"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_cancellations",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_claims-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_claims-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "operation": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "operation"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_claims",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_dispatch-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_dispatch-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "operation": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "operation"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_dispatch",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_enrollment-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_enrollment-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_enrollment",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_grants-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_grants-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "grant_id": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "grant_id"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_grants",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_outbox-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_outbox-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sequence": {
+                  "maximum": 9007199254740991,
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "scope",
+                "sequence"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_outbox",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_reconciliations-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_reconciliations-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "operation": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "operation"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_reconciliations",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_reservations-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_reservations-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "bucket": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "operation": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "operation",
+                "bucket"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_reservations",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_sources-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_action_sources-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "operation": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "operation"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_action_sources",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_cells-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_cells-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_activation_cells",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_delivery-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_delivery-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "id"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_activation_delivery",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_outbox-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_outbox-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "sequence": {
+                  "maximum": 9007199254740991,
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "sequence"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_activation_outbox",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_transitions-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_activation_transitions-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope",
+                "id"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_activation_transitions",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_execution_generation-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "before": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/gate_execution_generation-row"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "key": {
+              "additionalProperties": false,
+              "properties": {
+                "scope": {
+                  "maxLength": 65536,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "scope"
+              ],
+              "type": "object"
+            },
+            "table": {
+              "const": "gate_execution_generation",
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "key",
+            "before",
+            "after"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "exposure": {
+      "additionalProperties": false,
+      "properties": {
+        "attempt": {
+          "$ref": "#/$defs/attempt-ref"
+        },
+        "buckets": {
+          "items": {
+            "$ref": "#/$defs/bucket"
+          },
+          "maxItems": 32,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "grant": {
+          "$ref": "#/$defs/grant-ref"
+        },
+        "invocation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/invocation-ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operation": {
+          "$ref": "#/$defs/operation-ref"
+        },
+        "send_spent": {
+          "type": "boolean"
+        },
+        "target": {
+          "$ref": "#/$defs/target-ref"
+        },
+        "worker": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "worker_fence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "operation",
+        "attempt",
+        "target",
+        "grant",
+        "worker",
+        "worker_fence",
+        "invocation",
+        "send_spent",
+        "buckets"
+      ],
+      "type": "object"
+    },
+    "gate_action_cancellations-row": {
+      "additionalProperties": false,
+      "properties": {
+        "approval": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "attempt": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "receipt": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "withdrawal": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "operation",
+        "attempt",
+        "approval",
+        "withdrawal",
+        "receipt"
+      ],
+      "type": "object"
+    },
+    "gate_action_claims-row": {
+      "additionalProperties": false,
+      "properties": {
+        "binding": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "claim": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "consumption": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "operation",
+        "binding",
+        "claim",
+        "consumption"
+      ],
+      "type": "object"
+    },
+    "gate_action_dispatch-row": {
+      "additionalProperties": false,
+      "properties": {
+        "admission": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "outcome": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "operation",
+        "admission",
+        "outcome"
+      ],
+      "type": "object"
+    },
+    "gate_action_enrollment-row": {
+      "additionalProperties": false,
+      "properties": {
+        "registration": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "registration"
+      ],
+      "type": "object"
+    },
+    "gate_action_grants-row": {
+      "additionalProperties": false,
+      "properties": {
+        "grant_id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "grant_id",
+        "operation"
+      ],
+      "type": "object"
+    },
+    "gate_action_outbox-row": {
+      "additionalProperties": false,
+      "properties": {
+        "acknowledgement": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "scope",
+        "sequence",
+        "event",
+        "acknowledgement"
+      ],
+      "type": "object"
+    },
+    "gate_action_reconciliations-row": {
+      "additionalProperties": false,
+      "properties": {
+        "event": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "receipt": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "operation",
+        "receipt",
+        "event"
+      ],
+      "type": "object"
+    },
+    "gate_action_reservations-row": {
+      "additionalProperties": false,
+      "properties": {
+        "bucket": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "unresolved": {
+          "type": "boolean"
+        },
+        "window_start": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "scope",
+        "operation",
+        "bucket",
+        "window_start",
+        "unresolved"
+      ],
+      "type": "object"
+    },
+    "gate_action_sources-row": {
+      "additionalProperties": false,
+      "properties": {
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "operation",
+        "source"
+      ],
+      "type": "object"
+    },
+    "gate_activation_cells-row": {
+      "additionalProperties": false,
+      "properties": {
+        "digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "epoch": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "initial_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "initial_epoch": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "paused": {
+          "type": "boolean"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "transition_id": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "scope",
+        "initial_epoch",
+        "initial_digest",
+        "epoch",
+        "digest",
+        "paused",
+        "transition_id"
+      ],
+      "type": "object"
+    },
+    "gate_activation_delivery-row": {
+      "additionalProperties": false,
+      "properties": {
+        "acknowledgement": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "scope",
+        "id",
+        "sequence",
+        "event",
+        "acknowledgement"
+      ],
+      "type": "object"
+    },
+    "gate_activation_outbox-row": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "phase": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "record": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sequence",
+        "scope",
+        "id",
+        "phase",
+        "record"
+      ],
+      "type": "object"
+    },
+    "gate_activation_transitions-row": {
+      "additionalProperties": false,
+      "properties": {
+        "applied": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "pause": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "record": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "resumed": {
+          "type": "boolean"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "id",
+        "record",
+        "pause",
+        "applied",
+        "resumed"
+      ],
+      "type": "object"
+    },
+    "gate_execution_generation-row": {
+      "additionalProperties": false,
+      "properties": {
+        "generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "generation"
+      ],
+      "type": "object"
+    },
+    "grant-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "grant",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    },
+    "head-request": {
+      "additionalProperties": false,
+      "properties": {
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "kind": {
+          "const": "journal-head",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "journal"
+      ],
+      "type": "object"
+    },
+    "invocation-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "invocation",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    },
+    "journal-commit": {
+      "additionalProperties": false,
+      "properties": {
+        "after_state_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "delta": {
+          "items": {
+            "$ref": "#/$defs/delta"
+          },
+          "maxItems": 256,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "enrollment_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "intent_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "profile": {
+          "const": "stage2-journal-checkpoint-v1",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "source_generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "type": {
+          "const": "journal-commit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile",
+        "type",
+        "journal",
+        "source_generation",
+        "enrollment_digest",
+        "sequence",
+        "intent_digest",
+        "after_state_digest",
+        "delta"
+      ],
+      "type": "object"
+    },
+    "journal-enrollment": {
+      "additionalProperties": false,
+      "properties": {
+        "audit": {
+          "$ref": "#/$defs/audit"
+        },
+        "baseline": {
+          "additionalProperties": false,
+          "properties": {
+            "empty_journal": {
+              "const": true,
+              "type": "boolean"
+            },
+            "empty_target": {
+              "const": true,
+              "type": "boolean"
+            },
+            "evidence_digest": {
+              "maxLength": 71,
+              "minLength": 71,
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "empty_journal",
+            "empty_target",
+            "evidence_digest"
+          ],
+          "type": "object"
+        },
+        "initial_state_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "owner": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "profile": {
+          "const": "stage2-journal-checkpoint-v1",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "source_generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "type": {
+          "const": "journal-enrollment",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile",
+        "type",
+        "journal",
+        "owner",
+        "source_generation",
+        "initial_state_digest",
+        "audit",
+        "baseline"
+      ],
+      "type": "object"
+    },
+    "journal-head": {
+      "additionalProperties": false,
+      "properties": {
+        "checkpoint_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "enrollment_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "latest_receipt": {
+          "$ref": "#/$defs/journal-receipt"
+        },
+        "pending_intent": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journal-intent"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "profile": {
+          "const": "stage2-journal-checkpoint-v1",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "state_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "type": {
+          "const": "journal-head",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile",
+        "type",
+        "journal",
+        "source_generation",
+        "enrollment_digest",
+        "sequence",
+        "checkpoint_digest",
+        "state_digest",
+        "pending_intent",
+        "latest_receipt"
+      ],
+      "type": "object"
+    },
+    "journal-intent": {
+      "additionalProperties": false,
+      "properties": {
+        "after_state_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "audit": {
+          "$ref": "#/$defs/audit"
+        },
+        "before_state_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "delta_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "enrollment_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "exposure": {
+          "items": {
+            "$ref": "#/$defs/exposure"
+          },
+          "maxItems": 32,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "mutation_kinds": {
+          "items": {
+            "enum": [
+              "activation",
+              "enrollment",
+              "source",
+              "claim",
+              "cancel",
+              "consume",
+              "send",
+              "outcome",
+              "reconcile",
+              "acknowledgement"
+            ],
+            "type": "string"
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "operations": {
+          "items": {
+            "$ref": "#/$defs/operation"
+          },
+          "maxItems": 32,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "prior_checkpoint_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "profile": {
+          "const": "stage2-journal-checkpoint-v1",
+          "type": "string"
+        },
+        "proposed_delta": {
+          "items": {
+            "$ref": "#/$defs/delta"
+          },
+          "maxItems": 256,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "source_generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "type": {
+          "const": "journal-intent",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile",
+        "type",
+        "journal",
+        "source_generation",
+        "enrollment_digest",
+        "sequence",
+        "prior_checkpoint_digest",
+        "before_state_digest",
+        "after_state_digest",
+        "delta_digest",
+        "proposed_delta",
+        "mutation_kinds",
+        "operations",
+        "audit",
+        "exposure"
+      ],
+      "type": "object"
+    },
+    "journal-policy": {
+      "additionalProperties": false,
+      "properties": {
+        "enrollment": {
+          "$ref": "#/$defs/journal-enrollment"
+        },
+        "profile": {
+          "const": "stage2-journal-checkpoint-v1",
+          "type": "string"
+        },
+        "readers": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "type": {
+          "const": "journal-policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile",
+        "type",
+        "enrollment",
+        "readers"
+      ],
+      "type": "object"
+    },
+    "journal-receipt": {
+      "additionalProperties": false,
+      "properties": {
+        "enrollment_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "ledger": {
+          "$ref": "#/$defs/ledger-ref"
+        },
+        "ledger_position": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "profile": {
+          "const": "stage2-journal-checkpoint-v1",
+          "type": "string"
+        },
+        "received_at": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "record_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "record_type": {
+          "enum": [
+            "journal-enrollment",
+            "journal-intent",
+            "journal-commit"
+          ],
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "source_generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "type": {
+          "const": "journal-receipt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile",
+        "type",
+        "journal",
+        "source_generation",
+        "enrollment_digest",
+        "record_type",
+        "record_digest",
+        "ledger",
+        "ledger_position",
+        "received_at"
+      ],
+      "type": "object"
+    },
+    "journal-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "journal",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    },
+    "ledger-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "ledger",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    },
+    "lookup-request": {
+      "additionalProperties": false,
+      "properties": {
+        "journal": {
+          "$ref": "#/$defs/journal-ref"
+        },
+        "kind": {
+          "const": "journal-lookup",
+          "type": "string"
+        },
+        "record_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "journal",
+        "record_digest"
+      ],
+      "type": "object"
+    },
+    "operation": {
+      "additionalProperties": false,
+      "properties": {
+        "attempt": {
+          "$ref": "#/$defs/attempt-ref"
+        },
+        "operation": {
+          "$ref": "#/$defs/operation-ref"
+        }
+      },
+      "required": [
+        "operation",
+        "attempt"
+      ],
+      "type": "object"
+    },
+    "operation-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "operation",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    },
+    "record-request": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "journal-record",
+          "type": "string"
+        },
+        "record": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journal-enrollment"
+            },
+            {
+              "$ref": "#/$defs/journal-intent"
+            },
+            {
+              "$ref": "#/$defs/journal-commit"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "record"
+      ],
+      "type": "object"
+    },
+    "scope": {
+      "additionalProperties": false,
+      "properties": {
+        "cell": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "deployment": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "tenant": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "tenant",
+        "deployment",
+        "cell"
+      ],
+      "type": "object"
+    },
+    "target-ref": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9:._/-]*(?![\\s\\S])",
+          "type": "string"
+        },
+        "kind": {
+          "const": "target",
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        }
+      },
+      "required": [
+        "scope",
+        "kind",
+        "id"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/journal-enrollment"
+    },
+    {
+      "$ref": "#/$defs/journal-intent"
+    },
+    {
+      "$ref": "#/$defs/journal-commit"
+    },
+    {
+      "$ref": "#/$defs/journal-receipt"
+    },
+    {
+      "$ref": "#/$defs/journal-head"
+    },
+    {
+      "$ref": "#/$defs/journal-policy"
+    }
+  ]
+}

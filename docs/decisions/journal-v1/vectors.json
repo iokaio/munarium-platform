@@ -1,0 +1,366 @@
+{
+  "canonical": {
+    "commit": "{\"after_state_digest\":\"sha256:893f4e1732b1894a0bfc9ec3f59b4cce9dd77442c291637b6197cb2a4f5f1c94\",\"delta\":[{\"after\":{\"digest\":\"sha256:1111111111111111111111111111111111111111111111111111111111111111\",\"epoch\":1,\"initial_digest\":\"sha256:1111111111111111111111111111111111111111111111111111111111111111\",\"initial_epoch\":1,\"paused\":true,\"scope\":\"{\\\"cell\\\":\\\"cell-a\\\",\\\"deployment\\\":\\\"fixture-deployment\\\",\\\"domain\\\":\\\"fixture-domain\\\",\\\"tenant\\\":\\\"tenant-a\\\"}\",\"transition_id\":null},\"before\":null,\"key\":{\"scope\":\"{\\\"cell\\\":\\\"cell-a\\\",\\\"deployment\\\":\\\"fixture-deployment\\\",\\\"domain\\\":\\\"fixture-domain\\\",\\\"tenant\\\":\\\"tenant-a\\\"}\"},\"table\":\"gate_activation_cells\"}],\"enrollment_digest\":\"sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669\",\"intent_digest\":\"sha256:a40b6c3f6ee60bc2fba73dbfd9a419468985535f1c8758b7de458aae155e0c61\",\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"profile\":\"stage2-journal-checkpoint-v1\",\"schema_version\":1,\"sequence\":1,\"source_generation\":1,\"type\":\"journal-commit\"}",
+    "enrollment": "{\"audit\":{\"checkpoint_digest\":\"sha256:9e048b733a1939772692bfaddd31d5b9f8a9ffac34e5c657991cd84c5fce9955\",\"cutoff\":0,\"ledger\":{\"id\":\"fixture-journal-ledger\",\"kind\":\"ledger\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}}},\"baseline\":{\"empty_journal\":true,\"empty_target\":true,\"evidence_digest\":\"sha256:6c08f2eb42f65f0988a08ac1a4576951f2f965886db8793887484354e747014b\"},\"initial_state_digest\":\"sha256:68de0713d635da1c1953ed9cbfd5d70ecc5b866c88b16415b71128e9d61fc38c\",\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"owner\":\"fixture-gate\",\"profile\":\"stage2-journal-checkpoint-v1\",\"schema_version\":1,\"source_generation\":1,\"type\":\"journal-enrollment\"}",
+    "head": "{\"checkpoint_digest\":\"sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204\",\"enrollment_digest\":\"sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669\",\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"latest_receipt\":{\"enrollment_digest\":\"sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669\",\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"ledger\":{\"id\":\"fixture-journal-ledger\",\"kind\":\"ledger\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"ledger_position\":3,\"profile\":\"stage2-journal-checkpoint-v1\",\"received_at\":1000,\"record_digest\":\"sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204\",\"record_type\":\"journal-commit\",\"schema_version\":1,\"source_generation\":1,\"type\":\"journal-receipt\"},\"pending_intent\":null,\"profile\":\"stage2-journal-checkpoint-v1\",\"schema_version\":1,\"sequence\":1,\"source_generation\":1,\"state_digest\":\"sha256:893f4e1732b1894a0bfc9ec3f59b4cce9dd77442c291637b6197cb2a4f5f1c94\",\"type\":\"journal-head\"}",
+    "intent": "{\"after_state_digest\":\"sha256:893f4e1732b1894a0bfc9ec3f59b4cce9dd77442c291637b6197cb2a4f5f1c94\",\"audit\":{\"checkpoint_digest\":\"sha256:9e048b733a1939772692bfaddd31d5b9f8a9ffac34e5c657991cd84c5fce9955\",\"cutoff\":0,\"ledger\":{\"id\":\"fixture-journal-ledger\",\"kind\":\"ledger\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}}},\"before_state_digest\":\"sha256:68de0713d635da1c1953ed9cbfd5d70ecc5b866c88b16415b71128e9d61fc38c\",\"delta_digest\":\"sha256:ff4cc4255b4ecb2cca49664aa885f18d24d304eee448c558f1892aab953fdcf3\",\"enrollment_digest\":\"sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669\",\"exposure\":[],\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"mutation_kinds\":[\"activation\"],\"operations\":[],\"prior_checkpoint_digest\":\"sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669\",\"profile\":\"stage2-journal-checkpoint-v1\",\"proposed_delta\":[{\"after\":{\"digest\":\"sha256:1111111111111111111111111111111111111111111111111111111111111111\",\"epoch\":1,\"initial_digest\":\"sha256:1111111111111111111111111111111111111111111111111111111111111111\",\"initial_epoch\":1,\"paused\":true,\"scope\":\"{\\\"cell\\\":\\\"cell-a\\\",\\\"deployment\\\":\\\"fixture-deployment\\\",\\\"domain\\\":\\\"fixture-domain\\\",\\\"tenant\\\":\\\"tenant-a\\\"}\",\"transition_id\":null},\"before\":null,\"key\":{\"scope\":\"{\\\"cell\\\":\\\"cell-a\\\",\\\"deployment\\\":\\\"fixture-deployment\\\",\\\"domain\\\":\\\"fixture-domain\\\",\\\"tenant\\\":\\\"tenant-a\\\"}\"},\"table\":\"gate_activation_cells\"}],\"schema_version\":1,\"sequence\":1,\"source_generation\":1,\"type\":\"journal-intent\"}",
+    "policy": "{\"enrollment\":{\"audit\":{\"checkpoint_digest\":\"sha256:9e048b733a1939772692bfaddd31d5b9f8a9ffac34e5c657991cd84c5fce9955\",\"cutoff\":0,\"ledger\":{\"id\":\"fixture-journal-ledger\",\"kind\":\"ledger\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}}},\"baseline\":{\"empty_journal\":true,\"empty_target\":true,\"evidence_digest\":\"sha256:6c08f2eb42f65f0988a08ac1a4576951f2f965886db8793887484354e747014b\"},\"initial_state_digest\":\"sha256:68de0713d635da1c1953ed9cbfd5d70ecc5b866c88b16415b71128e9d61fc38c\",\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"owner\":\"fixture-gate\",\"profile\":\"stage2-journal-checkpoint-v1\",\"schema_version\":1,\"source_generation\":1,\"type\":\"journal-enrollment\"},\"profile\":\"stage2-journal-checkpoint-v1\",\"readers\":[\"fixture-reader\"],\"schema_version\":1,\"type\":\"journal-policy\"}",
+    "receipt": "{\"enrollment_digest\":\"sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669\",\"journal\":{\"id\":\"fixture-gate-journal\",\"kind\":\"journal\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"ledger\":{\"id\":\"fixture-journal-ledger\",\"kind\":\"ledger\",\"scope\":{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}},\"ledger_position\":3,\"profile\":\"stage2-journal-checkpoint-v1\",\"received_at\":1000,\"record_digest\":\"sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204\",\"record_type\":\"journal-commit\",\"schema_version\":1,\"source_generation\":1,\"type\":\"journal-receipt\"}"
+  },
+  "cases": [
+    {
+      "changes": {
+        "journal.scope.tenant": "other-tenant"
+      },
+      "expected": "Unauthorized",
+      "id": "foreign-scope",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "source_generation": 2
+      },
+      "expected": "Unauthorized",
+      "id": "changed-generation",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "prior_checkpoint_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected": "InvalidSequence",
+      "id": "stale-prior",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "sequence": 2
+      },
+      "expected": "InvalidSequence",
+      "id": "sequence-gap",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "delta_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected": "InvalidBinding",
+      "id": "wrong-delta-digest",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "after_state_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected": "InvalidBinding",
+      "id": "wrong-after-state",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "mutation_kinds.0": "refund"
+      },
+      "expected": "InvalidShape",
+      "id": "unknown-kind",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "proposed_delta.0.table": "uncovered_table"
+      },
+      "expected": "InvalidShape",
+      "id": "unknown-table",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "proposed_delta.0.after.scope": "{}"
+      },
+      "expected": "InvalidBinding",
+      "id": "wrong-row-scope",
+      "record": "intent"
+    },
+    {
+      "changes": {
+        "proposed_delta.0.after.scope": "{\"cell\":\"other-cell\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}"
+      },
+      "expected": "InvalidBinding",
+      "id": "wrong-row-key",
+      "record": "intent"
+    }
+  ],
+  "digests": {
+    "commit": "sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204",
+    "enrollment": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+    "head": "sha256:886ae6270110866b8d449a62e8ad5d0fe44b75a9f42ff25d3ac9bad71b2f0097",
+    "intent": "sha256:a40b6c3f6ee60bc2fba73dbfd9a419468985535f1c8758b7de458aae155e0c61",
+    "policy": "sha256:90985a63a6635418ff92e7df0b9aa4ace46ab667b068d0ca75b762c8c22c5d48",
+    "receipt": "sha256:169a6046d5579b0cccd59e011ba78ae22189f4dbe22e056314fcc8842320f617"
+  },
+  "initial_rows": [],
+  "profile": "stage2-journal-checkpoint-v1",
+  "records": {
+    "commit": {
+      "after_state_digest": "sha256:893f4e1732b1894a0bfc9ec3f59b4cce9dd77442c291637b6197cb2a4f5f1c94",
+      "delta": [
+        {
+          "after": {
+            "digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+            "epoch": 1,
+            "initial_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+            "initial_epoch": 1,
+            "paused": true,
+            "scope": "{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}",
+            "transition_id": null
+          },
+          "before": null,
+          "key": {
+            "scope": "{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}"
+          },
+          "table": "gate_activation_cells"
+        }
+      ],
+      "enrollment_digest": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+      "intent_digest": "sha256:a40b6c3f6ee60bc2fba73dbfd9a419468985535f1c8758b7de458aae155e0c61",
+      "journal": {
+        "id": "fixture-gate-journal",
+        "kind": "journal",
+        "scope": {
+          "cell": "cell-a",
+          "deployment": "fixture-deployment",
+          "domain": "fixture-domain",
+          "tenant": "tenant-a"
+        }
+      },
+      "profile": "stage2-journal-checkpoint-v1",
+      "schema_version": 1,
+      "sequence": 1,
+      "source_generation": 1,
+      "type": "journal-commit"
+    },
+    "enrollment": {
+      "audit": {
+        "checkpoint_digest": "sha256:9e048b733a1939772692bfaddd31d5b9f8a9ffac34e5c657991cd84c5fce9955",
+        "cutoff": 0,
+        "ledger": {
+          "id": "fixture-journal-ledger",
+          "kind": "ledger",
+          "scope": {
+            "cell": "cell-a",
+            "deployment": "fixture-deployment",
+            "domain": "fixture-domain",
+            "tenant": "tenant-a"
+          }
+        }
+      },
+      "baseline": {
+        "empty_journal": true,
+        "empty_target": true,
+        "evidence_digest": "sha256:6c08f2eb42f65f0988a08ac1a4576951f2f965886db8793887484354e747014b"
+      },
+      "initial_state_digest": "sha256:68de0713d635da1c1953ed9cbfd5d70ecc5b866c88b16415b71128e9d61fc38c",
+      "journal": {
+        "id": "fixture-gate-journal",
+        "kind": "journal",
+        "scope": {
+          "cell": "cell-a",
+          "deployment": "fixture-deployment",
+          "domain": "fixture-domain",
+          "tenant": "tenant-a"
+        }
+      },
+      "owner": "fixture-gate",
+      "profile": "stage2-journal-checkpoint-v1",
+      "schema_version": 1,
+      "source_generation": 1,
+      "type": "journal-enrollment"
+    },
+    "head": {
+      "checkpoint_digest": "sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204",
+      "enrollment_digest": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+      "journal": {
+        "id": "fixture-gate-journal",
+        "kind": "journal",
+        "scope": {
+          "cell": "cell-a",
+          "deployment": "fixture-deployment",
+          "domain": "fixture-domain",
+          "tenant": "tenant-a"
+        }
+      },
+      "latest_receipt": {
+        "enrollment_digest": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+        "journal": {
+          "id": "fixture-gate-journal",
+          "kind": "journal",
+          "scope": {
+            "cell": "cell-a",
+            "deployment": "fixture-deployment",
+            "domain": "fixture-domain",
+            "tenant": "tenant-a"
+          }
+        },
+        "ledger": {
+          "id": "fixture-journal-ledger",
+          "kind": "ledger",
+          "scope": {
+            "cell": "cell-a",
+            "deployment": "fixture-deployment",
+            "domain": "fixture-domain",
+            "tenant": "tenant-a"
+          }
+        },
+        "ledger_position": 3,
+        "profile": "stage2-journal-checkpoint-v1",
+        "received_at": 1000,
+        "record_digest": "sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204",
+        "record_type": "journal-commit",
+        "schema_version": 1,
+        "source_generation": 1,
+        "type": "journal-receipt"
+      },
+      "pending_intent": null,
+      "profile": "stage2-journal-checkpoint-v1",
+      "schema_version": 1,
+      "sequence": 1,
+      "source_generation": 1,
+      "state_digest": "sha256:893f4e1732b1894a0bfc9ec3f59b4cce9dd77442c291637b6197cb2a4f5f1c94",
+      "type": "journal-head"
+    },
+    "intent": {
+      "after_state_digest": "sha256:893f4e1732b1894a0bfc9ec3f59b4cce9dd77442c291637b6197cb2a4f5f1c94",
+      "audit": {
+        "checkpoint_digest": "sha256:9e048b733a1939772692bfaddd31d5b9f8a9ffac34e5c657991cd84c5fce9955",
+        "cutoff": 0,
+        "ledger": {
+          "id": "fixture-journal-ledger",
+          "kind": "ledger",
+          "scope": {
+            "cell": "cell-a",
+            "deployment": "fixture-deployment",
+            "domain": "fixture-domain",
+            "tenant": "tenant-a"
+          }
+        }
+      },
+      "before_state_digest": "sha256:68de0713d635da1c1953ed9cbfd5d70ecc5b866c88b16415b71128e9d61fc38c",
+      "delta_digest": "sha256:ff4cc4255b4ecb2cca49664aa885f18d24d304eee448c558f1892aab953fdcf3",
+      "enrollment_digest": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+      "exposure": [],
+      "journal": {
+        "id": "fixture-gate-journal",
+        "kind": "journal",
+        "scope": {
+          "cell": "cell-a",
+          "deployment": "fixture-deployment",
+          "domain": "fixture-domain",
+          "tenant": "tenant-a"
+        }
+      },
+      "mutation_kinds": [
+        "activation"
+      ],
+      "operations": [],
+      "prior_checkpoint_digest": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+      "profile": "stage2-journal-checkpoint-v1",
+      "proposed_delta": [
+        {
+          "after": {
+            "digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+            "epoch": 1,
+            "initial_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+            "initial_epoch": 1,
+            "paused": true,
+            "scope": "{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}",
+            "transition_id": null
+          },
+          "before": null,
+          "key": {
+            "scope": "{\"cell\":\"cell-a\",\"deployment\":\"fixture-deployment\",\"domain\":\"fixture-domain\",\"tenant\":\"tenant-a\"}"
+          },
+          "table": "gate_activation_cells"
+        }
+      ],
+      "schema_version": 1,
+      "sequence": 1,
+      "source_generation": 1,
+      "type": "journal-intent"
+    },
+    "policy": {
+      "enrollment": {
+        "audit": {
+          "checkpoint_digest": "sha256:9e048b733a1939772692bfaddd31d5b9f8a9ffac34e5c657991cd84c5fce9955",
+          "cutoff": 0,
+          "ledger": {
+            "id": "fixture-journal-ledger",
+            "kind": "ledger",
+            "scope": {
+              "cell": "cell-a",
+              "deployment": "fixture-deployment",
+              "domain": "fixture-domain",
+              "tenant": "tenant-a"
+            }
+          }
+        },
+        "baseline": {
+          "empty_journal": true,
+          "empty_target": true,
+          "evidence_digest": "sha256:6c08f2eb42f65f0988a08ac1a4576951f2f965886db8793887484354e747014b"
+        },
+        "initial_state_digest": "sha256:68de0713d635da1c1953ed9cbfd5d70ecc5b866c88b16415b71128e9d61fc38c",
+        "journal": {
+          "id": "fixture-gate-journal",
+          "kind": "journal",
+          "scope": {
+            "cell": "cell-a",
+            "deployment": "fixture-deployment",
+            "domain": "fixture-domain",
+            "tenant": "tenant-a"
+          }
+        },
+        "owner": "fixture-gate",
+        "profile": "stage2-journal-checkpoint-v1",
+        "schema_version": 1,
+        "source_generation": 1,
+        "type": "journal-enrollment"
+      },
+      "profile": "stage2-journal-checkpoint-v1",
+      "readers": [
+        "fixture-reader"
+      ],
+      "schema_version": 1,
+      "type": "journal-policy"
+    },
+    "receipt": {
+      "enrollment_digest": "sha256:a9b3d285eac4fb5c35723bea7007867c58832e0618416fbde0db2af29044f669",
+      "journal": {
+        "id": "fixture-gate-journal",
+        "kind": "journal",
+        "scope": {
+          "cell": "cell-a",
+          "deployment": "fixture-deployment",
+          "domain": "fixture-domain",
+          "tenant": "tenant-a"
+        }
+      },
+      "ledger": {
+        "id": "fixture-journal-ledger",
+        "kind": "ledger",
+        "scope": {
+          "cell": "cell-a",
+          "deployment": "fixture-deployment",
+          "domain": "fixture-domain",
+          "tenant": "tenant-a"
+        }
+      },
+      "ledger_position": 3,
+      "profile": "stage2-journal-checkpoint-v1",
+      "received_at": 1000,
+      "record_digest": "sha256:5af0e32913602299104daf874ea43d0324fa3f8f443ba3488d958c837f1ac204",
+      "record_type": "journal-commit",
+      "schema_version": 1,
+      "source_generation": 1,
+      "type": "journal-receipt"
+    }
+  }
+}
