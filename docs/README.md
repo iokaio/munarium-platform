@@ -18,8 +18,10 @@ Server and Matrix have their own releases and implementation evidence. The [foun
 ## The nine new components
 
 These summaries describe the **planned responsibilities**. Registry, Warden, Gate
-and Harness now have the experimental implementations described in the
-[Stage 1 record](architecture/stage1-implementation.md); the other five components
+and Harness have the experimental implementations described in the
+[Stage 1 record](architecture/stage1-implementation.md). Council and those owners
+also have the bounded prepared-action implementations in the
+[Stage 2 record](stage2-implementation.md); Gateway, Sentinel, Console and Assure
 remain scaffolds. The [acceptance packet](architecture/stage1-acceptance.md)
 separates implementation evidence from pending contract acceptance. There is no
 qualified platform composition or production action path. Catalog labels remain
