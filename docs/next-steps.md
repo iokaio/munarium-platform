@@ -54,9 +54,21 @@ timing conflict under [ADR 0017](decisions/0017-scoped-registry-assertions.md).
 The [full composition evidence](stage2-implementation.md#full-dynamic-isolated-composition-13-october-2026)
 retains both failed attempts, final exact-head results, source pins and exclusions.
 
-**Current next packet: RECOVERY-01.** Record the concrete protocol, then implement
-automatic rollback detection, independently retained cutoff/consumption/reservation
-reconciliation, old-worker exclusion and governed safe reopening. Missing evidence
+**RECOVERY-01 / R1 is merged:** Server
+[PR 82](https://github.com/iokaio/munarium/pull/82) provides authenticated, pinned
+retained action checkpoints, with all 13 checks green on its exact final head.
+The separately approved YAML maintenance fix merged through
+[PR 83](https://github.com/iokaio/munarium/pull/83). See the
+[retained checkpoint evidence](stage2-implementation.md#retained-action-checkpoints-13-october-2026)
+for tested/merged pins, the original failure, validation and scope limits.
+
+**Current next packet: RECOVERY-01 / R2.** Follow
+[ADR 0018](decisions/0018-restore-checkpoint-protocol.md) and the concrete
+[journal exchange](decisions/0019-journal-checkpoint-exchange.md): prepare the
+separate closed candidate/vectors, implement Server's admitted intent/commit chain
+with independent retention, then cover Gate's complete operational journal and
+admission path. Actual rollback/interruption evidence follows in Harness. R3 then
+owns cutoff reconciliation, old-worker exclusion and governed reopening. Missing evidence
 must retain quarantine and unresolved exposure. Historical outboxes must drain
 without regaining execution authority. Follow with remaining H03/REF cases and
 installation/investigation/teardown evidence. Stage 2 remains experimental with

@@ -29,6 +29,7 @@ while human acceptance remains pending. It does not accept or release those cand
 | [0016: Dynamic release admission](0016-dynamic-release-admission.md) | Experimental implementation directed; acceptance pending | Agent parameters, independently resolved manifests/policy/evidence and immutable source integration |
 | [0017: Scoped Registry assertions](0017-scoped-registry-assertions.md) | Experimental implementation directed; acceptance pending | Bounded verified service identity reuse and preflight before short-lived custody; current owners remain live |
 | [0018: Restore checkpoint protocol](0018-restore-checkpoint-protocol.md) | Experimental implementation directed; acceptance pending | Pinned retained-record export, independent journal intents/commits and governed reconciled reopening |
+| [0019: Journal checkpoint exchange](0019-journal-checkpoint-exchange.md) | Experimental implementation directed; acceptance pending | Separate owner enrollment, complete row deltas, independent retention and one-shot send custody |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus and bounded runs. ADR 0007 subsequently selected OPA for experimental

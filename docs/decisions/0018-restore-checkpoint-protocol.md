@@ -56,6 +56,10 @@ tests, plus real REST/gRPC parity and current-binding removal controls.
 
 ## R2: independent coverage before effect-relevant journal mutation
 
+[ADR 0019](0019-journal-checkpoint-exchange.md) specifies the enrollment, closed
+intent/commit exchange, complete transaction coverage and independent Server
+retention boundary. Its new wire candidate and runtime evidence remain separate.
+
 Server retains an append-only, separately scoped operational checkpoint chain for
 the enrolled Gate journal identity. Each effect-relevant mutation first records a
 write-ahead intent against the exact independently committed prior checkpoint.

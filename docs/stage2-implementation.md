@@ -1,5 +1,63 @@
 # Stage 2 implementation direction and bounded packets
 
+## Retained action checkpoints, 13 October 2026
+
+Server [PR 82](https://github.com/iokaio/munarium/pull/82) merged R1 at
+`bb18085f3d407e9b77d551fbf7ac68a6572fce27` after all 13 checks passed on final head
+`6e83575983252180e038325a907c2f95b56223bd`. The complete
+[Server workflow](https://github.com/iokaio/munarium/actions/runs/38459368558),
+[client workflow](https://github.com/iokaio/munarium/actions/runs/38459368720),
+[hygiene workflow](https://github.com/iokaio/munarium/actions/runs/38459368930) and
+[DCO workflow](https://github.com/iokaio/munarium/actions/runs/38459368664) passed.
+The tested tree matches the squash-merged tree; the contributor sign-off was
+retained and local main was fast-forwarded cleanly.
+
+The authenticated REST/gRPC `action-checkpoint` adapter retains exact original
+archive/event receipts and ledger positions under a pinned cutoff. Ordered pages
+share a stable digest and expose explicit continuation/completion, bounded record
+counts and encoded size, and historical stream/generation tails. Current peer,
+principal, tenant/deployment/cell and governed read binding are checked on every
+page. The profile is `stage2-recovery-checkpoint-v1`, with coverage explicitly
+limited to `action-artifacts-and-events`.
+
+Local validation passed the complete Server runner/catalog regression, equivalence
+and formatting entry point; core (2) and memory (6) action tests; explicitly selected
+ignored PostgreSQL action tests (3); affected Server API and documentation tests
+(6 each); affected build/clippy; root licence, compatibility, documentation and
+whitespace gates. Python formatting/lint/type checks and unit tests passed (179,
+with 8 live tests initially skipped); those 8 were then run against actual
+authenticated memory/PostgreSQL services and passed, including transport parity,
+pinned pagination/retry, wrong scope/limits and removal of current read binding.
+Only task-owned disposable test resources were removed after verification.
+
+The original [Server run](https://github.com/iokaio/munarium/actions/runs/38453340222)
+failed `cargo-deny` for the existing YAML parser dependency. The maintainer
+separately approved its bounded replacement with pinned `serde-saphyr` 2.0.0;
+[PR 83](https://github.com/iokaio/munarium/pull/83) passed all 13 checks on
+`6ccc57afae71646a4d42e26270e7850a49e3c721` and merged at
+`de0fde27b809ad7cb84392bd407c3472e6e2e0b8`. The complete
+[maintenance Server job](https://github.com/iokaio/munarium/actions/runs/38457534012)
+and the refreshed R1 Server job above passed, including the formerly failing
+dependency gate. The R1 changes remained byte-identical when refreshed onto that
+base. Parser compatibility, literal-key/diagnostic regression checks and regenerated
+shipping notices were included in the separate maintenance packet.
+
+The original full-filesystem private-material scan reported 172 pre-existing local
+scratch findings; they were neither removed nor suppressed. The clean tracked
+validation checkout passed its scan of 915 files, and hosted hygiene independently
+passed. Local gitleaks remained unavailable; hosted tree/history scanning passed.
+Local Python reported a cache-directory permission warning without a test failure.
+These limitations remain distinct from successful component and hosted results.
+
+R1 supplies retained audit evidence, not complete Gate journal custody, automatic
+undeclared-restore detection or safe reopening. No candidate/vector bytes, applied
+migrations, CI orchestration, API/SDK version, acceptance pin, catalog/invariant field
+or release label changed in R1. Stage 2 retains `qualification:false`.
+[ADR 0019](decisions/0019-journal-checkpoint-exchange.md) now specifies R2's next
+candidate, independently retained Server chain and exhaustive Gate mutation coverage;
+their implementation and actual restore evidence are still pending. R3 remains
+responsible for governed reconciliation and reopening.
+
 ## Full dynamic isolated composition, 13 October 2026
 
 Harness [PR 7](https://github.com/iokaio/munarium-harness/pull/7) merged at
