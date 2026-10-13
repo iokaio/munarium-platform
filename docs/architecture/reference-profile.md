@@ -14,6 +14,10 @@ claim, consumption and dispatch protocol used below.
 
 ## Boundary and proposed topology
 
+The separate [Linux worker evidence](../stage2-implementation.md#linux-evaluator-worker-13-october-2026)
+now establishes native evaluator bounds. Dynamic request-to-effect integration and
+this profile's actual agent isolation/recovery gates remain separate requirements.
+
 Use one disposable Linux VM with containers, including when the developer host is Windows.
 Start with a proposed resource ceiling of 4 vCPU, 8 GiB memory and 20 GiB disposable storage;
 measure actual consumption before calling this sufficient. The VM administrator, container

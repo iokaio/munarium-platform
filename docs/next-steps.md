@@ -33,6 +33,15 @@ before live runs. Release, production deployment and paid resources remain outsi
 this direction. After Stage 2's exit gate implement Gateway/S8, Sentinel/S6 and
 Console, then Assure/S5, following the build sequence.
 
+**Observed progress, 13 October:** Gate's LINUX-01 worker merged through
+[PR 6](https://github.com/iokaio/munarium-gate/pull/6), with exact-head native Linux,
+Windows, Rust/PostgreSQL/service and hygiene checks green. See the
+[worker evidence](stage2-implementation.md#linux-evaluator-worker-13-october-2026).
+Harness [PR 6](https://github.com/iokaio/munarium-harness/pull/6) prepares the actual
+agent-container boundary; its live composition evidence remains pending. The next
+runtime work connects dynamic authoritative inputs to the action path and records
+the concrete recovery protocol. A bounded worker alone does not qualify effects.
+
 ## Historical implementation direction, 7 October 2026
 
 Maintainer-directed implementation, 7 October 2026. This preserves the reviewed plan; actual results are recorded separately.

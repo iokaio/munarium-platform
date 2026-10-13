@@ -1,5 +1,44 @@
 # Stage 2 implementation direction and bounded packets
 
+## Linux evaluator worker, 13 October 2026
+
+[ADR 0015](decisions/0015-stage2-linux-qualification.md) preceded implementation.
+Gate [PR 6](https://github.com/iokaio/munarium-gate/pull/6) merged at
+`d030c5e8b3f94974972e2a02c459886647e86a59` after all checks passed on final
+head `bb46b135996a6bc75f84e43ab3d3b8008d0d4649`. Gate and hub local main were
+refreshed after their authorized squash merges; DCO sign-offs were retained.
+
+The separate Linux amd64 OPA 1.21.1 worker pins official executable SHA-256
+`668506eb17a2eaa1fce6cc0d1f42ef85125d4ac5bda5fc74d1152d0c77145031`. A trusted
+supervisor beneath its delegated cgroup v2 subtree creates a fresh child with
+64 MiB aggregate memory, zero swap, 16 tasks and one CPU quota before invoking OPA.
+The 100 ms evaluation deadline, pure built-ins, strict errors and bounded I/O are
+preserved. Whole-group cleanup precedes success. Unavailable bounds refuse.
+
+The exact-head [workflow](https://github.com/iokaio/munarium-gate/actions/runs/38417547808)
+passed native Linux allow/deny, missing/type-invalid inputs, forbidden network/time,
+small/excessive workloads, binary substitution and absent delegation. Independent
+memory/task probes observed kernel enforcement counters and group cleanup. The
+explicitly selected Rust native test passed through the existing worker-pin adapter.
+The preserved Windows controls and full Rust/PostgreSQL/native-service job also
+passed. Exact-head hygiene/history scanning and DCO passed independently.
+
+The first Linux attempt failed because its supervisor started outside the delegated
+subtree. The corrected CI entry point places that supervisor first, then drops to
+the ordinary runner user. The failed attempt remains recorded; no memory/deadline
+limit or assertion was weakened. Local Windows checks passed formatting, locked
+build, warnings-denied Clippy/docs, 11 ordinary Rust tests and three portable worker
+tests. Six local PostgreSQL tests and the Linux-only portable/native cases were
+unavailable or explicitly ignored locally, then exercised by hosted CI. Local
+gitleaks was unavailable; hosted scanning passed. No local test containers were
+created for this packet; hosted cleanup removed its exact owned cgroup.
+
+This supplies LINUX-01 worker implementation/evidence. Dynamic action evaluation,
+actual agent isolation, recovery reconciliation/reopening and full Stage 2
+qualification remain separate. Existing Windows worker bytes, candidate bundles,
+golden vectors and Stage 1 acceptance pins are unchanged. This is not contract
+acceptance, independent human review or a production profile.
+
 ## Participant delivery and journal review, 7 October 2026
 
 After the maintainer confirmed the preceding three merges, Server, hub, Harness,
