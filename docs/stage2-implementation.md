@@ -1,5 +1,71 @@
 # Stage 2 implementation direction and bounded packets
 
+## Full dynamic isolated composition, 13 October 2026
+
+Harness [PR 7](https://github.com/iokaio/munarium-harness/pull/7) merged at
+`a0594cfc2c206510d89e48775e736e5b917ae285` after all four checks passed on exact
+head `8e0ff0b6a527b967c5df25ef7823e5df814ad7fa`. The complete
+[workflow](https://github.com/iokaio/munarium-harness/actions/runs/38440726857)
+passed the original activation, prepared agent-isolation and prepared execution/
+restore histories, then both native dynamic histories in 333.51 seconds. Cgroup,
+service/container and per-case agent/network cleanup passed. Contributor DCO was
+retained in the squash commit and local main was fast-forwarded afterward.
+
+The actual unprivileged agent proposes parameters within signed enrolled task slots.
+Real Registry admits the C2 manifest/schema and installs the artifact set through
+the actual barrier. Gate independently resolves current manifest/head, policy and
+immutable test-result evidence and runs pinned native Linux OPA. Real Council,
+Server, Warden, OpenBao, connector and independently persisted target complete the
+approval/claim/grant/custody/final-send path. No owner response is stubbed.
+
+Both cases retained native denial, stale/parameter/context/identity refusals,
+prepared bypass refusal, incorrect archive receipts, committed proposal reply loss,
+immutable restart/retry and changed-parameter conflict, with independent zero-send
+observations. Each retained all 11 successful agent-boundary checks and cleanup.
+The effects case observed two effects with no resend after restart or target reply
+loss; the admission case observed zero sends after final reply loss, then one
+stale-worker send rejected at the newer target floor with zero effects. Capacity,
+withdrawal, settlement and actual pre-effect snapshot quarantine assertions passed.
+
+The artifact profile is `stage2-dynamic-isolated-agent-v1`, status passed and
+`qualification:false`. Its observations digest is
+`sha256:f2dea31187bdb128f647d95992a6d0e733e075d98ca731bf12e0279c7b1c0921`;
+observations and log digests were independently verified. All source trees were
+clean: Server `7d4a4d836fb483e7dad056f167f3a965d793d229`, Council
+`24babfd88991386d6e850dfe7db013155bfc9beb`, Registry
+`243709c6da9f3d77051d19c3535e33d1e4dae226`, Gate
+`28f80b4054a45e29677cb72c495edefc701f47ab`, Warden
+`fa6951ffdd83c74c0699ca217351562b2da28e5b`, and GitHub's Harness test merge
+`9c732d8a77af22420d964e92a85a3eb733ac00ca` for the final head/base. The unchanged
+OPA executable, worker/capabilities, candidate-vector and Registry bundle-lock
+digests are retained in the artifact rather than inferred from branch names.
+
+The first [attempt](https://github.com/iokaio/munarium-harness/actions/runs/38433521333)
+failed the effect/admission histories after native proposal controls passed. The
+[diagnostic attempt](https://github.com/iokaio/munarium-harness/actions/runs/38436262513)
+retained custody ReadTimeout at 5077/5064 ms. Warden's before/after broker checks
+both consult Council, whose source resolution reissued Registry identity and waited
+through usability. [ADR 0017](decisions/0017-scoped-registry-assertions.md) preceded
+Gate [PR 9](https://github.com/iokaio/munarium-gate/pull/9), merged at the Gate input
+above after all five exact-head checks passed on
+`17af0bc5e1ec4c92b51228f9ae638fec7176d65f`
+([workflow](https://github.com/iokaio/munarium-gate/actions/runs/38439819394)).
+Only verified scoped read identity is retained; every owner query stays live.
+Five-second custody, two-second clock bounds and native evaluator limits were
+preserved. The complete formerly failing Harness job passed on its final head.
+The diagnostic unit initially required an absent HTTP dependency in the standalone
+client job; its explicit unit transport double now passes without site packages.
+The actual composition continues to use real HTTP clients and owner services.
+
+Available local component/hygiene/docs checks passed; hosted native checks supply
+the unavailable local Linux evidence. Local gitleaks remains unavailable; exact-head
+hosted tree/history scanning and DCO passed independently. This supplies the bounded
+DYNAMIC-01 request-to-effect evidence, not general task/evidence support, per-service
+OS isolation, production qualification, safe restore reopening or independent
+human acceptance. RECOVERY-01's protocol/implementation and CLOSE-02's remaining
+failure/operator evidence are next. No candidate bytes, golden vectors, acceptance
+pins, catalog/invariant fields or release labels advanced.
+
 ## Agent isolation and dynamic admission, 13 October 2026
 
 The current sequence remains Stage 2 controlled execution, following

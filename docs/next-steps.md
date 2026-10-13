@@ -27,7 +27,7 @@ identifies Linux isolation, dynamic evaluation and restore reopening as P0 gaps.
 6. Close remaining H03/REF cases and installation/investigation evidence. Human
    contract dispositions stay separate from implementation and CI.
 
-The first pair is **LINUX-01 / Gate and ISOLATION-01 / Harness**. Keep the two-packet
+The next packet is **RECOVERY-01 / hub, then the owning services and Harness**. Keep the two-packet
 review limit and one owner for hub/Server edits. Record environment availability
 before live runs. Release, production deployment and paid resources remain outside
 this direction. After Stage 2's exit gate implement Gateway/S8, Sentinel/S6 and
@@ -45,14 +45,22 @@ materialization, immutable source recovery and native authenticated service test
 See the [current evidence](stage2-implementation.md#agent-isolation-and-dynamic-admission-13-october-2026)
 for source pins, CI receipts and limits.
 
-**Current next packet: Harness's full dynamic composition.** Exercise native policy
-evaluation from the isolated agent through real Registry, Warden, Server, Gate and
-Council, approval/grant/custody and independently observed target effects. Gate's
-native dynamic service test uses synthetic owner dependencies; it does not supply
-that composition evidence. Then record and implement rollback detection, cutoff
-reconciliation and safe reopening, followed by the remaining H03/REF cases and
-operator evidence. Stage 2 remains experimental with `qualification:false`;
-Stage 3's exit dependency has not been satisfied.
+**Dynamic composition is now merged:** Harness
+[PR 7](https://github.com/iokaio/munarium-harness/pull/7) passed native Linux policy
+evaluation from the actual isolated agent through all five real services, approval,
+grant/custody and independently observed effects. Gate
+[PR 9](https://github.com/iokaio/munarium-gate/pull/9) resolves the diagnosed custody
+timing conflict under [ADR 0017](decisions/0017-scoped-registry-assertions.md).
+The [full composition evidence](stage2-implementation.md#full-dynamic-isolated-composition-13-october-2026)
+retains both failed attempts, final exact-head results, source pins and exclusions.
+
+**Current next packet: RECOVERY-01.** Record the concrete protocol, then implement
+automatic rollback detection, independently retained cutoff/consumption/reservation
+reconciliation, old-worker exclusion and governed safe reopening. Missing evidence
+must retain quarantine and unresolved exposure. Historical outboxes must drain
+without regaining execution authority. Follow with remaining H03/REF cases and
+installation/investigation/teardown evidence. Stage 2 remains experimental with
+`qualification:false`; its exit gate before Stage 3 remains open.
 
 ## Historical implementation direction, 7 October 2026
 
