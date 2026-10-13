@@ -24,6 +24,8 @@ while human acceptance remains pending. It does not accept or release those cand
 | [0011: platform contract evolution](0011-platform-contract-evolution.md) | Proposed for maintainer review | Second-pass identity/attempt binding, qualified context, shared events, coverage, profiles and later-component boundaries |
 | [0012: Stage 2 candidate profile](0012-stage2-candidate-profile.md) | Candidate preparation directed; wire acceptance pending | Concrete single-cell action/approval/activation/event schemas, digest domains, offline profile and compatibility boundary |
 | [0013: Server action-record admission](0013-action-record-admission.md) | Experimental implementation directed | Protected action archives/events, producer admission, immutable acknowledgements and bounded historical recovery |
+| [0014: Stage 2 service integration](0014-stage2-service-integration.md) | Experimental implementation directed | Approval, activation, delivery, journal and prepared-release service boundaries |
+| [0015: Linux execution qualification](0015-stage2-linux-qualification.md) | Implementation directed; qualification pending | Bounded Linux evaluation, dynamic admission, physical isolation and recovery packets |
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus and bounded runs. ADR 0007 subsequently selected OPA for experimental

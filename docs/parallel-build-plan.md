@@ -66,7 +66,17 @@ Keep Console out of the first action milestone: Council's minimal authenticated 
 - Preserve the [governance work-in-progress limit](../GOVERNANCE.md#the-work-packet-and-the-limits-on-parallel-work): one major capability slice, one foundation maintenance lane, and no more than two bounded implementation tasks awaiting substantive review. A second machine adds execution capacity, not a second human acceptance authority.
 - Retain failed and unavailable checks alongside successful results in the [experimental run record](architecture/reference-scenario.md#experimental-run-record-from-the-first-integrated-slice). Passing local tests does not establish remote CI, qualification or release approval.
 
-## First pair to start
+## Current pair, 13 October 2026
+
+The next pair is **Gate's Linux evaluator and Harness's isolated Linux composition**,
+under [ADR 0015](decisions/0015-stage2-linux-qualification.md). Approval, activation,
+owner delivery, action journaling and prepared execution have merged experimental
+implementations. Dynamic evaluation, actual agent isolation and reconciled reopening
+remain open. Use [next steps](next-steps.md#current-implementation-sequence-13-october-2026)
+for current packet order and acceptance boundaries; the earlier sequence below is
+historical.
+
+## Historical first pairs
 
 The original starting pair was Server and Matrix qualification, recorded in
 [FOUNDATION-01](architecture/foundation-01.md). Do not repeat extraction or

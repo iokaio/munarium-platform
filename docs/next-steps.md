@@ -1,5 +1,40 @@
 # Stage 2 next steps
 
+## Current implementation sequence, 13 October 2026
+
+The maintainer directed implementation, testing, signed-off commits, PRs, exact-head
+green CI, squash merging and refreshing main, repeated in bounded packets. The next
+milestone is a qualified single-cell Stage 2 composition. See
+[ADR 0015](decisions/0015-stage2-linux-qualification.md) for shared choices and scope.
+
+Approval, activation, participant delivery, PostgreSQL journaling, live grants/broker
+custody and prepared synthetic execution are merged. The
+[8 October evidence](stage2-implementation.md#live-execution-review-packet-8-october-2026)
+retains `qualification:false`; live execution PRs were verified merged on 13 October.
+The [11 October review](architecture/architecture-review.md#10-review-findings-and-completion-gates)
+identifies Linux isolation, dynamic evaluation and restore reopening as P0 gaps.
+
+1. Pin merged inputs and the bounded Linux profile in the hub; preserve candidates
+   and historical Stage 1 acceptance pins.
+2. Implement Gate's bounded Linux OPA worker, retaining Windows coverage. Prove
+   native positives, resource limits, forbidden built-ins and cleanup.
+3. Implement Harness's isolated Linux composition and actual agent deny probes,
+   retaining independently observed effects.
+4. Connect independently resolved dynamic policy/evidence evaluation to exact
+   approval and the claim/grant/final-send path, preserving all admission checks.
+5. Record and implement rollback detection, cutoff reconciliation and governed safe
+   reopening; missing evidence retains quarantine and unresolved exposure.
+6. Close remaining H03/REF cases and installation/investigation evidence. Human
+   contract dispositions stay separate from implementation and CI.
+
+The first pair is **LINUX-01 / Gate and ISOLATION-01 / Harness**. Keep the two-packet
+review limit and one owner for hub/Server edits. Record environment availability
+before live runs. Release, production deployment and paid resources remain outside
+this direction. After Stage 2's exit gate implement Gateway/S8, Sentinel/S6 and
+Console, then Assure/S5, following the build sequence.
+
+## Historical implementation direction, 7 October 2026
+
 Maintainer-directed implementation, 7 October 2026. This preserves the reviewed plan; actual results are recorded separately.
 
 **The next stage is to finish Stage 2’s first controlled action path, starting with Council and Registry.** Stage 2 has already begun: its contract candidate and Server action-record foundation are merged. The parallel build plan’s “next pair” still points to preparation that has largely happened.

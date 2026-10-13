@@ -6,11 +6,12 @@ The original plan remains the historical strategy baseline. This guide makes the
 reviewable without advancing catalog states, release labels or invariant evidence.
 
 The hub owns architecture, contract candidates and evidence: no Rust code or Cargo
-workspace. Registry, Warden, Gate and Harness now implement an experimental
-decision-only slice with Server. The other five component repositories remain
-scaffolds. The [Stage 1 record](architecture/stage1-implementation.md) describes
-actual behavior; accepted published contracts and production action profiles
-remain **none**.
+workspace. Registry, Warden, Gate and Harness implement an experimental
+decision-only slice with Server. Council and those owners also have the bounded
+prepared-action implementations in the [Stage 2 record](stage2-implementation.md).
+Gateway, Sentinel, Console and Assure remain scaffolds. The
+[Stage 1 record](architecture/stage1-implementation.md) describes its historical
+behavior; accepted published contracts and production action profiles remain **none**.
 
 **Current position, 7 October 2026.** The original phase-2 preparation baseline is
 historical. [FOUNDATION-01](architecture/foundation-01.md) records its observed
@@ -26,6 +27,13 @@ desired impact or independently provide a usable way to advance Munarium Governa
 Ioka is concentrating more intensely on building the platform. The work packets below use a
 bounded coding-agent workflow and do not depend on further VCP development or on VCP as a primary
 development environment. See the [status update](../README.md#how-the-platform-is-built).
+
+**Current implementation direction, 13 October 2026.** Approval, activation,
+participant delivery, journal and prepared synthetic execution have merged
+experimental implementations. [ADR 0015](decisions/0015-stage2-linux-qualification.md)
+and [next steps](next-steps.md#current-implementation-sequence-13-october-2026)
+direct Linux evaluation/isolation, dynamic admission and safe recovery/reopening.
+Earlier preparation descriptions are historical; qualification remains pending.
 
 ## Start here
 
