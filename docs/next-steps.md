@@ -64,8 +64,11 @@ for tested/merged pins, the original failure, validation and scope limits.
 
 **Current next packet: RECOVERY-01 / R2.** Follow
 [ADR 0018](decisions/0018-restore-checkpoint-protocol.md) and the concrete
-[journal exchange](decisions/0019-journal-checkpoint-exchange.md): prepare the
-separate closed candidate/vectors, implement Server's admitted intent/commit chain
+[journal exchange](decisions/0019-journal-checkpoint-exchange.md). The separately
+locked [journal candidate](decisions/journal-v1/README.md) now supplies closed
+schemas, fixed vectors, offline replay/refusal checks and committed-source export.
+Its [preparation evidence](stage2-implementation.md#journal-candidate-preparation-13-october-2026)
+does not establish runtime custody. Next implement Server's admitted intent/commit chain
 with independent retention, then cover Gate's complete operational journal and
 admission path. Actual rollback/interruption evidence follows in Harness. R3 then
 owns cutoff reconciliation, old-worker exclusion and governed reopening. Missing evidence

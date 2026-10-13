@@ -8,8 +8,9 @@ Server `bb18085f3d407e9b77d551fbf7ac68a6572fce27`, Gate
 `a0594cfc2c206510d89e48775e736e5b917ae285`. The
 [R1 evidence](../stage2-implementation.md#retained-action-checkpoints-13-october-2026)
 establishes a pinned action export; it does not establish complete journal custody.
-No wire candidate is created or accepted by this record. Prepare a new, separately
-locked candidate and independent vectors before implementing its consumers.
+The separate [journal candidate](journal-v1/README.md) supplies locked schemas and
+offline vectors. It is not accepted; runtime consumers and their independent
+conformance/restore evidence remain pending.
 
 ## Enrollment and authority
 
@@ -47,7 +48,8 @@ Each journal has one append-only chain, with one pending intent at most. A mutat
 sequence starts at one and advances only through its matching committed pair. An
 intent binds the enrollment digest, exact preceding committed checkpoint digest,
 mutation sequence, actual before-state digest, mutation kinds, qualified operation/
-attempt identities where applicable, canonical row delta digest, expected after-state
+attempt identities where applicable, complete proposed canonical row delta and its
+digest, expected after-state
 digest, retained audit prefix and conservative exposure footprint. The first intent
 uses the enrollment checkpoint and its initial state. Activation-only mutations
 explicitly have no operation; they cannot invent a placeholder action identity.

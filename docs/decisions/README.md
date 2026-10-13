@@ -63,3 +63,6 @@ fixed wire/digest/refusal vectors and committed-source export. It does not chang
 or accept the Stage 1 bundles or implement effect-producing service APIs.
 
 [ADR 0014](0014-stage2-service-integration.md) records the experimental service integration boundary and its test obligations.
+
+[Journal v1 candidate](journal-v1/README.md) supplies a separate closed operational
+checkpoint namespace and committed-source export under ADR 0019; it remains inert.

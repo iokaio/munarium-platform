@@ -4,18 +4,18 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
 import subprocess
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RELATIVE = Path("docs/decisions/stage2-v1")
 FILES = {"README.md", "schema.json", "profile.json", "vectors.json"}
 
 
-def verify_lock(contents):
+def verify_lock(contents, profile="stage2-single-cell-v1"):
     lock = json.loads(contents["bundle-lock.json"])
     if (set(lock) != {"status", "profile", "files", "bundle_sha256"} or
-            lock["status"] != "candidate-not-accepted-not-released" or lock["profile"] != "stage2-single-cell-v1" or
+            lock["status"] != "candidate-not-accepted-not-released" or lock["profile"] != profile or
             set(lock["files"]) != FILES or set(contents) != FILES | {"bundle-lock.json"}):
         raise ValueError("unexpected candidate lock or file set")
     hashes = {name: hashlib.sha256(contents[name]).hexdigest() for name in sorted(FILES)}
@@ -25,23 +25,23 @@ def verify_lock(contents):
     return lock
 
 
-def read_committed(root=ROOT):
+def read_committed(root=ROOT, source_directory=RELATIVE, profile="stage2-single-cell-v1"):
     git = ["git", "-c", f"safe.directory={root.as_posix()}", "-C", str(root)]
     revision = subprocess.check_output(git + ["rev-parse", "HEAD"], text=True).strip()
     contents = {}
     for name in sorted(FILES | {"bundle-lock.json"}):
-        relative = (RELATIVE / name).as_posix()
+        relative = (source_directory / name).as_posix()
         path = root / relative
-        if path.is_symlink() or not path.resolve().is_relative_to((root / RELATIVE).resolve()):
+        if path.is_symlink() or not path.resolve().is_relative_to((root / source_directory).resolve()):
             raise ValueError("candidate symlink is not exportable")
         committed = subprocess.check_output(git + ["show", f"{revision}:{relative}"], stderr=subprocess.PIPE).replace(b"\r\n", b"\n")
         if path.read_bytes().replace(b"\r\n", b"\n") != committed:
             raise ValueError("candidate differs from committed source: " + relative)
         contents[name] = committed
-    lock = verify_lock(contents)
-    contents["vendor-lock.json"] = (json.dumps(dict(status="candidate-not-accepted-not-released",
-        repository="iokaio/munarium-platform", revision=revision, source_directory=RELATIVE.as_posix(),
-        bundle_sha256=lock["bundle_sha256"], files=lock["files"]), sort_keys=True, indent=2) + "\n").encode()
+    lock = verify_lock(contents, profile)
+    contents["vendor-lock.json"] = (json.dumps({"status": "candidate-not-accepted-not-released",
+        "repository": "iokaio/munarium-platform", "revision": revision, "source_directory": source_directory.as_posix(),
+        "bundle_sha256": lock["bundle_sha256"], "files": lock["files"]}, sort_keys=True, indent=2) + "\n").encode()
     return contents
 
 

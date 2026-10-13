@@ -1,0 +1,469 @@
+{
+  "canonicalization": "decision-json-v1",
+  "clock_uncertainty_seconds": 2,
+  "custody_seconds": 5,
+  "executable_authority": false,
+  "max_delta_rows": 256,
+  "max_pending_intents": 1,
+  "max_record_bytes": 65536,
+  "profile": "stage2-journal-checkpoint-v1",
+  "schema_version": 1,
+  "state_digest": "domain + canonical(scope,tables) NUL + sorted canonical(table,key,row) NUL",
+  "status": "candidate-not-qualified",
+  "tables": {
+    "gate_action_cancellations": {
+      "columns": {
+        "approval": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "attempt": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "receipt": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "withdrawal": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "operation",
+        "attempt",
+        "approval"
+      ]
+    },
+    "gate_action_claims": {
+      "columns": {
+        "binding": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "claim": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "consumption": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "operation"
+      ]
+    },
+    "gate_action_dispatch": {
+      "columns": {
+        "admission": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "outcome": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "operation"
+      ]
+    },
+    "gate_action_enrollment": {
+      "columns": {
+        "registration": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope"
+      ]
+    },
+    "gate_action_grants": {
+      "columns": {
+        "grant_id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "grant_id"
+      ]
+    },
+    "gate_action_outbox": {
+      "columns": {
+        "acknowledgement": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "keys": [
+        "scope",
+        "sequence"
+      ]
+    },
+    "gate_action_reconciliations": {
+      "columns": {
+        "event": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "receipt": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "operation"
+      ]
+    },
+    "gate_action_reservations": {
+      "columns": {
+        "bucket": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "unresolved": {
+          "type": "boolean"
+        },
+        "window_start": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "keys": [
+        "scope",
+        "operation",
+        "bucket"
+      ]
+    },
+    "gate_action_sources": {
+      "columns": {
+        "operation": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "operation"
+      ]
+    },
+    "gate_activation_cells": {
+      "columns": {
+        "digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "epoch": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "initial_digest": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "initial_epoch": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "paused": {
+          "type": "boolean"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "transition_id": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "keys": [
+        "scope"
+      ]
+    },
+    "gate_activation_delivery": {
+      "columns": {
+        "acknowledgement": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "keys": [
+        "scope",
+        "id"
+      ]
+    },
+    "gate_activation_outbox": {
+      "columns": {
+        "id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "phase": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "record": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "sequence": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "keys": [
+        "sequence"
+      ]
+    },
+    "gate_activation_transitions": {
+      "columns": {
+        "applied": {
+          "anyOf": [
+            {
+              "maxLength": 65536,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "pause": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "record": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        },
+        "resumed": {
+          "type": "boolean"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope",
+        "id"
+      ]
+    },
+    "gate_execution_generation": {
+      "columns": {
+        "generation": {
+          "maximum": 9007199254740991,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "scope": {
+          "maxLength": 65536,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "keys": [
+        "scope"
+      ]
+    }
+  }
+}

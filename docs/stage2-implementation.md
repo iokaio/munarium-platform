@@ -1,5 +1,45 @@
 # Stage 2 implementation direction and bounded packets
 
+## Journal candidate preparation, 13 October 2026
+
+The [ADR 0019](decisions/0019-journal-checkpoint-exchange.md) exchange is recorded;
+the separate [journal candidate](decisions/journal-v1/README.md) supplies a closed
+`stage2-journal-checkpoint-v1` profile. Its locked bundle digest is
+`4b0b83a2d3b3f80cf0864b6c6dd0efa799a931661517c233e9a41e2517bdabce`.
+All existing Stage 1/Stage 2 candidate bytes and acceptance pins are unchanged.
+
+The profile enumerates all 14 Gate operational tables, columns and keys from the
+owning repository's migrations 0001–0005 at `28f80b4054a45e29677cb72c495edefc701f47ab`.
+An intent retains complete proposed row changes before durable SQL commit; the
+actual commit must repeat them exactly. A streaming digest covers every owned
+table even when empty, all assigned sequence values and original acknowledgement
+bytes. It excludes only separately validated checkpoint metadata. Closed evidence
+and request shapes contain no send permission, refund, abort or reopen operation.
+
+Local licence, private-material (172 files), documentation/index (63 Markdown files)
+and whitespace checks passed. All 80 hub regression tests passed. Separate
+Draft 2020-12 validation with jsonschema 4.25.1 passed 84 journal shape comparisons
+and 333 unchanged action-candidate comparisons. Both bundle generators reproduced
+their locked bytes without changes. Portable CI-discovered controls exercise fixed
+canonical bytes/digests/refusals, every owned row's required/extra columns, omitted
+tables, ordering/duplicate keys, immutable tombstones, pending-intent/current-owner
+refusal, two-bucket consumption and spent send/invocation footprints, large streamed
+state and committed-source export/collision refusal.
+
+The initial oracle test attempt incorrectly compared SQL scope text with qualified
+scope objects and failed its positive controls. The corrected oracle validates each
+representation separately; all positives and original refusal expectations pass.
+Local gitleaks remains unavailable; hosted tree/history scanning remains required.
+The standards-library comparison is a separate local check; portable shape and
+semantic controls run in the existing hosted regression entry point.
+
+These are offline fictional fixtures, not independently authenticated owner facts,
+observed SQL commits, verified capacity policy, durable external retention or actual
+restore/reopening evidence. Server/Gate consumer conformance, independent retention
+and complete mutation/admission coverage are next, followed by Harness snapshot
+histories and R3 reconciliation. Formal acceptance and qualification remain pending;
+Stage 2 retains `qualification:false`.
+
 ## Retained action checkpoints, 13 October 2026
 
 Server [PR 82](https://github.com/iokaio/munarium/pull/82) merged R1 at

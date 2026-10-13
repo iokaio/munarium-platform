@@ -1,0 +1,11 @@
+{
+  "bundle_sha256": "4b0b83a2d3b3f80cf0864b6c6dd0efa799a931661517c233e9a41e2517bdabce",
+  "files": {
+    "README.md": "9e43ab3ed35d572232dfcd82d6ea2c4a322dc1a2089fa6f2ffebee051ff208d2",
+    "profile.json": "5b8cab2edb2cee545fdcc4fe2644ce83445034d6f4b9b20d4b4ebdf87b0264c7",
+    "schema.json": "e1a334da9f3d97b36ac8887d9d56d542e38c30e813544216827a8b9d9bb144e1",
+    "vectors.json": "11fd283ba7866780b2539fcc2c60891f098ca827bb21e4c4ab26d4a419d91735"
+  },
+  "profile": "stage2-journal-checkpoint-v1",
+  "status": "candidate-not-accepted-not-released"
+}
