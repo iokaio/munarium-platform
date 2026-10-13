@@ -1,5 +1,63 @@
 # Stage 2 implementation direction and bounded packets
 
+## Agent isolation and dynamic admission, 13 October 2026
+
+The current sequence remains Stage 2 controlled execution, following
+[ADR 0015](decisions/0015-stage2-linux-qualification.md) and
+[ADR 0016](decisions/0016-dynamic-release-admission.md). The following packets merged
+after all checks passed on their exact final PR heads. Contributor DCO sign-offs
+were retained in the squash commits; local main was fast-forwarded after each merge.
+
+| Packet | Final tested head | Merged main | Evidence |
+|---|---|---|---|
+| Harness actual agent isolation, [PR 6](https://github.com/iokaio/munarium-harness/pull/6) | `75c9d173d442ce6d152f791353237f6ab7121f57` | `c5718b9de81aecba848f662deedced78cd6888d1` | [Complete five-service workflow](https://github.com/iokaio/munarium-harness/actions/runs/38422399386) |
+| Gate dynamic materialization and retained source, [PR 7](https://github.com/iokaio/munarium-gate/pull/7) | `87e237b5ba41eae52a3d5658f399acec190b5a33` | `59aaea798fb4d23c10c2f924d480dd55f71c3942` | [Complete component workflow](https://github.com/iokaio/munarium-gate/actions/runs/38423601255) |
+| Gate native dynamic service, [PR 8](https://github.com/iokaio/munarium-gate/pull/8) | `af4e92da9f9c7a9d902bdad8fcf9c20bb17a168a` | `0b4be9c28c7a5fa5eff5d70eb8256aecb559c8ae` | [Complete component workflow](https://github.com/iokaio/munarium-gate/actions/runs/38430651311) |
+
+Harness's pinned unprivileged agent container has a read-only root, no capabilities,
+bounded resources and exactly four read-only proposal TLS/probe mounts. Task-owned
+network rules permit its Gate/Warden proposal paths and deny target, broker,
+authority, both databases, metadata and public egress. Both execution cases retained
+11 successful boundary checks, actual proposal receipts, independent target counts
+and cleanup receipts. The existing activation and prepared-execution histories
+also passed. The evidence artifact's observations digest is
+`sha256:5cd784e657c66e2a53a33cbc31c259817e24535daec45e5611be13b09fe8c962`.
+Its profile is `stage2-isolated-agent-v1`, status passed and `qualification:false`.
+Trusted services remain native host processes; per-service OS isolation is excluded.
+The first attempt failed on Python 3.13's permission-error behavior in a denied-mount
+probe. The corrected access oracle and three regression controls passed, followed
+by the complete workflow on the final head. Task-owned local containers and hosted
+network resources were removed; unrelated resources were preserved.
+
+Gate now materializes independently admitted manifest/policy/evidence inputs and
+retains the original request and decision across PostgreSQL reopen. The authenticated
+`propose` route accepts only enrolled task slots and closed parameters, runs the
+pinned native evaluator, checks current activation/retirement and exact Server
+archive receipts, and preserves the existing approval/claim/grant/final-send checks.
+Dynamic slots cannot use `prepare` to bypass evaluation. Seven explicitly selected
+PostgreSQL tests and the preserved native activation, Windows and Linux evaluator
+controls passed in CI. The native dynamic service entry point passed in 12.544 s,
+covering actor/tenant/parameter refusal, actual native permit/deny, incorrect archive
+receipts, process restart/retry, immutable source lookup and retirement. Its Gate,
+OPA and database are real; authenticated owner dependencies are explicitly synthetic.
+This is component evidence, not a real five-service dynamic effect.
+
+Available local formatting, locked builds, warnings-denied lint/API docs, behavioral
+tests and documentation/hygiene checks passed. Local native Linux evaluation remains
+unavailable on this host; hosted native evidence supplies the checks above. Local
+gitleaks is unavailable; exact-head hosted tree/history scanning and DCO passed for
+all three packets. The materialization packet also ran all seven real PostgreSQL
+tests locally against an isolated disposable database and removed its container/volume.
+
+**Next:** Harness must combine native dynamic evaluation with the actual isolated
+agent, five services, approval and independently observed effects. RECOVERY-01 then
+needs a recorded concrete protocol and implementation for rollback detection,
+retained-fact/cutoff reconciliation and governed reopening. Remaining H03/REF
+failure cases and installation/investigation/teardown evidence close CLOSE-02.
+No candidate bytes, golden vectors, Stage 1 acceptance pins, catalog/invariant
+fields or release labels changed. Human contract dispositions and independent
+review remain pending; Stage 2 qualification and its Stage 3 exit gate remain open.
+
 ## Linux evaluator worker, 13 October 2026
 
 [ADR 0015](decisions/0015-stage2-linux-qualification.md) preceded implementation.

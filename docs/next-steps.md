@@ -37,10 +37,22 @@ Console, then Assure/S5, following the build sequence.
 [PR 6](https://github.com/iokaio/munarium-gate/pull/6), with exact-head native Linux,
 Windows, Rust/PostgreSQL/service and hygiene checks green. See the
 [worker evidence](stage2-implementation.md#linux-evaluator-worker-13-october-2026).
-Harness [PR 6](https://github.com/iokaio/munarium-harness/pull/6) prepares the actual
-agent-container boundary; its live composition evidence remains pending. The next
-runtime work connects dynamic authoritative inputs to the action path and records
-the concrete recovery protocol. A bounded worker alone does not qualify effects.
+Harness [PR 6](https://github.com/iokaio/munarium-harness/pull/6) is merged with
+exact-head five-service evidence from the actual agent-container boundary and
+independent target observations. Gate [PR 7](https://github.com/iokaio/munarium-gate/pull/7)
+and [PR 8](https://github.com/iokaio/munarium-gate/pull/8) are merged with dynamic
+materialization, immutable source recovery and native authenticated service tests.
+See the [current evidence](stage2-implementation.md#agent-isolation-and-dynamic-admission-13-october-2026)
+for source pins, CI receipts and limits.
+
+**Current next packet: Harness's full dynamic composition.** Exercise native policy
+evaluation from the isolated agent through real Registry, Warden, Server, Gate and
+Council, approval/grant/custody and independently observed target effects. Gate's
+native dynamic service test uses synthetic owner dependencies; it does not supply
+that composition evidence. Then record and implement rollback detection, cutoff
+reconciliation and safe reopening, followed by the remaining H03/REF cases and
+operator evidence. Stage 2 remains experimental with `qualification:false`;
+Stage 3's exit dependency has not been satisfied.
 
 ## Historical implementation direction, 7 October 2026
 
