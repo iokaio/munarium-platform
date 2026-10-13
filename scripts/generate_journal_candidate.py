@@ -146,6 +146,7 @@ def fixtures():
     records = {"enrollment": enrollment, "intent": intent, "commit": commit, "receipt": receipt,
                    "head": head, "policy": dict(base, type="journal-policy", enrollment=enrollment, readers=["fixture-reader"])}
     cases = []
+    row_scope_path = "proposed_delta.0.after.scope"
     for name, path, replacement, expected in [
         ("foreign-scope", "journal.scope.tenant", "other-tenant", "Unauthorized"),
         ("changed-generation", "source_generation", 2, "Unauthorized"),
@@ -155,8 +156,8 @@ def fixtures():
         ("wrong-after-state", "after_state_digest", "sha256:" + "0" * 64, "InvalidBinding"),
         ("unknown-kind", "mutation_kinds.0", "refund", "InvalidShape"),
         ("unknown-table", "proposed_delta.0.table", "uncovered_table", "InvalidShape"),
-        ("wrong-row-scope", "proposed_delta.0.after.scope", "{}", "InvalidBinding"),
-        ("wrong-row-key", "proposed_delta.0.after.scope", canonical(dict(scope, cell="other-cell")).decode(), "InvalidBinding"),
+        ("wrong-row-scope", row_scope_path, "{}", "InvalidBinding"),
+        ("wrong-row-key", row_scope_path, canonical(dict(scope, cell="other-cell")).decode(), "InvalidBinding"),
     ]:
         cases.append({"id": name, "record": "intent", "changes": {path: replacement}, "expected": expected})
     return {"profile": PROFILE, "records": records, "initial_rows": [], "cases": cases,

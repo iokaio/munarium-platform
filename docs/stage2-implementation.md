@@ -29,7 +29,15 @@ state and committed-source export/collision refusal.
 The initial oracle test attempt incorrectly compared SQL scope text with qualified
 scope objects and failed its positive controls. The corrected oracle validates each
 representation separately; all positives and original refusal expectations pass.
-Local gitleaks remains unavailable; hosted tree/history scanning remains required.
+The first [hosted candidate hygiene run](https://github.com/iokaio/munarium-platform/actions/runs/38470537201)
+passed the 80 tests and other Python gates, then flagged a public JSON field-path
+string beside the generator's `wrong-row-key` case name. The official checksum-
+verified gitleaks 8.30.1 Windows binary reproduced that false positive. Naming the
+shared field path separately preserves every locked byte and yields a clean tree
+scan. The full development-branch history still flags the original fixture syntax
+in `a4e8103eec92a1aaff65725336f0e97fb4add63b`; no credential was present and no
+history or scanner exception was rewritten. Final exact-head hosted results are
+retained in [candidate PR 30](https://github.com/iokaio/munarium-platform/pull/30).
 The standards-library comparison is a separate local check; portable shape and
 semantic controls run in the existing hosted regression entry point.
 
