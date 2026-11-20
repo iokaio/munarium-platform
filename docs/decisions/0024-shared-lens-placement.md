@@ -1,9 +1,10 @@
 # ADR 0024: shared and dedicated Lens worker placement
 
-**Proposed for maintainer review, 20 November 2026.** This records the shared
-semantics of Server v1.5 "ClearView" decision SC2. It does not accept a contract,
-advance a catalog state or publish a version. The accountable owner is the founder under
-[governance](../../GOVERNANCE.md).
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decision SC2. The maintainer accepted it as written; see
+[Disposition](#disposition-20-november-2026). Acceptance does not publish a contract
+version, advance a catalog state or set a release label. The accountable owner is the
+founder under [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
 `ef32276d593c190b5a25234a85604564769d0e60` (Server `feat/clearview`), sections
@@ -19,7 +20,7 @@ tenants' enrolled collections may reach. Whether content from two tenants may me
 on one worker, and what happens when a dedicated pool is empty, is a boundary shared
 by Server admission, Lens deployment and operators' tenant policies.
 
-## Decision (proposed)
+## Decision
 
 1. Admit work to a shared Lens pool only with explicit, current authorization covering
    each participating tenant and compatible processing, location, retention and
@@ -39,6 +40,43 @@ by Server admission, Lens deployment and operators' tenant policies.
    after verifying its manifest and passing a probe. Automatic load-balancer replays of
    submitted inference calls are disabled; Server accounts for any permitted new attempt.
 
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, and activates
+nothing.
+
+This record listed no open choices. The placement-policy representation its version
+policy leaves to the owning process is recorded as the Server implemented it on
+`feat/clearview` (Server `9a14fd021de00d21ffcc18a933b4bc5943b37683`, additive
+migration 0081, ledger row SC2 and the Server
+[placement guide](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/guides/inference-endpoints.md#shared-and-dedicated-placement)):
+
+| Item | Resolution |
+|---|---|
+| Pool declaration | `inference.placement` on an `openai-compatible` provider configuration: `mode` `dedicated` or `shared`; a shared pool lists every covered tenant in `tenants` and declares at least one `processing` rule. Sharing is never implied by omission. |
+| Binding requirement | Optional `placement` on the collection binding: `isolation` `dedicated` or `shared`, plus required `processing` rules compared exactly. A rebind without `placement` keeps the existing requirement, so placement is never loosened implicitly. |
+| Refusal reasons | `placement_tenant_not_covered`, `placement_undeclared`, `placement_dedicated_required` and `placement_processing_incompatible`: a refused bind or probe is 409 `inference-not-qualified`; an existing binding that no longer satisfies placement turns its stages `unconfigured`, and the ADR 0023 stage policy then refuses or takes the disclosed fallback, which sends nothing. |
+| Check point | Before any content is sent, on serving, shadow, build and every retry. Server never chooses another endpoint when dedicated capacity is lost. |
+
+Cluster placement receipts (SC2-T1 to SC2-T3 on a fleet) remain deferred.
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 6** accepts the inference wire fields as release ready. The placement
+  fields extend the same inference configuration but were added the same day
+  (`9a14fd0`); whether decision 6 covers them awaits the maintainer's confirmation.
+  The hub contract export named in the version policy remains a separate step.
+- **Decision 17.** Cluster qualification, including the placement receipts, runs
+  only on the maintainer's workstation cluster and is deferred.
+- **Decision 1.** Binary rollback across v1.5 migrations, including 0081, is by
+  backup restore.
+
 ## Alternatives
 
 - **Share pools by default.** Rejected: sharing requires explicit coverage of every
@@ -49,7 +87,8 @@ by Server admission, Lens deployment and operators' tenant policies.
 
 ## Evidence
 
-No implementation evidence. The [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
+No implementation evidence at drafting. The implementation since is cited in the
+[disposition](#disposition-20-november-2026). At drafting, the [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
 records SC2 as planned, pending this record. Acceptance cases SC2-T1 to SC2-T3
 require zero request content at a forbidden worker on serving, build, retry and shadow
 paths.

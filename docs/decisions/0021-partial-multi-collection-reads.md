@@ -1,9 +1,10 @@
 # ADR 0021: explicit partial multi-collection reads
 
-**Proposed, 20 November 2026; open choices listed.** This records the shared
-semantics of Server v1.5 "ClearView" decision C1. It does not accept a contract,
-advance a catalog state or publish a version. The accountable owner is the founder
-under [governance](../../GOVERNANCE.md).
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decision C1. The maintainer accepted it as written; see
+[Disposition](#disposition-20-november-2026). Acceptance does not publish a contract
+version, advance a catalog state or set a release label. The accountable owner is the
+founder under [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
 `ef32276d593c190b5a25234a85604564769d0e60` (Server `feat/clearview`), sections
@@ -24,7 +25,7 @@ evidence can support. The response fields, evidence semantics and refusals are
 consumed by the four Server SDKs, the REST and gRPC transports and the planned MCP
 tools, so the meaning of a partial read is a shared semantic.
 
-## Decision (proposed)
+## Decision
 
 1. **Omitted policy keeps v1.4 behavior**, including the `NotFound` skip and failure
    on other member errors. `skipped` and its existing meanings are preserved.
@@ -64,6 +65,40 @@ tools, so the meaning of a partial read is a shared semantic.
 The per-member outcome names used by the system the Server design compares against
 are observations motivating the design, not proposed wire values.
 
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, and activates
+nothing.
+
+The open choices are resolved as the Server implemented them on `feat/clearview`
+(Server `1aa7dc5a6e0a6a4080abf43c4b12ca0a6ece6002`, ledger row R2 · C1, and the C1
+table in the Server [wire compatibility policy](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/wire-compatibility.md)):
+
+| Choice | Resolution |
+|---|---|
+| Whether `require` is offered for native reads | Offered, explicit only. It refuses with the existing `required-evidence-unavailable` problem type before query expansion or completion spends. C1 refusals reuse that type rather than adding one. Under `report`, a turn with no completed visible member is refused with the same type, as listed in the Server [error registry](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/api/errors.md). |
+| Wire spelling of the selector, outcomes and reasons, and their carriers | Selector `collection_availability` on the turn request: a REST/SSE enum string `report` or `require`, typed gRPC `TurnRequest` `string` tag 7 where `""` keeps v1.4. Unknown values are `invalid-input`. Response `coverage` (`policy`, `complete`, `members[]`, `withheld_claims`) on a REST response that flattens the unchanged v1.4 turn response, and typed gRPC `TurnResponse.coverage` tag 9. Member outcomes `complete`, `empty`, `unavailable`; stages `search`, `probe`; reasons `no_active_index`, `engine_unavailable`, `search_failed`. SSE `probe` and `retrieval` stages gain optional `outcome` and `reason` members under an explicit policy only. |
+| A shared deadline across members | Not introduced. Members keep the request's existing bounds. |
+
+`coverage` is returned with the turn and not written to the session transcript.
+Only availability errors become gaps; an authorization error still fails the turn. For item 7,
+the MCP `ask_session` tool sends `collection_availability: "require"` (Server
+`43d38c0ec7c36e9b68509467429671d6d558be44`).
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 6.** The C1 wire fields above are accepted as release ready. The hub
+  contract export named in the version policy remains a separate step; this
+  disposition does not perform it.
+- **Decision 1** (binary rollback by backup restore) does not affect this record:
+  C1 adds no persisted state.
+
 ## Alternatives
 
 - **Keep v1.4 failure on any member error.** Retained as the default when no policy
@@ -74,7 +109,8 @@ are observations motivating the design, not proposed wire values.
 
 ## Evidence
 
-No implementation evidence. The [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
+No implementation evidence at drafting. The implementation since is cited in the
+[disposition](#disposition-20-november-2026). At drafting, the [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
 records R2 · C1 as planned, pending this semantic. The existing evidence hierarchy and
 completeness tests in Server's `munarium-core` are the baseline the design preserves.
 

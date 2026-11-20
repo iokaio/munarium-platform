@@ -1,9 +1,10 @@
 # ADR 0020: Matrix ownership transfer and the Server consumer record
 
-**Proposed, 20 November 2026; open choices listed; experimental candidate present.**
-This records the shared semantics of Server v1.5 "ClearView" decision M1. It
-does not accept a contract, advance a catalog state or publish a version. The
-accountable owner is the founder under [governance](../../GOVERNANCE.md).
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decision M1. The maintainer accepted it as written; see
+[Disposition](#disposition-20-november-2026). Acceptance does not publish a contract
+version, advance a catalog state or set a release label. The accountable owner is
+the founder under [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
 `ef32276d593c190b5a25234a85604564769d0e60` (Server `feat/clearview`), sections
@@ -24,7 +25,7 @@ build and miss the provider in a mixed-purpose source file. The split between th
 Matrix publisher and the Server consumer is therefore a cross-repository contract
 choice, and the Server decision register lists M1 as "Hub record pending".
 
-## Decision (proposed)
+## Decision
 
 1. **Ownership.** Server owns its structured-evidence consumer, authorization,
    sealed evidence, report and bundled CLI entry point. Matrix owns the command and
@@ -63,7 +64,38 @@ choice, and the Server decision register lists M1 as "Hub record pending".
 | Minimal descriptor format (Server open item "M1 minimal descriptor format") | (a) The publisher's `--consumer-out` profile, which the experimental candidate uses: `format_version` 1 with a `wire_contract` pin and an `mmctl_matrix` command table, bound by a `profile_digest`. (b) Keep the forwarding shim until a bundled compatible replacement passes, recording the row as outstanding. | v1.4 CLI coverage, deterministic export, digest verification and standalone builds before deleting prior paths |
 | Publisher revision to pin | The candidate pins Matrix `feat/clearview` `79aa8c573011e8095c171dc532b01f19a6ecda63`, recorded as not reviewed or merged. The design requires re-pinning to the reviewed, merged revision before source removal. | Matrix review and merge, then the coupled Server CI change |
 
-This record does not choose between (a) and (b).
+As drafted, this record did not choose between (a) and (b). The
+[disposition](#disposition-20-november-2026) records the resolution.
+
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, and activates
+nothing.
+
+The open choices are resolved as the Server implemented them on `feat/clearview`:
+
+| Choice | Resolution | Where recorded |
+|---|---|---|
+| Minimal descriptor format | Option (a) for the consumer record: the publisher's `--consumer-out` profile (`format_version` 1, `wire_contract` pin, `mmctl_matrix` command table, `profile_digest`), written with the generated `matrix_pin.rs` by `server/tools/matrix_pin.py`. The existing `mmctl matrix` dispatcher stays in place until the command table is shown to reproduce the v1.4 CLI behavior (decision item 5); until then that removal row is outstanding. | Server `8b1ff2bcd1208f6030a4a6f32c1a732e8b6ad84d`; [ledger row M1 · Step 3](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#phase-m-matrix-isolation) |
+| Publisher revision to pin | Unchanged by acceptance: the candidate pin remains Matrix `feat/clearview` `79aa8c5`, recorded as not reviewed or merged. Re-pinning to the reviewed, merged revision is still required before step 4 removes any Server path. | Ledger row M1 · Step 3; [maintainer decision 4](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026) |
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 4.** Resolution of Matrix PR #4 is delayed until the work is code
+  complete; work continues on `feat/clearview`. The pin therefore stays a candidate
+  and step 4 (source removal) stays blocked on the reviewed, merged revision.
+- **Decision 13.** The Matrix pin check is an approved CI addition. The coupled
+  Server CI change (the `matrix_pin.py --check` gate with its baseline, assertions and
+  negative controls) remains to be made in the Server.
+- **Decision 1** (binary rollback across v1.5 migrations by backup restore) does not
+  change item 6: a post-removal regression still reverts the affected source
+  transfer and restores the last verified pin and gates.
 
 ## Alternatives
 
@@ -79,7 +111,8 @@ This record does not choose between (a) and (b).
 
 ## Evidence
 
-Experimental implementation only; no acceptance is claimed.
+Experimental implementation, as drafted. Acceptance of this record is in the
+[disposition](#disposition-20-november-2026); no release receipt is claimed.
 
 - Server `8b1ff2bcd1208f6030a4a6f32c1a732e8b6ad84d` (M1 step 3, recorded in the
   [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)

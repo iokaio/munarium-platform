@@ -1,10 +1,11 @@
 # ADR 0028: artifact damage confirmation, fleet block and verified repair
 
-**Proposed, 20 November 2026; open choices listed; experimental implementation
-present.** This records the shared semantics of Server v1.5 "ClearView" decisions
-ART1 and ART2 and the Server component's proposed verifier, pin and finding
-definitions. It does not accept a contract, advance a catalog state, publish a
-version or provide a REL1 receipt. The accountable owner is the founder under
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decisions ART1 and ART2 and the Server component's verifier, pin and
+finding definitions. The maintainer accepted it as written, with a single-replica
+adjustment requested separately; see [Disposition](#disposition-20-november-2026).
+Acceptance does not publish a contract version, advance a catalog state, set a
+release label or provide a REL1 receipt. The accountable owner is the founder under
 [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
@@ -28,7 +29,7 @@ before release (REL1). ART1 requires verifier identity and independence criteria
 be recorded in this hub decision before qualification, so the definition of an
 independent verifier is the shared semantic here.
 
-## Decision (proposed)
+## Decision
 
 ### ART1: isolation and fleet block
 
@@ -99,7 +100,49 @@ the artifact withdrawn before a v1.4 reader returns to service.
 | Mirror publication | Whether publication refuses a blocked pin; a rebuild converging on a blocked artifact ID currently republishes it | Open |
 | Per-event stream fence | ART1-T2 requires content-bearing stream events after a block to be ones authorized before it; the proposal fences whole search results, from which streams are assembled, rather than each event | Listed open in the implementation ledger |
 
-This record does not choose among these options.
+As drafted, this record did not choose among these options. The
+[disposition](#disposition-20-november-2026) records the resolution.
+
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, activates
+nothing and provides no REL1 receipt.
+
+The open choices are resolved as the Server implemented them on `feat/clearview`
+(definitions `cca06b13da4a2387789b5771df807213e735da1a`; implementation
+`7c6d3650655df8bfdd6c619e0dc6ca4a6e667a57` with additive migration 0060; ledger
+rows R10, ART1 and ART2; and the Server [operator guide](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/ops/artifact-damage.md)):
+
+| Choice | Resolution |
+|---|---|
+| Verifier authentication | Option (a): the configured instance identity over the shared database credential. A verifier is a Server replica in `observe` or `enforce` mode using the deployment's database credential; independence rests on a distinct, stable, operator-configured instance ID (`MUNARIUM_INSTANCE_ID`, or the pod `HOSTNAME`). Two replicas given one ID are one verifier. A per-replica authenticated identity remains the recorded hardening path, not adopted. ART1's requirement of "independently authenticated verifier identities" is resolved by this acceptance as written: for this release, a distinct configured instance identity is the accepted verifier identity, and the limitation in the consequences below stands. |
+| Storage generations | Not recorded. The artifact store exposes no object generation, so every observation records it as absent and a pinned object binds to its expected digest only. |
+| Per-result authorization records | None. The release fence commits a share-locked check against block and clearance at result release, with no durable row per result. |
+| Bounds | 1,024 history rows per tenant (refusing rather than evicting) and a 24-hour confirmation window, as constants. Maintainer decision 9 approves both values. |
+| Mirror publication | Publication is unchanged and does not refuse a blocked pin. A blocked pin is still refused by reader admission, the release fence, the readiness warmer and rollout. |
+| Per-event stream fence | The fence applies to whole search results, from which streams are assembled, not to each stream event. |
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 15, single-replica adjustment (pending).** The maintainer asked for ART
+  to be adjusted so that single-replica deployments can block and clear. That
+  adjustment is in progress in the Server and is not recorded in this record. As
+  written, ART1 item 2 and ART2 item 2 require two independent verifiers, and the
+  consequences below state that a single-replica deployment can neither confirm nor
+  clear a block. The adjustment needs a recorded amendment of this record, stating
+  how a single replica satisfies or replaces the two-verifier rule, before any
+  qualification relies on it; until then the two-verifier text governs.
+- **Decision 9** approves the 1,024-row history and 24-hour window above.
+- **Decision 1.** Binary rollback across v1.5 migrations, including 0060, is by
+  backup restore. A database restored from the pre-upgrade backup holds no durable
+  block, so the rollout rule's "artifact withdrawn" branch applies: withdraw the
+  affected artifact before a v1.4 reader returns to service.
 
 ## Alternatives
 
@@ -115,7 +158,8 @@ This record does not choose among these options.
 
 ## Evidence
 
-Experimental implementation only; no acceptance or release receipt is claimed.
+Experimental implementation, as drafted. Acceptance of this record is in the
+[disposition](#disposition-20-november-2026); no release receipt is claimed.
 
 - Server `cca06b13da4a2387789b5771df807213e735da1a` proposes the definitions above.
 - Server `7c6d3650655df8bfdd6c619e0dc6ca4a6e667a57` implements them opt-in with

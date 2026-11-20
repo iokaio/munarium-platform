@@ -1,9 +1,10 @@
 # ADR 0026: MCP generation opt-in, token allowances and shared generation
 
-**Proposed, 20 November 2026; open choices listed.** This records the shared
-semantics of Server v1.5 "ClearView" decisions A2, A8 and A9. A2 requires the A8
-allowances, and A9 defines how they combine, so the three are recorded together.
-It does not accept a contract, advance a catalog state or publish a version. The
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decisions A2, A8 and A9. A2 requires the A8 allowances, and A9 defines
+how they combine, so the three are recorded together. The maintainer accepted it as
+written; see [Disposition](#disposition-20-november-2026). Acceptance does not
+publish a contract version, advance a catalog state or set a release label. The
 accountable owner is the founder under [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
@@ -15,7 +16,8 @@ Normative source: the Server design at
 and [9.2](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/mcp-analysis.md#92-sequencing).
 The Server design records A2, A8 and A9 as maintainer design decisions and the A8
 policy inheritance as a separate implementation recommendation; this hub record
-proposes the decisions as shared semantics and does not record their acceptance.
+records the decisions as shared semantics, and its disposition records their
+acceptance.
 
 ## Context
 
@@ -26,7 +28,7 @@ observed usage, so it cannot establish a hard limit. Operators, the console, rep
 readers and the planned policy contract need one meaning for who may spend, how much
 and on whose behalf.
 
-## Decision (proposed)
+## Decision
 
 ### A2: opt-in and budget owner
 
@@ -96,8 +98,46 @@ Embedding and reranking costs on enrolled collections follow
 | How Server identifies the contributors to each shared call | Required by 9.2, not specified | A9-T1 and A9-T2 |
 | How the budget owner is named and bound | A2 requires a named owner; the representation is not specified | Same export |
 
-This record does not select a representation and does not promote the inheritance
-recommendation to a decision.
+As drafted, this record did not select a representation or promote the inheritance
+recommendation to a decision. The [disposition](#disposition-20-november-2026)
+records the resolution.
+
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, and activates
+nothing.
+
+The open choices are resolved as the Server implemented them on `feat/clearview`
+(Server `43d38c0ec7c36e9b68509467429671d6d558be44`, ledger rows A2, A8 and A9, and
+the Server [MCP generation guide](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/ops/mcp.md#generation-opt-in-and-allowances-a2-a8-a9)):
+
+| Choice | Resolution |
+|---|---|
+| Trusted collection/index policy representation | A trusted deployment policy file named by `MUNARIUM_MCP_GENERATION_POLICY`, read at startup and deployed identically to every replica (`version` 1, a `collections` list keyed by tenant and collection, with optional per-index overrides). It is a file, not a managed table. Generation also requires `MUNARIUM_MCP_PAID_TOOLS=enabled`. |
+| Index-policy precedence | The recommendation is implemented: with no override a pinned index inherits the collection's pair; an index override must give both allowances or startup fails; the collection daily balance and each contributing index's own daily balance are reserved together per attempt. |
+| How Server identifies the contributors | Fixed per call before dispatch: for `ask_collections`, the authorized collections the call names; for `ask_session`, the authorized collections of the session's pinned runbook at the session's clearance; each with its active index at that moment. A merely available collection never contributes. |
+| How the budget owner is named and bound | A `budget_owner` string on each collection entry of the policy file. Every contributor must name the same owner, which is the payer; tool arguments cannot select it. |
+
+The reservation bound is the serialized request's bytes, 64 tokens of framing and
+the permitted output. Refusals are `mcp-generation-not-authorized`,
+`mcp-allowance-exhausted` and `mcp-accounting-unavailable`. Usage above a bound
+suspends MCP generation for that tenant, provider configuration and model until an
+operator clears it. A9 is covered by engine and policy tests, not yet by a
+multi-collection MCP call, and A9-T2 (authorized-only usage reports) is not covered.
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 6.** The MCP wire additions are accepted as release ready. The hub
+  contract export of the policy representation and its rejection vectors, named in
+  the version policy, remains a separate step; this disposition does not perform it.
+- **Decision 1.** Binary rollback across v1.5 migrations, including the MCP
+  migration 0070, is by backup restore.
 
 ## Alternatives
 
@@ -110,7 +150,8 @@ recommendation to a decision.
 
 ## Evidence
 
-No implementation evidence. The [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
+No implementation evidence at drafting. The implementation since is cited in the
+[disposition](#disposition-20-november-2026). At drafting, the [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
 records A2, A8 and A9 as planned. Acceptance cases A2-T1, A8-T1 to A8-T3, A9-T1 and
 A9-T2 count physical provider arrivals against admitted attempts.
 

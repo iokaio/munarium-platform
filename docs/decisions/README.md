@@ -30,22 +30,26 @@ while human acceptance remains pending. It does not accept or release those cand
 | [0017: Scoped Registry assertions](0017-scoped-registry-assertions.md) | Experimental implementation directed; acceptance pending | Bounded verified service identity reuse and preflight before short-lived custody; current owners remain live |
 | [0018: Restore checkpoint protocol](0018-restore-checkpoint-protocol.md) | Experimental implementation directed; acceptance pending | Pinned retained-record export, independent journal intents/commits and governed reconciled reopening |
 | [0019: Journal checkpoint exchange](0019-journal-checkpoint-exchange.md) | Experimental implementation directed; acceptance pending | Separate owner enrollment, complete row deltas, independent retention and one-shot send custody |
-| [0020: Matrix consumer handoff](0020-matrix-consumer-handoff.md) | Proposed; open choices listed; experimental candidate present | Server M1: Matrix/Server ownership split, v1.4 compatibility names, generated consumer record and transfer order |
-| [0021: Partial multi-collection reads](0021-partial-multi-collection-reads.md) | Proposed; open choices listed | Server C1: explicit availability reporting, hidden-member silence and withheld unsupported claims |
-| [0022: Build-job failure codes](0022-build-job-failure-codes.md) | Proposed; open choices listed; partial experimental implementation present | Server C2: safe `error` text, classified `error_code` only, no inference for historical rows |
-| [0023: Enrolled inference policy and budgets](0023-enrolled-inference-policy-and-budgets.md) | Proposed; open choices listed | Server I1/I2: `require` default with explicit fallback, collection-owned budgets and caller attribution |
-| [0024: Shared Lens placement](0024-shared-lens-placement.md) | Proposed for maintainer review | Server SC2: explicit tenant coverage for shared pools, isolated caches and dedicated-pool loss |
-| [0025: MCP entry and evidence authority](0025-mcp-entry-and-evidence-authority.md) | Proposed; open choices listed | Server A1/A4: `mcp` entry scope plus operation scope; read-only evidence capability |
-| [0026: MCP generation token allowances](0026-mcp-generation-token-allowances.md) | Proposed; open choices listed | Server A2/A8/A9: generation opt-in, request and daily allowances, shared-generation ceiling and payer |
-| [0027: MCP durable admission and recovery](0027-mcp-durable-admission-and-recovery.md) | Proposed; open choices listed | Server A6 and interrupted-call recovery: confirmed audit before execution, caller-known recovery key |
-| [0028: Artifact damage verification and repair](0028-artifact-damage-verification-and-repair.md) | Proposed; open choices listed; experimental implementation present | Server ART1/ART2: independent confirmation, fleet block, release fence and verified repair clearance |
+| [0020: Matrix consumer handoff](0020-matrix-consumer-handoff.md) | Accepted (20 November 2026) | Server M1: Matrix/Server ownership split, v1.4 compatibility names, generated consumer record and transfer order |
+| [0021: Partial multi-collection reads](0021-partial-multi-collection-reads.md) | Accepted (20 November 2026) | Server C1: explicit availability reporting, hidden-member silence and withheld unsupported claims |
+| [0022: Build-job failure codes](0022-build-job-failure-codes.md) | Accepted (20 November 2026) | Server C2: safe `error` text, classified `error_code` only, no inference for historical rows |
+| [0023: Enrolled inference policy and budgets](0023-enrolled-inference-policy-and-budgets.md) | Accepted (20 November 2026) | Server I1/I2: `require` default with explicit fallback, collection-owned budgets and caller attribution |
+| [0024: Shared Lens placement](0024-shared-lens-placement.md) | Accepted (20 November 2026) | Server SC2: explicit tenant coverage for shared pools, isolated caches and dedicated-pool loss |
+| [0025: MCP entry and evidence authority](0025-mcp-entry-and-evidence-authority.md) | Accepted (20 November 2026) | Server A1/A4: `mcp` entry scope plus operation scope; read-only evidence capability |
+| [0026: MCP generation token allowances](0026-mcp-generation-token-allowances.md) | Accepted (20 November 2026) | Server A2/A8/A9: generation opt-in, request and daily allowances, shared-generation ceiling and payer |
+| [0027: MCP durable admission and recovery](0027-mcp-durable-admission-and-recovery.md) | Accepted (20 November 2026) | Server A6 and interrupted-call recovery: confirmed audit before execution, caller-known recovery key |
+| [0028: Artifact damage verification and repair](0028-artifact-damage-verification-and-repair.md) | Accepted (20 November 2026) | Server ART1/ART2: independent confirmation, fleet block, release fence and verified repair clearance |
+| [0029: Inference instruction-prefix ownership](0029-inference-instruction-prefix-ownership.md) | Accepted (20 November 2026) | Server IR-1/IR-2 and the Lens endpoint profile: Server-owned query and passage prefixes in the semantic index identity; Lens applies none |
 
-Records 0020–0028 propose the shared semantics behind the Server v1.5
+Records 0020–0028 record the shared semantics behind the Server v1.5
 "ClearView" decision-register rows marked "Hub record pending", grounded in the
-Server design at `ef32276d593c190b5a25234a85604564769d0e60`. They add no schema or
-vector; each names the wire shapes still to be exported through the owning process.
-Where the Server has implemented experimentally, the record cites that revision as
-experimental evidence only.
+Server design at `ef32276d593c190b5a25234a85604564769d0e60`. The maintainer accepted
+them as written on 20 November 2026, reviewing hub revision `dc3aa25`; each record's
+disposition section names that revision and records how the Server implementation
+resolved its open choices. Record 0029 records the maintainer's direct decision of
+the same day on instruction-prefix ownership. They add no schema or vector, and
+acceptance publishes no contract version or release label; any wire shape is still
+exported through the owning process.
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus and bounded runs. ADR 0007 subsequently selected OPA for experimental

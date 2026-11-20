@@ -1,10 +1,11 @@
 # ADR 0027: MCP durable audit admission and interrupted-call recovery
 
-**Proposed, 20 November 2026; open choices listed.** This records the shared
-semantics of Server v1.5 "ClearView" decision A6 and the proposed additive
-interrupted-call recovery contract that the Server design couples to it (open item
-"MCP interrupted calls (A5/A6)"). It does not accept a contract, advance a catalog
-state or publish a version. The accountable owner is the founder under
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decision A6 and the additive interrupted-call recovery contract that the
+Server design couples to it (open item "MCP interrupted calls (A5/A6)"). The
+maintainer accepted it as written; see [Disposition](#disposition-20-november-2026).
+Acceptance does not publish a contract version, advance a catalog state or set a
+release label. The accountable owner is the founder under
 [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
@@ -15,8 +16,8 @@ Normative source: the Server design at
 and acceptance cases A6-T1 to A6-T3 and
 [A5-T5](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/mcp-analysis.md#a5-t5).
 The Server design records A6 as a maintainer design decision and the recovery
-contract as a proposal; this hub record proposes both as shared semantics and does
-not record their acceptance.
+contract as a proposal; this hub record records both as shared semantics, and its
+disposition records their acceptance.
 
 ## Context
 
@@ -28,7 +29,7 @@ way to learn what happened without risking a second execution or charge. Report
 readers, MCP clients and the planned shared contract need one meaning for admission,
 duplicates and recovery.
 
-## Decision (proposed)
+## Decision
 
 ### A6: durable admission before execution
 
@@ -99,7 +100,48 @@ attribution across concurrent identical calls and an interrupted enrolled search
 | Scoped refusal shapes | Typed conflict, pruned-key refusal, absent-or-inaccessible equivalence | Problem types and their registry entries |
 | Admission store and linkage | Shared durable store, additive storage changes | Schema of admission and outcome linkage |
 
-This record does not choose these values.
+As drafted, this record did not choose these values. The
+[disposition](#disposition-20-november-2026) records the resolution.
+
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, and activates
+nothing.
+
+The open choices are resolved as the Server implemented them on `feat/clearview`
+(Server `43d38c0ec7c36e9b68509467429671d6d558be44` with additive migration 0070,
+ledger rows A5-T5 and A6, and the Server [MCP operator guide](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/ops/mcp.md)):
+
+| Choice | Resolution |
+|---|---|
+| Key format | An `operation_key` object `{"id", "expires_at"}`: `id` is 16 to 128 characters of `A-Z a-z 0-9 - _` from a random source; `expires_at` is an immutable RFC 3339 UTC time ending in `Z`. A malformed or out-of-window key is refused with `mcp-operation-key-invalid` and nothing runs. |
+| Key scope | Tenant, uid and tool only, so a key survives token renewal. |
+| Maximum validity window | `MUNARIUM_MCP_KEY_MAX_VALIDITY_SECS`, default 86,400 seconds, judged on the database clock at claim time. The expiry must also be at least the call deadline (`MUNARIUM_MCP_CALL_DEADLINE_SECS`, default 300) away. |
+| Receipt retention | Keys are deleted one day after expiry by a janitor that runs only while the endpoint is enabled. Audit rows and reservations are never deleted by it. |
+| Result discriminator and receipt shape | `_meta["io.munarium/result"]` is `native`, `projection`, `receipt` or `problem`; a refusal also carries `_meta["io.munarium/problem"]` with the slug. A receipt is `{"kind": "operation_receipt", …}` with `status` `pending`, `completed`, `refused`, `not_executed` or `unknown`; `outcome` (HTTP status, problem type, session ID, turn ordinal, result size, `content: "not_retained"`); and, for generating tools, `spend` (`attempts`, `settled_tokens`, `outstanding_reserved_tokens`). |
+| Scoped refusal shapes | `mcp-audit-unavailable` (with `executed: false`), `mcp-operation-conflict`, `mcp-operation-key-invalid`, and the same `not_found` receipt for an absent key and one the caller may not see. |
+| Admission store and linkage | `mcp_invocations` in PostgreSQL, committed in one transaction with the key claim before any handler runs; duplicates and recovery reads get a fresh invocation ID linked to the original. A possibly committed but unacknowledged claim is marked `withheld` when the store returns, so its receipt says the work never ran. |
+
+Known gaps recorded by the Server: the session or turn receipt link is written
+immediately after the native effect commits rather than in its transaction, so a
+crash in that window leaves the receipt `unknown` (never replayed); an enrolled
+search's embedding and reranking receipts are not yet correlated; and the A6
+process-kill variant was not run.
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 6.** The MCP wire additions are accepted as release ready. The hub
+  contract export of the recovery forms, receipt and refusal shapes, named in the
+  version policy, remains a separate step; this disposition does not perform it.
+- **Decision 1.** Binary rollback across v1.5 migrations, including 0070, is by
+  backup restore. A restore to the pre-upgrade backup does not retain MCP admission
+  records or keys written after that backup.
 
 ## Alternatives
 
@@ -111,7 +153,8 @@ This record does not choose these values.
 
 ## Evidence
 
-No implementation evidence. The [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
+No implementation evidence at drafting. The implementation since is cited in the
+[disposition](#disposition-20-november-2026). At drafting, the [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
 records A6 and A5-T5 as planned, both waiting for the exported contract.
 
 ## Owners and affected consumers

@@ -1,9 +1,10 @@
 # ADR 0025: MCP entry scope and the read-only evidence capability
 
-**Proposed, 20 November 2026; open choices listed.** This records the shared
-semantics of Server v1.5 "ClearView" decisions A1 and A4. A4 applies A1 at each
-evidence-reader call, so the two are recorded together. It does not accept a
-contract, advance a catalog state or publish a version. The accountable owner is the
+**Accepted (20 November 2026).** This records the shared semantics of Server v1.5
+"ClearView" decisions A1 and A4. A4 applies A1 at each evidence-reader call, so the
+two are recorded together. The maintainer accepted it as written; see
+[Disposition](#disposition-20-november-2026). Acceptance does not publish a contract
+version, advance a catalog state or set a release label. The accountable owner is the
 founder under [governance](../../GOVERNANCE.md).
 
 Normative source: the Server design at
@@ -14,7 +15,7 @@ Normative source: the Server design at
 and the acceptance cases A1-T1 and A4-T1 in
 [section 8](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/mcp-analysis.md#8-qualification-and-rollback).
 The Server design records A1 and A4 as maintainer design decisions; this hub record
-proposes them as shared semantics and does not record their acceptance.
+records them as shared semantics, and its disposition records their acceptance.
 
 ## Context
 
@@ -24,7 +25,7 @@ replica, and the scope vocabulary is read by the four Server SDKs and the consol
 Adding an endpoint must not widen any existing token, and the two sealed-evidence
 reader tools need a grant that cannot seal or write.
 
-## Decision (proposed)
+## Decision
 
 ### A1: entry and tool authority
 
@@ -75,7 +76,40 @@ reader tools need a grant that cannot seal or write.
 | Whether `mcp` plus a v1.4 `evidence` token admits the MCP readers | Not stated; A4-T1 exercises only the read-only grant over MCP and replays `evidence` natively | Same |
 | Issuance path for the new grant | "Issuance" is named as part of the export; the broker and token routes are not otherwise specified | Same |
 
-This record does not select a spelling or representation.
+As drafted, this record did not select a spelling or representation. The
+[disposition](#disposition-20-november-2026) records the resolution.
+
+## Disposition (20 November 2026)
+
+**Accepted by the maintainer on 20 November 2026, as written**, reviewing hub
+revision `dc3aa258b0bde8b82a1ad676a4727204264997db` (`dc3aa25`, this record as
+drafted). The Server implementation ledger records the acceptance as
+[maintainer decision 5](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/design/implementation-ledger.md#maintainer-decisions-20-november-2026)
+at Server `89e1bc2019c80d697d2d8adc9237a9ce577cf3d7`. This disposition changes the
+record's state only. It publishes no contract version, composition manifest or
+release label, advances no catalog state or invariant evidence field, and activates
+nothing.
+
+The open choices are resolved as the Server implemented them on `feat/clearview`
+(Server `0483db1c4d605c3e22f8c291ddd2b273b70378e5` and
+`43d38c0ec7c36e9b68509467429671d6d558be44`, ledger rows A1 and A4, and the Server
+[MCP operator guide](https://github.com/iokaio/munarium/blob/89e1bc2019c80d697d2d8adc9237a9ce577cf3d7/server/docs/ops/mcp.md)):
+
+| Choice | Resolution |
+|---|---|
+| Wire spelling of the read-only evidence scope | `evidence_read`. |
+| Representation | A new, distinct scope value, not an attenuated form of `evidence`. It opens `GET /v1/evidence/{id}` and `GET /v1/evidence/{id}/rows` natively and, with `mcp`, the two MCP readers. It cannot seal, upload or commit, and `query` does not imply it. |
+| Whether `mcp` plus a v1.4 `evidence` token admits the MCP readers | No. Only `evidence_read` opens the MCP readers; a v1.4 `evidence` token keeps its native read and sealing permissions. |
+| Issuance path for the new grant | The existing token issuance route, `POST /v1/access-tokens`, or the typed gRPC issuer, like any other scope. Static role credentials never carry `mcp`. |
+
+Maintainer decisions of 20 November 2026 that bear on this record:
+
+- **Decision 6.** The MCP wire additions, including the `mcp` and `evidence_read`
+  scope values, are accepted as release ready. The hub contract export with its
+  rejection vectors, named in the version policy, remains a separate step; this
+  disposition does not perform it.
+- **Decision 1.** Binary rollback across v1.5 migrations is by backup restore. The
+  rolling-upgrade rule in A1 item 5 is unchanged.
 
 ## Alternatives
 
@@ -89,7 +123,8 @@ This record does not select a spelling or representation.
 
 ## Evidence
 
-No implementation evidence. The [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
+No implementation evidence at drafting. The implementation since is cited in the
+[disposition](#disposition-20-november-2026). At drafting, the [implementation ledger](https://github.com/iokaio/munarium/blob/ef32276d593c190b5a25234a85604564769d0e60/server/docs/design/implementation-ledger.md)
 records A1 and A4 as planned. The A5 release gate treats an A4 authority failure as
 blocking.
 
