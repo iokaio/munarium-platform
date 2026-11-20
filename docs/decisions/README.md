@@ -38,7 +38,7 @@ while human acceptance remains pending. It does not accept or release those cand
 | [0025: MCP entry and evidence authority](0025-mcp-entry-and-evidence-authority.md) | Accepted (20 November 2026) | Server A1/A4: `mcp` entry scope plus operation scope; read-only evidence capability |
 | [0026: MCP generation token allowances](0026-mcp-generation-token-allowances.md) | Accepted (20 November 2026) | Server A2/A8/A9: generation opt-in, request and daily allowances, shared-generation ceiling and payer |
 | [0027: MCP durable admission and recovery](0027-mcp-durable-admission-and-recovery.md) | Accepted (20 November 2026) | Server A6 and interrupted-call recovery: confirmed audit before execution, caller-known recovery key |
-| [0028: Artifact damage verification and repair](0028-artifact-damage-verification-and-repair.md) | Accepted (20 November 2026) | Server ART1/ART2: independent confirmation, fleet block, release fence and verified repair clearance |
+| [0028: Artifact damage verification and repair](0028-artifact-damage-verification-and-repair.md) | Accepted (20 November 2026); amended the same day (signed verifier identity, single-replica mode) | Server ART1/ART2: independent confirmation, fleet block, release fence and verified repair clearance |
 | [0029: Inference instruction-prefix ownership](0029-inference-instruction-prefix-ownership.md) | Accepted (20 November 2026) | Server IR-1/IR-2 and the Lens endpoint profile: Server-owned query and passage prefixes in the semantic index identity; Lens applies none |
 
 Records 0020–0028 record the shared semantics behind the Server v1.5

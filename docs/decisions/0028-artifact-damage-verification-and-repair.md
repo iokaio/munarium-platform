@@ -144,6 +144,38 @@ Maintainer decisions of 20 November 2026 that bear on this record:
   block, so the rollout rule's "artifact withdrawn" branch applies: withdraw the
   affected artifact before a v1.4 reader returns to service.
 
+## Amendment (20 November 2026, maintainer decisions)
+
+Two maintainer decisions made after the disposition above amend this record. They
+supersede the disposition's verifier-authentication resolution and the consequences
+below that describe a single replica as unable to block or clear.
+
+1. **Verifier independence rests on a per-replica authenticated identity.** The
+   maintainer chose the hardening path over the configured instance identity. Each
+   replica signs every authoritative observation with an Ed25519 verifier key. The
+   operator enrolls the public key; revocation is permanent. An observation counts
+   only when it is signed at the pin's current generation by an enrolled, unrevoked
+   key whose fingerprint is its verifier identity. Independent assurance requires
+   distinct enrolled keys. Unsigned, unenrolled, revoked or forged observations may
+   isolate a local copy but never count toward a fleet block or a clearance. Two
+   replicas sharing one key count as one verifier. Implementation: Server
+   [`c0bbe83`](https://github.com/iokaio/munarium/commit/c0bbe83) on `feat/clearview`
+   (migration 0083, `munarium_core::artifact_verifier`, the `artifact-damage
+   enroll-verifier`, `revoke-verifier` and `generate-verifier-key` commands).
+   Remaining hardening: binding verifier keys to the platform-v1 workload certificate.
+2. **Single-replica deployments can block and clear.** An explicit operator setting
+   (`MUNARIUM_ARTIFACT_DAMAGE_REPLICAS=single`, refused when the configured replica
+   count exceeds one) replaces verifier independence with run and fetch independence
+   from the one enrolled key: two authoritative observations from distinct runs and
+   distinct direct fetches at least the configured interval apart (default 300
+   seconds). Every block and clearance records its assurance level, `independent`
+   or `single_replica`, so audits can distinguish them. The documented residual risk
+   is one replica's view: a systematically wrong local verifier could both block a
+   healthy artifact and clear a damaged one. Implementation: Server
+   [`585629a`](https://github.com/iokaio/munarium/commit/585629a) (migration 0082).
+
+The ART1 and ART2 rules above otherwise stand unchanged.
+
 ## Alternatives
 
 - **Block on the first mismatch.** Rejected: one observation isolates only locally.
