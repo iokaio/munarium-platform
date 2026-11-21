@@ -139,6 +139,33 @@ Maintainer decisions of 20 November 2026 that bear on this record:
 - **Decision 1.** Binary rollback across v1.5 migrations, including the MCP
   migration 0070, is by backup restore.
 
+## Amendment (21 November 2026)
+
+Maintainer decisions 14–16 replace the earlier reservation bound and suspension
+rules and keep the version 1 startup policy representation. All serving and
+builder pods load one managed ConfigMap under Helm. Each replica reports a
+SHA-256 digest of the exact bytes it loaded. The scale diagnostics report
+disagreement, and generation requires a live self heartbeat and agreement across
+the observed replicas in its deployment environment.
+
+Before each physical submission, Server estimates input as the serialized
+request and schema byte count divided by the resolved model's positive
+`model_bytes_per_token` setting, rounded up. The default is 3. Server adds 64
+framing tokens and the permitted output, then checks the estimate in one
+durable reservation against the request and every applicable daily balance.
+Reliable actual usage settles once and is charged in full. The settlement
+atomically records any excess above the estimate and increments the excess-token
+metric. Later attempts are checked against the resulting balances. An attempt
+can overshoot the request allowance by its estimate error. Uncertain usage
+keeps the reservation on its original day. Prior overage alone no longer
+suspends the model, and native provider limits still apply.
+
+[Maintainer decisions and implementation](https://github.com/iokaio/munarium/blob/67e368d88cd3275acdb71d91635cc40f336de718/server/docs/design/implementation-ledger.md#maintainer-decisions-21-november-2026)
+· [Operator contract](https://github.com/iokaio/munarium/blob/67e368d88cd3275acdb71d91635cc40f336de718/server/docs/ops/mcp.md)
+
+The [ClearView candidate](clearview-c2-mcp-v1/README.md) supplies the exact
+policy shape and offline budget vectors for contract review.
+
 ## Alternatives
 
 - **Use the native `dailyTotalTokens` budget as the hard limit.** Rejected: its

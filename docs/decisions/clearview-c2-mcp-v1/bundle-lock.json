@@ -1,0 +1,11 @@
+{
+  "bundle_sha256": "2b4032a8d80c485150a4047f9384dbabe8f7c23f263a6ef86c0faa92c094783f",
+  "files": {
+    "README.md": "dd4f29d818ea4344f990caafdc6b6296d6322878e8be818f551871af08e9d7ea",
+    "profile.json": "e9de80e9ae980920b83b7b1a26af1a278099b6753c4b178783429634fe705356",
+    "schema.json": "fe3f867f30877431011b67c0b392e147a82e1070d042aabeaddcccebc2ae4651",
+    "vectors.json": "c7ac9662c42e30ffac6bab5f6a947d71f9efd181f6e221f9d18216261bedeebd"
+  },
+  "profile": "clearview-c2-mcp-v1",
+  "status": "candidate-not-accepted-not-released"
+}

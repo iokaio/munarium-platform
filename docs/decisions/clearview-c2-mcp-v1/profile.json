@@ -1,0 +1,42 @@
+{
+  "decisions": [
+    "0022",
+    "0026"
+  ],
+  "generation": {
+    "configuration_digest": "sha256 of exact startup bytes, lowercase hex",
+    "daily_limits": "all contributing collections and each applicable index override, deduplicated, per UTC day",
+    "default_bytes_per_token": 3,
+    "estimate": "ceil(serialized_request_and_schema_bytes / model_bytes_per_token) + framing_tokens + effective_max_tokens",
+    "fleet_guard": "live self heartbeat and agreement across the observed deployment environment",
+    "framing_tokens": 64,
+    "policy_version": 1,
+    "request_limit": "largest effective allowance of the authorized contributors",
+    "setting": "MUNARIUM_MCP_GENERATION_POLICY",
+    "settlement": "charge reliable actual usage once and record and meter excess; preserve the reservation for uncertain usage"
+  },
+  "job_failure": {
+    "codes": {
+      "artifact_blocked": "build job failed: its result is an artifact blocked by artifact damage; repair is required",
+      "attempts_exhausted": "build job failed: its final attempt stopped renewing its lease before completing",
+      "datastore_unavailable": "build job failed: a datastore artifact could not be read or written",
+      "extraction_deferred": "build job failed: isolated PDF extraction was deferred; retry when extraction capacity returns",
+      "invalid_input": "build job failed: the build refused the job's target or parameters",
+      "not_found": "build job failed: something the job names no longer exists",
+      "provider_error": "build job failed: an upstream model provider call failed",
+      "storage_error": "build job failed: a storage error occurred; see the server log"
+    },
+    "extraction_deferred": {
+      "grpc_status": "RESOURCE_EXHAUSTED",
+      "http_status": 429,
+      "problem": "extraction-deferred",
+      "retry_action": "retry_later",
+      "retryable": false
+    },
+    "unclassified_message": "build job failed; no classified cause was recorded for this failure"
+  },
+  "profile": "clearview-c2-mcp-v1",
+  "server_source": "67e368d88cd3275acdb71d91635cc40f336de718",
+  "status": "candidate-not-accepted-not-released",
+  "version": 1
+}

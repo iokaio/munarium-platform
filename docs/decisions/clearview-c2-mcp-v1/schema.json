@@ -1,0 +1,153 @@
+{
+  "$defs": {
+    "build-job-failure": {
+      "additionalProperties": false,
+      "dependentRequired": {
+        "error_code": [
+          "error"
+        ]
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "error"
+              ]
+            },
+            {
+              "required": [
+                "error_code"
+              ]
+            }
+          ]
+        }
+      },
+      "if": {
+        "properties": {
+          "state": {
+            "const": "failed"
+          }
+        }
+      },
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "error_code": {
+          "pattern": "^[a-z][a-z0-9_]{0,63}$",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "running",
+            "succeeded",
+            "failed",
+            "cancelled",
+            "superseded"
+          ]
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "type": "object"
+    },
+    "generation-policy": {
+      "additionalProperties": false,
+      "properties": {
+        "collections": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "budget_owner": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "collection": {
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "daily_tokens": {
+                "maximum": 18446744073709551615,
+                "minimum": 0,
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "indexes": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "daily_tokens": {
+                      "maximum": 18446744073709551615,
+                      "minimum": 0,
+                      "type": "integer"
+                    },
+                    "index_version": {
+                      "type": "string"
+                    },
+                    "request_tokens": {
+                      "maximum": 18446744073709551615,
+                      "minimum": 0,
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "index_version",
+                    "request_tokens",
+                    "daily_tokens"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "request_tokens": {
+                "maximum": 18446744073709551615,
+                "minimum": 0,
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "tenant": {
+                "pattern": "\\S",
+                "type": "string"
+              }
+            },
+            "required": [
+              "tenant",
+              "collection"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "model_bytes_per_token": {
+          "additionalProperties": {
+            "maximum": 18446744073709551615,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "propertyNames": {
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "version": {
+          "const": 1
+        }
+      },
+      "required": [
+        "version"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

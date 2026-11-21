@@ -47,9 +47,10 @@ Server design at `ef32276d593c190b5a25234a85604564769d0e60`. The maintainer acce
 them as written on 20 November 2026, reviewing hub revision `dc3aa25`; each record's
 disposition section names that revision and records how the Server implementation
 resolved its open choices. Record 0029 records the maintainer's direct decision of
-the same day on instruction-prefix ownership. They add no schema or vector, and
-acceptance publishes no contract version or release label; any wire shape is still
-exported through the owning process.
+the same day on instruction-prefix ownership. Acceptance of those decisions publishes no contract or release label.
+The [ClearView C2 and MCP allowance candidate](clearview-c2-mcp-v1/README.md)
+records the 21 November amendments to 0022 and 0026 with a separate lock,
+schemas, vectors and a committed-source exporter.
 
 [HUB-02 evaluator comparison](evaluator-comparison.md) retains the synthetic OPA/Cedar
 corpus and bounded runs. ADR 0007 subsequently selected OPA for experimental

@@ -1,0 +1,635 @@
+{
+  "attempt_cases": [
+    {
+      "expected": {
+        "estimated": 83,
+        "refusal": "mcp-allowance-exhausted"
+      },
+      "id": "default-ratio-rounds-up",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          80
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "charged": 83,
+        "estimated": 83,
+        "excess": 0
+      },
+      "id": "all-balances-cover-attempt",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          83
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "charged": 82,
+        "estimated": 82,
+        "excess": 0
+      },
+      "id": "per-model-ratio",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          82
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "ratio": 4,
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "estimated": 83,
+        "refusal": "mcp-allowance-exhausted"
+      },
+      "id": "request-ceiling-refusal",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 82
+      }
+    },
+    {
+      "expected": {
+        "refusal": "mcp-generation-not-authorized"
+      },
+      "id": "fleet-divergence",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          80
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "refusal": "mcp-generation-not-authorized"
+      },
+      "id": "fleet-missing-self",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          80
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": false,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "refusal": "mcp-generation-not-authorized"
+      },
+      "id": "fleet-missing-policy",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          80
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          null
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "refusal": "mcp-generation-not-authorized"
+      },
+      "id": "mixed-payers",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          80
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "legal",
+          "finance"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "charged": 101,
+        "estimated": 83,
+        "excess": 18
+      },
+      "id": "settle-actual-above-estimate",
+      "input": {
+        "actual": 101,
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          100
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "charged": 70,
+        "estimated": 83,
+        "excess": 0
+      },
+      "id": "settle-reliable-lower-usage",
+      "input": {
+        "actual": 70,
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          100
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "charged": 83,
+        "estimated": 83,
+        "excess": 0
+      },
+      "id": "uncertain-holds-reservation",
+      "input": {
+        "actual": null,
+        "bytes": 7,
+        "daily_remaining": [
+          100,
+          100
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 100
+      }
+    },
+    {
+      "expected": {
+        "estimated": 83,
+        "refusal": "mcp-allowance-exhausted"
+      },
+      "id": "later-attempt-refused-after-excess",
+      "input": {
+        "bytes": 7,
+        "daily_remaining": [
+          100
+        ],
+        "digests": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "has_self": true,
+        "max_tokens": 16,
+        "payer": [
+          "shared",
+          "shared"
+        ],
+        "policy_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "request_remaining": 0
+      }
+    }
+  ],
+  "shape_cases": [
+    {
+      "definition": "generation-policy",
+      "id": "empty-policy",
+      "valid": true,
+      "value": {
+        "version": 1
+      }
+    },
+    {
+      "definition": "generation-policy",
+      "id": "indexed-allowance",
+      "valid": true,
+      "value": {
+        "collections": [
+          {
+            "budget_owner": "shared",
+            "collection": "legal",
+            "daily_tokens": 9000,
+            "indexes": [
+              {
+                "daily_tokens": 4000,
+                "index_version": "i-legal",
+                "request_tokens": 3000
+              }
+            ],
+            "request_tokens": 2000,
+            "tenant": "fixture"
+          },
+          {
+            "budget_owner": "shared",
+            "collection": "finance",
+            "daily_tokens": 9000,
+            "indexes": [],
+            "request_tokens": 8000,
+            "tenant": "fixture"
+          }
+        ],
+        "model_bytes_per_token": {
+          "fixture-model": 4
+        },
+        "version": 1
+      }
+    },
+    {
+      "definition": "generation-policy",
+      "id": "incomplete-collection-is-disabled",
+      "valid": true,
+      "value": {
+        "collections": [
+          {
+            "collection": "draft",
+            "request_tokens": null,
+            "tenant": "fixture"
+          }
+        ],
+        "version": 1
+      }
+    },
+    {
+      "definition": "generation-policy",
+      "id": "incomplete-index-override",
+      "valid": false,
+      "value": {
+        "collections": [
+          {
+            "budget_owner": "shared",
+            "collection": "legal",
+            "daily_tokens": 9000,
+            "indexes": [
+              {
+                "index_version": "i-legal",
+                "request_tokens": 3000
+              }
+            ],
+            "request_tokens": 2000,
+            "tenant": "fixture"
+          }
+        ],
+        "version": 1
+      }
+    },
+    {
+      "definition": "generation-policy",
+      "id": "zero-ratio",
+      "valid": false,
+      "value": {
+        "collections": [
+          {
+            "budget_owner": "shared",
+            "collection": "legal",
+            "daily_tokens": 9000,
+            "indexes": [
+              {
+                "daily_tokens": 4000,
+                "index_version": "i-legal",
+                "request_tokens": 3000
+              }
+            ],
+            "request_tokens": 2000,
+            "tenant": "fixture"
+          },
+          {
+            "budget_owner": "shared",
+            "collection": "finance",
+            "daily_tokens": 9000,
+            "indexes": [],
+            "request_tokens": 8000,
+            "tenant": "fixture"
+          }
+        ],
+        "model_bytes_per_token": {
+          "fixture-model": 0
+        },
+        "version": 1
+      }
+    },
+    {
+      "definition": "generation-policy",
+      "id": "unknown-policy-version",
+      "valid": false,
+      "value": {
+        "collections": [
+          {
+            "budget_owner": "shared",
+            "collection": "legal",
+            "daily_tokens": 9000,
+            "indexes": [
+              {
+                "daily_tokens": 4000,
+                "index_version": "i-legal",
+                "request_tokens": 3000
+              }
+            ],
+            "request_tokens": 2000,
+            "tenant": "fixture"
+          },
+          {
+            "budget_owner": "shared",
+            "collection": "finance",
+            "daily_tokens": 9000,
+            "indexes": [],
+            "request_tokens": 8000,
+            "tenant": "fixture"
+          }
+        ],
+        "model_bytes_per_token": {
+          "fixture-model": 4
+        },
+        "version": 2
+      }
+    },
+    {
+      "definition": "generation-policy",
+      "id": "unknown-policy-member",
+      "valid": false,
+      "value": {
+        "actor": "fixture",
+        "collections": [
+          {
+            "budget_owner": "shared",
+            "collection": "legal",
+            "daily_tokens": 9000,
+            "indexes": [
+              {
+                "daily_tokens": 4000,
+                "index_version": "i-legal",
+                "request_tokens": 3000
+              }
+            ],
+            "request_tokens": 2000,
+            "tenant": "fixture"
+          },
+          {
+            "budget_owner": "shared",
+            "collection": "finance",
+            "daily_tokens": 9000,
+            "indexes": [],
+            "request_tokens": 8000,
+            "tenant": "fixture"
+          }
+        ],
+        "model_bytes_per_token": {
+          "fixture-model": 4
+        },
+        "version": 1
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "attempts_exhausted",
+      "valid": true,
+      "value": {
+        "error": "build job failed: its final attempt stopped renewing its lease before completing",
+        "error_code": "attempts_exhausted",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "invalid_input",
+      "valid": true,
+      "value": {
+        "error": "build job failed: the build refused the job's target or parameters",
+        "error_code": "invalid_input",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "not_found",
+      "valid": true,
+      "value": {
+        "error": "build job failed: something the job names no longer exists",
+        "error_code": "not_found",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "storage_error",
+      "valid": true,
+      "value": {
+        "error": "build job failed: a storage error occurred; see the server log",
+        "error_code": "storage_error",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "datastore_unavailable",
+      "valid": true,
+      "value": {
+        "error": "build job failed: a datastore artifact could not be read or written",
+        "error_code": "datastore_unavailable",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "provider_error",
+      "valid": true,
+      "value": {
+        "error": "build job failed: an upstream model provider call failed",
+        "error_code": "provider_error",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "artifact_blocked",
+      "valid": true,
+      "value": {
+        "error": "build job failed: its result is an artifact blocked by artifact damage; repair is required",
+        "error_code": "artifact_blocked",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "extraction_deferred",
+      "valid": true,
+      "value": {
+        "error": "build job failed: isolated PDF extraction was deferred; retry when extraction capacity returns",
+        "error_code": "extraction_deferred",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "historical-failure",
+      "valid": true,
+      "value": {
+        "error": "build job failed; no classified cause was recorded for this failure",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "success-omits-failure",
+      "valid": true,
+      "value": {
+        "state": "succeeded"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "null-code-is-not-omission",
+      "valid": false,
+      "value": {
+        "error": "build job failed; no classified cause was recorded for this failure",
+        "error_code": null,
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "code-without-message",
+      "valid": false,
+      "value": {
+        "error_code": "extraction_deferred",
+        "state": "failed"
+      }
+    },
+    {
+      "definition": "build-job-failure",
+      "id": "success-cannot-have-a-code",
+      "valid": false,
+      "value": {
+        "error": "build job failed; no classified cause was recorded for this failure",
+        "error_code": "storage_error",
+        "state": "succeeded"
+      }
+    }
+  ],
+  "version": 1
+}

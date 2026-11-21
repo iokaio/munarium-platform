@@ -80,6 +80,23 @@ Maintainer decisions of 20 November 2026 that bear on this record:
   backup restore. The historical-row rule (item 4) is unchanged: rows are not
   rewritten in place.
 
+## Amendment (21 November 2026)
+
+The maintainer approved a classified failure for isolated PDF extraction under
+`MUNARIUM_PDF_EXTRACTION_DEFERRED=fail`. A queued build emits
+`extraction_deferred` with the fixed display message in the Server registry.
+A direct failure uses `extraction-deferred`, HTTP 429 and gRPC
+`RESOURCE_EXHAUSTED`, with `retryable: false` and `retry_action: retry_later`.
+The default skip behavior and historical omission rules still apply.
+The current registry also includes `artifact_blocked` from the 20 November
+artifact publication decision. Both are additive codes of the existing field.
+Clients keep reading it as a string.
+[Maintainer decisions and implementation](https://github.com/iokaio/munarium/blob/67e368d88cd3275acdb71d91635cc40f336de718/server/docs/design/implementation-ledger.md#maintainer-decisions-21-november-2026)
+· [Current error registry](https://github.com/iokaio/munarium/blob/67e368d88cd3275acdb71d91635cc40f336de718/server/docs/api/errors.md#build-job-failure-codes)
+
+The [ClearView candidate](clearview-c2-mcp-v1/README.md) captures the current
+registry and failure-member omission vectors for contract review.
+
 ## Alternatives
 
 - **Return the raw error chain (v1.4).** Rejected: it discloses storage internals.
